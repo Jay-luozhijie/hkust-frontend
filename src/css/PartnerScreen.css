@@ -1,0 +1,68 @@
+/*合作伙伴*/
+.partner .title{
+	color: #9A1E23;
+	font-size: 54px;
+	font-weight: bold;
+	padding-left: 100px;
+}
+.partner .m-test-wrap{
+	margin-top: 97px;
+}
+.partner .slide-item{
+position: relative;
+	padding:50px 59px;
+	height: 557px;
+	box-sizing: border-box;
+	border-radius: 0px 60px;
+	background: #FFF7F7;
+	box-shadow: 0px 4px 4px 0px rgba(154, 30, 35, 0.16);
+}
+.partner .slide-item .img{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.partner .slide-item  h2{
+	color: #9A1E23;
+	text-align: center;
+	font-family: "OPPO Sans";
+	font-size: 36px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	margin-top: 16px;
+}
+.partner .slide-item p{
+	color: #000;
+	text-align: justify;
+	font-family: FZLanTingHei-R-GBK;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 150%;
+	margin-top: 21px;
+}
+.partner .slide-item .bottom-arrow{
+	position: absolute;
+	right: 0px;
+	bottom: 0px;;
+	width: 68px;
+	height: 68px;
+	background-image: url('../img/Ellipse.svg');
+	background-size: cover; /* 或者可以使用contain来保持SVG的原始大小 */
+	background-repeat: no-repeat;
+	background-position: center;
+	fill: #C95C5C;
+	flex-shrink: 0;
+	color: #FFF;
+	font-family: "OPPO Sans";
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	text-decoration-line: underline;
+	text-align: center;
+	line-height: 68px;
+}
+

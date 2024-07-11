@@ -1,0 +1,78 @@
+.swiper {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+  
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.image{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.homeSwiper .swiper-pagination-bullet{
+    width: 16px;
+    height: 16px;
+    border: 2px solid #fff;
+    opacity: 1;
+    background-color: transparent;
+    z-index:3;
+}
+
+.homeSwiper .swiper-pagination-bullet-active{
+    background-color: #fff;
+}
+
+.homeSwiper .swiper-slide img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-cover{
+    background: linear-gradient(to right, rgba(154, 30, 35, 0.9), rgba(255, 255, 255, 0.2));
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.layer1, .layer2, .layer3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .layer1 {
+    z-index: 1; /* 图层1位于上方 */
+  }
+  
+  .layer2 {
+    z-index: 2; /* 图层2位于上方 */
+  }
+
+  .layer3 {
+    z-index: 3; /* 图层3位于上方 */
+  }
+
+  .swiper-text-1{
+    color:white;
+    font-size: large;
+    font-family: "Oppo Sans Regular", Arial, sans-serif;
+  }
