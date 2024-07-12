@@ -71,8 +71,60 @@
     z-index: 3; /* 图层3位于上方 */
   }
 
-  .swiper-text-1{
+  .swiper-text{
     color:white;
     font-size: large;
     font-family: "Oppo Sans Regular", Arial, sans-serif;
+    text-align: left;
+  }
+
+
+  .swiper-slide .size-1{
+    font-size: 64px;
+  }
+
+  .swiper-slide .size-2{
+    font-size: 40px;
+  }
+
+  .text-box{
+    position:absolute;
+    text-align: left;
+    left:67px;
+    top:51px;
+  }
+  
+  .text-box .swiper-text {
+    display: block;
+  }
+
+
+
+  .home-page-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /* Optional: Aligns items to the start of the container */
+    margin: 0; /* This will set margin on all sides to 0 */
+    width: 1920px; /* Ensures the container spans the full viewport width */
+    padding: 0; /* Sets padding on all sides to 0 */
+}
+
+  .home-page-container div {
+    margin: 5px 0; /* Optional: Adds some space between each div */
+    padding: 10px;
+  }
+
+
+  .homePageBackground{
+    position: absolute;
+    left: 51vw;
+  }
+
+  .homePageIntro {
+    width: 60%; /* Set the width to 60% of the parent container */
+    margin: 0 auto; /* Center the div horizontally */
+    padding: 20px; /* Add padding inside the div */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    background-color: #f9f9f9; /* Optional: Add a background color */
+    border-radius: 8px; /* Optional: Add rounded corners */
   }
