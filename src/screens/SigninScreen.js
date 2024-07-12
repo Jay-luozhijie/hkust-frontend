@@ -1,12 +1,35 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState } from 'react';
+import {useDispatch, useSelector} from 'react-redux'
+import {signin} from '../auth/userActions'
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../auth/AuthContext';
 
-export default function SigninScreen(){
+export default function SigninScreen(props){
     const [name, setName] = useState('');
     const [password, setPassword] = useState('');
+
+    const redirect = "/adminPage";
+
+    const userSignin = useSelector((state) => state.userSignin);
+    const {userInfo} = userSignin
+
+    const dispatch = useDispatch()
     const submitHandler = (e)=>{
         e.preventDefault();
+        dispatch(signin(name, password));
     }
+
+    const navigate = useNavigate()
+    const {login} = useAuth();
+
+    useEffect(() => {
+        if (userInfo) {
+            login();
+            navigate(redirect);
+        }
+    }, [userInfo, navigate, redirect, login]);
+
     return (
         <div>
             <form className="form" onSubmit={submitHandler}>

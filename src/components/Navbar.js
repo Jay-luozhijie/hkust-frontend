@@ -5,13 +5,20 @@ import quantSocietyLogo from '../img/quant_society_logo.png';
 import { ReactComponent as Earth } from '../img/globe-americas.svg';
 import { ReactComponent as Triangle } from '../img/caret-down-fill.svg';
 import {useState} from 'react';
+import { NavLink } from 'react-router-dom';
 
 function Navbar() {
-    const [isOpen, setIsOpen] = useState(false);
+    const [dropdowns, setDropdowns] = useState({
+        languageIsOpen: false,
+        aluminiIsOpen: false,
+        aboutIsOpen: false
+    });
 
-    const toggleDropdown = () => {
-        console.log(isOpen)
-        setIsOpen(!isOpen);
+    const toggleDropdown = (dropdown) => {
+    setDropdowns((prevState) => ({
+        ...prevState,
+        [dropdown]: !prevState[dropdown]
+    }));
     };
 
     return (
@@ -33,12 +40,39 @@ function Navbar() {
                             <div style={{ flexGrow: 1 }}></div>
 
                             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexGrow: 2 }}>
-                                <span style={{ color: '#9A1E23', marginRight: '30px', flex: '1', textAlign: 'right' }}>关于我们</span>
+                                <div>
+                                    <span style={{ color: '#9A1E23', marginRight: '30px', flex: '1', textAlign: 'right', cursor: "pointer"}}>关于我们</span>
+                                    {dropdowns.aboutIsOpen && (
+                                        <ul style={{display: dropdowns.aboutIsOpen ? 'block' : 'none', position: "relative", 
+                                        backgroundColor: "#9A1E23", zIndex: "1",  right: "0", listStyleType: "none"}}>
+                                            <li><a href="#">社团介绍</a></li>
+                                            <li><a href="#">成员与运营团队</a></li>
+                                        </ul>
+                                    )}
+                                </div>
                                 <span style={{ color: '#9A1E23', marginRight: '30px', flex: '1', textAlign: 'right' }}>交易大赛</span>
                                 <span style={{ color: '#9A1E23', marginRight: '30px', flex: '1', textAlign: 'right' }}>社团顾问</span>
-                                <span style={{ color: '#9A1E23', marginRight: '30px', flex: '1', textAlign: 'right' }}>合作伙伴</span>
-                                <span style={{ color: '#9A1E23', marginRight: '30px', flex: '1', textAlign: 'right' }}>校友会</span>
-                                <span style={{ color: '#9A1E23', marginRight: '30px', flex: '1', textAlign: 'right' }}>社团新闻</span>
+
+                                <NavLink to="/partner" style={{textDecoration: "none"}}>
+                                    <span style={{ color: '#9A1E23', marginRight: '30px', flex: '1', textAlign: 'right' }}>合作伙伴</span>
+                                </NavLink>
+                                <div onClick={() => toggleDropdown('aluminiIsOpen')}>
+                                    <span style={{ color: '#9A1E23', marginRight: '30px', flex: '1', textAlign: 'right' }}>校友会</span>
+                                    {dropdowns.aluminiIsOpen && (
+                                        <ul style={{display: dropdowns.aluminiIsOpen ? 'block' : 'none', position: "absolute", 
+                                        backgroundColor: "#9A1E23", zIndex: "1",  right: "0", listStyleType: "none"}}>
+                                            <li><a href="/alumini/Hongkong">香港校友会</a></li>
+                                            <li><a href="/alumini/Beijing">北京校友会</a></li>
+                                            <li><a href="/alumini/Shanghai">上海校友会</a></li>
+                                            <li><a href="/alumini/Guangzhou">广州校友会</a></li>
+                                            <li><a href="/alumini/Shenzhen">深圳校友会</a></li>
+                                        </ul>
+                                    )}
+                                </div>
+                                
+                                <NavLink to="/communityNews" style={{textDecoration: "none"}}>
+                                    <span style={{ color: '#9A1E23', marginRight: '30px', flex: '1', textAlign: 'right' }}>社团新闻</span>
+                                </NavLink>
                                 {/* <div class="btn-group">
                                     <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
                                         Right-aligned but left aligned when large screen
@@ -49,11 +83,11 @@ function Navbar() {
                                         <li><button class="dropdown-item" type="button">Something else here</button></li>
                                     </ul>
                                 </div> */}
-                                <div onClick={toggleDropdown}>
+                                <div onClick={() => toggleDropdown('languageIsOpen')}>
                                     <Earth style={{ textAlign: 'right'}}></Earth>
                                     <Triangle  style={{ color: '#9A1E23', marginRight: '30px', textAlign: 'left' }}></Triangle>
-                                    {isOpen && (
-                                        <ul style={{display: isOpen ? 'block' : 'none', position: "absolute", 
+                                    {dropdowns.languageIsOpen && (
+                                        <ul style={{display: dropdowns.languageIsOpen ? 'block' : 'none', position: "absolute", 
                                         backgroundColor: "#9A1E23", zIndex: "1",  right: "0", listStyleType: "none"}}>
                                             <li><a href="#">简体中文</a></li>
                                             <li><a href="#">繁體中文</a></li>
