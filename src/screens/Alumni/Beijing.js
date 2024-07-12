@@ -1,5 +1,5 @@
 import React from 'react';
-import aluminiPageBackground from "../../img/AluminiPageBackground.png"
+import alumniPageBackground from "../../img/AlumniPageBackground.png"
 import BeijingImg from "../../img/Beijing.jpg"
 
 function Beijing() {
@@ -7,7 +7,7 @@ function Beijing() {
         <div>
             <div class="home-page-container" style={{height:"734px", overflow: "hidden", position: "relative", margin:"0"}}>
                 <div class="homePageBackground" style={{overflow: "hidden", position: "absolute", left:"50px"}}>
-                    <img src={aluminiPageBackground} ></img>
+                    <img src={alumniPageBackground} ></img>
                 </div>
                 <img src={BeijingImg}></img>
                 <div class="homePageIntro" style={{width:"500px", marginLeft:"200px"}}>

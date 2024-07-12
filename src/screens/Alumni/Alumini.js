@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
 
-function Alumini() {
+function Alumni() {
   return (
     <div>
       <Outlet />
@@ -8,4 +8,4 @@ function Alumini() {
   );
 }
 
-export default Alumini;
+export default Alumni;

@@ -10,7 +10,7 @@ import { NavLink } from 'react-router-dom';
 function Navbar() {
     const [dropdowns, setDropdowns] = useState({
         languageIsOpen: false,
-        aluminiIsOpen: false,
+        alumniIsOpen: false,
         aboutIsOpen: false
     });
 
@@ -56,16 +56,16 @@ function Navbar() {
                                 <NavLink to="/partner" style={{textDecoration: "none"}}>
                                     <span style={{ color: '#9A1E23', marginRight: '30px', flex: '1', textAlign: 'right' }}>合作伙伴</span>
                                 </NavLink>
-                                <div onClick={() => toggleDropdown('aluminiIsOpen')}>
+                                <div onClick={() => toggleDropdown('alumniIsOpen')}>
                                     <span style={{ color: '#9A1E23', marginRight: '30px', flex: '1', textAlign: 'right' }}>校友会</span>
-                                    {dropdowns.aluminiIsOpen && (
-                                        <ul style={{display: dropdowns.aluminiIsOpen ? 'block' : 'none', position: "absolute", 
+                                    {dropdowns.alumniIsOpen && (
+                                        <ul style={{display: dropdowns.alumniIsOpen ? 'block' : 'none', position: "absolute", 
                                         backgroundColor: "#9A1E23", zIndex: "1",  right: "0", listStyleType: "none"}}>
-                                            <li><a href="/alumini/Hongkong">香港校友会</a></li>
-                                            <li><a href="/alumini/Beijing">北京校友会</a></li>
-                                            <li><a href="/alumini/Shanghai">上海校友会</a></li>
-                                            <li><a href="/alumini/Guangzhou">广州校友会</a></li>
-                                            <li><a href="/alumini/Shenzhen">深圳校友会</a></li>
+                                            <li><a href="/alumni/Hongkong">香港校友会</a></li>
+                                            <li><a href="/alumni/Beijing">北京校友会</a></li>
+                                            <li><a href="/alumni/Shanghai">上海校友会</a></li>
+                                            <li><a href="/alumni/Guangzhou">广州校友会</a></li>
+                                            <li><a href="/alumni/Shenzhen">深圳校友会</a></li>
                                         </ul>
                                     )}
                                 </div>
