@@ -36,7 +36,6 @@ function App() {
                 <div style={{ minHeight: "0", paddingBottom: "100px"}}>
                   
                     <Routes>
-                    <AuthProvider>
                       <Route path = "/" element={<HomeScreen/>}></Route>
                       <Route path = "/signin" element={<SigninScreen/>}></Route>
                       <Route path = "/Clubnews" element={<ClubnewsScreen/>}></Route>
@@ -52,7 +51,6 @@ function App() {
                       <Route element={<PrivateRoute />}>
                         <Route path="/adminPage" element={<AdminPage />} />
                       </Route>
-                      </AuthProvider>
                     </Routes>
                   
                 </div>
