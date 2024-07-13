@@ -27,6 +27,7 @@ import {AuthProvider} from './auth/AuthContext.js'
 import SocialAdvisorScreen from './screens/SocialAdvisorScreen'
 import AboutUsScreen from './screens/AboutUsScreen'
 import IntroduceScreen from './screens/IntroduceScreen'
+import CommunityNewsDetailScreen from './screens/CommunityNewsDetailScreen.js';
 
 axios.defaults.baseURL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000';
 function App() {
@@ -45,6 +46,7 @@ function App() {
                       <Route path = "/Clubnews" element={<ClubnewsScreen/>}></Route>
                       <Route path = "/partner" element={<PartnerScreen/>}></Route>
                       <Route path = "/communityNews" element={<CommunityNewsScreen/>}></Route>
+                      <Route path = "/communityNews/:id" element={<CommunityNewsDetailScreen/>}></Route>
                       <Route path = "/SocialAdvisor" element={<SocialAdvisorScreen/>}></Route>
                       <Route path = "/AboutUs" element={<AboutUsScreen/>}></Route>
                       <Route path = "/Introduce" element={<IntroduceScreen/>}></Route>

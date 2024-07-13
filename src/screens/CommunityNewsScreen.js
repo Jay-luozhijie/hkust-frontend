@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../css/communityNews.css';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
@@ -15,6 +15,11 @@ import Rectangle92 from '../img/Rectangle92.png';
 import Rectangle93 from '../img/Rectangle93.png';
 import Vector47 from '../img/Vector47.png';
 import Vector48 from '../img/Vector48.png';
+import axios from 'axios';
+import NewsItem from '../components/NewsItem';
+
+
+
 const activityData = [
   { id: 1, title: '科大打两局哈市离开的3423', time: '24-07-11 14:20', imgSrc: Rectangle91 },
   { id: 2, title: '科大打两局哈市离开的3423', time: '24-07-11 14:20', imgSrc: Rectangle92 },
@@ -22,14 +27,35 @@ const activityData = [
   { id: 4, title: '科大打两局哈市离开的3423', time: '24-07-11 14:20', imgSrc: Rectangle91 },
   { id: 5, title: '科大打两局哈市离开的3423', time: '24-07-11 14:20', imgSrc: Rectangle92 }
 ]
-const newsData = [
-  { id: 1, title: '科大打两局哈市离开的3423', time: '24-07-11 14:20', imgSrc: communityNewsImg1 },
-  { id: 2, title: '科大打两局哈市离开的3423', time: '24-07-11 14:20', imgSrc: communityNewsImg2 },
-  { id: 3, title: '科大打两局哈市离开的3423', time: '24-07-11 14:20', imgSrc: communityNewsImg3 },
-  { id: 5, title: '科大打两局哈市离开的3423', time: '24-07-11 14:20', imgSrc: communityNewsImg5 }
-];
 
 function CommunityNewsScreen() {
+  const [newsData, setNewsData] = useState([]);
+  const [pageNumber, setPageNumber] = useState(1);
+  useEffect(() => {
+    fetchNewsData(pageNumber);
+  }, [pageNumber]);
+
+  const fetchNewsData = async (page) => {
+    try {
+      const response = await axios.get(`/api/users/news?page=${page}&limit=4`);
+      console.log(response.data)
+      setNewsData(response.data);
+    } catch (error) {
+      console.error('Error fetching news data', error);
+    }
+  };
+
+  const handlePrevClick = () => {
+    if (pageNumber > 1) {
+      setPageNumber(pageNumber - 1);
+    }
+  };
+
+  const handleNextClick = () => {
+    setPageNumber(pageNumber + 1);
+  };
+
+
   return (
     <div className="community-news-wrap">
       <div className='banner-container'>
@@ -81,17 +107,14 @@ function CommunityNewsScreen() {
           <div className='header'>
             <span className='title'>社团新闻</span>
             <div className='page-btns'>
-              <div className='perv-btn'> <img src={Vector48} className='image'/></div>
-              <div className='next-btn'> <img src={Vector47} className='image'/></div>
+              <div className='perv-btn' onClick={handlePrevClick}> <img src={Vector48} className='image'/></div>
+              <div className='next-btn'onClick={handleNextClick}> <img src={Vector47} className='image'/></div>
             </div>
           </div>
           <div className='news-list'>
-            {newsData.map((item) => (
-              <div className='news-item'>
-                <span className='news-detail'>{item.title}</span>
-                <span className='news-time'>{item.time}</span>
-              </div>
-            ))}
+          {newsData.map((item) => (
+            <NewsItem key={item._id} news={item} />
+          ))}
           </div>
         </div>
       </div>
