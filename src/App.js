@@ -3,7 +3,7 @@ import axios from 'axios';
 import {BrowserRouter, Route, Routes, Navigate} from 'react-router-dom'
 import HomeScreen from './screens/HomeScreen'
 import SigninScreen from './screens/SigninScreen'
-import './css/navbar.css'
+import './css/navbar.scss'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './components/Navbar.js';
 import Footer from './components/Footer.js'
@@ -24,12 +24,16 @@ import PrivateRoute from './auth/PrivateRoute';
 import AdminPage from './screens/AdminPage.js';
 import { useSelector } from 'react-redux';
 import {AuthProvider} from './auth/AuthContext.js'
+import SocialAdvisorScreen from './screens/SocialAdvisorScreen'
+import AboutUsScreen from './screens/AboutUsScreen'
+import IntroduceScreen from './screens/IntroduceScreen'
 
 axios.defaults.baseURL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000';
 function App() {
   
   return (
       <BrowserRouter>
+        <AuthProvider>
             <div className="grid-container">
               <main>
                 <Navbar></Navbar>
@@ -41,6 +45,9 @@ function App() {
                       <Route path = "/Clubnews" element={<ClubnewsScreen/>}></Route>
                       <Route path = "/partner" element={<PartnerScreen/>}></Route>
                       <Route path = "/communityNews" element={<CommunityNewsScreen/>}></Route>
+                      <Route path = "/SocialAdvisor" element={<SocialAdvisorScreen/>}></Route>
+                      <Route path = "/AboutUs" element={<AboutUsScreen/>}></Route>
+                      <Route path = "/Introduce" element={<IntroduceScreen/>}></Route>
                       <Route path="/Alumni" element={<Alumni />}>
                         <Route path = "/Alumni/Beijing" element={<Beijing></Beijing>}></Route>
                         <Route path = "/Alumni/Hongkong" element={<Hongkong></Hongkong>}></Route>
@@ -48,9 +55,11 @@ function App() {
                         <Route path = "/Alumni/Guangzhou" element={<Guangzhou></Guangzhou>}></Route>
                         <Route path = "/Alumni/Shenzhen" element={<Shenzhen></Shenzhen>}></Route>
                       </Route>
-                      <Route element={<PrivateRoute />}>
-                        <Route path="/adminPage" element={<AdminPage />} />
-                      </Route>
+                      <Route path="/adminPage" element={
+                        <PrivateRoute>
+                          <AdminPage />
+                        </PrivateRoute>
+                      } />
                     </Routes>
                   
                 </div>
@@ -58,6 +67,7 @@ function App() {
                 <Footer></Footer>
               </main>
             </div>
+          </AuthProvider>
         </BrowserRouter>);
 }   
 
