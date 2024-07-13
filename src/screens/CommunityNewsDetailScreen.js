@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import ReactMarkdown from 'react-markdown';
 
 export default function CommunityNewsDetailScreen(){
     const {id} = useParams();
@@ -29,7 +30,7 @@ export default function CommunityNewsDetailScreen(){
             {news ? (
                 <div>
                 <h2>{news.title}</h2>
-                <p>{news.content}</p>
+                <ReactMarkdown>{news.content}</ReactMarkdown>
                 <p><strong>Published at:</strong> {news.updatedAt}</p>
                 </div>
             ) : (
