@@ -1,0 +1,165 @@
+.column {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* 平均分配宽度 */
+    padding: 0 10px;
+}
+
+.column ul {
+    list-style-type: none; /* 移除列表默认样式 */
+    padding: 0;
+}
+
+.column ul li {
+    margin-bottom: 10px; /* 可选：增加项目之间的间距 */
+}
+
+a.nav-link {
+    margin-left: 45px; /* 增加链接之间的间距 */
+    padding: 0px;
+    color: #9A1E23; /* 字体颜色 */
+    font-size: 20px; /* 字号大小 */
+    font-family: "OPPO Sans", sans-serif; /* 字体 */
+    font-weight: 400; /* 字体粗细 */
+    word-wrap: break-word; /* 文字自动换行 */
+    text-decoration: none; /* 去掉下划线 */
+	overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.grey-bg {
+    height: 53px;
+}
+
+.Logo, .Title {
+    height: 60%;
+    margin-right: 15px;
+    padding-right: 20px;
+    border-right: 1px solid #003366;
+}
+
+.tp-header-height {
+    height: 149px;
+}
+
+.tab-box {
+    height: 96px;
+}
+
+.tab-box-item {
+    margin-left: 50px;
+    width: calc(100% - 50px);
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* 使导航链接靠右对齐 */
+    flex-grow: 2;
+}
+
+.Earth {
+    margin-right: 100px; /* 增加地球图标和文本之间的距离 */
+    align-self: flex-end; /* 确保地球图标靠右对齐 */
+}
+
+.menubtn {
+    width: 23px;
+    height: 23px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    opacity: 0; /* 默认隐藏，小屏显示 */
+    transition: opacity 0.3s ease; /* 平滑过渡 */
+}
+
+.menubtn span, .menubtn span::before, .menubtn span::after {
+    display: block;
+    width: 19px;
+    height: 2px;
+    background: #9A1E23;
+    position: relative;
+    transition: all 0.3s ease; /* 平滑过渡所有属性 */
+}
+
+.menubtn span::before {
+    top: -6px;
+}
+
+.menubtn span::after {
+    bottom: -6px;
+}
+
+@media only screen and (max-width: 767px) {
+    .tp-header-height {
+        height: auto;
+    }
+
+    .tab-box {
+        height: 52px;
+        background: #FFF;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .grey-bg {
+        height: 24px;
+        font-size: 12px;
+    }
+
+    .nav-bar {
+        display: none;
+    }
+
+    .Logo, .Title {
+        border-right: 1px solid #003366;
+        margin-right: 0px;
+        padding-right: 0px;
+    }
+
+    .tab-box-item {
+        margin-left: 15px;
+        width: calc(100% - 30px);
+    }
+
+    .menubtn {
+        opacity: 1; /* 在小屏幕上显示菜单按钮 */
+    }
+}
+
+.nav-link-container {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none; /* 默认不显示 */
+    position: absolute;
+    background-color: #C95C5C; /* 矩形框颜色 */
+    z-index: 1;
+    border: none; /* 去除边框 */
+    top: 100%;
+}
+
+.nav-link-container:hover .dropdown-menu {
+    display: block; /* 悬停显示 */
+    background-color: #C95C5C; /* 确保背景色一致 */
+}
+
+.nav-link-container .dropdown-menu .dropdown-item {
+    color: white;
+    font-family: "OPPO Sans";
+}
+
+
+.nav-link-container .dropdown-menu .dropdown-item:hover {
+    background-color: white; /* 悬停时背景色 */
+    color: #C95C5C; /* 悬停时字体颜色为白色 */
+}
+
+.nav-link-container .dropdown-menu .dropdown-item.active,
+.nav-link-container .dropdown-menu .dropdown-item:active {
+    background-color: white;; /* 被点击时的背景颜色 */
+    color: #9A1E23; /* 被点击时的字体颜色 */
+}

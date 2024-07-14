@@ -1,0 +1,452 @@
+.introduce {
+	overflow-x: hidden;
+}
+.introduce .banner{
+	padding-left: 159px;
+	box-sizing: border-box;
+	background: url("../img/Group26.png") no-repeat right top;
+background-size: 534px 646px;
+	position: relative;
+	padding-top: 100px;
+	padding-bottom: 376px;
+	&:before{
+		position: absolute;
+		content: "";
+		width: 534px;
+		height: 646px;
+		border-radius: 50%;
+		right: -10%;
+		top:-10%;
+		background: radial-gradient(50% 50% at 50% 50%, #FFEBEB 0%, rgba(239, 211, 211, 0.48) 16.5%, rgba(239, 211, 211, 0.48) 23.5%, rgba(225, 188, 189, 0.00) 86%);
+	}
+}
+.introduce .banner .h1{
+	color: #9A1E23;
+	font-family: "OPPO Sans";
+	font-size: 96px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	// margin-top: 100px;
+}
+.introduce .banner .label{
+	color: #252525;
+	font-family: "OPPO Sans";
+	font-size: 40px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	white-space: nowrap;
+}
+.introduce .banner .info{
+	color: #9A1E23;
+	font-family: "OPPO Sans";
+	font-size: 48px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	margin-top: 146px;
+	width: 50%;
+}
+.services{
+	padding:0 149px;
+}
+.services .title{
+	color: #9A1E23;
+	font-family: "OPPO Sans";
+	font-size: 64px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	margin-bottom: 49px;
+	margin-top: 214px;
+}
+
+.services .services-item{
+	border-radius: 20px;
+	background: #FFF7F7;
+	height: 400px;
+	margin-bottom: 48px;
+	padding:48px 70px;
+}
+.services .services-item .big-title{
+	color: #C90;
+	font-family: "OPPO Sans";
+	font-size: 40px;
+	font-weight: 500;
+	position: relative;
+	padding-left: 22px;
+	
+}
+.services .services-item .big-title .title{
+	color: #C90;
+	font-weight: 500;
+	margin-bottom: 0px;
+	font-size: 40px;
+	line-height: normal;
+	margin-top: 0px;
+}
+
+.services .services-item .big-title .label{
+	font-weight: 400;
+	    line-height: normal;
+}
+
+.services .services-item  .big-title::before{
+height: 95px;
+	width: 10px;
+	background-color: #CC9900;
+	content:"";
+	display: block;
+	position: absolute;
+	left: 0px;
+	top:10px;
+}
+
+.services .services-item .ul li{
+	color: #252525;
+	font-family: "OPPO Sans";
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 42.287px;
+	white-space: nowrap;
+	
+}
+.services .services-item  .small-title{
+	color: #036;
+	white-space: nowrap;
+	font-family: "OPPO Sans";
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	margin-bottom: 20px;
+}
+
+.container-box{
+	background: #FFEBEB;
+	width: 100%;
+	box-shadow: 30px 30px 100px 0px rgba(0, 0, 0, 0.03);
+	.box{
+		width: 1456px;
+		margin: auto;
+		padding:153px 0px;
+		display: flex;
+		justify-content:space-around;
+		.container-item{
+			width: 353px;
+			border-radius: 20px;
+			background: #FFF;
+			box-shadow: 0px 4px 4px 0px rgba(154, 30, 35, 0.06);
+			padding:96px 45px 51px 38px;
+			box-sizing: border-box;
+			position: relative;
+			.title{
+				color: #9A1E23;
+				font-family: "OPPO Sans";
+				font-size: 32px;
+				font-style: normal;
+				font-weight: 500;
+				line-height: normal;
+				margin-bottom: 20px;
+			}
+			.text{
+				margin-top: 23px;
+				color: #000;
+				font-family: "OPPO Sans";
+				font-size: 20px;
+				font-style: normal;
+				font-weight: 500;
+				line-height: normal;
+			}
+			.big-img{
+				position:absolute;
+				right:22px;
+				top:54px
+			}
+		}
+	}
+}
+.active-box{
+	width: 1636px;
+	margin: auto;
+	margin-top: 203px;
+	.title{
+		color: #9A1E23;
+		font-family: "OPPO Sans";
+		font-size: 64px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: normal;
+		margin-left: 120px;
+	}
+	.time-line{
+		display: flex;
+		margin-left: 80px;
+		.time{
+			margin-top: 39px;
+			width: 200px;
+			height: 50px;
+			font-size: 20px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: normal;
+			color: #9A1E23;
+			border-radius: 20px;
+			border: 2px solid #9A1E23;
+			margin-right: 43px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			margin-left: 40px;
+			cursor: pointer;
+			&.active{
+				background: #C95C5C;
+				color: #FFF;
+			}
+		}
+		
+	}
+	.example{
+		margin-top: 116px;
+		.steps{
+			display: flex;
+			.step__head{
+				width: 100%;
+				position: relative;
+				text-align: center;
+				margin-top: 162px;
+				.step__line{
+					left: 50%;
+					right: -50%;
+					height: 2px;
+					top: 11px;
+					position: absolute;
+					background-color:#9A1E23;
+				}
+				.step__icon{
+					border-radius: 50%;
+					position: relative;
+					display: inline-flex;
+					width: 22px;
+					height: 22px;
+					border: 2px solid #9A1E23;
+					background: #FFEBEB;
+					
+				}
+				.step__icon_active{
+					border: 2px solid #9A1E23;
+					background: #C95C5C;
+				}
+				
+			}
+			.step__top{
+				text-align: center;
+				height: 100px;
+				position: absolute;
+				.step__title{
+					color: #000;
+					font-family: "OPPO Sans";
+					font-size: 24px;
+					// width: 200px;
+					font-style: normal;
+					font-weight: 500;
+					line-height: normal;
+				}
+				.step__small_title{
+					color: rgba(0, 0, 0, 0.60);
+					font-family: "OPPO Sans";
+					font-size: 20px;
+					font-style: normal;
+					font-weight: 500;
+					line-height: normal;
+				}
+			}
+			.step__bottom{
+				margin-top: 37px;
+				.step__description{
+					color: rgba(154, 30, 35, 0.58);
+					text-align: center;
+					font-family: "OPPO Sans";
+					font-size: 24px;
+					font-style: normal;
+					font-weight: 500;
+					line-height: normal;
+					letter-spacing: 2.4px;
+				}
+			}
+			.step{
+				flex: 1;
+				&:last-of-type{
+					.step__line{
+						display: none;
+					}
+				}
+			}
+			
+		}
+	}
+}
+@media only screen and (max-width: 767px){
+	.introduce{
+		overflow-x: hidden;
+		.banner{
+			padding: 0 45px;
+			height: auto;
+			background: url("../img/Group26.png") no-repeat 113px -65px;
+			background-size: 287px 323px;
+			padding-top: 272px;
+			position: relative;
+			&:before{
+				position: absolute;
+				content: "";
+				    width: 100%;
+				    height: 100%;
+				    border-radius: 50%;
+				    right: -20%;
+				    top: -36%;
+				background: radial-gradient(50% 50% at 50% 50%, #FFEBEB 0%, rgba(239, 211, 211, 0.48) 16.5%, rgba(239, 211, 211, 0.48) 23.5%, rgba(225, 188, 189, 0.00) 86%);
+			}
+			.h1{
+				font-size: 40px;
+				
+			
+			}
+			.label{
+				font-size: 20px;
+			}
+			.info{
+				font-size: 20px;
+				margin-top: 26px;
+				margin-bottom: 70px;
+				width: 100%;
+			}
+		}
+	}
+	.active-box{
+		margin-top: 45px;
+		padding-left: 45px;
+		.title{
+			font-size: 24px;
+			
+			
+		}
+		.time-line{
+			
+			.time{
+				margin-top: 18px;
+				width: 77px;
+				height: 27px;
+				font-size: 16px;
+				margin-right: 15px;
+			}
+		}
+		.example{
+			overflow-x: auto;
+			.steps .step__head{
+				margin-top: 100px;
+			}
+		}
+	}
+	.container-box{
+		padding: 40px 45px;
+		
+		.box{
+			padding: 0px;
+			width: auto;
+			flex-direction: column;
+			.container-item{
+				margin-bottom: 53px;
+				width: 100%;
+				padding:48px 25px;
+				.title{
+					font-size: 24px;
+					margin-bottom: 13px;
+				}
+				.text{
+					font-size: 16px;
+					margin-top: 15px;
+				}
+				.big-img{
+					width: 135px;
+					height: auto;
+				}
+			}
+		}
+	}
+	.services{
+		padding: 0 45px;
+		.title{
+			font-size: 32px;
+			margin-bottom: 37px;
+			margin-top: 200px;
+		}
+		.services-item{
+			padding: 0px;
+			background-color: inherit;
+			height: auto;
+			.big-title{
+				font-size: 24px;
+				&::before{
+					height: 52px;
+					width: 3px;
+					margin-right: 15px;
+				}
+				.title{
+				font-size: 24px;	
+				}
+			}
+			.ul{
+				li{
+					font-size: 16px;
+					line-height: 28px;
+				}
+			}
+			.row{
+				&>*{
+					margin: 0px;
+				}
+			}
+			.small-title{
+				font-size: 20px;
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; // 确保内容在容器中左对齐
+
+    .step__top {
+        margin-top: 20px; // 根据需要调整这个值，使文字下移
+        text-align: left; // 文字左对齐
+		padding-left: 55px;
+
+        .step__title,
+        .step__small_title {
+            text-align: left; // 确保标题和小标题都是左对齐
+        }
+    }
+
+    .step__bottom {
+        text-align: left;
+		padding-left: 40px; 
+    }
+}
+
+.custom-row-gutter {
+    --bs-gutter-x: 1.5rem !important;
+}
+
+@media (max-width: 767px) { /* Bootstrap的sm断点以下 */
+	.px-4 {
+	  padding-left: 7.5rem !important; /* 移除左内边距 */
+	  padding-right: 10rem !important; /* 移除右内边距 */
+	}
+  }
+  

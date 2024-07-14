@@ -1,0 +1,132 @@
+.swiper {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+  
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.image{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.homeSwiper .swiper-pagination-bullet{
+    width: 12px;
+    height: 12px;
+    border: 1px solid #fff;
+    opacity: 1;
+    background-color: transparent;
+    z-index:3;
+    margin: 0 15px !important;
+    transform: translateY(-30px);
+}
+
+.homeSwiper .swiper-pagination-bullet-active{
+    background-color: #fff;
+}
+
+.homeSwiper .swiper-slide img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-cover{
+    background: linear-gradient(to right, rgba(154, 30, 35, 0.9), rgba(255, 255, 255, 0.2));
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.layer1, .layer2, .layer3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .layer1 {
+    z-index: 1; /* 图层1位于上方 */
+  }
+  
+  .layer2 {
+    z-index: 2; /* 图层2位于上方 */
+  }
+
+  .layer3 {
+    z-index: 3; /* 图层3位于上方 */
+  }
+
+  .swiper-text{
+    color:white;
+    font-size: large;
+    font-family: "Oppo Sans Regular", Arial, sans-serif;
+    text-align: left;
+  }
+  
+  .swiper-slide .size-1{
+    font-size: 64px;
+  }
+
+  .swiper-slide .size-2{
+    font-size: 40px;
+  }
+
+  .text-box{
+    position:absolute;
+    text-align: left;
+    left:67px;
+    top:51px;
+  }
+  
+  .text-box .swiper-text {
+    display: block;
+  }
+
+
+
+  .home-page-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /* Optional: Aligns items to the start of the container */
+    margin: 0; /* This will set margin on all sides to 0 */
+    width: 1920px; /* Ensures the container spans the full viewport width */
+    padding: 0; /* Sets padding on all sides to 0 */
+}
+
+  .home-page-container div {
+    margin: 5px 0; /* Optional: Adds some space between each div */
+    padding: 10px;
+  }
+
+
+  .homePageBackground{
+    position: absolute;
+    left: 51vw;
+  }
+
+  .homePageIntro {
+    width: 60%; /* Set the width to 60% of the parent container */
+    margin: 0 auto; /* Center the div horizontally */
+    padding: 20px; /* Add padding inside the div */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    background-color: #f9f9f9; /* Optional: Add a background color */
+    border-radius: 8px; /* Optional: Add rounded corners */
+  }
+  

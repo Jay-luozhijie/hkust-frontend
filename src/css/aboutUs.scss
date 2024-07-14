@@ -1,0 +1,189 @@
+.aboutus-wrap {
+  width: 100%;
+  background: url('../img/about-us-bg.png') no-repeat left top;
+  background-size: contain;
+  display: flex;
+  overflow-x: hidden;
+  padding-top: 90px;
+  
+  .tab-container {
+    width: 342px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 55px;
+    
+    .logo img {
+      width: 180px;
+      height: auto;
+    }
+    
+    .tab-list {
+      font-family: 'OPPO Sans', sans-serif; // 设置字体
+      .tab-item {
+        position: relative; // 为伪元素定位做准备
+        color: #000000;
+        font-size: 21.6px;
+        height: 58.5px; // 可调整为适当的高度以适应新的 line-height
+        line-height: 58.5px; // 调整为需要的值以适应文本间隔
+        width: 144px; // 根据需要调整
+        text-align: center;
+        cursor: pointer;
+        padding-top: 5px; // 增加上部间隔
+        padding-bottom: 3px; // 增加下部间隔
+    
+        &.active {
+          &::after {
+            content: ''; // 必须有，即使是空字符串
+            position: absolute;
+            left: 50%; // 从中间开始
+            bottom: 0; // 定位到底部
+            width: 180px; // 伪元素的宽度
+            height: 1px; // 伪元素的高度
+            background-color: #9A1E23; // 边框颜色
+            transform: translateX(-50%); // 中心对齐
+          }
+          border-bottom: none; // 移除原本的border-bottom
+        }
+      }
+    }
+    
+  }
+
+  .member-container {
+    flex: 1;
+    
+    .header {
+      color: #9A1E23;
+      font-size: 57.6px;
+      margin-bottom: 67.5px;
+      font-family: 'OPPO Sans';
+      font-weight: 700;
+    }
+    
+    .title {
+      font-size: 36px;
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+      font-family: 'OPPO Sans';
+      margin-bottom: 34.2px;
+      &::before {
+        content: "";
+        width: 7.2px;
+        height: 49.5px;
+        margin-right: 22px;
+        background: #C90;
+      }
+    }
+    
+    .association-member-list {
+      display: flex;
+      flex-wrap: wrap;
+
+      .member-item {
+        width: 260px;
+        margin-bottom: 45px;
+
+        .avatar-outer {
+          width: 193px;
+          height: 265px;          
+          background: #D9D9D9;
+          margin-bottom: 9px;
+
+          img {
+            width: 100%; // 确保图片填满容器
+            height: auto;
+            display: block;
+          }
+        }
+        
+        .name {
+          color: #036;
+          font-size: 21.6px;
+          line-height: 36px;
+          border-bottom: 3px solid #C90;
+          width: 126px;
+        }
+
+        .job {
+          color: #036;
+          font-size: 21.6px;
+          line-height: 36px;
+          font-family: 'OPPO Sans';
+        }
+
+        .introduce1 {
+          font-size: 17px;
+          line-height: 27px;
+          margin-top: 10px;
+          max-width: 200px;
+          font-family: 'OPPO Sans';
+          line-height: 20px;
+
+          &:not(:last-child) {
+            margin-bottom: 0; // 移除除最后一个介绍外的底部边距
+          }
+        }
+
+        .introduce2 {
+          font-size: 17px;
+          line-height: 27px;
+          max-width: 200px;
+          font-family: 'OPPO Sans';
+          line-height: 20px;
+
+          &:not(:last-child) {
+            margin-bottom: 0; // 移除除最后一个介绍外的底部边距
+          }
+        }
+      }
+    }
+
+    .previous-member-list {
+      margin-left: 20px;
+      .member-item {
+        .stage {
+          color: #003366;
+          font-size: 32.4px;
+          display: flex;
+          font-family: 'OPPO Sans';
+          align-items: center;
+          &::before {
+            content: "";
+            width: 16.2px;
+            height: 16.2px;
+            background: #003366;
+            margin-right: 32px;
+          }
+        }
+        .introduce {
+          font-size: 21.6px;
+          color: #000000;
+          margin: 27px 45px;
+          font-family: 'OPPO Sans';
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .aboutus-wrap {
+    justify-content: center; // 将整体内容居中对齐
+  }
+}
+
+.member-info {
+  .name {
+    white-space: nowrap; // 防止文本换行
+    max-width: 150px; 
+    font-family: 'OPPO Sans';
+  }
+}
+
+.past-members-section {
+  margin-top: 60px;
+  padding-bottom: 200px;
+}
