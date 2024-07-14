@@ -17,33 +17,42 @@ function PartnerScreen() {
     return <div>Loading or error...</div>; // 或者其他错误处理
   }
 
-  return (
-<div className="partner">
-  <div className="title" style={{ marginTop: '30px' }}>{t('partnerTitle')}</div>
-  <div className="m-test-wrap">
-    <Swiper
-      spaceBetween={50}
-      slidesPerView={3.5}
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper) => console.log(swiper)}
-    >
-      {partners.map((partner, index) => (
-        <SwiperSlide key={index}>
-          <div className="slide-item">
-            <div className="img">
-              <img src={[tiannengLogo, MBALogo, xianggangLogo][index % 3]} alt={`${partner.name} Logo`} />
-            </div>
-            {/* 应用条件样式 */}
-            <h2 style={i18n.language === 'en' ? { fontSize: '28px' } : {}}>{partner.name}</h2>
-            <p style={i18n.language === 'en' ? { fontSize: '16px' } : {}}>{partner.description}</p>
-            <div className="bottom-arrow">→<br/>-</div>
-          </div>
-        </SwiperSlide>
-      ))}
-    </Swiper>
-  </div>
-</div>
+  const getTextStyle = () => {
+    if (i18n.language === 'en') {
+      return { fontSize: '28px' };
+    } else {
+      return { whiteSpace: 'nowrap' };
+    }
+  };
 
+  return (
+	<div className="partner">
+		<div className="title" style={{ marginTop: '30px' }}>{t('partnerTitle')}</div>
+		<div className="m-test-wrap">
+			<Swiper
+			spaceBetween={50}
+			slidesPerView={3.5}
+			onSlideChange={() => console.log('slide change')}
+			onSwiper={(swiper) => console.log(swiper)}
+			>
+			{partners.map((partner, index) => (
+				<SwiperSlide key={index}>
+				<div className="slide-item">
+					<div className="img">
+					<img src={[tiannengLogo, MBALogo, xianggangLogo][index % 3]} alt={`${partner.name} Logo`} />
+					</div>
+					{/* 应用条件样式 */}
+					<h2 style={getTextStyle()}>{partner.name}</h2>
+					<p style={i18n.language === 'en' ? { fontSize: '16px' } : {}}>{partner.description}</p>
+					<a href={partner.link} target="_blank" rel="noopener noreferrer">
+						<div className="bottom-arrow">→<br/>-</div>
+					</a>
+				</div>
+				</SwiperSlide>
+			))}
+			</Swiper>
+		</div>
+	</div>
   );
 }
 
