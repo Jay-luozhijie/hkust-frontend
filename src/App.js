@@ -28,6 +28,8 @@ import SocialAdvisorScreen from './screens/SocialAdvisorScreen'
 import AboutUsScreen from './screens/AboutUsScreen'
 import IntroduceScreen from './screens/IntroduceScreen'
 import CommunityNewsDetailScreen from './screens/CommunityNewsDetailScreen.js';
+import TradingCompetition from './screens/TradingCompetitionScreen.js';
+import './css/App.scss';
 
 axios.defaults.baseURL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000';
 function App() {
@@ -35,11 +37,10 @@ function App() {
   return (
       <BrowserRouter>
         <AuthProvider>
-            <div className="grid-container">
-              <main>
+            <div className="app-container">
+              
                 <Navbar></Navbar>
-                <div style={{ minHeight: "0", paddingBottom: "100px"}}>
-                  
+                <main className="main-content">
                     <Routes>
                       <Route path = "/" element={<HomeScreen/>}></Route>
                       <Route path = "/signin" element={<SigninScreen/>}></Route>
@@ -49,6 +50,7 @@ function App() {
                       <Route path = "/communityNews/:id" element={<CommunityNewsDetailScreen/>}></Route>
                       <Route path = "/SocialAdvisor" element={<SocialAdvisorScreen/>}></Route>
                       <Route path = "/AboutUs" element={<AboutUsScreen/>}></Route>
+                      <Route path = "/TradingCompetition" element={<TradingCompetition/>}></Route> 
                       <Route path = "/Introduce" element={<IntroduceScreen/>}></Route>
                       <Route path="/Alumni" element={<Alumni />}>
                         <Route path = "/Alumni/Beijing" element={<Beijing></Beijing>}></Route>
@@ -64,7 +66,7 @@ function App() {
                       } />
                     </Routes>
                   
-                </div>
+                
                
                 <Footer></Footer>
               </main>

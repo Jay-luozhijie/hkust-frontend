@@ -24,12 +24,14 @@
 }
 
 .homeSwiper .swiper-pagination-bullet{
-    width: 16px;
-    height: 16px;
-    border: 2px solid #fff;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #fff;
     opacity: 1;
     background-color: transparent;
     z-index:3;
+    margin: 0 15px !important;
+    transform: translateY(-30px);
 }
 
 .homeSwiper .swiper-pagination-bullet-active{
@@ -77,8 +79,7 @@
     font-family: "Oppo Sans Regular", Arial, sans-serif;
     text-align: left;
   }
-
-
+  
   .swiper-slide .size-1{
     font-size: 64px;
   }
@@ -128,3 +129,4 @@
     background-color: #f9f9f9; /* Optional: Add a background color */
     border-radius: 8px; /* Optional: Add rounded corners */
   }
+  

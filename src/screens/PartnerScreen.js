@@ -8,7 +8,7 @@ import 'swiper/css';
 function PartnerScreen() {
   return (
   <div className="partner">
-  	<div className="title">合作伙伴</div>
+  	<div className="title" style={{ marginTop: '30px' }}>合作伙伴</div>
 	<div className="m-test-wrap">
 	 <Swiper
 	      spaceBetween={50}
@@ -35,7 +35,7 @@ function PartnerScreen() {
 			  <div className="img">
 			  	<img src={MBALogo} alt="Quant Society Logo" style={{}} />
 			  </div>
-				  <h2>香港工商管理硕士协会</h2>
+			  	<h2 style={{ whiteSpace: 'nowrap' }}>香港工商管理硕士协会</h2>
 				  <p>HKMBA协会成立于2014年，由香港八所大学的杰出MBA学生和校友，以及多位资深教授和商界名人作为指导顾问共同创立。作为一个非营利组织，香港MBA研究院将为MBA学生、校友和商界人士创造广阔的发展空间，并提供一个资源共享平台。</p>
 				  <div className="bottom-arrow">
 				  		→<br/>-	
@@ -75,7 +75,7 @@ function PartnerScreen() {
 		  			<div className="img">
 		  			  	<img src={MBALogo} alt="Quant Society Logo" style={{}} />
 		  			</div>
-		  			<h2>香港工商管理硕士协会</h2>
+		  			<h2 style={{ whiteSpace: 'nowrap' }}>香港工商管理硕士协会</h2>
 		  			<p>HKMBA协会成立于2014年，由香港八所大学的杰出MBA学生和校友，以及多位资深教授和商界名人作为指导顾问共同创立。作为一个非营利组织，香港MBA研究院将为MBA学生、校友和商界人士创造广阔的发展空间，并提供一个资源共享平台。</p>
 		  				<div className="bottom-arrow">
 		  					→<br/>-	

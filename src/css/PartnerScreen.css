@@ -6,7 +6,7 @@
 	padding-left: 100px;
 }
 .partner .m-test-wrap{
-	margin-top: 97px;
+	margin-top: 70px;
 }
 .partner .slide-item{
 position: relative;
@@ -66,3 +66,7 @@ position: relative;
 	line-height: 68px;
 }
 
+.partner {
+	padding-bottom: 70px; 
+  }
+  

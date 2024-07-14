@@ -22,7 +22,7 @@ background-size: 534px 646px;
 }
 .introduce .banner .h1{
 	color: #9A1E23;
-	font-family: "Abhaya Libre Medium";
+	font-family: "OPPO Sans";
 	font-size: 96px;
 	font-style: normal;
 	font-weight: 500;
@@ -31,15 +31,16 @@ background-size: 534px 646px;
 }
 .introduce .banner .label{
 	color: #252525;
-	font-family: "Abhaya Libre Medium";
+	font-family: "OPPO Sans";
 	font-size: 40px;
 	font-style: normal;
 	font-weight: 500;
 	line-height: normal;
+	white-space: nowrap;
 }
 .introduce .banner .info{
 	color: #9A1E23;
-	font-family: "Abhaya Libre Medium";
+	font-family: "OPPO Sans";
 	font-size: 48px;
 	font-style: normal;
 	font-weight: 500;
@@ -52,7 +53,7 @@ background-size: 534px 646px;
 }
 .services .title{
 	color: #9A1E23;
-	font-family: "Abhaya Libre Medium";
+	font-family: "OPPO Sans";
 	font-size: 64px;
 	font-style: normal;
 	font-weight: 500;
@@ -70,7 +71,7 @@ background-size: 534px 646px;
 }
 .services .services-item .big-title{
 	color: #C90;
-	font-family: "Abhaya Libre Medium";
+	font-family: "OPPO Sans";
 	font-size: 40px;
 	font-weight: 500;
 	position: relative;
@@ -103,17 +104,18 @@ height: 95px;
 }
 .services .services-item .ul li{
 	color: #252525;
-	font-family: "Abhaya Libre Medium";
+	font-family: "OPPO Sans";
 	font-size: 24px;
 	font-style: normal;
 	font-weight: 500;
 	line-height: 42.287px;
+	white-space: nowrap;
 	
 }
 .services .services-item  .small-title{
 	color: #036;
-	
-	font-family: "Abhaya Libre Medium";
+	white-space: nowrap;
+	font-family: "OPPO Sans";
 	font-size: 32px;
 	font-style: normal;
 	font-weight: 500;
@@ -140,7 +142,7 @@ height: 95px;
 			position: relative;
 			.title{
 				color: #9A1E23;
-				font-family: "Abhaya Libre Medium";
+				font-family: "OPPO Sans";
 				font-size: 32px;
 				font-style: normal;
 				font-weight: 500;
@@ -150,7 +152,7 @@ height: 95px;
 			.text{
 				margin-top: 23px;
 				color: #000;
-				font-family: "Abhaya Libre Medium";
+				font-family: "OPPO Sans";
 				font-size: 20px;
 				font-style: normal;
 				font-weight: 500;
@@ -170,14 +172,16 @@ height: 95px;
 	margin-top: 203px;
 	.title{
 		color: #9A1E23;
-		font-family: "Abhaya Libre Medium";
+		font-family: "OPPO Sans";
 		font-size: 64px;
 		font-style: normal;
 		font-weight: 500;
 		line-height: normal;
+		margin-left: 120px;
 	}
 	.time-line{
 		display: flex;
+		margin-left: 80px;
 		.time{
 			margin-top: 39px;
 			width: 200px;
@@ -194,6 +198,7 @@ height: 95px;
 			justify-content: center;
 			align-items: center;
 			text-align: center;
+			margin-left: 40px;
 			cursor: pointer;
 			&.active{
 				background: #C95C5C;
@@ -241,7 +246,7 @@ height: 95px;
 				position: absolute;
 				.step__title{
 					color: #000;
-					font-family: "Abhaya Libre Medium";
+					font-family: "OPPO Sans";
 					font-size: 24px;
 					// width: 200px;
 					font-style: normal;
@@ -250,7 +255,7 @@ height: 95px;
 				}
 				.step__small_title{
 					color: rgba(0, 0, 0, 0.60);
-					font-family: "Abhaya Libre Medium";
+					font-family: "OPPO Sans";
 					font-size: 20px;
 					font-style: normal;
 					font-weight: 500;
@@ -262,7 +267,7 @@ height: 95px;
 				.step__description{
 					color: rgba(154, 30, 35, 0.58);
 					text-align: center;
-					font-family: "Abhaya Libre Medium";
+					font-family: "OPPO Sans";
 					font-size: 24px;
 					font-style: normal;
 					font-weight: 500;
@@ -409,3 +414,37 @@ height: 95px;
 		}
 	}
 }
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; // 确保内容在容器中左对齐
+
+    .step__top {
+        margin-top: 20px; // 根据需要调整这个值，使文字下移
+        text-align: left; // 文字左对齐
+		padding-left: 55px;
+
+        .step__title,
+        .step__small_title {
+            text-align: left; // 确保标题和小标题都是左对齐
+        }
+    }
+
+    .step__bottom {
+        text-align: left;
+		padding-left: 40px; 
+    }
+}
+
+.custom-row-gutter {
+    --bs-gutter-x: 1.5rem !important;
+}
+
+@media (max-width: 767px) { /* Bootstrap的sm断点以下 */
+	.px-4 {
+	  padding-left: 7.5rem !important; /* 移除左内边距 */
+	  padding-right: 10rem !important; /* 移除右内边距 */
+	}
+  }
+  

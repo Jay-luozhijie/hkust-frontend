@@ -16,11 +16,11 @@ function SocialAdvisorScreen() {
   return (
    <div className="SocialAdvisor">
 		<div className="title">
-			社会顾问
+			社团顾问
 		</div>
 		  <Row>
 		    {previousMemberData.map((item) => (
-		      <Col key={item.id} xs={12} sm={6} md={4} lg={4} xl={4} xxl={4}>
+		      <Col key={item.id} xs={12} sm={12} md={6} lg={4} xl={4} xxl={4}>
 		       <div className="lists">
 				 <div className="lists-item">
 					 <img src={item.img}/>
