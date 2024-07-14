@@ -1,8 +1,27 @@
 import React from 'react';
-import Background from '../../img/AlumniPageBackground.png'
-import ShenzhenBG from '../../img/Shenzhen.png'
+import { useTranslation } from 'react-i18next';
+import Background from '../../img/AlumniPageBackground.png';
+import ShenzhenBG from '../../img/Shenzhen.png';
 
 const Shenzhen = () => {
+  const { t, i18n } = useTranslation();
+
+  const getTranslatedText = (zhText, enText1, enText2, tcText) => {
+    if (i18n.language === 'zh') {
+      return zhText;
+    } else if (i18n.language === 'tc') {
+      return tcText;
+    } else {
+      return (
+        <>
+          {enText1}
+          <br />
+          {enText2}
+        </>
+      );
+    }
+  };
+
   return (
     <div style={{
       position: 'relative',
@@ -52,7 +71,7 @@ const Shenzhen = () => {
             borderRadius: '20px',
           }}
           src={ShenzhenBG}
-          alt="Scenic view of Hong Kong"
+          alt="Scenic view of Shenzhen"
         />
         <div style={{
           display: 'flex',
@@ -65,8 +84,9 @@ const Shenzhen = () => {
             fontFamily: 'OPPO Sans',
             fontWeight: '500',
             wordWrap: 'break-word',
+            whiteSpace: i18n.language === 'en' ? 'nowrap' : 'normal'
           }}>
-            深圳校友会
+            {getTranslatedText('深圳校友会', 'Shenzhen Alumni Association', '', '深圳校友會')}
           </div>
           <div style={{
             color: 'black',
@@ -76,7 +96,7 @@ const Shenzhen = () => {
             wordWrap: 'break-word',
             whiteSpace: 'nowrap', // 防止文本换行
           }}>
-            深圳校友会成立于2024年7月1日, 现任主要负责人为李思远先生,
+            {getTranslatedText('深圳校友会成立于2024年7月1日, 现任主要负责人为李思远先生,', 'The Shenzhen Alumni Association was established on July 1, 2024,', 'currently headed by Mr. Li Siyuan,', '深圳校友會成立於2024年7月1日，現任主要負責人為李思遠先生,')}
           </div>
           <div style={{
             color: 'black',
@@ -85,7 +105,7 @@ const Shenzhen = () => {
             fontWeight: '400',
             wordWrap: 'break-word',
           }}>
-            联系邮箱为lisiyuansven@foxmail.com.
+            {getTranslatedText('联系邮箱为lisiyuansven@foxmail.com.', 'Contact email is lisiyuansven@foxmail.com.', '', '聯繫郵箱為lisiyuansven@foxmail.com.')}
           </div>
         </div>
       </div>

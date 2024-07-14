@@ -6,9 +6,11 @@ import { ReactComponent as Earth } from '../img/globe-americas.svg';
 import { ReactComponent as Triangle } from '../img/caret-down-fill.svg';
 import {useState} from 'react';
 import { NavLink } from 'react-router-dom';
+import { useLanguage } from '../components/LanguageContext';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Navbar() {
+    const { changeLanguage } = useLanguage();
     const [dropdowns, setDropdowns] = useState({
         languageIsOpen: false,
         alumniIsOpen: false,
@@ -81,11 +83,11 @@ function Navbar() {
                                 <Triangle style={{ color: '#9A1E23', marginRight: '30px' }} />
                             </div>
                             {dropdowns.languageIsOpen && (
-                                <div className="dropdown-menu">
-                                    <NavLink className="dropdown-item" to="/language/en">English</NavLink>
-                                    <NavLink className="dropdown-item" to="/language/cn">繁體中文</NavLink>
-                                    <NavLink className="dropdown-item" to="/language/ZH_cn">简体中文</NavLink>
-                                </div>
+                            <div className="dropdown-menu">
+                                <div className="dropdown-item" onClick={() => changeLanguage('en')}>English</div>
+                                <div className="dropdown-item" onClick={() => changeLanguage('tc')}>繁體中文</div>
+                                <div className="dropdown-item" onClick={() => changeLanguage('zh')}>简体中文</div>
+                            </div>
                             )}
                             </div>
                         </div>

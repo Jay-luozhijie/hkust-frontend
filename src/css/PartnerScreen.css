@@ -70,3 +70,11 @@ position: relative;
 	padding-bottom: 70px; 
   }
   
+  .slide-item p {
+	max-height: 330px; /* 或者你需要的特定高度 */
+	overflow-y: auto; /* 垂直方向上超出内容显示滚动条 */
+  }
+  
+  .slide-item p::-webkit-scrollbar {
+	width: 6px; /* 设置滚动条宽度 */
+  }
