@@ -1,0 +1,49 @@
+.adminPage{
+    margin-left:40px;
+}
+
+.btn-group {
+    display: flex;
+    gap: 30px; /* Adjust as needed */
+}
+
+.btn {
+    padding: 10px 20px; /* Adjust as needed */
+    margin:10px 30px;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.btn-primary.active {
+    background-color: darkgrey; /* Adjust to the active color you want */
+}
+
+/* Optional: Add hover effect */
+.btn:hover {
+    background-color: darkgrey;
+}
+
+
+.newsTitle,
+.imageUrl {
+    min-width: 500px; /* Adjust as needed */
+    min-height: 40px; /* Adjust as needed */
+    margin: 15px 0px; /* Adjust as needed */
+    margin-right:20px;
+    padding: 5px; /* Optional: to add some padding inside the input */
+    font-size: 16px; /* Optional: adjust font size */
+    border: 2px solid #ccc; /* Optional: add border */
+    border-radius: 4px; /* Optional: add border radius */
+}
+
+.content {
+    min-width: 200px; /* Adjust as needed */
+    min-height: 40px; /* Adjust as needed */
+    margin: 30px 30px; /* Adjust as needed */
+    padding: 5px; /* Optional: to add some padding inside the input */
+    font-size: 16px; /* Optional: adjust font size */
+    border-radius: 4px; /* Optio*/
+}

@@ -21,16 +21,18 @@ import NewsItem from '../components/NewsItem';
 
 
 const activityData = [
-  { id: 1, title: '科大打两局哈市离开的3423', time: '24-07-11 14:20', imgSrc: Rectangle91 },
-  { id: 2, title: '科大打两局哈市离开的3423', time: '24-07-11 14:20', imgSrc: Rectangle92 },
-  { id: 3, title: '科大打两局哈市离开的3423', time: '24-07-11 14:20', imgSrc: Rectangle93 },
-  { id: 4, title: '科大打两局哈市离开的3423', time: '24-07-11 14:20', imgSrc: Rectangle91 },
-  { id: 5, title: '科大打两局哈市离开的3423', time: '24-07-11 14:20', imgSrc: Rectangle92 }
+  { id: 1, title: '科大学者戴希教授荣获「陈嘉庚科学奖」...', time: '24-07-11 14:20', imgSrc: Rectangle91 },
+  { id: 2, title: '科大学者戴希教授荣获「陈嘉庚科学奖」...', time: '24-07-11 14:20', imgSrc: Rectangle92 },
+  { id: 3, title: '科大学者戴希教授荣获「陈嘉庚科学奖」...', time: '24-07-11 14:20', imgSrc: Rectangle93 },
+  { id: 4, title: '科大学者戴希教授荣获「陈嘉庚科学奖」...', time: '24-07-11 14:20', imgSrc: Rectangle91 },
+  { id: 5, title: '科大学者戴希教授荣获「陈嘉庚科学奖」...', time: '24-07-11 14:20', imgSrc: Rectangle92 }
 ]
 
 function CommunityNewsScreen() {
   const [newsData, setNewsData] = useState([]);
+  // const [activityData, setActivityData] = useState([]);
   const [pageNumber, setPageNumber] = useState(1);
+  const [pageNumberAlumni, setPageNumberAlumni] = useState(1);
   useEffect(() => {
     fetchNewsData(pageNumber);
   }, [pageNumber]);
@@ -55,6 +57,15 @@ function CommunityNewsScreen() {
     setPageNumber(pageNumber + 1);
   };
 
+  const handlePrevClickAlumniAct = () => {
+    if (pageNumber > 1) {
+      setPageNumberAlumni(pageNumberAlumni - 1);
+    }
+  };
+
+  const handleNextClickAlumniAct = () => {
+    setPageNumberAlumni(pageNumberAlumni + 1);
+  };
 
   return (
     <div className="community-news-wrap">
@@ -123,8 +134,8 @@ function CommunityNewsScreen() {
         <div className='header'>
           <span className='title'>校友活动</span>
           <div className='page-btns'>
-            <div className='perv-btn'> <img src={Vector48} className='image'/></div>
-            <div className='next-btn'> <img src={Vector47} className='image'/></div>
+          <div className='perv-btn' onClick={handlePrevClickAlumniAct}> <img src={Vector48} className='image'/></div>
+          <div className='next-btn'onClick={handleNextClickAlumniAct}> <img src={Vector47} className='image'/></div>
           </div>
         </div>
         <div className='activity-list'>

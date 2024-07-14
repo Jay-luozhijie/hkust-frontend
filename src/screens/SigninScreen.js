@@ -32,7 +32,7 @@ export default function SigninScreen(props){
 
     return (
         <div>
-            <form className="form" onSubmit={submitHandler}>
+            <form className="form" onSubmit={submitHandler} style={{height:"781px"}}>
                 <div>
                     <h1>Sign In</h1>
                 </div>
