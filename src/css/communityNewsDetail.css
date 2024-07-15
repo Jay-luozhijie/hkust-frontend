@@ -1,0 +1,46 @@
+
+
+/* .newsTitle{
+
+} */
+
+.newsContainer {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    margin:0;
+    padding:0;
+  }
+
+  .newsTitleContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .newsTitle {
+    margin-top: 69px; /* Remove default margin */
+    margin-bottom:0px;
+    font-family: 'OPPO Sans'; 
+    font-size: 40px; 
+  }
+
+  .newsDate{
+    margin-top:17px;
+    color:#A5A5A5;
+    font-family: 'OPPO Sans';
+
+  }
+
+  .newsContent {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: start; /* Center items horizontally */
+    margin: 96px 323px 122px; /* Set margins (top, left/right, bottom) */
+    max-width: calc(100% - 646px); /* Optional: Ensure it doesn't exceed container width */
+  }
+  
+  .newsContent > * {
+    width: 100%; /* Make child elements take full width */
+    text-align: start; /* Center text inside child elements */
+  }

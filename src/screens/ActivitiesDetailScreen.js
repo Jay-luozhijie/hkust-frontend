@@ -8,7 +8,7 @@ import styles from "../css/communityNewsDetail.css"
 
 
 
-export default function CommunityNewsDetailScreen(){
+export default function ActivitiesDetailScreen(){
     const {id} = useParams();
     const [news, setNews] = useState("");
     const [loading, setLoading] = useState(true);
@@ -19,7 +19,8 @@ export default function CommunityNewsDetailScreen(){
     useEffect(()=>{
         const fetchNews = async () =>{
             try{
-                const response = await axios.get(`/api/users/newsDetail?id=${id}`);
+                console.log(id)
+                const response = await axios.get(`/api/users/activitiesDetail?id=${id}`);
                 setNews(response.data);
                 const dateString = new Date(response.data.updatedAt);
                 setDate(dateString.toISOString().split('T')[0]);

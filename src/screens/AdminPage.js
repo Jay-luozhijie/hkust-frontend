@@ -5,8 +5,7 @@ import MdEditor from 'react-markdown-editor-lite';
 import axios from 'axios';
 import { useState } from 'react';
 import 'react-markdown-editor-lite/lib/index.css';
-import NewsSelect from '../components/NewsSelect';
-import adminPage from '../css/AdminPage.css'
+import '../css/AdminPage.css'
 
 const COMMUNITY_NEWS = 0
 const ALUMNI_ACTIVITIES = 1
@@ -92,7 +91,7 @@ const AdminPage = () => {
 
 
       <div class="content">
-        <input class="newsTitle"
+        <input class="inputNewsTitle"
           type="text"
           value={title || ''}
           onChange={handleTitleChange}
