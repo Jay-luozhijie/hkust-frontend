@@ -41,6 +41,7 @@ a.nav-link {
 
 .tp-header-height {
     height: 149px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .tab-box {
@@ -50,6 +51,8 @@ a.nav-link {
 .tab-box-item {
     margin-left: 50px;
     width: calc(100% - 50px);
+    max-width: 100vw;
+    max-height: 100vh;
 }
 
 .nav-bar {
@@ -114,8 +117,8 @@ a.nav-link {
 
     .Logo, .Title {
         border-right: 1px solid #003366;
-        margin-right: 0px;
-        padding-right: 0px;
+        margin-right: 5px;
+        padding-right: 5px;
     }
 
     .tab-box-item {
@@ -145,6 +148,7 @@ a.nav-link {
 .nav-link-container:hover .dropdown-menu {
     display: block; /* 悬停显示 */
     background-color: #C95C5C; /* 确保背景色一致 */
+    z-index: 2000;
 }
 
 .nav-link-container .dropdown-menu .dropdown-item {
@@ -162,4 +166,131 @@ a.nav-link {
 .nav-link-container .dropdown-menu .dropdown-item:active {
     background-color: white;; /* 被点击时的背景颜色 */
     color: #9A1E23; /* 被点击时的字体颜色 */
+}
+
+.menubtn {
+    width: 20px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+    position: relative; /* 增加定位属性 */
+}
+
+.menubtn span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #9A1E23;
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100vh; /* 使用视口高度 */
+    background-color: white;
+    transform: translateX(100%); /* 初始隐藏在视口右侧外 */
+    transition: transform 0.3s ease; /* 动画平滑过渡 */
+    z-index: 1; /* 确保在最顶层 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.side-menu.open {
+    transform: translateX(0); /* 菜单打开时移动到视口内 */
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 200px;
+    height: 100%;
+    background-color: white;
+    transition: right 0.3s ease;
+    z-index: 1000;
+}
+
+.mobile-menu.open {
+    right: 0;
+}
+
+.mobile-nav {
+    padding: 20px;
+}
+
+.mobile-nav-link-container {
+    margin-bottom: 10px;
+}
+
+.mobile-nav-link {
+    display: flex;
+    align-items: center;
+    color: #9A1E23;
+    font-family: "OPPO Sans", sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.mobile-nav-link-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.mobile-dropdown-menu {
+    background-color: #f9f9f9;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-left: 3px solid #9A1E23;
+    padding: 5px 0;
+}
+
+.mobile-dropdown-item {
+    display: block;
+    padding: 8px 20px;
+    color: #9A1E23;
+    text-decoration: none;
+    font-family: "OPPO Sans", sans-serif;
+    font-weight: 500;
+}
+
+.about-dropdown-icon {
+    transform: rotate(-90deg); /* 初始角度 */
+    transition: transform 0.3s ease;
+}
+
+.about-dropdown-icon.rotate {
+    transform: rotate(0deg);
+}
+
+.language-dropdown-icon {
+    display: inline-block;  /* Ensures that transform can be applied */
+    transform: rotate(-90deg);  /* Default position */
+    transition: transform 0.3s ease;  /* Smooth transition */
+}
+
+.rotate {
+    transform: rotate(0deg);  /* Rotate the icon when active */
+}
+
+.alumni-dropdown-icon {
+    display: inline-block;  /* 确保可以应用转换 */
+    transform: rotate(-90deg);  /* 默认位置 */
+    transition: transform 0.3s ease;  /* 平滑的转换动画 */
+}
+
+.about-dropdown-icon.rotate, .language-dropdown-icon.rotate, .alumni-dropdown-icon.rotate {
+    transform: rotate(0deg);
+}
+
+.tp-header-height {
+    position: fixed; /* 设置位置固定 */
+    top: 0;          /* 距顶部0距离 */
+    width: 100%;     /* 宽度设为100%，覆盖整个视口宽度 */
+    z-index: 500;   /* 设置一个较高的z-index值确保导航栏在其他内容之上 */
 }

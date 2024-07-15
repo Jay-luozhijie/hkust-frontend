@@ -1,0 +1,139 @@
+{
+    "socialAdvisorTitle": "社團顧問",
+    "members": [
+      {
+        "name": "陳卡你 教授",
+        "job": "協會理事長",
+        "introduce": "陳卡你教授目前擔任香港科技大學金融數學碩士課程主任以及風險管理與商業智能課程聯合主任。他於1994年獲得紐約市哥倫比亞大學統計學博士學位，並於1990年和1987年分別獲得北京大學的理學碩士和理學學士學位。陳卡你教授在金融數學領域擁有數十年的研究和教學經驗。"
+      },
+      {
+        "name": "汪洋 教授",
+        "job": "榮譽理事",
+        "introduce": "汪洋教授自2020年以來一直擔任香港科技大學副校長，國際知名的學者，研究領域廣泛。汪洋教授與陳卡你教授和李北先生共同簽署了校企合作備忘錄。他於1994年獲得紐約市哥倫比亞大學統計學博士學位，並於1990年和1987年分別獲得北京大學的理學碩士和理學學士學位。陳卡你教授在金融數學領域擁有數十年的研究和教學經驗。"
+      },
+      {
+        "name": "李北 先生",
+        "job": "協會監事長",
+        "introduce": "李北先生，天龍證券股份有限公司執行總裁，香港MBA協會會長。李北先生在證券行業擁有多年的經驗，並積累了豐富的人脈資源，一直以來與香港科技大學保持著長期且深入的關係。2023年，他代表的富通香港有限公司成功與香港科技大學簽署了校企合作諒解備忘錄。他於1994年獲得紐約市哥倫比亞大學統計學博士學位，並於1990年和1987年分別獲得北京大學的理學碩士和理學學士學位。陳卡你教授在金融數學領域擁有數十年的研究和教學經驗。"
+      }
+    ],
+    "partnerTitle": "合作夥伴",
+    "partners": [
+      {
+        "name": "天龍證券",
+        "description": "天龍證券有限公司（簡稱「TLS」）於2020年8月在香港註冊成立，是天龍金融集團成員之一，持有第4類（證券諮詢）及第9類（資產管理）專業牌照。天龍證券致力於完善產品組合及服務，投資範圍覆蓋大中華地區，為高淨值客戶、家族辦公室及機構客戶提供全方位的投資管理服務，為他們量身定制方案，幫助他們準確把握信息密集型市場的脈搏，把握投資機遇，實現財富增值。",
+        "link": "https://www.tianlongsecurities.com/zh"
+      },
+      {
+        "name": "香港工商管理碩士協會",
+        "description": "HKMBA協會成立於2014年，由香港八所大學的傑出MBA學生和校友，以及多位資深教授和商界名人作為指導顧問共同創立。作為一個非營利組織，香港MBA研究院將為MBA學生、校友和商界人士創造廣闊的發展空間，並提供一個資源共享平台。",
+        "link": "https://mba.org.hk/"
+      },
+      {
+        "name": "香港資管通",
+        "description": "香港資管通為投資經理提供相應的項目諮詢，力爭做好資金與項目的有效溝通互動平台。「港科資管通領航基金」28日在香港成立，將致力於推動高校科研成果轉化，助力香港國際創科中心建設。港科資管通領航基金項目核心投研團隊均來自於海外常春藤及國內頂尖名校，均有豐富的量化基金投資及管理經驗，對金融市場有著深刻的理解，立志於為客戶帶來長期、穩定、滿意的投資回報。",
+        "link": "https://mp.weixin.qq.com/s/SanNilboYaAZuS6F11ih2Q"
+      },
+      {
+        "name": "天龍證券",
+        "description": "天龍證券有限公司（簡稱「TLS」）於2020年8月在香港註冊成立，是天龍金融集團成員之一，持有第4類（證券諮詢）及第9類（資產管理）專業牌照。天龍證券致力於完善產品組合及服務，投資範圍覆蓋大中華地區，為高淨值客戶、家族辦公室及機構客戶提供全方位的投資管理服務，為他們量身定制方案，幫助他們準確把握信息密集型市場的脈搏，把握投資機遇，實現財富增值。",
+        "link": "https://www.tianlongsecurities.com/zh"
+      },
+      {
+        "name": "香港工商管理碩士協會",
+        "description": "HKMBA協會成立於2014年，由香港八所大學的傑出MBA學生和校友，以及多位資深教授和商界名人作為指導顧問共同創立。作為一個非營利組織，香港MBA研究院將為MBA學生、校友和商界人士創造廣闊的發展空間，並提供一個資源共享平台。",
+        "link": "https://mba.org.hk/"
+      }
+    ],
+    "introduceTitle": "港科寬圖",
+    "hkustQuantTradingSociety": "HKUST Quant Trading Society",
+    "empowerFutureQuantLeaders": "通過知識傳遞、人脈拓展和競賽實踐，賦能未來量化金融領袖",
+    "missionTitle": "使命",
+    "missionText": "橋接學校與企業，通過學術創新推動量化領域的實際應用，構建國際合作與交流的平台，培養具有前瞻性和創新能力的量化專業人才。",
+    "visionTitle": "願景",
+    "visionText": "成為塑造全球量化交易未來領袖的引擎，通過建立一個開放的全球知識共享網絡，推動行業的革新與進步。",
+    "cultureTitle": "社團文化",
+    "cultureText": "創新驅動，資源共享，科技前沿 —— 一起探索未來的可能性。",
+    "activityTimelineTitle": "活動時間線",
+    "mainServicesTitle": "主要服務",
+    "industryConnectionTitle": "行業聯繫",
+    "industryConnectionLabel": "Industry Connection",
+    "industryConnectionDetails": [
+        "通過職業招聘會和校友網絡活動建立有效聯繫",
+        "舉辦量化主題分享會",
+        "目標：建立有效的行業聯繫"
+    ],
+    "tradingCompetitionTitle": "交易比賽",
+    "tradingCompetitionLabel": "Trading Competition",
+    "tradingStrategies": [
+        "學生聯繫",
+        "導師指導項目",
+        "提供量化策略支持"
+    ],
+    "tradingSelection": [
+        "通過回測和模擬交易測試高回報策略",
+        "選擇優秀的策略"
+    ],
+    "tradingCompetition": [
+        "舉辦交易比賽",
+        "每季進行為期三個月的交易",
+        "目標：豐富量化基金管理經驗"
+    ],
+    "quantFundIncubationTitle": "量化基金孵化",
+    "quantFundIncubationLabel": "Quant Fund Incubation",
+    "quantFundIncubationDetails": [
+        "為優秀策略籌集和啟動資金"
+    ],
+    "newsData_2024": [
+        {"id": 1, "time": "1月", "title": "第二屆戰略競賽", "small": "預計一月舉行"},
+        {"id": 2, "time": "2月", "title": "", "small": ""},
+        {"id": 3, "time": "3月", "title": "", "small": ""},
+        {"id": 4, "time": "4月", "title": "", "small": ""},
+        {"id": 5, "time": "5月", "title": "第三屆戰略競賽", "small": "預計五月舉行"},
+        {"id": 6, "time": "6月", "title": "", "small": ""},
+        {"id": 7, "time": "7月", "title": "", "small": ""},
+        {"id": 8, "time": "8月", "title": "", "small": ""},
+        {"id": 9, "time": "9月", "title": "", "small": ""},
+        {"id": 10, "time": "10月", "title": "量化分析人才招聘會", "small": "針對0fin&Mafm項目"},
+        {"id": 11, "time": "11月", "title": "", "small": ""},
+        {"id": 12, "time": "12月", "title": "", "small": ""}
+    ],
+    "newsData_2025": [
+        {"id": 1, "time": "1月", "title": "", "small": ""},
+        {"id": 2, "time": "2月", "title": "", "small": ""},
+        {"id": 3, "time": "3月", "title": "", "small": ""},
+        {"id": 4, "time": "4月", "title": "管理團隊會議", "small": "制定發展計劃"},
+        {"id": 5, "time": "5月", "title": "", "small": ""},
+        {"id": 6, "time": "6月", "title": "", "small": ""},
+        {"id": 7, "time": "7月", "title": "開幕式", "small": "預計七月中旬舉行"},
+        {"id": 8, "time": "8月", "title": "", "small": ""},
+        {"id": 9, "time": "9月", "title": "第一屆戰略競賽", "small": "預計九月舉行"},
+        {"id": 10, "time": "10月", "title": "", "small": ""},
+        {"id": 11, "time": "11月", "title": "", "small": ""},
+        {"id": 12, "time": "12月", "title": "", "small": ""}
+    ],
+    "aboutUs": "關於我們",
+    "introduction": "社團介紹",
+    "team": "成員與運營團隊",
+    "tradingCompetitionNav": "交易大賽",
+    "socialAdvisor": "社團顧問",
+    "partnersNav": "合作夥伴",
+    "alumni": "校友會",
+    "alumniHongKong": "香港校友會",
+    "alumniBeijing": "北京校友會",
+    "alumniShanghai": "上海校友會",
+    "alumniGuangzhou": "廣州校友會",
+    "alumniShenzhen": "深圳校友會",
+    "communityNews": "社團新聞",
+    "friendLinks": "友情鏈接",
+    "hkust_background": "香港科技大學背景",
+    "slide_text_line1": "通過知識傳遞、人脈拓展和競賽實踐",
+    "slide_text_line2": "賦能未來量化金融領袖",
+    "hkust_quant_trading_society": "HKUST Quant Trading Society ",
+    "hkust_quant_trading_association": "香港科技大學量化交易協會",
+    "hkust_quant_trading_association2": "香港科技大學量化交易協會（港科寬圖）",
+    "we_are": "我們是",
+    "association_description_1": "成立於2023年9月。作為香港科技大學金融數學碩士課程（MAFM）的學生社團，我們致力於幫助學生進入量化行業並建立有效的人脈。我們的校友網絡涵蓋超過10,000名香港科技大學畢業生。此外，我們計劃舉辦面向全校學生的交易比賽，發掘人才並孵化未來的量化基金。",
+    "association_description_2": "香港科技大學數學系自2006年成立以來，每年招收約800名本科生、碩士生和博士生。作為系裡支持的學生領袖平台，我們的校友網絡覆蓋超過10,000名學生和校友。"
+  }
+  

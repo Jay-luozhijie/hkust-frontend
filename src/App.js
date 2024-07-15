@@ -30,17 +30,30 @@ import IntroduceScreen from './screens/IntroduceScreen'
 import CommunityNewsDetailScreen from './screens/CommunityNewsDetailScreen.js';
 import TradingCompetition from './screens/TradingCompetitionScreen.js';
 import './css/App.scss';
+import './css/PartnerScreen.scss';
+import './css/TradingCompetitionScreen.scss'
+import './css/Alumni/HongKong.scss';
+import './css/Alumni/Guangzhou.scss';
+import './css/Alumni/Beijing.scss'; 
+import './css/Alumni/Shanghai.scss';
+import './css/Alumni/Shenzhen.scss';
+
+import { useMediaQuery } from 'react-responsive';
+import breakpoints from './config/breakpoints';
 
 axios.defaults.baseURL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000';
+
 function App() {
-  
+
+  const isMobile = useMediaQuery({ query: breakpoints.mobile });
+
   return (
       <BrowserRouter>
         <AuthProvider>
             <div className="app-container">
               
                 <Navbar></Navbar>
-                <main className="main-content">
+                <main className="main-content" style={{ paddingTop: isMobile ? '75px' : '144px' }}>
                     <Routes>
                       <Route path = "/" element={<HomeScreen/>}></Route>
                       <Route path = "/signin" element={<SigninScreen/>}></Route>

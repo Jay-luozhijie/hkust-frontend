@@ -1,3 +1,4 @@
+
 import React from 'react';
 import MarkdownIt from 'markdown-it';
 import MdEditor from 'react-markdown-editor-lite';
@@ -12,6 +13,7 @@ const ALUMNI_ACTIVITIES = 1
 const NEW = 0
 const EDIT = 1
 
+
 const mdParser = new MarkdownIt();
 
 const AdminPage = () => {
@@ -24,6 +26,7 @@ const AdminPage = () => {
   const [aluAct, SetAluAct] = useState(ALUMNI_ACTIVITIES)
   const [purpose, setPurpose] = useState(NEW)
   const [newsId, setNewsId] = useState(1)
+
 
   const handleEditorChange = ({ text }) => {
     setContent(text);
@@ -116,3 +119,4 @@ const AdminPage = () => {
 };
 
 export default AdminPage;
+

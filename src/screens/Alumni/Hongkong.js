@@ -23,88 +23,22 @@ const HongKong = () => {
   };
 
   return (
-    <div style={{
-      position: 'relative',
-      width: '100%', 
-      minHeight: '633px',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      padding: '50px 0',
-      marginLeft: '-110px',
-    }}>
-      <div style={{
-        position: 'absolute',
-        top: '0', 
-        left: '0',
-        width: '100%',
-        height: '100%',
-        zIndex: '-1'
-      }}>
-      </div>
-      <div style={{
-        position: 'absolute',
-        top: '0',
-        left: '0',
-        width: '1000px',
-        height: '600px',
-        backgroundImage: `url(${Background})`,
-        backgroundSize: 'cover', 
-        backgroundPosition: 'left top', 
-        backgroundRepeat: 'no-repeat', 
-        zIndex: '-1', // 确保背景在内容之下
-        marginTop: '30px',
-      }}>
-      </div>
-      <div style={{
-        display: 'flex',
-        alignItems: 'flex-start',
-        width: '80%', // 容器宽度
-        maxWidth: '1200px', // 容器最大宽度
-        zIndex: 1
-      }}>
-        <img
-          style={{
-            width: '739px', // 图片宽度
-            height: '436px', // 图片高度
-            borderRadius: '20px',
-          }}
-          src={HongKongBG}
-          alt="Scenic view of Hong Kong"
-        />
-        <div style={{
-          display: 'flex',
-          flexDirection: 'column',
-          marginLeft: '80px', // 图片与文字的间距
-        }}>
-          <div style={{
-            color: '#9A1E23',
-            fontSize: '48px', // 标题字体大小
-            fontFamily: 'OPPO Sans',
-            fontWeight: '500',
-            wordWrap: 'break-word',
-            whiteSpace: i18n.language === 'en' ? 'nowrap' : 'normal'
-          }}>
+    <div className="hongkong-container">
+      <div className="background-layer"></div>
+      <div className="background-image"></div>
+      <div className="content">
+        <img className="hongkong-image" src={HongKongBG} alt="Scenic view of Hong Kong" />
+        <div className="text-content">
+          <div className={`title ${i18n.language === 'en' ? 'no-wrap' : ''}`}>
             {getTranslatedText('香港校友会', 'Hong Kong Alumni Association', '', '香港校友會')}
           </div>
-          <div style={{
-            color: 'black',
-            fontSize: '20px', // 正文字体大小
-            fontFamily: 'OPPO Sans',
-            fontWeight: '400',
-            wordWrap: 'break-word',
-            whiteSpace: 'nowrap', // 防止文本换行
-          }}>
-            {getTranslatedText('香港校友会成立于2024年7月1日, 现任主要负责人为李思远先生,', 'The Hong Kong Alumni Association was established on July 1, 2024,', 'currently headed by Mr. Li Siyuan,', '香港校友會成立於2024年7月1日，現任主要負責人為李思遠先生,')}
+          <div className="paragraph">
+            {getTranslatedText('香港校友会成立于2024年7月1日, ', 'The Hong Kong Alumni Association was established on July 1, 2024,', '香港校友會成立於2024年7月1日，現任主要負責人為李思遠先生,')}
           </div>
-          <div style={{
-            color: 'black',
-            fontSize: '20px', // 正文字体大小
-            fontFamily: 'OPPO Sans',
-            fontWeight: '400',
-            wordWrap: 'break-word',
-          }}>
+          <div className="paragraph">
+            {getTranslatedText('现任主要负责人为李思远先生,', 'currently headed by Mr. Li Siyuan,', '香港校友會成立於2024年7月1日，現任主要負責人為李思遠先生,')}
+          </div>
+          <div className="paragraph">
             {getTranslatedText('联系邮箱为lisiyuansven@foxmail.com.', 'Contact email is lisiyuansven@foxmail.com.', '', '聯繫郵箱為lisiyuansven@foxmail.com.')}
           </div>
         </div>

@@ -26,6 +26,7 @@ const activityData = [
   { id: 3, title: '科大学者戴希教授荣获「陈嘉庚科学奖」...', time: '24-07-11 14:20', imgSrc: Rectangle93 },
   { id: 4, title: '科大学者戴希教授荣获「陈嘉庚科学奖」...', time: '24-07-11 14:20', imgSrc: Rectangle91 },
   { id: 5, title: '科大学者戴希教授荣获「陈嘉庚科学奖」...', time: '24-07-11 14:20', imgSrc: Rectangle92 }
+
 ]
 
 function CommunityNewsScreen() {
@@ -33,6 +34,7 @@ function CommunityNewsScreen() {
   // const [activityData, setActivityData] = useState([]);
   const [pageNumber, setPageNumber] = useState(1);
   const [pageNumberAlumni, setPageNumberAlumni] = useState(1);
+
   useEffect(() => {
     fetchNewsData(pageNumber);
   }, [pageNumber]);
