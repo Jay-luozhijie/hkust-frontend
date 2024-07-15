@@ -17,7 +17,7 @@ function Footer() {
     const isMobile = useMediaQuery({ query: breakpoints.mobile });
     const footerStyle = {
         width: '100%',
-        minHeight: isMobile ? '350px' : '150px',  // 手机时设置为100px高，电脑为150px
+        minHeight: isMobile ? '375px' : '150px',  // 手机时设置为100px高，电脑为150px
         backgroundColor: '#9A1E23',
         position: 'relative',
         minWidth: '320px',
@@ -25,49 +25,85 @@ function Footer() {
     };
 
     const logoStyle = {
-        width: isMobile ? '100px' : '205px',  // 宽度自适应
-        height: '68px',  // 固定高度
+        width: isMobile ? '100px' : '205px',
+        height: '68px',
         marginRight: '50px',
-        marginLeft: isMobile ? 'auto' : '15px',  // 手机模式下自动居中
+        marginLeft: isMobile ? 'auto' : '15px',
         paddingRight: '20px',
         position: 'relative',
-        top: isMobile ? '160px' : '-10px',  // 手机模式下上移更多一点
-        left: isMobile ? '46%' : '0',       // 如果是手机，左偏移50%
-        transform: isMobile ? 'translateX(-50%)' : 'none',  // 如果是手机，向左平移自身的50%以居中
-        minWidth: '185px',  // 最小宽度
-        maxWidth: '205px',  // 最大宽度，保持固定宽度
+        top: isMobile ? '240px' : '-10px',  // 增加了手机模式下的下移距离
+        left: isMobile ? '46%' : '0',
+        transform: isMobile ? 'translateX(-50%)' : 'none',
+        minWidth: '185px',
+        maxWidth: '205px',
     };
 
     const copyrightTextStyle = {
         color: 'white',
         position: 'relative',
-        top: isMobile ? '215px' : '-10px',  // 调整位置使之上移与Logo一致
+        top: isMobile ? '295px' : '-10px',  // 增加了手机模式下的下移距离
         left: isMobile ? '56%' : '0',
-        transform: isMobile ? 'translateX(-137%)' : 'none',  // 居中
+        transform: isMobile ? 'translateX(-137%)' : 'none',
         whiteSpace: 'nowrap'
     };
-    
+
     const friendLinksTextStyle = {
         color: 'white',
         position: 'relative',
-        top: isMobile ? '80px' : '-10px',
+        top: isMobile ? '160px' : '-10px',  // 增加了手机模式下的下移距离
         left: isMobile ? '-125%' : '0',
-        transform: isMobile ? 'translateX(-50%)' : 'none', // 居中调整
+        transform: isMobile ? 'translateX(-50%)' : 'none',
         marginRight: '50px',
         marginLeft: isMobile ? 'auto' : '15px',
-        minWidth: isMobile ? '200px' : 'auto', // 手机模式下设置最小宽度
-        whiteSpace: 'nowrap', // 防止换行
-        padding: isMobile ? '0 10px' : '0', // 手机模式下增加内边距
+        minWidth: isMobile ? '200px' : 'auto',
+        whiteSpace: 'nowrap',
+        padding: isMobile ? '0 10px' : '0',
     };
-    
+
     const cryptoStyle = {
         marginRight: isMobile ? '20px' : '0'
     };
 
     const outerDivStyle = {
-        position: 'relative', 
-        top: isMobile ? '-20px' : '0px',
-        left: isMobile ? '-985px' : '0px',
+        position: 'relative',
+        top: isMobile ? '50px' : '0px',  // 减少了手机模式下的上移距离
+        left: isMobile ? '-985px' : '10px',
+    };
+
+    const linkStyle1 = {
+        color: 'white',
+        fontFamily: 'Oppo Sans Regular',
+        fontSize: isMobile ? '14px' : '16px', // 手机模式下字体更小
+        position: 'relative',
+        top: isMobile ? '-5px' : '0px',
+        left: isMobile ? '15px' : '12px'
+    };
+    
+
+    const linkStyle2 = {
+        color: 'white',
+        fontFamily: 'Oppo Sans Regular',
+        fontSize: isMobile ? '16px' : '16px', // 手机模式下字体更小
+        position: 'relative',
+        top: isMobile ? '8px' : undefined
+    };
+    
+    const iconStyleEnvolope = {
+        position: 'relative',
+    };
+
+    const msgDivStyle = {
+        display: "flex",
+        flexDirection: "column",
+        marginLeft: "30px",
+        position: 'absolute',
+        right: '25px',
+        top: isMobile ? '40px' : '25px',  // 手机模式下移
+    };
+
+    const msgIconStyle = {
+        position: 'relative',
+        top: isMobile ? '-10px' : '-10px'  // 手机模式调整
     };
     
     return (
@@ -103,8 +139,8 @@ function Footer() {
                             marginLeft: '170px',
                             boxSizing: 'border-box'
                         }}>
-                            <Envelope style={{ marginRight: '15px', position: 'relative', top: '-8px' }}></Envelope>
-                            <div style={{ position: 'relative', top: '-10px' }}>
+                            <Envelope style={iconStyleEnvolope} />
+                            <div style={linkStyle1}>
                                 <span style={{ color: 'white', fontFamily: 'Oppo Sans Regular' }}>official@ustquant.hk</span>
                                 <br />
                                 <span style={{ color: 'white', fontFamily: 'Oppo Sans Regular' }}>secretary@ustquant.hk</span>
@@ -120,16 +156,16 @@ function Footer() {
                             boxSizing: 'border-box'
                         }}>
                             <Linkedin style={{ marginRight: '15px', position: 'relative', top: '8px' }}></Linkedin>
-                            <div style={{ position: 'relative', top: '10px' }}>
-                                <a style={{ color: 'white', fontFamily: 'Oppo Sans Regular' }} href="https://www.linkedin.com/company/ust-quant-trading-society-limitted/" target="_blank" rel="noopener noreferrer">
-                                    https://www.linkedin.com/company/<br />ust-quant-trading-society-limitted/
-                                </a>
-                            </div>
+                            <div style={linkStyle2}>
+                        <a style={{ color: 'white', fontFamily: 'Oppo Sans Regular', fontSize: isMobile ? '12px' : '16px' }} href="https://www.linkedin.com/company/ust-quant-trading-society-limitted/" target="_blank" rel="noopener noreferrer">
+                            https://www.linkedin.com/company/<br />ust-quant-trading-society-limitted/
+                        </a>
+                    </div>
                         </div>
                     </div>
-                    <div style={{ display: "flex", flexDirection: "column", marginLeft: "30px", position: 'absolute', right: '25px', top: '25px' }}>
-                        <MsgIcon style={{ position: 'relative', top: '-10px' }}></MsgIcon>
-                        <Rectangle></Rectangle>
+                    <div style={msgDivStyle}>
+                        <MsgIcon style={msgIconStyle} />
+                        <Rectangle />
                     </div>
                     <div style={{ flexGrow: 1 }}></div>
                 </div>
