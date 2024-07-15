@@ -4,6 +4,12 @@
 	font-size: 54px;
 	font-weight: bold;
 	padding-left: 100px;
+	@media only screen and (max-width: 768px) {
+		font-size: 35px;
+		padding-top: 50px;
+		left: -60px;
+		position: relative;
+	  }
 }
 .partner .m-test-wrap{
 	margin-top: 70px;
@@ -16,6 +22,9 @@ position: relative;
 	border-radius: 0px 60px;
 	background: #FFF7F7;
 	box-shadow: 0px 4px 4px 0px rgba(154, 30, 35, 0.16);
+	@media only screen and (max-width: 768px) {
+		width: 390px;
+	  }
 }
 .partner .slide-item .img{
     text-align: center;
@@ -32,11 +41,14 @@ position: relative;
 	font-weight: 700;
 	line-height: normal;
 	margin-top: 16px;
+	@media only screen and (max-width: 768px) {
+		font-size: 30px;
+	  }
 }
 .partner .slide-item p{
 	color: #000;
 	text-align: justify;
-	font-family: FZLanTingHei-R-GBK;
+	font-family: "OPPO Sans";
 	font-size: 20px;
 	font-style: normal;
 	font-weight: 400;
@@ -68,6 +80,9 @@ position: relative;
 
 .partner {
 	padding-bottom: 70px; 
+	@media only screen and (max-width: 768px) {
+		padding-bottom: 110px; 
+	  }
   }
   
   .slide-item p {
@@ -82,4 +97,7 @@ position: relative;
   .partner .m-test-wrap .swiper-slide {
     width: 400px;
     flex-shrink: 0; 
+	@media only screen and (max-width: 768px) {
+		width: 360px;
+	  }
 }

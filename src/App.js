@@ -30,7 +30,13 @@ import IntroduceScreen from './screens/IntroduceScreen'
 import CommunityNewsDetailScreen from './screens/CommunityNewsDetailScreen.js';
 import TradingCompetition from './screens/TradingCompetitionScreen.js';
 import './css/App.scss';
+import './css/PartnerScreen.scss';
 import './css/TradingCompetitionScreen.scss'
+import './css/Alumni/HongKong.scss';
+import './css/Alumni/Guangzhou.scss';
+import './css/Alumni/Beijing.scss'; 
+import './css/Alumni/Shanghai.scss';
+import './css/Alumni/Shenzhen.scss';
 
 import { useMediaQuery } from 'react-responsive';
 import breakpoints from './config/breakpoints';

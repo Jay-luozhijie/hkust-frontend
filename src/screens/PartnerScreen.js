@@ -2,7 +2,6 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import '../css/PartnerScreen.css';
 import xianggangLogo from '../img/xianggang.png';
 import MBALogo from '../img/MBA.png';
 import tiannengLogo from '../img/tianneng.png';

@@ -1,0 +1,108 @@
+.beijing-container {
+    position: relative;
+    width: 100%;
+    min-height: 633px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+    margin-left: -110px;
+    margin-bottom: 150px;
+  
+    .beijing-background-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+  
+    .beijing-background-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1000px;
+      height: 600px;
+      background-image: url('../../img/AlumniPageBackground.png');
+      background-size: cover;
+      background-position: left top;
+      background-repeat: no-repeat;
+      z-index: -1;
+      margin-top: 30px;
+      @media only screen and (max-width: 768px) {
+        top: 80px;
+        left: 110px;
+        width: 400px;
+        height: 550px;
+        background-size: cover;
+        background-position: right center;
+        background-repeat: no-repeat;
+        z-index: -1;
+        margin-top: 30px;
+      }
+    }
+  
+    .beijing-content {
+      display: flex;
+      align-items: flex-start;
+      width: 80%;
+      max-width: 1200px;
+      z-index: 1;
+  
+      .beijing-image {
+        width: 739px;
+        height: 436px;
+        border-radius: 20px;
+        @media only screen and (max-width: 768px) {
+          width: 342px;
+          left: 115px;
+          height: 218px;
+          position: relative;
+          top: -90px;
+          border-radius: 15px;
+        }
+      }
+  
+      .beijing-text-content {
+        display: flex;
+        flex-direction: column;
+        margin-left: 80px;
+        @media only screen and (max-width: 768px) {
+          left: -280px;
+          position: relative;
+          top: -150px;
+        }
+  
+        .beijing-title {
+          color: #9A1E23;
+          font-size: 48px;
+          font-family: 'OPPO Sans';
+          font-weight: 500;
+          word-wrap: break-word;
+          @media only screen and (max-width: 768px) {
+            font-size: 24px;
+          }
+          &.no-wrap {
+            white-space: nowrap;
+          }
+        }
+  
+        .beijing-paragraph {
+          color: black;
+          font-size: 20px;
+          font-family: 'OPPO Sans';
+          font-weight: 400;
+          word-wrap: break-word;
+          white-space: nowrap;
+          position: relative;
+          @media only screen and (max-width: 768px) {
+            font-size: 18px;
+            top: 270px;
+          }
+        }
+      }
+    }
+  }
+  
