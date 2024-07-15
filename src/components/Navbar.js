@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ReactComponent as Logo } from '../img/hkust_logo.svg';
 import { ReactComponent as Title } from '../img/Header-title_MAFM.svg';
 import quantSocietyLogo from '../img/quant_society_logo.png';
@@ -8,6 +8,8 @@ import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useLanguage } from '../components/LanguageContext';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useMediaQuery } from 'react-responsive';
+import breakpoints from '../config/breakpoints'; // 确保这是正确的路径
 
 function Navbar() {
     const { t, i18n } = useTranslation();
@@ -18,12 +20,36 @@ function Navbar() {
         aboutIsOpen: false
     });
 
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
+    const isMobile = useMediaQuery({ query: breakpoints.mobile });
+    const isDesktop = useMediaQuery({ query: breakpoints.desktop });
+
     const toggleDropdown = (dropdown) => {
-        setDropdowns((prevState) => ({
+        setDropdowns(prevState => ({
             ...prevState,
             [dropdown]: !prevState[dropdown]
         }));
     };
+    
+    // 点击外部关闭菜单的逻辑
+    useEffect(() => {
+        const closeMenu = (e) => {
+            if (isMenuOpen && !e.target.closest('.side-menu') && !e.target.closest('.menubtn')) {
+                setIsMenuOpen(false);
+            }
+        };
+
+        document.addEventListener('mousedown', closeMenu);
+
+        return () => {
+            document.removeEventListener('mousedown', closeMenu);
+        };
+    }, [isMenuOpen]); // 依赖isMenuOpen状态，以便更新监听器
 
     const getNavLinkStyle = () => {
         if (i18n.language === 'en') {
@@ -42,18 +68,24 @@ function Navbar() {
                     </div>
                 </div>
                 <div style={{ backgroundColor: 'white' }} className="tab-box">
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', height: '100%', boxSizing: 'border-box' }} className="tab-box-item">
-                        <div style={{ display: 'flex', alignItems: 'center', marginRight: '0px' }}>
-                            <Logo style={{ width: '230px', height: '60px' }} className="Logo" />
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', height: '100%', boxSizing: 'border-box', position: 'relative' }} className="tab-box-item">
+                    <div style={{ display: 'flex', alignItems: 'center', marginRight: '0px' }}>
+                        <Logo style={{ width: isMobile ? '127.5px' : '230px', height: isMobile ? '34px' : '60px' }} className="Logo" />
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', marginRight: '0px' }}>
+                        <Title style={{ width: isMobile ? '102px' : '180px', height: isMobile ? '34px' : '60px' }} className="Title" />
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', marginLeft: isDesktop ? '-15px' : '0px' }}>
+                        <img src={quantSocietyLogo} alt="Quant Society Logo" style={{ width: isDesktop ? '187px' : '85px', height: isDesktop ? '187px' : '85px' }} />
+                    </div>
+                    {!isDesktop && (
+                        <div className="menubtn" onClick={toggleMenu} style={{ position: 'absolute', right: '0px', top: '25%' }}>
+                            <span></span>
+                            <span></span>
+                            <span></span>
                         </div>
-                        <div style={{ display: 'flex', alignItems: 'center', marginRight: '0px' }}>
-                            <Title style={{ width: '180px', height: '60px' }} className="Title" />
-                        </div>
-                        <div style={{ display: 'flex', alignItems: 'center', marginLeft: '-15px' }}>
-                            <img src={quantSocietyLogo} alt="Quant Society Logo" style={{ width: '187px', height: '187px' }} />
-                        </div>
-                        <div className="menubtn"><span></span></div>
-                        <div style={{ flexGrow: 1 }}></div>
+                    )}
+                    <div style={{ flexGrow: 1 }}></div>
                         <div className="nav-bar">
                             <div className="nav-link-container">
                                 <NavLink to="#" className="nav-link" onMouseEnter={() => toggleDropdown('aboutIsOpen')} style={getNavLinkStyle()}>
@@ -96,6 +128,67 @@ function Navbar() {
                                         <div className="dropdown-item" onClick={() => changeLanguage('zh')}>简体中文</div>
                                     </div>
                                 )}
+                            </div>
+                        </div>
+                        <div className={isMenuOpen ? "side-menu open" : "side-menu"}>
+                            <div className={isMenuOpen ? "mobile-menu open" : "mobile-menu"}>
+                                <div className="mobile-nav">
+                                    {/* About Us Section */}
+                                    <div className="mobile-nav-link-container">
+                                        <NavLink to="#" className="mobile-nav-link" onClick={() => toggleDropdown('aboutIsOpen')}>
+                                            {t('aboutUs')}
+                                            <Triangle className={dropdowns.aboutIsOpen ? "about-dropdown-icon rotate" : "about-dropdown-icon"} style={{ marginLeft: '5px' }} />
+                                        </NavLink>
+                                        {dropdowns.aboutIsOpen && (
+                                            <div className="mobile-dropdown-menu">
+                                                <NavLink className="mobile-dropdown-item" to="/Introduce">{t('introduction')}</NavLink>
+                                                <NavLink className="mobile-dropdown-item" to="/AboutUs">{t('team')}</NavLink>
+                                            </div>
+                                        )}
+                                    </div>
+                                    {/* Trading Competition */}
+                                    <NavLink to="/TradingCompetition" className="mobile-nav-link">{t('tradingCompetitionNav')}</NavLink>
+
+                                    {/* Social Advisor */}
+                                    <NavLink to="/SocialAdvisor" className="mobile-nav-link">{t('socialAdvisor')}</NavLink>
+
+                                    {/* Partners */}
+                                    <NavLink to="/partner" className="mobile-nav-link">{t('partnersNav')}</NavLink>
+
+                                    {/* Alumni Section */}
+                                    <div className="mobile-nav-link-container">
+                                        <NavLink to="#" className="mobile-nav-link" onClick={() => toggleDropdown('alumniIsOpen')}>
+                                            {t('alumni')}
+                                            <Triangle className={dropdowns.alumniIsOpen ? "alumni-dropdown-icon rotate" : "alumni-dropdown-icon"} style={{ marginLeft: '5px' }} />
+                                        </NavLink>
+                                        {dropdowns.alumniIsOpen && (
+                                            <div className="mobile-dropdown-menu">
+                                                <NavLink className="mobile-dropdown-item" to="/Alumni/Hongkong">{t('alumniHongKong')}</NavLink>
+                                                <NavLink className="mobile-dropdown-item" to="/Alumni/Beijing">{t('alumniBeijing')}</NavLink>
+                                                <NavLink className="mobile-dropdown-item" to="/Alumni/Shanghai">{t('alumniShanghai')}</NavLink>
+                                                <NavLink className="mobile-dropdown-item" to="/Alumni/Guangzhou">{t('alumniGuangzhou')}</NavLink>
+                                                <NavLink className="mobile-dropdown-item" to="/Alumni/Shenzhen">{t('alumniShenzhen')}</NavLink>
+                                            </div>
+                                        )}
+                                    </div>
+                                    {/* Community News */}
+                                    <NavLink to="/communityNews" className="mobile-nav-link">{t('communityNews')}</NavLink>
+
+                                    {/* Language Options */}
+                                    <div className="mobile-nav-link-container">
+                                        <div className="mobile-nav-link" onClick={() => toggleDropdown('languageIsOpen')}>
+                                            <Earth style={{ width: '20px', height: '20px', color: '#888888' }} />
+                                            <Triangle className={dropdowns.languageIsOpen ? "language-dropdown-icon rotate" : "language-dropdown-icon"} style={{ color: '#9A1E23', marginLeft: '5px' }} />
+                                        </div>
+                                        {dropdowns.languageIsOpen && (
+                                            <div className="mobile-dropdown-menu">
+                                                <div className="mobile-dropdown-item" onClick={() => changeLanguage('en')}>English</div>
+                                                <div className="mobile-dropdown-item" onClick={() => changeLanguage('tc')}>繁體中文</div>
+                                                <div className="mobile-dropdown-item" onClick={() => changeLanguage('zh')}>简体中文</div>
+                                            </div>
+                                        )}
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
