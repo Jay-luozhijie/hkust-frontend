@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import '../css/communityNews.css';
+import '../css/communityNews.scss';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
@@ -186,11 +186,11 @@ function CommunityNewsScreen() {
         <div className='activity-list'>
           <Swiper watchSlidesProgress={true} slidesPerView={3} spaceBetween={50}>
             {activityData.map((item) => (
-              <SwiperSlide key={item.id}>
+              <SwiperSlide key={item.id} onClick={() => handleActitityItemClick(item._id)} style={{ cursor: 'pointer' }}>
               <div className='activity-item'>
               <img src={item.img_url} className='image'/>
               <div className='activity-info'>
-                  <a className='title' onClick={() => handleActitityItemClick(item._id)} style={{ cursor: 'pointer' }}>{item.title}</a>
+                  <a className='title' >{item.title}</a>
                   {parseTime(item.updatedAt)}
               </div>
               </div>
