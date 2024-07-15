@@ -1,0 +1,131 @@
+{
+    "socialAdvisorTitle": "Social Advisors",
+    "members": [
+      {
+        "name": "Professor Chen Ka Ni",
+        "job": "Association Chairman",
+        "introduce": "Professor Chen Ka Ni currently serves as the Director of the Master of Financial Mathematics program and the Co-Director of the Risk Management and Business Intelligence Program at HKUST. He earned his PhD in Statistics from Columbia University in 1994, and his Master's and Bachelor's degrees in Science from Peking University in 1990 and 1987, respectively. Professor Chen has decades of research and teaching experience in the field of financial mathematics."
+      },
+      {
+        "name": "Professor Wang Yang",
+        "job": "Honorary Chairman",
+        "introduce": "Professor Wang Yang has been serving as the Vice-President of HKUST since 2020. He is an internationally recognized scholar with a broad research spectrum. Professor Wang, along with Professor Chen Ka Ni and Mr. Li Bei, has signed a university-enterprise cooperation memorandum with the company."
+      },
+      {
+        "name": "Mr. Li Bei",
+        "job": "Association Supervisor",
+        "introduce": "Mr. Li Bei, CEO of Tianlong Securities Co., Ltd. and Chairman of the Hong Kong MBA Association, has extensive experience in the securities industry and a rich network of contacts. He has maintained a long and deep relationship with HKUST. In 2023, he represented Futong Hong Kong Ltd. in signing a university-enterprise cooperation memorandum with HKUST."
+      }
+    ],
+    "partnerTitle": "Partners",
+    "partners": [
+      {
+        "name": "Tianneng Securities",
+        "description": "Tianneng Securities Limited (TLS) was established in Hong Kong in August 2020 as a member of the Tianneng Financial Group, holding professional licenses for Type 4 (Securities Advice) and Type 9 (Asset Management). TLS is committed to perfecting its product portfolio and services, covering investment across the Greater China region, providing comprehensive investment management services for high-net-worth clients, family offices, and institutional clients, tailoring solutions for them, and enabling them to grasp the pulse of information-intensive markets and investment opportunities for wealth appreciation.",
+        "link": "https://www.tianlongsecurities.com/zh"
+      },
+      {
+        "name": "Hong Kong MBA Association",
+        "description": "The HKMBA Association was founded in 2014 by outstanding MBA students and alumni from eight universities in Hong Kong, along with senior professors and business celebrities as advisory consultants. As a non-profit organization, the Hong Kong MBA Institute offers a broad development space and a resource-sharing platform for MBA students, alumni, and business people.",
+        "link": "https://mba.org.hk/"
+      },
+      {
+        "name": "Hong Kong Asset Management",
+        "description": "Hong Kong Asset Management provides project consulting for investment managers, striving to be an effective communication and interaction platform for capital and projects. The 'HKUST Asset Management Leading Fund' was established in Hong Kong to promote the transformation of university scientific research achievements and support the construction of Hong Kong as an international innovation and technology hub. The core investment research team consists of members from Ivy League and top domestic universities, who have extensive experience in quantitative fund investment and management and a deep understanding of financial markets, committed to bringing long-term, stable, and satisfactory investment returns to clients.",
+        "link": "https://mp.weixin.qq.com/s/SanNilboYaAZuS6F11ih2Q"
+      },
+      {
+        "name": "Tianneng Securities",
+        "description": "Tianneng Securities Limited (TLS) was established in Hong Kong in August 2020 as a member of the Tianneng Financial Group, holding professional licenses for Type 4 (Securities Advice) and Type 9 (Asset Management). TLS is committed to perfecting its product portfolio and services, covering investment across the Greater China region, providing comprehensive investment management services for high-net-worth clients, family offices, and institutional clients, tailoring solutions for them, and enabling them to grasp the pulse of information-intensive markets and investment opportunities for wealth appreciation.",
+        "link": "https://www.tianlongsecurities.com/zh"
+      },
+      {
+        "name": "Hong Kong MBA Association",
+        "description": "The HKMBA Association was founded in 2014 by outstanding MBA students and alumni from eight universities in Hong Kong, along with senior professors and business celebrities as advisory consultants. As a non-profit organization, the Hong Kong MBA Institute offers a broad development space and a resource-sharing platform for MBA students, alumni, and business people.",
+        "link": "https://mba.org.hk/"
+      }
+    ],
+        "introduceTitle": "HKUST Quantitative Trading Society",
+        "hkustQuantTradingSociety": "HKUST Quant Trading Society",
+        "empowerFutureQuantLeaders": "Empowering future quantitative finance leaders through knowledge transfer, networking, and competition practice",
+        "missionTitle": "Mission",
+        "missionText": "Bridging academia and industry, promoting practical applications in the field of quantitative finance through academic innovation, building a platform for international cooperation and exchange, and nurturing forward-looking and innovative quantitative professionals.",
+        "visionTitle": "Vision",
+        "visionText": "To become the engine shaping the future leaders of global quantitative trading, driving industry innovation and progress by establishing an open global knowledge-sharing network.",
+        "cultureTitle": "Society Culture",
+        "cultureText": "Innovation-driven, resource-sharing, technology forefront – exploring future possibilities together.",
+        "activityTimelineTitle": "Activity Timeline",
+        "mainServicesTitle": "Main Services",
+        "industryConnectionTitle": "Industry Connection",
+        "industryConnectionLabel": "Industry Connection",
+        "industryConnectionDetails": [
+          "Establishing effective connections through career fairs and alumni network events",
+          "Hosting quantitative-themed sharing sessions",
+          "Goal: Establishing effective industry connections"
+        ],
+        "tradingCompetitionTitle": "Trading Competition",
+        "tradingCompetitionLabel": "Trading Competition",
+        "tradingStrategies": [
+          "Student engagement",
+          "Mentor-guided projects",
+          "Providing quantitative strategy support"
+        ],
+        "tradingSelection": [
+          "Testing high-return strategies",
+          "through backtesting and simulated trading",
+          "Selecting excellent strategies"
+        ],
+        "tradingCompetition": [
+          "Hosting trading competitions",
+          "Conducting three-month",
+          "trading sessions each season",
+          "Goal: Enriching quantitative",
+          "fund management experience"
+        ],
+        "quantFundIncubationTitle": "Quant Fund Incubation",
+        "quantFundIncubationLabel": "Quant Fund Incubation",
+        "quantFundIncubationDetails": [
+          "Raising and initiating funds for excellent strategies"
+        ],
+        "newsData_2024": [
+          {"id": 1, "time": "January", "title": "Second Strategic Competition", "small": "Expected to be held in January"},
+          {"id": 2, "time": "February", "title": "", "small": ""},
+          {"id": 3, "time": "March", "title": "", "small": ""},
+          {"id": 4, "time": "April", "title": "", "small": ""},
+          {"id": 5, "time": "May", "title": "Third Strategic Competition", "small": "Expected to be held in May"},
+          {"id": 6, "time": "June", "title": "", "small": ""},
+          {"id": 7, "time": "July", "title": "", "small": ""},
+          {"id": 8, "time": "August", "title": "", "small": ""},
+          {"id": 9, "time": "September", "title": "", "small": ""},
+          {"id": 10, "time": "October", "title": "Quantitative Analysis Talent Fair", "small": "Targeting 0fin&Mafm programs"},
+          {"id": 11, "time": "November", "title": "", "small": ""},
+          {"id": 12, "time": "December", "title": "", "small": ""}
+        ],
+        "newsData_2025": [
+          {"id": 1, "time": "January", "title": "", "small": ""},
+          {"id": 2, "time": "February", "title": "", "small": ""},
+          {"id": 3, "time": "March", "title": "", "small": ""},
+          {"id": 4, "time": "April", "title": "Management Team Meeting", "small": "Formulating development plans"},
+          {"id": 5, "time": "May", "title": "", "small": ""},
+          {"id": 6, "time": "June", "title": "", "small": ""},
+          {"id": 7, "time": "July", "title": "Opening Ceremony", "small": "Expected to be held in mid-July"},
+          {"id": 8, "time": "August", "title": "", "small": ""},
+          {"id": 9, "time": "September", "title": "First Strategic Competition", "small": "Expected to be held in September"},
+          {"id": 10, "time": "October", "title": "", "small": ""},
+          {"id": 11, "time": "November", "title": "", "small": ""},
+          {"id": 12, "time": "December", "title": "", "small": ""}
+        ],
+        "aboutUs": "About Us",
+        "introduction": "Introduction",
+        "team": "Team",
+        "tradingCompetitionNav": "Trading Competition",
+        "socialAdvisor": "Social Advisor",
+        "partnersNav": "Partners",
+        "alumni": "Alumni",
+        "alumniHongKong": "Hong Kong",
+        "alumniBeijing": "Beijing",
+        "alumniShanghai": "Shanghai",
+        "alumniGuangzhou": "Guangzhou",
+        "alumniShenzhen": "Shenzhen",
+        "communityNews": "Community News"
+}
