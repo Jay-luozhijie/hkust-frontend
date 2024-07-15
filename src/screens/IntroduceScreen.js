@@ -126,10 +126,10 @@ function IntroduceScreen() {
 			{t('activityTimelineTitle')}
 		</div>
 		<div className="time-line" style={mobileTextShiftStyle}>
-			<div onClick={() => setActive(1)} className={active === 1 ? 'time active' : 'time'}>
+			<div onClick={() => setActive(2)} className={active === 2 ? 'time active' : 'time'}>
 			2024
 			</div>
-			<div onClick={() => setActive(2)} className={active === 2 ? 'time active' : 'time'}>
+			<div onClick={() => setActive(1)} className={active === 1 ? 'time active' : 'time'}>
 			2025
 			</div>
 		</div>

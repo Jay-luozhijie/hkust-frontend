@@ -1,6 +1,8 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import '../css/aboutUs.scss';
+import { useMediaQuery } from 'react-responsive';
+import breakpoints from '../config/breakpoints';
 import quantSocietyLogo from '../img/quant_society_logo.png';
 import avatar1 from '../img/avatar/luoguangda.png';
 import avatar2 from '../img/avatar/wangjiaheng.png';
@@ -33,6 +35,7 @@ const previousMemberData = [
 
 function AboutUsScreen() {
   const { t, i18n } = useTranslation();
+  const isMobile = useMediaQuery({ query: breakpoints.mobile });
 
   const getTranslatedText = (zhText, enText, tcText) => {
     if (i18n.language === 'zh') {
@@ -49,28 +52,39 @@ function AboutUsScreen() {
     whiteSpace: i18n.language === 'en' ? 'nowrap' : undefined
   };
 
+  const associationMemberListStyle = {
+    marginLeft: isMobile ? '50px' : '0'
+  };
+
+  const avatarOuterStyle = {
+    width: isMobile ? '139px' : '193px',
+    height: isMobile ? '164px' : '265px'
+  };
+
   return (
     <div className="aboutus-wrap">
-      <div className="tab-container">
-        <div className="logo">
-          <img src={quantSocietyLogo} alt="Quant Society Logo" />
-        </div>
-        <div className="tab-list">
-          <div className="tab-item active" style={tabItemStyle}>
-            {getTranslatedText('协会成员', 'Association Members', '協會成員')}
+      {!isMobile && (
+        <div className="tab-container">
+          <div className="logo">
+            <img src={quantSocietyLogo} alt="Quant Society Logo" />
           </div>
-          <div className="tab-item" style={tabItemStyle}>
-            {getTranslatedText('往届成员', 'Previous Members', '往屆成員')}
+          <div className="tab-list">
+            <div className="tab-item active" style={tabItemStyle}>
+              {getTranslatedText('协会成员', 'Association Members', '協會成員')}
+            </div>
+            <div className="tab-item" style={tabItemStyle}>
+              {getTranslatedText('往届成员', 'Previous Members', '往屆成員')}
+            </div>
           </div>
         </div>
-      </div>
+      )}
       <div className="member-container">
         <div className="header">{getTranslatedText('成员与运营团队', 'Members and Operating Team', '成員與運營團隊')}</div>
         <div className="title">{getTranslatedText('协会成员', 'Association Members', '協會成員')}</div>
-        <div className="association-member-list">
+        <div className="association-member-list" style={associationMemberListStyle}>
           {associationMemberData.map((item) => (
             <div key={item.id} className="member-item">
-              <div className="avatar-outer">
+              <div className="avatar-outer" style={avatarOuterStyle}>
                 <img src={item.avatarSrc} alt={item.name} />
               </div>
               <div className="member-info">
