@@ -51,7 +51,6 @@ a.nav-link {
 .tab-box-item {
     margin-left: 50px;
     width: calc(100% - 50px);
-    overflow: hidden;
     max-width: 100vw;
     max-height: 100vh;
 }
@@ -149,6 +148,7 @@ a.nav-link {
 .nav-link-container:hover .dropdown-menu {
     display: block; /* 悬停显示 */
     background-color: #C95C5C; /* 确保背景色一致 */
+    z-index: 2000;
 }
 
 .nav-link-container .dropdown-menu .dropdown-item {

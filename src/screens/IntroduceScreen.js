@@ -58,25 +58,6 @@ function IntroduceScreen() {
 	lineHeight: i18n.language === 'en' ? '1.4' : undefined // 英文模式下设置较小的字体
   };
 
-  function getStepTextStyle(isMobile, language) {
-	if (isMobile) {
-	  let baseSize = language === 'en' ? '14px' : '16px'; // 移动设备上的字体大小
-	  let smallSize = language === 'en' ? '12px' : '14px'; // 移动设备上的小字体大小
-	  let padding = '15px'; // 移动设备上的内边距
-  
-	  return {
-		base: { fontSize: baseSize, padding },
-		small: { fontSize: smallSize, padding }
-	  };
-	}
-  
-	// 不是移动设备时返回空对象，表示不修改样式
-	return {
-	  base: {},
-	  small: {}
-	};
-  }
-
   function getMobileShiftStyle(isMobile) {
 	if (isMobile) {
 	  return {
