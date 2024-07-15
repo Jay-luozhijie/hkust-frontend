@@ -27,9 +27,9 @@
 }
 
 
-.newsTitle,
+.inputNewsTitle,
 .imageUrl {
-    min-width: 500px; /* Adjust as needed */
+    min-width: 700px; /* Adjust as needed */
     min-height: 40px; /* Adjust as needed */
     margin: 15px 0px; /* Adjust as needed */
     margin-right:20px;

@@ -30,6 +30,7 @@ import IntroduceScreen from './screens/IntroduceScreen'
 import CommunityNewsDetailScreen from './screens/CommunityNewsDetailScreen.js';
 import TradingCompetition from './screens/TradingCompetitionScreen.js';
 import './css/App.scss';
+import ActivitiesDetailScreen from './screens/ActivitiesDetailScreen.js';
 
 axios.defaults.baseURL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000';
 function App() {
@@ -48,6 +49,7 @@ function App() {
                       <Route path = "/partner" element={<PartnerScreen/>}></Route>
                       <Route path = "/communityNews" element={<CommunityNewsScreen/>}></Route>
                       <Route path = "/communityNews/:id" element={<CommunityNewsDetailScreen/>}></Route>
+                      <Route path = "/activities/:id" element={<ActivitiesDetailScreen/>}></Route>
                       <Route path = "/SocialAdvisor" element={<SocialAdvisorScreen/>}></Route>
                       <Route path = "/AboutUs" element={<AboutUsScreen/>}></Route>
                       <Route path = "/TradingCompetition" element={<TradingCompetition/>}></Route> 
