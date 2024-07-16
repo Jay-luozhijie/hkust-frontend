@@ -45,8 +45,8 @@
         "link": "https://mba.org.hk/"
       }
     ],
-        "introduceTitle": "HKUST Quantitative Trading Society",
-        "hkustQuantTradingSociety": "HKUST Quant Trading Society",
+        "introduceTitle": "Quant Trading Society",
+        "hkustQuantTradingSociety": "(HKUST- MAFM)",
         "empowerFutureQuantLeaders": "Empowering future quantitative finance leaders through knowledge transfer, networking, and competition practice",
         "missionTitle": "Mission",
         "missionText": "Bridging academia and industry, promoting practical applications in the field of quantitative finance through academic innovation, building a platform for international cooperation and exchange, and nurturing forward-looking and innovative quantitative professionals.",
@@ -59,20 +59,26 @@
         "industryConnectionTitle": "Industry Connection",
         "industryConnectionLabel": "Industry Connection",
         "industryConnectionDetails": [
-          "Establishing effective connections through career fairs and alumni network events",
-          "Hosting quantitative-themed sharing sessions",
-          "Goal: Establishing effective industry connections"
+          "Establishing effective connections",
+          "through career fairs and alumni",
+          "network events",
+          "Hosting quantitative-themed",
+          "sharing sessions",
+          "Goal: Establishing effective",
+          "industry connections"
         ],
         "tradingCompetitionTitle": "Trading Competition",
         "tradingCompetitionLabel": "Trading Competition",
         "tradingStrategies": [
           "Student engagement",
           "Mentor-guided projects",
-          "Providing quantitative strategy support"
+          "Providing quantitative ",
+          "strategy support"
         ],
         "tradingSelection": [
           "Testing high-return strategies",
-          "through backtesting and simulated trading",
+          "through backtesting and",
+          " simulated trading",
           "Selecting excellent strategies"
         ],
         "tradingCompetition": [
@@ -85,7 +91,8 @@
         "quantFundIncubationTitle": "Quant Fund Incubation",
         "quantFundIncubationLabel": "Quant Fund Incubation",
         "quantFundIncubationDetails": [
-          "Raising and initiating funds for excellent strategies"
+          "Raising and initiating funds",
+          "for excellent strategies"
         ],
         "newsData_2024": [
           {"id": 1, "time": "January", "title": "Second Strategic Competition", "small": "Expected to be held in January"},
