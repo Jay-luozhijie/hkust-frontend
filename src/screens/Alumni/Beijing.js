@@ -6,20 +6,9 @@ import BeiJingBG from '../../img/Beijing.jpg';
 const Beijing = () => {
   const { t, i18n } = useTranslation();
 
-  const getTranslatedText = (zhText, enText1, enText2, tcText) => {
-    if (i18n.language === 'zh') {
-      return zhText;
-    } else if (i18n.language === 'tc') {
-      return tcText;
-    } else {
-      return (
-        <>
-          {enText1}
-          <br />
-          {enText2}
-        </>
-      );
-    }
+  const getTranslatedText = (translations) => {
+    const lang = i18n.language;
+    return translations[lang] || translations.en;
   };
 
   return (
@@ -30,16 +19,31 @@ const Beijing = () => {
         <img className="beijing-image" src={BeiJingBG} alt="Scenic view of Beijing" />
         <div className="beijing-text-content">
           <div className={`beijing-title ${i18n.language === 'en' ? 'no-wrap' : ''}`}>
-            {getTranslatedText('北京校友会', 'Beijing Alumni Association', '', '北京校友會')}
+            {getTranslatedText({
+              zh: '北京校友会',
+              en: 'Beijing Alumni Association',
+              tc: '北京校友會'
+            })}
           </div>
           <div className="beijing-paragraph">
-            {getTranslatedText('北京校友会成立于2024年7月1日,', 'The Beijing Alumni Association was established on July 1, 2024,', '北京校友會成立於2024年7月1日，現任主要負責人為李思遠先生,')}
+            {getTranslatedText({
+              zh: '北京校友会成立于2024年7月1日, 现任主要负责人为李思远先生,',
+              en: (
+                <>
+                  The Beijing Alumni Association was established on July 1, 2024,
+                  <br />
+                  currently headed by Mr. Li Siyuan,
+                </>
+              ),
+              tc: '北京校友會成立於2024年7月1日，現任主要負責人為李思遠先生,'
+            })}
           </div>
           <div className="beijing-paragraph">
-            {getTranslatedText('现任主要负责人为李思远先生,', 'currently headed by Mr. Li Siyuan,', '廣州校友會成立於2024年7月1日，現任主要負責人為李思遠先生,')}
-          </div>
-          <div className="beijing-paragraph">
-            {getTranslatedText('联系邮箱为lisiyuansven@foxmail.com.', 'Contact email is lisiyuansven@foxmail.com.', '', '聯繫郵箱為lisiyuansven@foxmail.com.')}
+            {getTranslatedText({
+              zh: '联系邮箱为lisiyuansven@foxmail.com.',
+              en: 'Contact email is lisiyuansven@foxmail.com.',
+              tc: '聯繫郵箱為lisiyuansven@foxmail.com.'
+            })}
           </div>
         </div>
       </div>

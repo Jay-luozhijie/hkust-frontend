@@ -6,20 +6,9 @@ import ShenzhenBG from '../../img/Shenzhen.png';
 const Shenzhen = () => {
   const { t, i18n } = useTranslation();
 
-  const getTranslatedText = (zhText, enText1, enText2, tcText) => {
-    if (i18n.language === 'zh') {
-      return zhText;
-    } else if (i18n.language === 'tc') {
-      return tcText;
-    } else {
-      return (
-        <>
-          {enText1}
-          <br />
-          {enText2}
-        </>
-      );
-    }
+  const getTranslatedText = (translations) => {
+    const lang = i18n.language;
+    return translations[lang] || translations.en;
   };
 
   return (
@@ -30,13 +19,31 @@ const Shenzhen = () => {
         <img className="shenzhen-image" src={ShenzhenBG} alt="Scenic view of Shenzhen" />
         <div className="shenzhen-text-content">
           <div className={`shenzhen-title ${i18n.language === 'en' ? 'no-wrap' : ''}`}>
-            {getTranslatedText('深圳校友会', 'Shenzhen Alumni Association', '', '深圳校友會')}
+            {getTranslatedText({
+              zh: '深圳校友会',
+              en: 'Shenzhen Alumni Association',
+              tc: '深圳校友會'
+            })}
           </div>
           <div className="shenzhen-paragraph">
-            {getTranslatedText('深圳校友会成立于2024年7月1日, 现任主要负责人为李思远先生,', 'The Shenzhen Alumni Association was established on July 1, 2024,', 'currently headed by Mr. Li Siyuan,', '深圳校友會成立於2024年7月1日，現任主要負責人為李思遠先生,')}
+            {getTranslatedText({
+              zh: '深圳校友会成立于2024年7月1日, 现任主要负责人为李思远先生,',
+              en: (
+                <>
+                  The Shenzhen Alumni Association was established on July 1, 2024,
+                  <br />
+                  currently headed by Mr. Li Siyuan,
+                </>
+              ),
+              tc: '深圳校友會成立於2024年7月1日，現任主要負責人為李思遠先生,'
+            })}
           </div>
           <div className="shenzhen-paragraph">
-            {getTranslatedText('联系邮箱为lisiyuansven@foxmail.com.', 'Contact email is lisiyuansven@foxmail.com.', '', '聯繫郵箱為lisiyuansven@foxmail.com.')}
+            {getTranslatedText({
+              zh: '联系邮箱为lisiyuansven@foxmail.com.',
+              en: 'Contact email is lisiyuansven@foxmail.com.',
+              tc: '聯繫郵箱為lisiyuansven@foxmail.com.'
+            })}
           </div>
         </div>
       </div>

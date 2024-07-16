@@ -24,8 +24,8 @@ function IntroduceScreen() {
 
   function getStepTextStyle(isMobile, language) {
 	if (isMobile) {
-	  let baseSize = language === 'en' ? '14px' : '16px'; // 移动设备上的字体大小
-	  let smallSize = language === 'en' ? '12px' : '14px'; // 移动设备上的小字体大小
+	  let baseSize = language === 'en' ? '22px' : '16px'; // 移动设备上的字体大小
+	  let smallSize = language === 'en' ? '18px' : '14px'; // 移动设备上的小字体大小
 	  let padding = '15px'; // 移动设备上的内边距
   
 	  return {
@@ -70,7 +70,7 @@ function IntroduceScreen() {
     
   function getTitleFontSize(isMobile, language) {
 	if (isMobile) {
-	  return language === 'en' ? '35px' : '50px'; // 移动设备上较小的字体大小
+	  return language === 'en' ? '28px' : '35px'; // 移动设备上较小的字体大小
 	}
 	return language === 'en' ? '70px' : '95px'; // 电脑设备上的原始大小
   }
@@ -96,7 +96,7 @@ function IntroduceScreen() {
 		<h1 className="h1" style={{ fontSize }}>
 			{t('introduceTitle')}
 		</h1>
-			<p className="label">{t('hkustQuantTradingSociety')}</p>
+			<p className="label" style={ {fontSize: isMobile ? '15px' : undefined}}>{t('hkustQuantTradingSociety')}</p>
 			<p className="info">{t('empowerFutureQuantLeaders')}</p>
       </div>
       <div className="container-box">
@@ -177,7 +177,9 @@ function IntroduceScreen() {
 						<Col xs={12}>
 							<ul className="ul">
 							{t('industryConnectionDetails', { returnObjects: true }).map((detail, index) => (
-								<li key={index}>{detail}</li>
+								<li key={index} style={{ listStyleType: index === 1 || index === 2 || index === 4 || index === 6 ? 'none' : undefined }}>
+									{detail}
+								</li>
 							))}
 							</ul>
 						</Col>
@@ -206,7 +208,7 @@ function IntroduceScreen() {
 								</div>
 								<ul className="ul" style={textStyle}>
 								{t('tradingStrategies', { returnObjects: true }).map((strategy, index) => (
-									<li key={index} style={textStyle}>{strategy}</li>
+									<li key={index} style={{...textStyle, listStyleType: index === 3 ? 'none' : undefined }}>{strategy}</li>
 								))}
 								</ul>
 							</Col>
@@ -216,7 +218,7 @@ function IntroduceScreen() {
 								</div>
 								<ul className="ul" style={textStyle}>
 								{t('tradingSelection', { returnObjects: true }).map((selection, index) => (
-									<li key={index} style={{ ...textStyle, listStyleType: index === 1 ? 'none' : undefined }}>
+									<li key={index} style={{ ...textStyle, listStyleType: index === 1 || index === 2 ? 'none' : undefined }}>
 									{selection}
 									</li>
 								))}
@@ -256,7 +258,7 @@ function IntroduceScreen() {
 					<Col xs={12}>
 						<ul className="ul">
 						{t('quantFundIncubationDetails', { returnObjects: true }).map((incubation, index) => (
-							<li key={index}>{incubation}</li>
+							<li key={index} style={{listStyleType: index === 1 ? 'none' : undefined}}>{incubation}</li>
 						))}
 						</ul>
 					</Col>

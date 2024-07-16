@@ -10,6 +10,7 @@ import { useLanguage } from '../components/LanguageContext';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useMediaQuery } from 'react-responsive';
 import breakpoints from '../config/breakpoints'; // 确保这是正确的路径
+import { Link } from 'react-router-dom';
 
 function Navbar() {
     const { t, i18n } = useTranslation();
@@ -64,19 +65,25 @@ function Navbar() {
             <header className="tp-header-height">
                 <div className="tp-header-top-3__area grey-bg" style={{ backgroundColor: '#9A1E23' }}>
                     <div className="container" style={{ display: "flex", alignItems: "center", justifyContent: "flex-end", height: "100%", marginRight: "40px" }}>
-                        <div style={{ color: "white" }}>HKUST Quant Trading Society</div>
+                        <div style={{ color: "white" }}>Quant Trading Society（HKUST- MAFM）</div>
                     </div>
                 </div>
                 <div style={{ backgroundColor: 'white' }} className="tab-box">
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', height: '100%', boxSizing: 'border-box', position: 'relative' }} className="tab-box-item">
-                    <div style={{ display: 'flex', alignItems: 'center', marginRight: '0px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', marginRight: '0px' }}>
+                    <Link to="/">
                         <Logo style={{ width: isMobile ? '127.5px' : '230px', height: isMobile ? '34px' : '60px' }} className="Logo" />
+                    </Link>
                     </div>
                     <div style={{ display: 'flex', alignItems: 'center', marginRight: '0px' }}>
+                    <Link to="/">
                         <Title style={{ width: isMobile ? '102px' : '180px', height: isMobile ? '34px' : '60px' }} className="Title" />
+                    </Link>
                     </div>
                     <div style={{ display: 'flex', alignItems: 'center', marginLeft: isDesktop ? '-15px' : '0px' }}>
+                    <Link to="/">
                         <img src={quantSocietyLogo} alt="Quant Society Logo" style={{ width: isDesktop ? '187px' : '85px', height: isDesktop ? '187px' : '85px' }} />
+                    </Link>
                     </div>
                     {!isDesktop && (
                         <div className="menubtn" onClick={toggleMenu} style={{ position: 'absolute', right: '0px', top: '25%' }}>

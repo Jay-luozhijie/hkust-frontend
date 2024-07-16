@@ -10,7 +10,7 @@ import breakpoints from '../config/breakpoints';
 import i18n from 'i18next';
 
 const slideContent = (t, isMobile) => {
-  const fontSizeMain = isMobile ? '24px' : '64px';
+  const fontSizeMain = isMobile ? '22px' : '64px';
   const fontSizeSub = isMobile ? '18px' : '40px';
   const isEnglish = i18n.language === 'en';
 
@@ -101,7 +101,7 @@ function HomeScreen() {
   
   const titleStyle1 = {
     color: '#9A1E23',
-    fontSize: isMobile ? '32px' : '64px', // 手机模式下的字号调整
+    fontSize: isMobile ? '30px' : '64px', // 手机模式下的字号调整
     marginBottom: '10px'
   };
   

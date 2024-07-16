@@ -29,24 +29,52 @@ const associationMemberData = [
 ];
 
 const previousMemberData = [
-  { id: 1, stage: '2024届成员', introduce: '罗广大（主席），王佳恒（副主席），李思远（常务秘书）' },
-  { id: 2, stage: '2023届成员', introduce: '罗广大（主席），王佳恒（副主席）' },
+  {
+    id: 1,
+    stage: {
+      zh: '2024届成员',
+      en: '2024 Members',
+      tc: '2024屆成員'
+    },
+    introduce: {
+      zh: '罗广大（主席），王佳恒（副主席），李思远（常务秘书）',
+      en: 'LUO Guangda (President), WANG Jiaheng (Vice President), LI Siyuan (General Secretary)',
+      tc: '羅廣大（主席），王佳恒（副主席），李思遠（常務秘書）'
+    }
+  },
+  {
+    id: 2,
+    stage: {
+      zh: '2023届成员',
+      en: '2023 Members',
+      tc: '2023屆成員'
+    },
+    introduce: {
+      zh: '罗广大（主席），王佳恒（副主席）',
+      en: 'LUO Guangda (President), WANG Jiaheng (Vice President)',
+      tc: '羅廣大（主席），王佳恒（副主席）'
+    }
+  }
 ];
 
 function AboutUsScreen() {
   const { t, i18n } = useTranslation();
   const isMobile = useMediaQuery({ query: breakpoints.mobile });
 
-  const getTranslatedText = (zhText, enText, tcText) => {
-    if (i18n.language === 'zh') {
-      return zhText;
-    } else if (i18n.language === 'tc') {
-      return tcText;
-    } else {
-      return enText;
+  const getTranslatedText = (i18n, zhText, enText, tcText) => {
+    console.log('i18n.language:', i18n.language); // 添加这一行日志
+    switch (i18n.language) {
+      case 'en':
+        return enText;
+      case 'tc':
+        return tcText;
+      default:
+        return zhText;
     }
   };
-
+  
+  const previousMembersTitleText = getTranslatedText(i18n, '往届成员', 'Previous Members', '往屆成員');
+  
   const tabItemStyle = {
     fontSize: i18n.language === 'en' ? '17px' : undefined,
     whiteSpace: i18n.language === 'en' ? 'nowrap' : undefined
@@ -61,6 +89,14 @@ function AboutUsScreen() {
     height: isMobile ? '164px' : '265px'
   };
 
+  const headerStyle = {
+    fontSize: i18n.language === 'en' ? '24px' : undefined,
+  };
+
+  const titleStyle = {
+    fontSize: i18n.language === 'en' ? '20px' : undefined,
+  };
+  
   return (
     <div className="aboutus-wrap">
       {!isMobile && (
@@ -79,8 +115,12 @@ function AboutUsScreen() {
         </div>
       )}
       <div className="member-container">
-        <div className="header">{getTranslatedText('成员与运营团队', 'Members and Operating Team', '成員與運營團隊')}</div>
-        <div className="title">{getTranslatedText('协会成员', 'Association Members', '協會成員')}</div>
+      <div className="header" style={headerStyle}>
+          {getTranslatedText(i18n, '成员与运营团队', 'Members and Operating Team', '成員與運營團隊')}
+        </div>
+        <div className="title" style={titleStyle}>
+          {getTranslatedText(i18n, '协会成员', 'Association Members', '協會成員')}
+        </div>
         <div className="association-member-list" style={associationMemberListStyle}>
           {associationMemberData.map((item) => (
             <div key={item.id} className="member-item">
@@ -97,12 +137,12 @@ function AboutUsScreen() {
           ))}
         </div>
         <div className="past-members-section">
-          <div className="title">{getTranslatedText('往届成员', 'Previous Members', '往屆成員')}</div>
+          <div className="title">{previousMembersTitleText}</div>
           <div className="previous-member-list">
-            {previousMemberData.map((item) => (
+          {previousMemberData.map((item) => (
               <div key={item.id} className="member-item">
-                <div className="stage">{item.stage}</div>
-                <div className="introduce">{item.introduce}</div>
+                <div className="stage">{getTranslatedText(i18n, item.stage.zh, item.stage.en, item.stage.tc)}</div>
+                <div className="introduce">{getTranslatedText(i18n, item.introduce.zh, item.introduce.en, item.introduce.tc)}</div>
               </div>
             ))}
           </div>

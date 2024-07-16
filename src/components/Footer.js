@@ -11,6 +11,7 @@ import { ReactComponent as Rectangle } from '../img/Rectangle.svg';
 import { useTranslation } from 'react-i18next';
 import { useMediaQuery } from 'react-responsive';
 import breakpoints from '../config/breakpoints';
+import QRCode from '../img/footerQR.jpg'
 
 function Footer() {
     const { t } = useTranslation();
@@ -42,32 +43,35 @@ function Footer() {
         color: 'white',
         position: 'relative',
         top: isMobile ? '295px' : '-10px',  // 增加了手机模式下的下移距离
-        left: isMobile ? '56%' : '0',
+        right: isMobile ? '-50%' : '0',
         transform: isMobile ? 'translateX(-137%)' : 'none',
-        whiteSpace: 'nowrap'
+        whiteSpace: 'nowrap',
+        fontFamily: 'Oppo Sans Regular',
+        fontSize: isMobile ? '12px' : undefined,
     };
 
     const friendLinksTextStyle = {
         color: 'white',
         position: 'relative',
         top: isMobile ? '160px' : '-10px',  // 增加了手机模式下的下移距离
-        left: isMobile ? '-125%' : '0',
+        left: isMobile ? '-120%' : '0',
         transform: isMobile ? 'translateX(-50%)' : 'none',
         marginRight: '50px',
         marginLeft: isMobile ? 'auto' : '15px',
         minWidth: isMobile ? '200px' : 'auto',
         whiteSpace: 'nowrap',
         padding: isMobile ? '0 10px' : '0',
+        fontFamily: 'Oppo Sans Regular'
     };
 
     const cryptoStyle = {
-        marginRight: isMobile ? '20px' : '0'
+        marginRight: isMobile ? '20px' : '0',
     };
 
     const outerDivStyle = {
         position: 'relative',
         top: isMobile ? '50px' : '0px',  // 减少了手机模式下的上移距离
-        left: isMobile ? '-985px' : '10px',
+        left: isMobile ? '-965px' : '-30px',
     };
 
     const linkStyle1 = {
@@ -106,6 +110,14 @@ function Footer() {
         top: isMobile ? '-10px' : '-10px'  // 手机模式调整
     };
     
+    const rectangleStyle = {
+        width: '100px', // 设定适当的宽度和高度
+        height: '100px',
+        backgroundImage: `url(${QRCode})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+    };
+    
     return (
         <div style={{ zIndex: 2, position: 'relative' }}>
             <footer className="tp-header-height" style={footerStyle}>
@@ -119,7 +131,7 @@ function Footer() {
                     boxSizing: 'border-box'
                 }}>
                 <Logo style={logoStyle} />
-                    <span style={copyrightTextStyle}>Copyright&copy; HKUST Quant Trading Society</span>
+                    <span style={copyrightTextStyle}>Copyright&copy; Quant Trading Society（HKUST- MAFM）</span>
                     <div style={{ flexGrow: 1 }}></div>
                     <div style={friendLinksTextStyle}>
                         {t('friendLinks')}{isMobile ? <br /> : ': '}
@@ -165,7 +177,7 @@ function Footer() {
                     </div>
                     <div style={msgDivStyle}>
                         <MsgIcon style={msgIconStyle} />
-                        <Rectangle />
+                        <div style={rectangleStyle}></div>
                     </div>
                     <div style={{ flexGrow: 1 }}></div>
                 </div>

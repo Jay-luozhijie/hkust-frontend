@@ -8,7 +8,7 @@
     justify-content: center;
     padding: 50px 0;
     margin-left: -110px;
-    margin-bottom: 150px;
+    margin-bottom: 50px;
   
     .shanghai-background-layer {
       position: absolute;
@@ -95,11 +95,12 @@
           font-family: 'OPPO Sans';
           font-weight: 400;
           word-wrap: break-word;
-          white-space: nowrap;
+          width: 600px;
           position: relative;
           @media only screen and (max-width: 768px) {
             font-size: 18px;
             top: 270px;
+            width: 300px;
           }
         }
       }
