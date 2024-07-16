@@ -185,7 +185,20 @@ function CommunityNewsScreen() {
           </div>
         </div>
         <div className='activity-list'>
-          <Swiper watchSlidesProgress={true} slidesPerView={3} spaceBetween={50}>
+          <Swiper watchSlidesProgress={true} breakpoints={{
+              640: {
+                slidesPerView: 2,
+                spaceBetween: 20
+              },
+              768: {
+                slidesPerView: 3,
+                spaceBetween: 40
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 50
+              },
+            }}>
             {activityData.map((item) => (
               <SwiperSlide key={item.id} onClick={() => handleActitityItemClick(item._id)} style={{ cursor: 'pointer' }}>
               <div className='activity-item'>

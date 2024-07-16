@@ -7,6 +7,7 @@ import Col from 'react-bootstrap/Col';
 import Rectangle23 from '../img/Rectangle23.png';
 import Rectangle25 from '../img/Rectangle25.png';
 import Rectangle26 from '../img/Rectangle26.png';
+import Rectangle95 from '../img/Rectangle95.png';
 
 function SocialAdvisorScreen() {
   const { t } = useTranslation();
@@ -26,16 +27,20 @@ function SocialAdvisorScreen() {
     </div>
     <Row>
       {members.map((member, index) => (
-        <Col key={index} xs={12} sm={12} md={6} lg={4} xl={4} xxl={4}>
+        <Col key={index} xs={12} sm={12} md={12} lg={12} xl={12} xxl={12}>
          <div className="lists">
            <div className="lists-item">
-             <img src={[Rectangle23, Rectangle25, Rectangle26][index]}/>
-             <div className="bottom_content">
-              <h3 className="name">{member.name}</h3>
-              <p className="job">{member.job}</p>
-             </div>
+            
+              <img src={[Rectangle25, Rectangle95, Rectangle23, Rectangle26][index]}/>
+              <div className="right">
+                <div className="bottom_content">
+                  <h3 className="name">{member.name}</h3>
+                  <p className="job">{member.job}</p>
+                </div>
+                <p className="label">{member.introduce}</p>
+              </div>
+            
            </div>
-           <p className="label">{member.introduce}</p>
          </div>
         </Col>
       ))}
