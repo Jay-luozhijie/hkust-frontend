@@ -67,7 +67,7 @@ const associationMemberData = [
       en: 'Li Siyuan',
       tc: '李思遠'
     }, 
-    job: 'General Secretary', introduce1: 'Master of Philosophy in Fintech,', introduce2: 'Hong Kong University of Science and Technology', avatarSrc: avatar6 },
+    job: 'General Secretary', introduce1: 'Master of Philosophy in Fintech,', introduce2: 'Hong Kong University of Science and Technology (Guangzhou)', avatarSrc: avatar6 },
   { 
     id: 7,     
     name: {
