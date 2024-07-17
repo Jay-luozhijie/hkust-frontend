@@ -4,12 +4,6 @@
 	font-size: 54px;
 	font-weight: bold;
 	padding-left: 100px;
-	@media only screen and (max-width: 768px) {
-		font-size: 35px;
-		padding-top: 50px;
-		left: -60px;
-		position: relative;
-	  }
 }
 .partner .m-test-wrap{
 	margin-top: 70px;
@@ -18,14 +12,10 @@
 position: relative;
 	padding:50px 59px;
 	height: 557px;
-	width: 500px;
 	box-sizing: border-box;
 	border-radius: 0px 60px;
 	background: #FFF7F7;
 	box-shadow: 0px 4px 4px 0px rgba(154, 30, 35, 0.16);
-	@media only screen and (max-width: 768px) {
-		width: 390px;
-	  }
 }
 .partner .slide-item .img{
     text-align: center;
@@ -37,19 +27,16 @@ position: relative;
 	color: #9A1E23;
 	text-align: center;
 	font-family: "OPPO Sans";
-	font-size: 28px;
+	font-size: 36px;
 	font-style: normal;
 	font-weight: 700;
 	line-height: normal;
 	margin-top: 16px;
-	@media only screen and (max-width: 768px) {
-		font-size: 30px;
-	  }
 }
 .partner .slide-item p{
 	color: #000;
 	text-align: justify;
-	font-family: "OPPO Sans";
+	font-family: FZLanTingHei-R-GBK;
 	font-size: 20px;
 	font-style: normal;
 	font-weight: 400;
@@ -81,25 +68,13 @@ position: relative;
 
 .partner {
 	padding-bottom: 70px; 
-	@media only screen and (max-width: 768px) {
-		padding-bottom: 110px; 
-	  }
   }
   
   .slide-item p {
-	max-height: 330px;
-	overflow-y: auto;
+	max-height: 330px; /* 或者你需要的特定高度 */
+	overflow-y: auto; /* 垂直方向上超出内容显示滚动条 */
   }
   
   .slide-item p::-webkit-scrollbar {
-	width: 6px;
+	width: 6px; /* 设置滚动条宽度 */
   }
-
-  .partner .m-test-wrap .swiper-slide {
-    width: 400px;
-    flex-shrink: 0; 
-	width: 500px;
-	@media only screen and (max-width: 768px) {
-		width: 360px;
-	  }
-}

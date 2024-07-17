@@ -40,6 +40,7 @@ import './css/Alumni/Shenzhen.scss';
 
 import { useMediaQuery } from 'react-responsive';
 import breakpoints from './config/breakpoints';
+import ActivitiesDetailScreen from './screens/ActivitiesDetailScreen.js';
 
 axios.defaults.baseURL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000';
 
@@ -61,6 +62,7 @@ function App() {
                       <Route path = "/partner" element={<PartnerScreen/>}></Route>
                       <Route path = "/communityNews" element={<CommunityNewsScreen/>}></Route>
                       <Route path = "/communityNews/:id" element={<CommunityNewsDetailScreen/>}></Route>
+                      <Route path = "/activities/:id" element={<ActivitiesDetailScreen/>}></Route>
                       <Route path = "/SocialAdvisor" element={<SocialAdvisorScreen/>}></Route>
                       <Route path = "/AboutUs" element={<AboutUsScreen/>}></Route>
                       <Route path = "/TradingCompetition" element={<TradingCompetition/>}></Route> 
@@ -81,8 +83,9 @@ function App() {
                   
                 
                
-                <Footer></Footer>
+
               </main>
+              <Footer></Footer>
             </div>
           </AuthProvider>
         </BrowserRouter>);

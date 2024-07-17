@@ -1,7 +1,6 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Pagination, Autoplay } from 'swiper/modules';
-import homeScreenImage from '../img/hkust_background.png';
 import backgroundImage from '../img/Group12.png';
 import '../css/homeScreen.css';
 import { useTranslation } from 'react-i18next';
@@ -9,20 +8,327 @@ import { useMediaQuery } from 'react-responsive';
 import breakpoints from '../config/breakpoints';
 import i18n from 'i18next';
 
-const slideContent = (t, isMobile) => {
-  const fontSizeMain = isMobile ? '22px' : '64px';
-  const fontSizeSub = isMobile ? '18px' : '40px';
+import slide1ScreenImage from '../img/homeslides/slide1.png';
+import slide2ScreenImage from '../img/homeslides/slide2.png';
+import slide3ScreenImage from '../img/homeslides/slide3.png';
+import slide4ScreenImage from '../img/homeslides/slide4.png';
+import slide5ScreenImage from '../img/homeslides/slide5.png';
+import slide6ScreenImage from '../img/homeslides/slide6.png';
+
+const slideContent1 = (t, isMobile) => {
   const isEnglish = i18n.language === 'en';
+  const fontSizeMain = isMobile ? '22px' : (isEnglish ? '50px' : '50px');  // 英文模式下调整主字号
+  const fontSizeSub = isMobile ? '18px' : (isEnglish ? '30px' : '30px');  // 英文模式下调整子字号
 
   // 调整每个文本框的位置
   const textPosition1 = isMobile ? { right: '20px', top: isEnglish ? '80px' : '80px' } : { left: '142px', top: '70px' };
   const textPosition2 = isMobile ? { right: '20px', top: isEnglish ? '140px' : '120px' } : { left: '142px', top: '140px' };
-  const textPosition3 = isMobile ? { right: '20px', top: isEnglish ? '210px' : '160px' } : { left: '142px', top: '215px' };
+  const textPosition3 = isMobile ? { right: '20px', top: isEnglish ? '210px' : '160px' } : { left: '142px', top: '220px' };
   const textAlign = isMobile ? 'right' : 'left';
   
   return (
     <div>
-      <img className="layer1" src={homeScreenImage} alt={t('hkust_background')} />
+      <img className="layer1" src={slide1ScreenImage} alt={t('hkust_background')} />
+      <div className="layer2 swiper-cover"></div>
+      <div className="layer3">
+        <div style={{
+          position: 'absolute',
+          color: 'white',
+          fontSize: fontSizeMain,
+          fontFamily: 'OPPO Sans',
+          fontWeight: '400',
+          wordWrap: 'break-word',
+          lineHeight: '1.3',
+          textAlign: textAlign,
+          ...textPosition1
+        }}>
+          {t('slide_text_line1')}
+        </div>
+        <div style={{
+          position: 'absolute',
+          color: 'white',
+          fontSize: fontSizeMain,
+          fontFamily: 'OPPO Sans',
+          fontWeight: '400',
+          wordWrap: 'break-word',
+          lineHeight: '1.3',
+          textAlign: textAlign,
+          ...textPosition2
+        }}>
+          {t('slide_text_line2')}
+        </div>
+        <div style={{
+          position: 'absolute',
+          color: 'white',
+          fontSize: fontSizeSub,
+          fontFamily: 'OPPO Sans',
+          fontWeight: '400',
+          wordWrap: 'break-word',
+          lineHeight: '1.3',
+          textAlign: textAlign,
+          ...textPosition3
+        }}>
+          {t('hkust_quant_trading_society')}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const slideContent2 = (t, isMobile) => {
+  const isEnglish = i18n.language === 'en';
+  const fontSizeMain = isMobile ? '22px' : (isEnglish ? '50px' : '50px');  // 英文模式下调整主字号
+  const fontSizeSub = isMobile ? '18px' : (isEnglish ? '30px' : '30px');  // 英文模式下调整子字号
+
+  // 调整每个文本框的位置
+  const textPosition1 = isMobile ? { right: '20px', top: isEnglish ? '80px' : '80px' } : { left: '142px', top: '70px' };
+  const textPosition2 = isMobile ? { right: '20px', top: isEnglish ? '140px' : '120px' } : { left: '142px', top: '140px' };
+  const textPosition3 = isMobile ? { right: '20px', top: isEnglish ? '210px' : '160px' } : { left: '142px', top: '220px' };
+  const textAlign = isMobile ? 'right' : 'left';
+  
+  return (
+    <div>
+      <img className="layer1" src={slide2ScreenImage} alt={t('hkust_background')} />
+      <div className="layer2 swiper-cover"></div>
+      <div className="layer3">
+        <div style={{
+          position: 'absolute',
+          color: 'white',
+          fontSize: fontSizeMain,
+          fontFamily: 'OPPO Sans',
+          fontWeight: '400',
+          wordWrap: 'break-word',
+          lineHeight: '1.3',
+          textAlign: textAlign,
+          ...textPosition1
+        }}>
+          {t('slide_text_line1')}
+        </div>
+        <div style={{
+          position: 'absolute',
+          color: 'white',
+          fontSize: fontSizeMain,
+          fontFamily: 'OPPO Sans',
+          fontWeight: '400',
+          wordWrap: 'break-word',
+          lineHeight: '1.3',
+          textAlign: textAlign,
+          ...textPosition2
+        }}>
+          {t('slide_text_line2')}
+        </div>
+        <div style={{
+          position: 'absolute',
+          color: 'white',
+          fontSize: fontSizeSub,
+          fontFamily: 'OPPO Sans',
+          fontWeight: '400',
+          wordWrap: 'break-word',
+          lineHeight: '1.3',
+          textAlign: textAlign,
+          ...textPosition3
+        }}>
+          {t('hkust_quant_trading_society')}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const slideContent3 = (t, isMobile) => {
+  const isEnglish = i18n.language === 'en';
+  const fontSizeMain = isMobile ? '22px' : (isEnglish ? '50px' : '50px');  // 英文模式下调整主字号
+  const fontSizeSub = isMobile ? '18px' : (isEnglish ? '30px' : '30px');  // 英文模式下调整子字号
+
+  // 调整每个文本框的位置
+  const textPosition1 = isMobile ? { right: '20px', top: isEnglish ? '80px' : '80px' } : { left: '142px', top: '70px' };
+  const textPosition2 = isMobile ? { right: '20px', top: isEnglish ? '140px' : '120px' } : { left: '142px', top: '140px' };
+  const textPosition3 = isMobile ? { right: '20px', top: isEnglish ? '210px' : '160px' } : { left: '142px', top: '220px' };
+  const textAlign = isMobile ? 'right' : 'left';
+  
+  return (
+    <div>
+      <img className="layer1" src={slide3ScreenImage} alt={t('hkust_background')} />
+      <div className="layer2 swiper-cover"></div>
+      <div className="layer3">
+        <div style={{
+          position: 'absolute',
+          color: 'white',
+          fontSize: fontSizeMain,
+          fontFamily: 'OPPO Sans',
+          fontWeight: '400',
+          wordWrap: 'break-word',
+          lineHeight: '1.3',
+          textAlign: textAlign,
+          ...textPosition1
+        }}>
+          {t('slide_text_line1')}
+        </div>
+        <div style={{
+          position: 'absolute',
+          color: 'white',
+          fontSize: fontSizeMain,
+          fontFamily: 'OPPO Sans',
+          fontWeight: '400',
+          wordWrap: 'break-word',
+          lineHeight: '1.3',
+          textAlign: textAlign,
+          ...textPosition2
+        }}>
+          {t('slide_text_line2')}
+        </div>
+        <div style={{
+          position: 'absolute',
+          color: 'white',
+          fontSize: fontSizeSub,
+          fontFamily: 'OPPO Sans',
+          fontWeight: '400',
+          wordWrap: 'break-word',
+          lineHeight: '1.3',
+          textAlign: textAlign,
+          ...textPosition3
+        }}>
+          {t('hkust_quant_trading_society')}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const slideContent4 = (t, isMobile) => {
+  const isEnglish = i18n.language === 'en';
+  const fontSizeMain = isMobile ? '22px' : (isEnglish ? '50px' : '50px');  // 英文模式下调整主字号
+  const fontSizeSub = isMobile ? '18px' : (isEnglish ? '30px' : '30px');  // 英文模式下调整子字号
+
+  // 调整每个文本框的位置
+  const textPosition1 = isMobile ? { right: '20px', top: isEnglish ? '80px' : '80px' } : { left: '142px', top: '70px' };
+  const textPosition2 = isMobile ? { right: '20px', top: isEnglish ? '140px' : '120px' } : { left: '142px', top: '140px' };
+  const textPosition3 = isMobile ? { right: '20px', top: isEnglish ? '210px' : '160px' } : { left: '142px', top: '220px' };
+  const textAlign = isMobile ? 'right' : 'left';
+  
+  return (
+    <div>
+      <img className="layer1" src={slide4ScreenImage} alt={t('hkust_background')} />
+      <div className="layer2 swiper-cover"></div>
+      <div className="layer3">
+        <div style={{
+          position: 'absolute',
+          color: 'white',
+          fontSize: fontSizeMain,
+          fontFamily: 'OPPO Sans',
+          fontWeight: '400',
+          wordWrap: 'break-word',
+          lineHeight: '1.3',
+          textAlign: textAlign,
+          ...textPosition1
+        }}>
+          {t('slide_text_line1')}
+        </div>
+        <div style={{
+          position: 'absolute',
+          color: 'white',
+          fontSize: fontSizeMain,
+          fontFamily: 'OPPO Sans',
+          fontWeight: '400',
+          wordWrap: 'break-word',
+          lineHeight: '1.3',
+          textAlign: textAlign,
+          ...textPosition2
+        }}>
+          {t('slide_text_line2')}
+        </div>
+        <div style={{
+          position: 'absolute',
+          color: 'white',
+          fontSize: fontSizeSub,
+          fontFamily: 'OPPO Sans',
+          fontWeight: '400',
+          wordWrap: 'break-word',
+          lineHeight: '1.3',
+          textAlign: textAlign,
+          ...textPosition3
+        }}>
+          {t('hkust_quant_trading_society')}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const slideContent5 = (t, isMobile) => {
+  const isEnglish = i18n.language === 'en';
+  const fontSizeMain = isMobile ? '22px' : (isEnglish ? '50px' : '50px');  // 英文模式下调整主字号
+  const fontSizeSub = isMobile ? '18px' : (isEnglish ? '30px' : '30px');  // 英文模式下调整子字号
+
+  // 调整每个文本框的位置
+  const textPosition1 = isMobile ? { right: '20px', top: isEnglish ? '80px' : '80px' } : { left: '142px', top: '70px' };
+  const textPosition2 = isMobile ? { right: '20px', top: isEnglish ? '140px' : '120px' } : { left: '142px', top: '140px' };
+  const textPosition3 = isMobile ? { right: '20px', top: isEnglish ? '210px' : '160px' } : { left: '142px', top: '220px' };
+  const textAlign = isMobile ? 'right' : 'left';
+  
+  return (
+    <div>
+      <img className="layer1" src={slide5ScreenImage} alt={t('hkust_background')} />
+      <div className="layer2 swiper-cover"></div>
+      <div className="layer3">
+        <div style={{
+          position: 'absolute',
+          color: 'white',
+          fontSize: fontSizeMain,
+          fontFamily: 'OPPO Sans',
+          fontWeight: '400',
+          wordWrap: 'break-word',
+          lineHeight: '1.3',
+          textAlign: textAlign,
+          ...textPosition1
+        }}>
+          {t('slide_text_line1')}
+        </div>
+        <div style={{
+          position: 'absolute',
+          color: 'white',
+          fontSize: fontSizeMain,
+          fontFamily: 'OPPO Sans',
+          fontWeight: '400',
+          wordWrap: 'break-word',
+          lineHeight: '1.3',
+          textAlign: textAlign,
+          ...textPosition2
+        }}>
+          {t('slide_text_line2')}
+        </div>
+        <div style={{
+          position: 'absolute',
+          color: 'white',
+          fontSize: fontSizeSub,
+          fontFamily: 'OPPO Sans',
+          fontWeight: '400',
+          wordWrap: 'break-word',
+          lineHeight: '1.3',
+          textAlign: textAlign,
+          ...textPosition3
+        }}>
+          {t('hkust_quant_trading_society')}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const slideContent6 = (t, isMobile) => {
+  const isEnglish = i18n.language === 'en';
+  const fontSizeMain = isMobile ? '22px' : (isEnglish ? '50px' : '50px');  // 英文模式下调整主字号
+  const fontSizeSub = isMobile ? '18px' : (isEnglish ? '30px' : '30px');  // 英文模式下调整子字号
+
+  // 调整每个文本框的位置
+  const textPosition1 = isMobile ? { right: '20px', top: isEnglish ? '80px' : '80px' } : { left: '142px', top: '70px' };
+  const textPosition2 = isMobile ? { right: '20px', top: isEnglish ? '140px' : '120px' } : { left: '142px', top: '140px' };
+  const textPosition3 = isMobile ? { right: '20px', top: isEnglish ? '210px' : '160px' } : { left: '142px', top: '220px' };
+  const textAlign = isMobile ? 'right' : 'left';
+  
+  return (
+    <div>
+      <img className="layer1" src={slide6ScreenImage} alt={t('hkust_background')} />
       <div className="layer2 swiper-cover"></div>
       <div className="layer3">
         <div style={{
@@ -150,6 +456,7 @@ function HomeScreen() {
           slideShadows: true,
         }}
         autoplay={{
+
           delay: 30000,
           disableOnInteraction: false,
         }}
@@ -159,11 +466,12 @@ function HomeScreen() {
         }}
         modules={[EffectCoverflow, Pagination, Autoplay]}
       >
-        <SwiperSlide>{slideContent(t, isMobile)}</SwiperSlide>
-        <SwiperSlide>{slideContent(t, isMobile)}</SwiperSlide>
-        <SwiperSlide>{slideContent(t, isMobile)}</SwiperSlide>
-        <SwiperSlide>{slideContent(t, isMobile)}</SwiperSlide>
-        <SwiperSlide>{slideContent(t, isMobile)}</SwiperSlide>
+        <SwiperSlide>{slideContent1(t, isMobile)}</SwiperSlide>
+        <SwiperSlide>{slideContent2(t, isMobile)}</SwiperSlide>
+        <SwiperSlide>{slideContent3(t, isMobile)}</SwiperSlide>
+        <SwiperSlide>{slideContent4(t, isMobile)}</SwiperSlide>
+        <SwiperSlide>{slideContent5(t, isMobile)}</SwiperSlide>
+        <SwiperSlide>{slideContent6(t, isMobile)}</SwiperSlide>
       </Swiper>
       <div style={containerStyle1}>
         <div style={{

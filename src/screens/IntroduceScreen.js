@@ -122,6 +122,7 @@ function IntroduceScreen() {
         </div>
       </div>
 	  <div className="active-box">
+
 		<div className="title" style={mobileShiftStyle}>
 			{t('activityTimelineTitle')}
 		</div>
@@ -152,6 +153,7 @@ function IntroduceScreen() {
 					<div className="step__bottom">
 						<div className="step__description">{item.time}</div>
 					</div>
+
 				</div>
 			))}
 			</div>

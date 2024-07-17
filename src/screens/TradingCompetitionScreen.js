@@ -17,6 +17,7 @@ function TradingCompetition() {
 
   return (
     <>
+
     <div className="background-layer" style={{ backgroundImage: `url(${AlumniPageBackground})` }} />
 
     <div className="content-layer">

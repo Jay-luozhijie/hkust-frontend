@@ -21,7 +21,7 @@ const associationMemberData = [
   { id: 3, name: 'Zhang Yawei', job: 'General Secretary', introduce1: 'Master of Public Management,', introduce2: 'Hong Kong University of Science and Technology', avatarSrc: avatar3 },
   { id: 4, name: 'Xiong Jiarui', job: 'General Secretary', introduce1: 'Master of Financial Mathematics,', introduce2: 'Hong Kong University of Science and Technology', avatarSrc: avatar4 },
   { id: 5, name: 'Lin Heyi', job: 'General Secretary', introduce1: 'Master of Financial Mathematics,', introduce2: 'Hong Kong University of Science and Technology', avatarSrc: avatar5 },
-  { id: 6, name: 'Li Siyuan', job: 'General Secretary', introduce1: 'Master of Financial Mathematics,', introduce2: 'Hong Kong University of Science and Technology', avatarSrc: avatar6 },
+  { id: 6, name: 'Li Siyuan', job: 'General Secretary', introduce1: 'Master of Philosophy in Fintech,', introduce2: 'Hong Kong University of Science and Technology', avatarSrc: avatar6 },
   { id: 7, name: 'Lui Man Hin', job: 'General Secretary', introduce1: 'Master of Financial Mathematics,', introduce2: 'Hong Kong University of Science and Technology', avatarSrc: avatar7 },
   { id: 8, name: 'Yu Ruoyan', job: 'General Secretary', introduce1: 'Master of Public Management,', introduce2: 'Hong Kong University of Science and Technology', avatarSrc: avatar8 },
   { id: 9, name: 'Li Ka Chun', job: 'General Secretary', introduce1: 'Master of Financial Mathematics,', introduce2: 'Hong Kong University of Science and Technology', avatarSrc: avatar9 },
@@ -74,7 +74,7 @@ function AboutUsScreen() {
   };
   
   const previousMembersTitleText = getTranslatedText(i18n, '往届成员', 'Previous Members', '往屆成員');
-  
+
   const tabItemStyle = {
     fontSize: i18n.language === 'en' ? '17px' : undefined,
     whiteSpace: i18n.language === 'en' ? 'nowrap' : undefined
@@ -106,10 +106,10 @@ function AboutUsScreen() {
           </div>
           <div className="tab-list">
             <div className="tab-item active" style={tabItemStyle}>
-              {getTranslatedText('协会成员', 'Association Members', '協會成員')}
+              {getTranslatedText(i18n, '协会成员', 'Association Members', '協會成員')}
             </div>
             <div className="tab-item" style={tabItemStyle}>
-              {getTranslatedText('往届成员', 'Previous Members', '往屆成員')}
+              {getTranslatedText(i18n, '往届成员', 'Previous Members', '往屆成員')}
             </div>
           </div>
         </div>

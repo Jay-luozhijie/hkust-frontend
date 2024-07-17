@@ -1,10 +1,23 @@
-.body {
-    background-color: #f4f4f4;
-  }
-  
-  .footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-  }
-  
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* 确保整个视窗高度被占满 */
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* 这会使app-container占据所有可用空间 */
+}
+
+.main-content {
+  flex: 1; /* 让主内容区域扩展，占据除Footer外的所有空间 */
+  display: flex;
+  flex-direction: column;
+}

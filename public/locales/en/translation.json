@@ -2,19 +2,24 @@
     "socialAdvisorTitle": "Social Advisors",
     "members": [
       {
-        "name": "Professor Chen Ka Ni",
-        "job": "Association Chairman",
-        "introduce": "Professor Chen Ka Ni currently serves as the Director of the Master of Financial Mathematics program and the Co-Director of the Risk Management and Business Intelligence Program at HKUST. He earned his PhD in Statistics from Columbia University in 1994, and his Master's and Bachelor's degrees in Science from Peking University in 1990 and 1987, respectively. Professor Chen has decades of research and teaching experience in the field of financial mathematics."
+        "name": "Professor Wang Yang",
+        "job": "Honorary Director",
+        "introduce": "Professor Wang Yang has been serving as the Vice President of the Hong Kong University of Science and Technology since 2020. He is an internationally renowned scholar with a wide range of research areas. Professor Wang Yang, along with Professor Chen Kani and Mr. Li Bei, signed a memorandum of understanding on university-enterprise cooperation. He received his PhD in Statistics from Columbia University in New York City in 1994, and his Master of Science and Bachelor of Science degrees from Peking University in 1990 and 1987 respectively. Professor Chen Kani has decades of research and teaching experience in the field of financial mathematics."
       },
       {
-        "name": "Professor Wang Yang",
-        "job": "Honorary Chairman",
-        "introduce": "Professor Wang Yang has been serving as the Vice-President of HKUST since 2020. He is an internationally recognized scholar with a broad research spectrum. Professor Wang, along with Professor Chen Ka Ni and Mr. Li Bei, has signed a university-enterprise cooperation memorandum with the company."
+        "name": "Mr. Rong Yongqi, Silver Bauhinia Star, Honorary Medal, Justice of the Peace",
+        "job": "Honorary Advisor",
+        "introduce": "Mr. Rong Yongqi holds an Executive Master of Business Administration (EMBA) from the Hong Kong University of Science and Technology and is certified as a Financial Planner (CFPCM) and a Registered Financial Consultant (RFC). He currently serves as the Regional Executive Director and Honorary Advisor for AIA International Limited. He is also the Vice Chairman of the National Committee of the Chinese People's Political Consultative Conference Economic Committee, founding president of the Hong Kong Association of Professional and Senior Executives, and has close ties with education in Hong Kong. He currently serves as the chairman of the Hong Kong Examinations and Assessment Authority and a standing member of the Education Coordination Committee, and he is a member of the governing boards of the Hong Kong University of Science and Technology and the Metropolitan University of Hong Kong. Previously, he was a member of the International Advisory Committee and the Board of Governors of the Hong Kong Polytechnic University and chairman of its Advisory Committee, a board member of the Open University of Hong Kong, and a member of the Vocational Training Council."
+      },
+      {
+        "name": "Professor Chen Kani",
+        "job": "Association President",
+        "introduce": "Professor Chen Kani currently serves as the Director of the Master's program in Financial Mathematics and the Co-Director of the Risk Management and Business Intelligence program at the Hong Kong University of Science and Technology. He received his PhD in Statistics from Columbia University in New York City in 1994, and his Master of Science and Bachelor of Science degrees from Peking University in 1990 and 1987 respectively. Professor Chen Kani has decades of research and teaching experience in the field of financial mathematics."
       },
       {
         "name": "Mr. Li Bei",
-        "job": "Association Supervisor",
-        "introduce": "Mr. Li Bei, CEO of Tianlong Securities Co., Ltd. and Chairman of the Hong Kong MBA Association, has extensive experience in the securities industry and a rich network of contacts. He has maintained a long and deep relationship with HKUST. In 2023, he represented Futong Hong Kong Ltd. in signing a university-enterprise cooperation memorandum with HKUST."
+        "job": "Association Supervisory Chairman",
+        "introduce": "Mr. Li Bei, CEO of Tianlong Securities Co., Ltd. and President of the Hong Kong MBA Association, has many years of experience in the securities industry and has built a rich network of contacts. He has maintained a long and deep relationship with the Hong Kong University of Science and Technology. In 2023, he represented FT Hong Kong Limited in signing a memorandum of understanding on university-enterprise cooperation with the Hong Kong University of Science and Technology. He received his PhD in Statistics from Columbia University in New York City in 1994, and his Master of Science and Bachelor of Science degrees from Peking University in 1990 and 1987 respectively. Professor Chen Kani has decades of research and teaching experience in the field of financial mathematics."
       }
     ],
     "partnerTitle": "Partners",
@@ -43,6 +48,11 @@
         "name": "Hong Kong MBA Association",
         "description": "The HKMBA Association was founded in 2014 by outstanding MBA students and alumni from eight universities in Hong Kong, along with senior professors and business celebrities as advisory consultants. As a non-profit organization, the Hong Kong MBA Institute offers a broad development space and a resource-sharing platform for MBA students, alumni, and business people.",
         "link": "https://mba.org.hk/"
+      },
+      {
+        "name": "Hong Kong Asset Management",
+        "description": "Hong Kong Asset Management provides project consulting for investment managers, striving to be an effective communication and interaction platform for capital and projects. The 'HKUST Asset Management Leading Fund' was established in Hong Kong to promote the transformation of university scientific research achievements and support the construction of Hong Kong as an international innovation and technology hub. The core investment research team consists of members from Ivy League and top domestic universities, who have extensive experience in quantitative fund investment and management and a deep understanding of financial markets, committed to bringing long-term, stable, and satisfactory investment returns to clients.",
+        "link": "https://mp.weixin.qq.com/s/SanNilboYaAZuS6F11ih2Q"
       }
     ],
         "introduceTitle": "Quant Trading Society",
@@ -139,9 +149,9 @@
         "hkust_background": "HKUST Background",
         "slide_text_line1": "Empowering Future Quantitative Finance Leaders",
         "slide_text_line2": "Through Knowledge Transfer, Networking, and Competitions",
-        "hkust_quant_trading_society": "HKUST Quant Trading Society",
-        "hkust_quant_trading_association": "HKUST Quant Trading Association",
-        "hkust_quant_trading_association2": " HKUST Quant Trading Association",
+        "hkust_quant_trading_society": "(HKUST- MAFM)",
+        "hkust_quant_trading_association": "Quant Trading Society",
+        "hkust_quant_trading_association2": " Quant Trading Society(HKUST- MAFM)",
         "we_are": "We are",
         "association_description_1": ", established in September 2023. As a student society of the HKUST Master of Science in Financial Mathematics (MAFM), we are committed to helping students enter the quantitative industry and build effective networks. Our alumni network covers over 10,000 HKUST graduates. Additionally, we plan to hold trading competitions for all students to discover talent and incubate future quant funds.",
         "association_description_2": "Since its establishment in 2006, the Department of Mathematics at HKUST enrolls about 800 undergraduate, master's, and doctoral students each year. As a student leadership platform supported by the department, our alumni network covers over 10,000 students and alumni."

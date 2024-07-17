@@ -7,6 +7,7 @@ import MBALogo from '../img/MBA.png';
 import tiannengLogo from '../img/tianneng.png';
 
 function PartnerScreen() {
+
     const { t, i18n } = useTranslation();
     const partners = t('partners', { returnObjects: true });
 
@@ -31,6 +32,7 @@ function PartnerScreen() {
                 <Swiper
                     spaceBetween={50}
                     slidesPerView={'auto'}
+                    loop={true}
                     onSlideChange={() => console.log('slide change')}
                     onSwiper={(swiper) => console.log(swiper)}
                 >

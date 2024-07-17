@@ -111,8 +111,8 @@ function Footer() {
     };
     
     const rectangleStyle = {
-        width: '100px', // 设定适当的宽度和高度
-        height: '100px',
+        width: '90px', // 设定适当的宽度和高度
+        height: '90px',
         backgroundImage: `url(${QRCode})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center'
@@ -130,11 +130,12 @@ function Footer() {
                     marginLeft: '50px',
                     boxSizing: 'border-box'
                 }}>
+
                 <Logo style={logoStyle} />
                     <span style={copyrightTextStyle}>Copyright&copy; Quant Trading Society（HKUST- MAFM）</span>
                     <div style={{ flexGrow: 1 }}></div>
                     <div style={friendLinksTextStyle}>
-                        {t('friendLinks')}{isMobile ? <br /> : ': '}
+                        {t('friendLinks')}<br />
                         <a href="https://mafm.hkust.edu.hk/" style={{ color: 'white' }}>
                             <span style={cryptoStyle}>Crypto-Fintech Lab</span>
                             {isMobile ? '' : <br />}
@@ -151,6 +152,7 @@ function Footer() {
                             marginLeft: '170px',
                             boxSizing: 'border-box'
                         }}>
+
                             <Envelope style={iconStyleEnvolope} />
                             <div style={linkStyle1}>
                                 <span style={{ color: 'white', fontFamily: 'Oppo Sans Regular' }}>official@ustquant.hk</span>
@@ -168,6 +170,7 @@ function Footer() {
                             boxSizing: 'border-box'
                         }}>
                             <Linkedin style={{ marginRight: '15px', position: 'relative', top: '8px' }}></Linkedin>
+
                             <div style={linkStyle2}>
                         <a style={{ color: 'white', fontFamily: 'Oppo Sans Regular', fontSize: isMobile ? '12px' : '16px' }} href="https://www.linkedin.com/company/ust-quant-trading-society-limitted/" target="_blank" rel="noopener noreferrer">
                             https://www.linkedin.com/company/<br />ust-quant-trading-society-limitted/

@@ -5,6 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider as ReduxProvider } from 'react-redux';
 import store from './store';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 import './components/i18n';  // 确保i18next的初始化
 import { LanguageProvider } from './components/LanguageContext';
 
