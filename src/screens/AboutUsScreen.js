@@ -16,16 +16,90 @@ import avatar9 from '../img/avatar/likachun.png';
 import avatar10 from '../img/avatar/gongyanbin.png';
 
 const associationMemberData = [
-  { id: 1, name: 'LUO Guangda', job: 'President', introduce1: 'Master of Financial Mathematics,', introduce2: 'Hong Kong University of Science and Technology', avatarSrc: avatar1 },
-  { id: 2, name: 'Wang Jiaheng', job: 'Vice President', introduce1: 'Master of Financial Mathematics,', introduce2: 'Hong Kong University of Science and Technology', avatarSrc: avatar2 },
-  { id: 3, name: 'Zhang Yawei', job: 'General Secretary', introduce1: 'Master of Public Management,', introduce2: 'Hong Kong University of Science and Technology', avatarSrc: avatar3 },
-  { id: 4, name: 'Xiong Jiarui', job: 'General Secretary', introduce1: 'Master of Financial Mathematics,', introduce2: 'Hong Kong University of Science and Technology', avatarSrc: avatar4 },
-  { id: 5, name: 'Lin Heyi', job: 'General Secretary', introduce1: 'Master of Financial Mathematics,', introduce2: 'Hong Kong University of Science and Technology', avatarSrc: avatar5 },
-  { id: 6, name: 'Li Siyuan', job: 'General Secretary', introduce1: 'Master of Philosophy in Fintech,', introduce2: 'Hong Kong University of Science and Technology', avatarSrc: avatar6 },
-  { id: 7, name: 'Lui Man Hin', job: 'General Secretary', introduce1: 'Master of Financial Mathematics,', introduce2: 'Hong Kong University of Science and Technology', avatarSrc: avatar7 },
-  { id: 8, name: 'Yu Ruoyan', job: 'General Secretary', introduce1: 'Master of Public Management,', introduce2: 'Hong Kong University of Science and Technology', avatarSrc: avatar8 },
-  { id: 9, name: 'Li Ka Chun', job: 'General Secretary', introduce1: 'Master of Financial Mathematics,', introduce2: 'Hong Kong University of Science and Technology', avatarSrc: avatar9 },
-  { id: 10, name: 'Gong Yanbin', job: 'General Secretary', introduce1: 'Master of Financial Mathematics,', introduce2: 'Hong Kong University of Science and Technology', avatarSrc: avatar10 },
+  { 
+    id: 1, 
+    name: {
+      zh: '罗广大',
+      en: 'LUO Guangda',
+      tc: '羅廣大'
+    }, 
+    job: 'President', 
+    introduce1: 'Master of Financial Mathematics,', 
+    introduce2: 'Hong Kong University of Science and Technology', 
+    avatarSrc: avatar1 
+  },
+  { 
+    id: 2,     
+    name: {
+    zh: '王佳恒',
+    en: 'Wang Jiaheng',
+    tc: '王佳恆'
+  },
+  job: 'Vice President', introduce1: 'Master of Financial Mathematics,', introduce2: 'Hong Kong University of Science and Technology', avatarSrc: avatar2 },
+  { 
+    id: 3,
+    name: {
+    zh: '张亚伟',
+    en: 'Zhang Yawei',
+    tc: '張亞偉'
+  }, 
+  job: 'General Secretary', introduce1: 'Master of Public Management,', introduce2: 'Hong Kong University of Science and Technology', avatarSrc: avatar3 },
+  { 
+    id: 4,     
+    name: {
+      zh: '熊佳蕊',
+      en: 'Xiong Jiarui',
+      tc: '熊佳蕊'
+    },
+    job: 'General Secretary', introduce1: 'Master of Financial Mathematics,', introduce2: 'Hong Kong University of Science and Technology', avatarSrc: avatar4 },
+  { 
+    id: 5,     
+    name: {
+      zh: '林河屹',
+      en: 'Lin Heyi',
+      tc: '林河屹'
+    },
+    job: 'General Secretary', introduce1: 'Master of Financial Mathematics,', introduce2: 'Hong Kong University of Science and Technology', avatarSrc: avatar5 },
+  { 
+    id: 6,     
+    name: {
+      zh: '李思远',
+      en: 'Li Siyuan',
+      tc: '李思遠'
+    }, 
+    job: 'General Secretary', introduce1: 'Master of Philosophy in Fintech,', introduce2: 'Hong Kong University of Science and Technology', avatarSrc: avatar6 },
+  { 
+    id: 7,     
+    name: {
+      zh: '吕文轩',
+      en: 'Lui Man Hin',
+      tc: '呂文軒'
+    },  
+    job: 'General Secretary', introduce1: 'Master of Financial Mathematics,', introduce2: 'Hong Kong University of Science and Technology', avatarSrc: avatar7 },
+  { 
+  id: 8,     
+  name: {
+    zh: '虞若妍',
+    en: 'Yu Ruoyan',
+    tc: '虞若妍'
+  },   
+  job: 'General Secretary', introduce1: 'Master of Public Management,', introduce2: 'Hong Kong University of Science and Technology', avatarSrc: avatar8 },
+  { 
+    id: 9,   
+    name: {
+      zh: '李嘉俊',
+      en: 'Li Ka Chun',
+      tc: '李嘉俊'
+    },   
+    job: 'General Secretary', introduce1: 'Master of Financial Mathematics,', introduce2: 'Hong Kong University of Science and Technology', avatarSrc: avatar9 },
+  { 
+    id: 10,     
+    name: {
+      zh: '龚彦宾',
+      en: 'Gong Yanbin',
+      tc: '龔彥賓'
+    },    
+    job: 'General Secretary', introduce1: 'Master of Financial Mathematics,', introduce2: 'Hong Kong University of Science and Technology', avatarSrc: avatar10 },
 ];
 
 const previousMemberData = [
@@ -129,7 +203,7 @@ function AboutUsScreen() {
               </div>
               <div className="member-info">
                 <div className="job">{getTranslatedText(item.job, item.job, item.job)}</div>
-                <div className="name">{item.name}</div>
+                <div className="name">{getTranslatedText(i18n, item.name.zh, item.name.en, item.name.tc)}</div>
                 <div className="introduce1">{getTranslatedText(item.introduce1, item.introduce1, item.introduce1)}</div>
                 <div className="introduce2">{getTranslatedText(item.introduce2, item.introduce2, item.introduce2)}</div>
               </div>
