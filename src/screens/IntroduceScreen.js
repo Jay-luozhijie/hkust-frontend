@@ -70,7 +70,7 @@ function IntroduceScreen() {
     
   function getTitleFontSize(isMobile, language) {
 	if (isMobile) {
-	  return language === 'en' ? '28px' : '35px'; // 移动设备上较小的字体大小
+	  return language === 'en' ? '28px' : '32px'; // 移动设备上较小的字体大小
 	}
 	return language === 'en' ? '70px' : '95px'; // 电脑设备上的原始大小
   }
