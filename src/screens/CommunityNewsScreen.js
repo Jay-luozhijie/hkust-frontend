@@ -18,6 +18,7 @@ import Vector48 from '../img/Vector48.png';
 import axios from 'axios';
 import NewsItem from '../components/NewsItem';
 import { useNavigate } from 'react-router-dom';
+import { useMediaQuery } from 'react-responsive';
 
 
 // const activityData = [
@@ -67,10 +68,13 @@ function CommunityNewsScreen() {
     fetchActivityData(pageNumberAlumni);
   }, [pageNumberAlumni]);
 
+  const isMobile = useMediaQuery({ maxWidth: 767 });
+
   const fetchActivityData = async (page) => {
     try {
-      const response = await axios.get(`/api/users/AlumniAct?page=${page}&limit=3`);
-      if (response.data.length < 3){
+      let limit = isMobile ? 1 : 3;
+      const response = await axios.get(`/api/users/AlumniAct?page=${page}&limit=${limit}`);
+      if (response.data.length == 0){
         setReachEndAlumni(true)
       }else{
         setReachEndAlumni(false)
@@ -112,6 +116,8 @@ function CommunityNewsScreen() {
     // Redirect to a specific route, passing item._id as a parameter
     navigate(`/activities/${id}`);
   };
+
+
 
   return (
     <div className="community-news-wrap">

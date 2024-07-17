@@ -9,6 +9,7 @@
     flex-direction: column; /* Stack items vertically */
     margin:0;
     padding:0;
+    width: 100%;
   }
 
   .newsTitleContainer{
@@ -43,4 +44,29 @@
   .newsContent > * {
     width: 100%; /* Make child elements take full width */
     text-align: start; /* Center text inside child elements */
+  }
+
+  @media only screen and (max-width: 767px){
+    .newsTitle{
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 25px;
+      margin-top: 37px;
+    }
+    .newsDate{
+      font-size:14px;
+    }
+
+    .newsContent {
+      align-items: start; /* Center items horizontally */
+      margin: 0px 20px 20px; /* Set margins (top, left/right, bottom) */
+      display: block; /* Change display to block on smaller screens */
+      max-width: none;
+    }
+
+    .newsContent > * {
+      width: 100%; /* Make child elements take full width */
+      text-align: start; /* Center text inside child elements */
+    }
+
   }
