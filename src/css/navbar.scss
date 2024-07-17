@@ -201,6 +201,8 @@ a.nav-link {
 
 .side-menu.open {
     transform: translateX(0); /* 菜单打开时移动到视口内 */
+    z-index: 60;
+    margin-top: 70px;
 }
 
 .mobile-menu {
@@ -292,5 +294,5 @@ a.nav-link {
     position: fixed; /* 设置位置固定 */
     top: 0;          /* 距顶部0距离 */
     width: 100%;     /* 宽度设为100%，覆盖整个视口宽度 */
-    z-index: 500;   /* 设置一个较高的z-index值确保导航栏在其他内容之上 */
+    z-index: 500; 
 }

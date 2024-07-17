@@ -138,6 +138,9 @@ function Navbar() {
                                 )}
                             </div>
                         </div>
+                        </div>
+                        </div>
+                        </header>
                         <div className={isMenuOpen ? "side-menu open" : "side-menu"}>
                             <div className={isMenuOpen ? "mobile-menu open" : "mobile-menu"}>
                                 <div className="mobile-nav">
@@ -199,9 +202,8 @@ function Navbar() {
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </header>
+
+
         </div>
     );
 }
