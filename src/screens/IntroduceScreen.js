@@ -248,7 +248,6 @@ function IntroduceScreen() {
 							))}
 						</ul>
 						</Col>
-
 						</Row>
 					</div>
 				</Col>
