@@ -46,7 +46,7 @@ function Footer() {
         right: isMobile ? '-50%' : '0',
         transform: isMobile ? 'translateX(-137%)' : 'none',
         whiteSpace: 'nowrap',
-        fontFamily: 'OPPO Sans',
+        fontFamily: 'customOPPOSans',
         fontSize: isMobile ? '12px' : undefined,
     };
 
@@ -61,7 +61,7 @@ function Footer() {
         minWidth: isMobile ? '200px' : 'auto',
         whiteSpace: 'nowrap',
         padding: isMobile ? '0 10px' : '0',
-        fontFamily: 'OPPO Sans'
+        fontFamily: 'customOPPOSans'
     };
 
     const cryptoStyle = {
@@ -76,7 +76,7 @@ function Footer() {
 
     const linkStyle1 = {
         color: 'white',
-        fontFamily: 'OPPO Sans',
+        fontFamily: 'customOPPOSans',
         fontSize: isMobile ? '14px' : '16px', // 手机模式下字体更小
         position: 'relative',
         top: isMobile ? '-5px' : '0px',
@@ -86,7 +86,7 @@ function Footer() {
 
     const linkStyle2 = {
         color: 'white',
-        fontFamily: 'OPPO Sans',
+        fontFamily: 'customOPPOSans',
         fontSize: isMobile ? '16px' : '16px', // 手机模式下字体更小
         position: 'relative',
         top: isMobile ? '8px' : undefined
@@ -155,9 +155,9 @@ function Footer() {
 
                             <Envelope style={iconStyleEnvolope} />
                             <div style={linkStyle1}>
-                                <span style={{ color: 'white', fontFamily: 'OPPO Sans' }}>official@ustquant.hk</span>
+                                <span style={{ color: 'white', fontFamily: 'customOPPOSans' }}>official@ustquant.hk</span>
                                 <br />
-                                <span style={{ color: 'white', fontFamily: 'OPPO Sans' }}>secretary@ustquant.hk</span>
+                                <span style={{ color: 'white', fontFamily: 'customOPPOSans' }}>secretary@ustquant.hk</span>
                             </div>
                         </div>
                         <div style={{
@@ -172,7 +172,7 @@ function Footer() {
                             <Linkedin style={{ marginRight: '15px', position: 'relative', top: '8px' }}></Linkedin>
 
                             <div style={linkStyle2}>
-                        <a style={{ color: 'white', fontFamily: 'OPPO Sans', fontSize: isMobile ? '12px' : '16px' }} href="https://www.linkedin.com/company/ust-quant-trading-society-limitted/" target="_blank" rel="noopener noreferrer">
+                        <a style={{ color: 'white', fontFamily: 'customOPPOSans', fontSize: isMobile ? '12px' : '16px' }} href="https://www.linkedin.com/company/ust-quant-trading-society-limitted/" target="_blank" rel="noopener noreferrer">
                             https://www.linkedin.com/company/<br />ust-quant-trading-society-limitted/
                         </a>
                     </div>
