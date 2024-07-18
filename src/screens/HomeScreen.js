@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Pagination, Autoplay } from 'swiper/modules';
 import { useMediaQuery } from 'react-responsive';
 import breakpoints from '../config/breakpoints';
-import '../css/homeScreen.css';
+import '../css/homeScreen.scss';
 import backgroundImage from '../img/Group12.png';
 
 // 引入所有幻灯片图片
@@ -110,8 +110,6 @@ function HomeScreen() {
         zIndex: -1
       }
     : {
-        position: 'absolute',
-        right: 0,
         top: 30,
         width: '700px',
         minHeight: '600px',
@@ -223,7 +221,7 @@ function HomeScreen() {
           zIndex: -1
           }}>
         </div>
-        <div style={imageStyle}></div>
+        <div className='image-position' style={imageStyle}></div>
       </div>
     </div>
   );

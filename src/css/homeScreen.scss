@@ -130,3 +130,13 @@
     border-radius: 8px; /* Optional: Add rounded corners */
   }
   
+  .image-position {
+    position: absolute;
+    right: 0px;  
+  
+    @media only screen and (max-width: 1700px) {
+      right: auto;
+      left: 900px;
+    }
+  }
+  
