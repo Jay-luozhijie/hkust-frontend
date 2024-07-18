@@ -20,7 +20,7 @@
     }
     
     .tab-list {
-      font-family: 'OPPO Sans', sans-serif; // 设置字体
+      font-family: 'customOPPOSans', sans-serif; // 设置字体
       .tab-item {
         position: relative; // 为伪元素定位做准备
         color: #000000;
@@ -58,7 +58,7 @@
       color: #9A1E23;
       font-size: 57.6px;
       margin-bottom: 67.5px;
-      font-family: 'OPPO Sans';
+      font-family: 'customOPPOSans';
       font-weight: 700;
       @media only screen and (max-width: 768px) {
         font-size: 40px;
@@ -72,7 +72,7 @@
       font-weight: 400;
       display: flex;
       align-items: center;
-      font-family: 'OPPO Sans';
+      font-family: 'customOPPOSans';
       margin-bottom: 34.2px;
       @media only screen and (max-width: 768px) {
         margin-left: 50px;
@@ -133,7 +133,7 @@
           color: #036;
           font-size: 21.6px;
           line-height: 36px;
-          font-family: 'OPPO Sans';
+          font-family: 'customOPPOSans';
           @media only screen and (max-width: 768px) {
             margin-top: 30px;
             font-size: 19px; // 在手机模式下调整顶部间距
@@ -145,7 +145,7 @@
           line-height: 27px;
           margin-top: 10px;
           max-width: 200px;
-          font-family: 'OPPO Sans';
+          font-family: 'customOPPOSans';
           line-height: 20px;
           @media only screen and (max-width: 768px) {
             font-size: 15px;
@@ -161,7 +161,7 @@
           font-size: 17px;
           line-height: 27px;
           max-width: 200px;
-          font-family: 'OPPO Sans';
+          font-family: 'customOPPOSans';
           line-height: 20px;
           @media only screen and (max-width: 768px) {
             font-size: 15px;
@@ -185,7 +185,7 @@
           color: #003366;
           font-size: 32.4px;
           display: flex;
-          font-family: 'OPPO Sans';
+          font-family: 'customOPPOSans';
           align-items: center;
           @media only screen and (max-width: 768px) {
             font-size: 24px;
@@ -207,7 +207,7 @@
           font-size: 21.6px;
           color: #000000;
           margin: 27px 45px;
-          font-family: 'OPPO Sans';
+          font-family: 'customOPPOSans';
           @media only screen and (max-width: 768px) {
             font-size: 19px;
             margin: 15px 30px;
@@ -228,7 +228,7 @@
   .name {
     white-space: nowrap; // 防止文本换行
     max-width: 150px; 
-    font-family: 'OPPO Sans';
+    font-family: 'customOPPOSans';
   }
 }
 

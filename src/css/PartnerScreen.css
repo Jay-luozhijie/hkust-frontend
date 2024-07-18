@@ -26,7 +26,7 @@ position: relative;
 .partner .slide-item  h2{
 	color: #9A1E23;
 	text-align: center;
-	font-family: "OPPO Sans";
+	font-family: "customOPPOSans";
 	font-size: 36px;
 	font-style: normal;
 	font-weight: 700;
@@ -56,7 +56,7 @@ position: relative;
 	fill: #C95C5C;
 	flex-shrink: 0;
 	color: #FFF;
-	font-family: "OPPO Sans";
+	font-family: "customOPPOSans";
 	font-size: 32px;
 	font-style: normal;
 	font-weight: 400;

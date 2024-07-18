@@ -22,14 +22,14 @@
   .newsTitle {
     margin-top: 69px; /* Remove default margin */
     margin-bottom:0px;
-    font-family: 'OPPO Sans'; 
+    font-family: 'customOPPOSans'; 
     font-size: 40px; 
   }
 
   .newsDate{
     margin-top:17px;
     color:#A5A5A5;
-    font-family: 'OPPO Sans';
+    font-family: 'customOPPOSans';
 
   }
 

@@ -19,7 +19,7 @@ a.nav-link {
     padding: 0px;
     color: #9A1E23; /* 字体颜色 */
     font-size: 20px; /* 字号大小 */
-    font-family: "OPPO Sans", sans-serif; /* 字体 */
+    font-family: "customOPPOSans", sans-serif; /* 字体 */
     font-weight: 400; /* 字体粗细 */
     word-wrap: break-word; /* 文字自动换行 */
     text-decoration: none; /* 去掉下划线 */
@@ -153,7 +153,7 @@ a.nav-link {
 
 .nav-link-container .dropdown-menu .dropdown-item {
     color: white;
-    font-family: "OPPO Sans";
+    font-family: "customOPPOSans";
 }
 
 
@@ -232,7 +232,7 @@ a.nav-link {
     display: flex;
     align-items: center;
     color: #9A1E23;
-    font-family: "OPPO Sans", sans-serif;
+    font-family: "customOPPOSans", sans-serif;
     font-weight: 500;
     text-decoration: none;
     padding: 10px 20px;
@@ -257,7 +257,7 @@ a.nav-link {
     padding: 8px 20px;
     color: #9A1E23;
     text-decoration: none;
-    font-family: "OPPO Sans", sans-serif;
+    font-family: "customOPPOSans", sans-serif;
     font-weight: 500;
 }
 
