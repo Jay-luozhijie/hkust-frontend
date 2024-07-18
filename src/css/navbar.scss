@@ -137,7 +137,7 @@ a.nav-link {
 }
 
 .dropdown-menu {
-    display: none; /* 默认不显示 */
+    display: block; /* 默认不显示 */
     position: absolute;
     background-color: #C95C5C; /* 矩形框颜色 */
     z-index: 1;
@@ -191,16 +191,18 @@ a.nav-link {
     top: 0;
     right: 0;
     width: 200px;
-    height: 100vh; /* 使用视口高度 */
+    height: 100vh;
     background-color: white;
-    transform: translateX(100%); /* 初始隐藏在视口右侧外 */
-    transition: transform 0.3s ease; /* 动画平滑过渡 */
-    z-index: 1; /* 确保在最顶层 */
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .side-menu.open {
-    transform: translateX(0); /* 菜单打开时移动到视口内 */
+    transform: translateX(0);
     z-index: 60;
     margin-top: 70px;
 }
@@ -214,6 +216,8 @@ a.nav-link {
     background-color: white;
     transition: right 0.3s ease;
     z-index: 1000;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .mobile-menu.open {
