@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReactComponent as Logo } from '../img/hkust_white_logo.svg';
+import { ReactComponent as Logo } from '../img/hkust_logo_small.svg';
 import { ReactComponent as Title } from '../img/Header-title_MAFM.svg';
 import quantSocietyLogo from '../img/quant_society_logo.png';
 import { ReactComponent as Earth } from '../img/globe-americas.svg';

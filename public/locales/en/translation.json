@@ -1,57 +1,47 @@
 {
-    "socialAdvisorTitle": "Social Advisors",
+    "socialAdvisorTitle": "Advisors",
     "members": [
       {
-        "name": "Professor Wang Yang",
-        "job": "Honorary Director",
-        "introduce": "Professor Wang Yang has been serving as the Vice President of the Hong Kong University of Science and Technology since 2020. He is an internationally renowned scholar with a wide range of research areas. Professor Wang Yang, along with Professor Chen Kani and Mr. Li Bei, signed a memorandum of understanding on university-enterprise cooperation. He received his PhD in Statistics from Columbia University in New York City in 1994, and his Master of Science and Bachelor of Science degrees from Peking University in 1990 and 1987 respectively. Professor Chen Kani has decades of research and teaching experience in the field of financial mathematics."
+        "name": "Prof. Yang Wang",
+        "job": "Honorary President",
+        "introduce": "Prof. Yang Wang took office as Vice-President for Institutional Advancement of HKUST on October 1, 2020. He is also a Chair Professor of Department of Industrial Engineering and Decision Analytics and Department of Mathematics. He joined the HKUST as the Head of the Department of Mathematics in 2014 and he became the Dean of School of Science in 2016. Prof. Wang received his Bachelor's degree in Mathematics from the University of Science and Technology of China in 1983 and obtained his PhD degree in Mathematics from Harvard University in 1990. He started his academic career with the Georgia Institute of Technology in 1989 and then moved on to be the Department Chair and Professor of Mathematics at Michigan State University in 2007."
       },
       {
-        "name": "Mr. Rong Yongqi, Silver Bauhinia Star, Honorary Medal, Justice of the Peace",
+        "name": "Mr. Samuel Yung Wing Ki, SBS, MH, JP",
         "job": "Honorary Advisor",
-        "introduce": "Mr. Rong Yongqi holds an Executive Master of Business Administration (EMBA) from the Hong Kong University of Science and Technology and is certified as a Financial Planner (CFPCM) and a Registered Financial Consultant (RFC). He currently serves as the Regional Executive Director and Honorary Advisor for AIA International Limited. He is also the Vice Chairman of the National Committee of the Chinese People's Political Consultative Conference Economic Committee, founding president of the Hong Kong Association of Professional and Senior Executives, and has close ties with education in Hong Kong. He currently serves as the chairman of the Hong Kong Examinations and Assessment Authority and a standing member of the Education Coordination Committee, and he is a member of the governing boards of the Hong Kong University of Science and Technology and the Metropolitan University of Hong Kong. Previously, he was a member of the International Advisory Committee and the Board of Governors of the Hong Kong Polytechnic University and chairman of its Advisory Committee, a board member of the Open University of Hong Kong, and a member of the Vocational Training Council."
+        "introduce": "Mr. Samuel Yung is an Executive District Director & Honorable Advisor of AIA International Limited. He is Vice Chairman of the Committee for Economic Affairs, Chinese People’s Political Consultative Conference (CPPCC) National Committee and Founding President of Hong Kong Professionals and Senior Executives Association. Mr. Yung has strong ties with the tertiary education sector. He is a Council Member of the Hong Kong University of Science and Technology (HKUST) and a Court Member of the Hong Kong Metropolitan University (HKMU)."
       },
       {
-        "name": "Professor Chen Kani",
-        "job": "Association President",
-        "introduce": "Professor Chen Kani currently serves as the Director of the Master's program in Financial Mathematics and the Co-Director of the Risk Management and Business Intelligence program at the Hong Kong University of Science and Technology. He received his PhD in Statistics from Columbia University in New York City in 1994, and his Master of Science and Bachelor of Science degrees from Peking University in 1990 and 1987 respectively. Professor Chen Kani has decades of research and teaching experience in the field of financial mathematics."
+        "name": "Prof. Kani Chen",
+        "job": "Supervisory Board Chairman",
+        "introduce": "Prof. Kani Chen acts as program director of MSc in Financial Mathematics and CoDirector of Risk Management and Business Intelligence Program in HKUST. He received a PhD in Statistics (1994) from Columbia University in the City of New York, an MSc (1990) and a BSc (1987) from Peking University. He has over decades of research and teaching experience in financial mathematics."
       },
       {
-        "name": "Mr. Li Bei",
-        "job": "Association Supervisory Chairman",
-        "introduce": "Mr. Li Bei, CEO of Tianlong Securities Co., Ltd. and President of the Hong Kong MBA Association, has many years of experience in the securities industry and has built a rich network of contacts. He has maintained a long and deep relationship with the Hong Kong University of Science and Technology. In 2023, he represented FT Hong Kong Limited in signing a memorandum of understanding on university-enterprise cooperation with the Hong Kong University of Science and Technology. He received his PhD in Statistics from Columbia University in New York City in 1994, and his Master of Science and Bachelor of Science degrees from Peking University in 1990 and 1987 respectively. Professor Chen Kani has decades of research and teaching experience in the field of financial mathematics."
+        "name": "Mr. Hyde Li CFA",
+        "job": "Board Chairman",
+        "introduce": "Mr. Hyde Li, CFA, serves as the Executive Director of Tianlong Securities Co., Ltd. and the Chairman of Fund Connect HK Limited. He is also the President of the Hong Kong MBA Institute. Mr. Li has many years of experience in the traditional and digital asset investment industries. He has managed various prestigious projects, including the \"Top 100 Listed Companies in Hong Kong\" for Finet Group Limited, collaborated with Huobi Group on digital asset quantitative trading management, and handled asset management for family offices. He has built extensive professional networks and maintained strong connections with the Hong Kong University of Science and Technology, providing a vast platform for student entrepreneurship and career development."
       }
     ],
     "partnerTitle": "Partners",
     "partners": [
       {
-        "name": "Tianneng Securities",
-        "description": "Tianneng Securities Limited (TLS) was established in Hong Kong in August 2020 as a member of the Tianneng Financial Group, holding professional licenses for Type 4 (Securities Advice) and Type 9 (Asset Management). TLS is committed to perfecting its product portfolio and services, covering investment across the Greater China region, providing comprehensive investment management services for high-net-worth clients, family offices, and institutional clients, tailoring solutions for them, and enabling them to grasp the pulse of information-intensive markets and investment opportunities for wealth appreciation.",
+        "name": "Tianlong Securities",
+        "description": "Incorporated in Hong Kong in August 2020, Tianlong Securities Co., Ltd (“TLS”) is a member of Tianlong Financial Group. It holds Type 4 (Advising on securities), and Type 9 (Asset management) professional licenses. TLS committed to improving its product portfolio and services, and its investment covers the Greater China areas, providing comprehensive investment management services to high net-worth clients, family offices and institutional clients. We customize programs for them and helps them accurately grasp the pulse of the information-intensive market and seize investment opportunities to increase wealth.",
         "link": "https://www.tianlongsecurities.com/zh"
       },
       {
-        "name": "Hong Kong MBA Association",
-        "description": "The HKMBA Association was founded in 2014 by outstanding MBA students and alumni from eight universities in Hong Kong, along with senior professors and business celebrities as advisory consultants. As a non-profit organization, the Hong Kong MBA Institute offers a broad development space and a resource-sharing platform for MBA students, alumni, and business people.",
+        "name": "Tiger Brokers",
+        "description": "Tiger Brokers (NASDAQ: TIGR) was established in 2014 and is a leading technology-driven brokerage group. Its subsidiary, Tiger Brokers (HK) Global Limited (Central number: BMU940), holds Hong Kong Securities and Futures Commission licenses for categories 1, 2, 4, 5, and 9. Hong Kong residents can trade Hong Kong stocks, warrants, CBBCs, U.S. stocks, fractional shares, ETFs, and other major global financial products through one account on Tiger Trade, offering a one-stop solution for investment needs.",
+        "link": "https://www.itiger.com"
+      },
+      {
+        "name": "Hong Kong MBA Institute",
+        "description": "Hong Kong MBA Institute was founded in 2014 by the outstanding MBA students and alumni of eight universities in Hong Kong, as well as many senior professors and business celebrities as guidance counselors. As a non-profit organization, Hong Kong MBA Institute will create a broad development space and provide a resource sharing platform to the MBA students, alumni and business people.",
         "link": "https://mba.org.hk/"
       },
       {
-        "name": "Hong Kong Asset Management",
-        "description": "Hong Kong Asset Management provides project consulting for investment managers, striving to be an effective communication and interaction platform for capital and projects. The 'HKUST Asset Management Leading Fund' was established in Hong Kong to promote the transformation of university scientific research achievements and support the construction of Hong Kong as an international innovation and technology hub. The core investment research team consists of members from Ivy League and top domestic universities, who have extensive experience in quantitative fund investment and management and a deep understanding of financial markets, committed to bringing long-term, stable, and satisfactory investment returns to clients.",
-        "link": "https://mp.weixin.qq.com/s/SanNilboYaAZuS6F11ih2Q"
-      },
-      {
-        "name": "Tianneng Securities",
-        "description": "Tianneng Securities Limited (TLS) was established in Hong Kong in August 2020 as a member of the Tianneng Financial Group, holding professional licenses for Type 4 (Securities Advice) and Type 9 (Asset Management). TLS is committed to perfecting its product portfolio and services, covering investment across the Greater China region, providing comprehensive investment management services for high-net-worth clients, family offices, and institutional clients, tailoring solutions for them, and enabling them to grasp the pulse of information-intensive markets and investment opportunities for wealth appreciation.",
-        "link": "https://www.tianlongsecurities.com/zh"
-      },
-      {
-        "name": "Hong Kong MBA Association",
-        "description": "The HKMBA Association was founded in 2014 by outstanding MBA students and alumni from eight universities in Hong Kong, along with senior professors and business celebrities as advisory consultants. As a non-profit organization, the Hong Kong MBA Institute offers a broad development space and a resource-sharing platform for MBA students, alumni, and business people.",
-        "link": "https://mba.org.hk/"
-      },
-      {
-        "name": "Hong Kong Asset Management",
-        "description": "Hong Kong Asset Management provides project consulting for investment managers, striving to be an effective communication and interaction platform for capital and projects. The 'HKUST Asset Management Leading Fund' was established in Hong Kong to promote the transformation of university scientific research achievements and support the construction of Hong Kong as an international innovation and technology hub. The core investment research team consists of members from Ivy League and top domestic universities, who have extensive experience in quantitative fund investment and management and a deep understanding of financial markets, committed to bringing long-term, stable, and satisfactory investment returns to clients.",
+        "name": "Fund Connect HK",
+        "description": "Fund Connect HK provides project consultation for investment managers, striving to serve as an effective communication platform between capital and projects. The \"HKUST-Fund Connect HK Leading Fund\" was established in Hong Kong on the 28th and is committed to promoting the transformation of university scientific research achievements and supporting the construction of Hong Kong as an international innovation and technology hub. The core investment research team of the HKUST-Fund Connect HK Leading Fund comprises members from top-tier domestic schools and Ivy League universities abroad, all of whom possess extensive experience in quantitative fund investment and management and a profound understanding of the financial markets. They are dedicated to delivering long-term, stable, and satisfactory investment returns to their clients.",
         "link": "https://mp.weixin.qq.com/s/SanNilboYaAZuS6F11ih2Q"
       }
     ],
@@ -136,7 +126,7 @@
         "introduction": "Introduction",
         "team": "Team",
         "tradingCompetitionNav": "Trading Competition",
-        "socialAdvisor": "Social Advisor",
+        "socialAdvisor": "Advisor",
         "partnersNav": "Partners",
         "alumni": "Alumni",
         "alumniHongKong": "Hong Kong",
@@ -144,12 +134,12 @@
         "alumniShanghai": "Shanghai",
         "alumniGuangzhou": "Guangzhou",
         "alumniShenzhen": "Shenzhen",
-        "communityNews": "Community News",
+        "communityNews": "News",
         "friendLinks": "Links",
         "hkust_background": "HKUST Background",
-        "slide_text_line1": "Empowering Future Quantitative Finance Leaders",
-        "slide_text_line2": "Through Knowledge Transfer, Networking, and Competitions",
-        "hkust_quant_trading_society": "(HKUST- MAFM)",
+        "slide_text_line1": "Empowering Future \nQuantitative Finance Leaders",
+        "slide_text_line2": "Through Knowledge Transfer, \nNetworking, and Competitions",
+        "hkust_quant_trading_society": "Quant Trading Society (HKUST- MAFM)",
         "hkust_quant_trading_association": "Quant Trading Society",
         "hkust_quant_trading_association2": " Quant Trading Society(HKUST- MAFM)",
         "we_are": "We are",

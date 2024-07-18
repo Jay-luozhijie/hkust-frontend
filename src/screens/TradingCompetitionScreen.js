@@ -22,7 +22,7 @@ function TradingCompetition() {
 
     <div className="content-layer">
       <span className="first-line">
-        {getTranslatedText('港科大量化交易社团官方网站', 'HKUST Quant Trading Society Official Website', '港科大量化交易社團官方網站')}
+        {getTranslatedText('港科大量化交易社团官方网站', 'Quant Trading Society (HKUST- MAFM) Official Website', '港科大量化交易社團官方網站')}
         <br/>
       </span>
       <span className="second-line">

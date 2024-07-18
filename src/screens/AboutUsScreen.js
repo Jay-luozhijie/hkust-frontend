@@ -75,7 +75,7 @@ const associationMemberData = [
       en: 'Lui Man Hin',
       tc: '呂文軒'
     },  
-    job: 'General Secretary', introduce1: 'Master of Financial Mathematics,', introduce2: 'Hong Kong University of Science and Technology', avatarSrc: avatar7 },
+    job: 'General Secretary', introduce1: 'Bachelor in Quantitative Finance,', introduce2: 'Hong Kong University of Science and Technology', avatarSrc: avatar7 },
   { 
   id: 8,     
   name: {
@@ -83,7 +83,7 @@ const associationMemberData = [
     en: 'Yu Ruoyan',
     tc: '虞若妍'
   },   
-  job: 'General Secretary', introduce1: 'Master of Public Management,', introduce2: 'Hong Kong University of Science and Technology', avatarSrc: avatar8 },
+  job: 'General Secretary', introduce1: 'Bachelor of Accounting and Finance,', introduce2: 'Hong Kong Polytechnic University ', avatarSrc: avatar8 },
   { 
     id: 9,   
     name: {
@@ -99,7 +99,7 @@ const associationMemberData = [
       en: 'Gong Yanbin',
       tc: '龔彥賓'
     },    
-    job: 'General Secretary', introduce1: 'Master of Financial Mathematics,', introduce2: 'Hong Kong University of Science and Technology', avatarSrc: avatar10 },
+    job: 'General Secretary', introduce1: 'Doctor of Philosophy in Computer Science,', introduce2: 'Hong Kong University of Science and Technology', avatarSrc: avatar10 },
 ];
 
 const previousMemberData = [

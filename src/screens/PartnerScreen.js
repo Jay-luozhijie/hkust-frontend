@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import xianggangLogo from '../img/xianggang.png';
+import TigerBrokers from '../img/TigerBrokers.png';
 import MBALogo from '../img/MBA.png';
 import tiannengLogo from '../img/tianneng.png';
 
@@ -40,7 +41,7 @@ function PartnerScreen() {
                         <SwiperSlide key={index}>
                             <div className="slide-item">
                                 <div className="img">
-                                    <img src={[tiannengLogo, MBALogo, xianggangLogo][index % 3]} alt={`${partner.name} Logo`} />
+                                    <img src={[tiannengLogo, TigerBrokers, MBALogo, xianggangLogo][index % 4]} alt={`${partner.name} Logo`} />
                                 </div>
                                 <h2 style={getTextStyle()}>{partner.name}</h2>
                                 <p style={i18n.language === 'en' ? { fontSize: '16px' } : {}}>{partner.description}</p>
