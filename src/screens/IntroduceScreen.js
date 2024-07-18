@@ -85,10 +85,18 @@ function IntroduceScreen() {
 		zIndex: '-1'
 		};
 
-  const getPhaseTitle = (zhTitle, enTcTitle) => {
-    return i18n.language === 'zh' ? zhTitle : enTcTitle;
-  };
-
+		function getPhaseTitle(simplifiedChineseTitle, traditionalChineseTitle, englishTitle) {
+			switch (i18n.language) {
+			  case 'zh':
+				return simplifiedChineseTitle;
+			  case 'tc':
+				return traditionalChineseTitle;
+			  case 'en':
+			  default:
+				return englishTitle;
+			}
+		  }
+		  
   return (
     <div className="introduce">
       <div className="banner" style={{ position: 'relative', overflow: 'hidden' }}>
@@ -179,9 +187,9 @@ function IntroduceScreen() {
 						<Col xs={12}>
 							<ul className="ul">
 							{t('industryConnectionDetails', { returnObjects: true }).map((detail, index) => (
-								<li key={index} style={{ listStyleType: index === 1 || index === 2 || index === 4 || index === 6 ? 'none' : undefined }}>
-									{detail}
-								</li>
+							<li key={index} style={{ listStyleType: i18n.language === 'en' && (index === 1 || index === 2 || index === 4 || index === 6) ? 'none' : undefined }}>
+								{detail}
+							</li>
 							))}
 							</ul>
 						</Col>
@@ -200,44 +208,47 @@ function IntroduceScreen() {
 							{t('tradingCompetitionTitle')}
 						</p>
 						{i18n.language !== 'en' && (
-							<p className="label">{t('Trading Competition Label')}</p>
+							<p className="label">{t('Trading Competition')}</p>
 						)}
 						</div>
 						<Row>
-							<Col xs={12} md={4}>
-								<div className="small-title" style={textStyle}>
-								{getPhaseTitle('策略阶段 Strategies', 'Strategies')}
-								</div>
-								<ul className="ul" style={textStyle}>
-								{t('tradingStrategies', { returnObjects: true }).map((strategy, index) => (
-									<li key={index} style={{...textStyle, listStyleType: index === 3 ? 'none' : undefined }}>{strategy}</li>
-								))}
-								</ul>
-							</Col>
-							<Col xs={12} md={4}>
-								<div className="small-title" style={textStyle}>
-								{getPhaseTitle('选择阶段 Selection', 'Selection')}
-								</div>
-								<ul className="ul" style={textStyle}>
-								{t('tradingSelection', { returnObjects: true }).map((selection, index) => (
-									<li key={index} style={{ ...textStyle, listStyleType: index === 1 || index === 2 ? 'none' : undefined }}>
-									{selection}
-									</li>
-								))}
-								</ul>
-							</Col>
-							<Col xs={12} md={4}>
-									<div className="small-title" style={textStyle}>
-									{getPhaseTitle('比赛阶段 Competition', 'Competition')}
-									</div>
-									<ul className="ul" style={textStyle}>
-									{t('tradingCompetition', { returnObjects: true }).map((competition, index) => (
-										<li key={index} style={{ ...textStyle, listStyleType: index === 2 || index === 4 ? 'none' : undefined }}>
-										{competition}
-										</li>
-									))}
-								</ul>
-							</Col>
+						<Col xs={12} md={4}>
+						<div className="small-title" style={textStyle}>
+							{getPhaseTitle('策略阶段 Strategies', '策略階段 Strategies', 'Strategies')}
+						</div>
+						<ul className="ul" style={textStyle}>
+							{t('tradingStrategies', { returnObjects: true }).map((strategy, index) => (
+							<li key={index} style={{...textStyle, listStyleType: i18n.language === 'en' && index === 3 ? 'none' : undefined }}>
+								{strategy}
+							</li>
+							))}
+						</ul>
+						</Col>
+						<Col xs={12} md={4}>
+						<div className="small-title" style={textStyle}>
+							{getPhaseTitle('选择阶段 Selection', '選擇階段 Selection', 'Selection')}
+						</div>
+						<ul className="ul" style={textStyle}>
+							{t('tradingSelection', { returnObjects: true }).map((selection, index) => (
+							<li key={index} style={{...textStyle, listStyleType: i18n.language === 'en' && (index === 1 || index === 2) ? 'none' : undefined }}>
+								{selection}
+							</li>
+							))}
+						</ul>
+						</Col>
+						<Col xs={12} md={4}>
+						<div className="small-title" style={textStyle}>
+							{getPhaseTitle('比赛阶段 Competition', '比賽階段 Competition', 'Competition')}
+						</div>
+						<ul className="ul" style={textStyle}>
+							{t('tradingCompetition', { returnObjects: true }).map((competition, index) => (
+							<li key={index} style={{...textStyle, listStyleType: i18n.language === 'en' && (index === 2 || index === 4) ? 'none' : undefined }}>
+								{competition}
+							</li>
+							))}
+						</ul>
+						</Col>
+
 						</Row>
 					</div>
 				</Col>

@@ -65,7 +65,7 @@
 .services .services-item{
 	border-radius: 20px;
 	background: #FFF7F7;
-	height: 400px;
+	height: auto;
 	margin-bottom: 48px;
 	padding:48px 70px;
 }
@@ -110,9 +110,8 @@ height: 95px;
 	font-style: normal;
 	font-weight: 500;
 	line-height: 42.287px;
-	white-space: nowrap;
-	
 }
+
 .services .services-item  .small-title{
 	color: #036;
 	white-space: nowrap;
