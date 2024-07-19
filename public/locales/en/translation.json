@@ -2,22 +2,26 @@
     "socialAdvisorTitle": "Advisors",
     "members": [
       {
-        "name": "Prof. Yang Wang",
+        "name_mobile": "Prof. Yang Wang",
+        "name_desktop": "Prof. Yang Wang",
         "job": "Honorary President",
         "introduce": "Prof. Yang Wang took office as Vice-President for Institutional Advancement of HKUST on October 1, 2020. He is also a Chair Professor of Department of Industrial Engineering and Decision Analytics and Department of Mathematics. He joined the HKUST as the Head of the Department of Mathematics in 2014 and he became the Dean of School of Science in 2016. Prof. Wang received his Bachelor's degree in Mathematics from the University of Science and Technology of China in 1983 and obtained his PhD degree in Mathematics from Harvard University in 1990. He started his academic career with the Georgia Institute of Technology in 1989 and then moved on to be the Department Chair and Professor of Mathematics at Michigan State University in 2007."
       },
       {
-        "name": "Mr. Samuel Yung Wing Ki, SBS, MH, JP",
+        "name_mobile": "Mr. Samuel Yung Wing Ki, SBS, MH, JP",
+        "name_desktop": "Mr. Samuel Yung Wing Ki, SBS, MH, JP",
         "job": "Honorary Advisor",
         "introduce": "Mr. Samuel Yung is an Executive District Director & Honorable Advisor of AIA International Limited. He is Vice Chairman of the Committee for Economic Affairs, Chinese People’s Political Consultative Conference (CPPCC) National Committee and Founding President of Hong Kong Professionals and Senior Executives Association. Mr. Yung has strong ties with the tertiary education sector. He is a Council Member of the Hong Kong University of Science and Technology (HKUST) and a Court Member of the Hong Kong Metropolitan University (HKMU)."
       },
       {
-        "name": "Prof. Kani Chen",
+        "name_mobile": "Prof. Kani Chen",
+        "name_desktop": "Prof. Kani Chen",
         "job": "Supervisory Board Chairman",
         "introduce": "Prof. Kani Chen acts as program director of MSc in Financial Mathematics and CoDirector of Risk Management and Business Intelligence Program in HKUST. He received a PhD in Statistics (1994) from Columbia University in the City of New York, an MSc (1990) and a BSc (1987) from Peking University. He has over decades of research and teaching experience in financial mathematics."
       },
       {
-        "name": "Mr. Hyde Li CFA",
+        "name_mobile": "Mr. Hyde Li CFA",
+        "name_desktop": "Mr. Hyde Li CFA",
         "job": "Board Chairman",
         "introduce": "Mr. Hyde Li, CFA, serves as the Executive Director of Tianlong Securities Co., Ltd. and the Chairman of Fund Connect HK Limited. He is also the President of the Hong Kong MBA Institute. Mr. Li has many years of experience in the traditional and digital asset investment industries. He has managed various prestigious projects, including the \"Top 100 Listed Companies in Hong Kong\" for Finet Group Limited, collaborated with Huobi Group on digital asset quantitative trading management, and handled asset management for family offices. He has built extensive professional networks and maintained strong connections with the Hong Kong University of Science and Technology, providing a vast platform for student entrepreneurship and career development."
       }

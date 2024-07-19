@@ -16,6 +16,18 @@ import QRCode from '../img/footerQR.jpg'
 function Footer() {
     const { t } = useTranslation();
     const isMobile = useMediaQuery({ query: breakpoints.mobile });
+    const isCustomMobile = useMediaQuery({ query: '(min-width: 769px) and (max-width: 1400px)' });
+
+    // 根据屏幕类型动态设置marginTop
+    let marginTop;
+    if (isMobile) {
+        marginTop = '0px';  // 标准移动设备无额外的marginTop
+    } else if (isCustomMobile) {
+        marginTop = '30px';  // 自定义移动范围设备marginTop为30px
+    } else {
+        marginTop = '0px';  // 非移动设备无额外的marginTop
+    }
+
     const footerStyle = {
         width: '100%',
         minHeight: isMobile ? '375px' : '150px',  // 手机时设置为100px高，电脑为150px
@@ -27,7 +39,7 @@ function Footer() {
 
     const logoStyle = {
         width: isMobile ? '100px' : '205px',
-        height: '68px',
+        height: '45px',
         marginRight: '50px',
         marginLeft: isMobile ? 'auto' : '15px',
         paddingRight: '20px',
@@ -53,8 +65,8 @@ function Footer() {
     const friendLinksTextStyle = {
         color: 'white',
         position: 'relative',
-        top: isMobile ? '160px' : '-10px',  // 增加了手机模式下的下移距离
-        left: isMobile ? '-120%' : '0',
+        top: isMobile ? '160px' : '0px',  // 增加了手机模式下的下移距离
+        right: isMobile ? '450px' : '0',
         transform: isMobile ? 'translateX(-50%)' : 'none',
         marginRight: '50px',
         marginLeft: isMobile ? 'auto' : '15px',
@@ -100,7 +112,7 @@ function Footer() {
         display: "flex",
         flexDirection: "column",
         marginLeft: "30px",
-        position: 'absolute',
+        position: isMobile ? 'absolute' : undefined,
         right: '25px',
         top: isMobile ? '40px' : '25px',  // 手机模式下移
     };
@@ -121,15 +133,16 @@ function Footer() {
     return (
         <div style={{ zIndex: 2, position: 'relative' }}>
             <footer className="tp-header-height" style={footerStyle}>
-                <div style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'flex-start',
-                    height: '100%',
-                    width: 'calc(100% - 50px)',
-                    marginLeft: '50px',
-                    boxSizing: 'border-box'
-                }}>
+        <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'flex-start',
+            height: '100%',
+            width: 'calc(100% - 50px)',
+            marginLeft: '50px',
+            marginTop: marginTop,  // 应用动态marginTop
+            boxSizing: 'border-box'
+        }}>
 
                 <Logo style={logoStyle} />
                     <span style={copyrightTextStyle}>Copyright&copy; Quant Trading Society（HKUST- MAFM）</span>
