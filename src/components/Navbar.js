@@ -65,7 +65,7 @@ function Navbar() {
     // 缩放因子
     let scaleFactor;
     if (isMobile) {
-        scaleFactor = 1;  // 标准移动设备上缩小15%
+        scaleFactor = 0.9;  // 标准移动设备上缩小15%
     } else if (isCustomMobile) {
         scaleFactor = 1.2;  // 自定义移动范围设备上缩小25%
     } else {
