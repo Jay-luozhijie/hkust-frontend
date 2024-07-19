@@ -28,30 +28,33 @@ function SocialAdvisorScreen() {
     <div className="SocialAdvisor">
       <div className="title">{t('socialAdvisorTitle')}</div>
       <Row>
-        {members.map((member, index) => (
-          <Col key={index} xs={12} sm={12} md={12} lg={12} xl={12} xxl={12}>
-            <div className="lists">
-              <div className={`lists-item ${index === 1 ? 'special-item' : ''}`}>
-                <img src={[Rectangle25, Rectangle95, Rectangle23, Rectangle26][index]} alt={`Member ${index + 1}`} />
-                <div className="right">
-                  <div className="bottom_content">
-                    <h3 className="name">
-                      {member.name.split('\n').map((line, idx) => (
-                        <span key={idx} className={idx > 0 ? "small-text" : ""}>
-                          {line}
-                          <br />
-                        </span>
-                      ))}
-                    </h3>
-                    <p className="job">{member.job}</p>
+        {members.map((member, index) => {
+          const name = isMobile ? member.name_mobile : member.name_desktop;
+          return (
+            <Col key={index} xs={12} sm={12} md={12} lg={12} xl={12} xxl={12}>
+              <div className="lists">
+                <div className={`lists-item ${isMobile && index === 1 ? 'special-item' : ''}`}>
+                  <img src={[Rectangle25, Rectangle95, Rectangle23, Rectangle26][index]} alt={`Member ${index + 1}`} />
+                  <div className="right">
+                    <div className="bottom_content">
+                      <h3 className="name">
+                        {name ? name.split('\n').map((line, idx) => (
+                          <span key={idx} className={idx > 0 ? "small-text" : ""}>
+                            {line}
+                            <br />
+                          </span>
+                        )) : null}
+                      </h3>
+                      <p className="job">{member.job}</p>
+                    </div>
+                    {isMobile ? null : <p className="label">{member.introduce}</p>}
                   </div>
-                  {isMobile ? null : <p className="label">{member.introduce}</p>}
                 </div>
+                {isMobile ? <p className="label">{member.introduce}</p> : null}
               </div>
-              {isMobile ? <p className="label">{member.introduce}</p> : null}
-            </div>
-          </Col>
-        ))}
+            </Col>
+          );
+        })}
       </Row>
     </div>
   );

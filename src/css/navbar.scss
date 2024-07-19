@@ -30,6 +30,7 @@ a.nav-link {
 
 .grey-bg {
     height: 53px;
+    max-width: 100%;
 }
 
 .Logo, .Title {
@@ -40,7 +41,7 @@ a.nav-link {
 }
 
 .tp-header-height {
-    height: 149px;
+    height: 150px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -60,6 +61,7 @@ a.nav-link {
     align-items: center;
     justify-content: flex-end; /* 使导航链接靠右对齐 */
     flex-grow: 2;
+    white-space: nowrap;
 }
 
 .Earth {
@@ -95,7 +97,7 @@ a.nav-link {
     bottom: -6px;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1400px) {
     .tp-header-height {
         height: auto;
     }
@@ -300,3 +302,4 @@ a.nav-link {
     width: 100%;     /* 宽度设为100%，覆盖整个视口宽度 */
     z-index: 500; 
 }
+

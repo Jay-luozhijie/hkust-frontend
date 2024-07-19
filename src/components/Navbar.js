@@ -30,6 +30,7 @@ function Navbar() {
 
     const isMobile = useMediaQuery({ query: breakpoints.mobile });
     const isDesktop = useMediaQuery({ query: breakpoints.desktop });
+    const isCustomMobile = useMediaQuery({ query: '(max-width: 1400px)' });
 
     const toggleDropdown = (dropdown) => {
         setDropdowns(prevState => ({
@@ -61,6 +62,34 @@ function Navbar() {
         }
     };
 
+    // 缩放因子
+    let scaleFactor;
+    if (isMobile) {
+        scaleFactor = 1;  // 标准移动设备上缩小15%
+    } else if (isCustomMobile) {
+        scaleFactor = 1.2;  // 自定义移动范围设备上缩小25%
+    } else {
+        scaleFactor = 0.8;  // 非移动设备上缩小5%
+    }
+
+    // Logo尺寸
+    const logoWidth = isMobile ? 127.5 : 230;
+    const logoHeight = isCustomMobile ? 34 : 60;
+    const scaledLogoWidth = `${logoWidth * scaleFactor}px`;
+    const scaledLogoHeight = `${logoHeight * scaleFactor}px`;
+
+    // Title尺寸
+    const titleWidth = isMobile ? 102 : 180;
+    const titleHeight = isCustomMobile ? 34 : 60;
+    const scaledTitleWidth = `${titleWidth * scaleFactor}px`;
+    const scaledTitleHeight = `${titleHeight * scaleFactor}px`;
+
+    // Quant Society Logo尺寸
+    const quantLogoWidth = isCustomMobile ? 85 : 187;
+    const quantLogoHeight = isCustomMobile ? 85 : 187;
+    const scaledQuantLogoWidth = `${quantLogoWidth * scaleFactor}px`;
+    const scaledQuantLogoHeight = `${quantLogoHeight * scaleFactor}px`;
+
     return (
         <div>
             <header className="tp-header-height">
@@ -73,20 +102,20 @@ function Navbar() {
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', height: '100%', boxSizing: 'border-box', position: 'relative' }} className="tab-box-item">
                 <div style={{ display: 'flex', alignItems: 'center', marginRight: '0px' }}>
                     <Link to="/">
-                        <Logo style={{ width: isMobile ? '127.5px' : '230px', height: isMobile ? '34px' : '60px' }} className="Logo" />
+                        <Logo style={{ width: scaledLogoWidth, height: scaledLogoHeight }} className="Logo" />
                     </Link>
-                    </div>
-                    <div style={{ display: 'flex', alignItems: 'center', marginRight: '0px' }}>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', marginRight: '0px' }}>
                     <Link to="/">
-                        <Title style={{ width: isMobile ? '102px' : '180px', height: isMobile ? '34px' : '60px' }} className="Title" />
+                        <Title style={{ width: scaledTitleWidth, height: scaledTitleHeight }} className="Title" />
                     </Link>
-                    </div>
-                    <div style={{ display: 'flex', alignItems: 'center', marginLeft: isDesktop ? '-15px' : '0px' }}>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', marginLeft: isCustomMobile ? '10px' : '0px' }}>
                     <Link to="/">
-                        <img src={quantSocietyLogo} alt="Quant Society Logo" style={{ width: isDesktop ? '187px' : '85px', height: isDesktop ? '187px' : '85px' }} />
+                        <img src={quantSocietyLogo} alt="Quant Society Logo" style={{ width: scaledQuantLogoWidth, height: scaledQuantLogoHeight }} />
                     </Link>
-                    </div>
-                    {!isDesktop && (
+                </div>
+                    {isCustomMobile && (
                         <div className="menubtn" onClick={toggleMenu} style={{ position: 'absolute', right: '0px', top: '25%' }}>
                             <span></span>
                             <span></span>
@@ -202,8 +231,6 @@ function Navbar() {
                                 </div>
                             </div>
                         </div>
-
-
         </div>
     );
 }
