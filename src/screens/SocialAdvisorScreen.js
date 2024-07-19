@@ -31,11 +31,18 @@ function SocialAdvisorScreen() {
         {members.map((member, index) => (
           <Col key={index} xs={12} sm={12} md={12} lg={12} xl={12} xxl={12}>
             <div className="lists">
-            <div className="lists-item">
-                <img src={[Rectangle25, Rectangle95, Rectangle23, Rectangle26][index]} />
+              <div className={`lists-item ${index === 1 ? 'special-item' : ''}`}>
+                <img src={[Rectangle25, Rectangle95, Rectangle23, Rectangle26][index]} alt={`Member ${index + 1}`} />
                 <div className="right">
                   <div className="bottom_content">
-                    <h3 className="name">{member.name}</h3>
+                    <h3 className="name">
+                      {member.name.split('\n').map((line, idx) => (
+                        <span key={idx} className={idx > 0 ? "small-text" : ""}>
+                          {line}
+                          <br />
+                        </span>
+                      ))}
+                    </h3>
                     <p className="job">{member.job}</p>
                   </div>
                   {isMobile ? null : <p className="label">{member.introduce}</p>}
