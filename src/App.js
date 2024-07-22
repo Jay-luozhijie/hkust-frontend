@@ -1,6 +1,6 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import axios from 'axios';
-import {BrowserRouter, Route, Routes, Navigate} from 'react-router-dom'
+import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import HomeScreen from './screens/HomeScreen'
 import SigninScreen from './screens/SigninScreen'
 import './css/navbar.scss'
@@ -39,7 +39,7 @@ import './css/Alumni/Shanghai.scss';
 import './css/Alumni/Shenzhen.scss';
 
 import { useMediaQuery } from 'react-responsive';
-import breakpoints from './config/breakpoints';
+
 import ActivitiesDetailScreen from './screens/ActivitiesDetailScreen.js';
 
 axios.defaults.baseURL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000';
