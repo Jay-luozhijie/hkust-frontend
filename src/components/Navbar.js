@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { ReactComponent as Logo } from '../img/hkust_logo.svg';
 import { ReactComponent as Title } from '../img/Header-title_MAFM.svg';

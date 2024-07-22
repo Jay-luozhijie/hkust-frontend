@@ -8,6 +8,7 @@ i18n
   .use(LanguageDetector) // 自动检测用户语言
   .use(initReactI18next) // 传递i18n实例给react-i18next
   .init({
+    lng: 'zh', // 强制设置默认语言为简体中文
     fallbackLng: 'zh', // 默认回退语言
     debug: true, // 启用调试模式以查看加载详情
     interpolation: {

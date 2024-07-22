@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 import i18n from 'i18next';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -104,20 +104,7 @@ function SlideContent({ slideIndex, isMobile }) {
 function HomeScreen() {
   const { t } = useTranslation();
   const isMobile = useMediaQuery({ query: breakpoints.mobile });
-  const [isEnglish, setIsEnglish] = useState(i18n.language === 'en');
-
-  useEffect(() => {
-    setIsEnglish(i18n.language === 'en');
-    // 监听语言变化
-    i18n.on('languageChanged', (lng) => {
-      setIsEnglish(lng === 'en');
-    });
-
-    // 清理监听器
-    return () => {
-      i18n.off('languageChanged');
-    };
-  }, []);
+  const isEnglish = i18n.language === 'en'; // 如果i18n未在这个文件中引入，需要添加相应的import语句
 
   const imageStyle = isMobile 
     ? {
