@@ -46,9 +46,9 @@ const associationMemberData = [
   { 
     id: 3,
     name: {
-    zh: '张亚伟',
+    zh: '张亚维',
     en: 'Zhang Yawei',
-    tc: '張亞偉'
+    tc: '張亞維'
   }, 
   job: 'General Secretary', introduce1: 'Master of Public Management,', introduce2: 'Hong Kong University of Science and Technology', avatarSrc: avatar3 },
   { 
