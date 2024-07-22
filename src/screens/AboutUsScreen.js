@@ -215,7 +215,7 @@ function AboutUsScreen() {
 
   const avatarOuterStyle = {
     width: isMobile ? '139px' : '193px',
-    height: isMobile ? '164px' : '265px'
+    height: isMobile ? '164px' : '263px'
   };
 
   const headerStyle = {
