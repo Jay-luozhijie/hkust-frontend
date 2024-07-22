@@ -43,6 +43,8 @@ function SlideContent({ slideIndex, isMobile }) {
   const textPosition1 = isMobile ? { right: '20px', top: isEnglish ? '80px' : '80px' } : { left: '142px', top: '70px' };
   const textPosition2 = isMobile ? { right: '20px', top: isEnglish ? '140px' : '120px' } : { left: '142px', top: '140px' };
   const textPosition3 = isMobile ? { right: '20px', top: isEnglish ? '210px' : '160px' } : { left: '142px', top: '220px' };
+  const paddingLeft = isMobile ? '0px' : '150px';
+  const paddingRight = isMobile ? '15px' : '0px';
 
   return (
     <div>
@@ -50,40 +52,46 @@ function SlideContent({ slideIndex, isMobile }) {
       <div className="layer2 swiper-cover"></div>
       <div className="layer3">
         <div style={{
-          position: 'absolute',
           color: 'white',
           fontSize: fontSizeMain,
           fontFamily: 'customOPPOSans',
           fontWeight: '400',
           wordWrap: 'break-word',
           lineHeight: '1.3',
+          width: '100%',
           textAlign: textAlign,
+          paddingLeft: paddingLeft,
+          paddingRight: paddingRight,
           ...textPosition1
         }}>
           {parseNewlines(t('slide_text_line1'), isMobile)}
         </div>
         <div style={{
-          position: 'absolute',
           color: 'white',
           fontSize: fontSizeMain,
           fontFamily: 'customOPPOSans',
           fontWeight: '400',
           wordWrap: 'break-word',
           lineHeight: '1.3',
+          width: '100%',
           textAlign: textAlign,
+          paddingLeft: paddingLeft,
+          paddingRight: paddingRight,
           ...textPosition2
         }}>
           {parseNewlines(t('slide_text_line2'), isMobile)}
         </div>
         <div style={{
-          position: 'absolute',
           color: 'white',
           fontSize: fontSizeSub,
           fontFamily: 'customOPPOSans',
           fontWeight: '400',
           wordWrap: 'break-word',
           lineHeight: '1.3',
+          width: '100%',
           textAlign: textAlign,
+          paddingLeft: paddingLeft,
+          paddingRight: paddingRight,
           ...textPosition3
         }}>
           {t('hkust_quant_trading_society')}

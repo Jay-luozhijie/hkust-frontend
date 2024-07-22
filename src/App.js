@@ -46,7 +46,11 @@ axios.defaults.baseURL = process.env.REACT_APP_API_BASE_URL || 'http://localhost
 
 function App() {
 
-  const isMobile = useMediaQuery({ query: breakpoints.mobile });
+  // 定义屏幕宽度是否小于1400px的媒体查询
+  const isLessThan1400px = useMediaQuery({ query: '(max-width: 1399px)' });
+
+  // 根据屏幕宽度设置 paddingTop
+  const paddingTop = isLessThan1400px ? '75px' : '144px';
 
   return (
       <BrowserRouter>
@@ -54,7 +58,7 @@ function App() {
             <div className="app-container">
               
                 <Navbar></Navbar>
-                <main className="main-content" style={{ paddingTop: isMobile ? '75px' : '144px' }}>
+                <main className="main-content" style={{ paddingTop }}>
                     <Routes>
                       <Route path = "/" element={<HomeScreen/>}></Route>
                       <Route path = "/signin" element={<SigninScreen/>}></Route>

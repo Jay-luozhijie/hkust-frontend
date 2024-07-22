@@ -70,8 +70,15 @@
   }
 
   .layer3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start; /* 或者 'flex-end' 依据文本对齐需求 */
+    position: absolute;
+    width: 100%; /* 确保它填满整个父容器 */
     z-index: 3; /* 图层3位于上方 */
-  }
+    top: 70px;
+}
 
   .swiper-text{
     color:white;
