@@ -17,6 +17,8 @@ function Footer() {
     const { t } = useTranslation();
     const isMobile = useMediaQuery({ query: breakpoints.mobile });
     const isCustomMobile = useMediaQuery({ query: '(min-width: 769px) and (max-width: 1400px)' });
+    const isTablet = useMediaQuery({ query: '(min-width: 769px) and (max-width: 1650px)' });
+    const isStickQR = useMediaQuery({ query: '(min-width: 769px) and (max-width: 1180px)' });
 
     // 根据屏幕类型动态设置marginTop
     let marginTop;
@@ -34,7 +36,7 @@ function Footer() {
         backgroundColor: '#9A1E23',
         position: 'relative',
         minWidth: '320px',
-        overflow: 'hidden'
+        overflow: 'auto'
     };
 
     const logoStyle = {
@@ -69,7 +71,7 @@ function Footer() {
         right: isMobile ? '450px' : '0',
         transform: isMobile ? 'translateX(-50%)' : 'none',
         marginRight: '50px',
-        marginLeft: isMobile ? 'auto' : '15px',
+        marginLeft: isMobile ? 'auto' : isTablet ? '0px' :'15px',
         minWidth: isMobile ? '200px' : 'auto',
         whiteSpace: 'nowrap',
         padding: isMobile ? '0 10px' : '0',
@@ -82,7 +84,7 @@ function Footer() {
 
     const outerDivStyle = {
         position: 'relative',
-        top: isMobile ? '50px' : '0px',  // 减少了手机模式下的上移距离
+        top: isMobile ? '50px' : '-10px',  // 减少了手机模式下的上移距离
         left: isMobile ? '-965px' : '-30px',
     };
 
@@ -111,10 +113,13 @@ function Footer() {
     const msgDivStyle = {
         display: "flex",
         flexDirection: "column",
-        marginLeft: "30px",
+        marginLeft: isStickQR ? undefined : "30px",
         position: isMobile ? 'absolute' : undefined,
         right: '25px',
         top: isMobile ? '40px' : '25px',  // 手机模式下移
+        position: isStickQR ? undefined : 'absolute',
+        paddingBottom: isStickQR ? '30px' : undefined,
+        paddingRight: isStickQR ? '30px' : undefined
     };
 
     const msgIconStyle = {
@@ -145,8 +150,13 @@ function Footer() {
         }}>
 
                 <Logo style={logoStyle} />
-                    <span style={copyrightTextStyle}>Copyright&copy; Quant Trading Society（HKUST- MAFM）</span>
-                    <div style={{ flexGrow: 1 }}></div>
+                {!isTablet && (
+                    <span style={copyrightTextStyle}>
+                        Copyright&copy; Quant Trading Society（HKUST- MAFM）
+                    </span>
+                )}
+
+                {!isTablet && (
                     <div style={friendLinksTextStyle}>
                         {t('friendLinks')}<br />
                         <a href="https://mafm.hkust.edu.hk/" style={{ color: 'white' }}>
@@ -155,6 +165,31 @@ function Footer() {
                             HKUST MAFM
                         </a>
                     </div>
+                )}
+        {isTablet && (
+            <div style={{
+                display: 'flex',
+                flexDirection: 'column-reverse', // 设置为列反向排列
+                justifyContent: 'flex-start', // 内容向容器的起始边对齐
+                alignItems: 'flex-start', // 使内容左对齐
+                gap: '10px', // 元素之间增加10px的间隔
+                padding: '10px'  // 添加一些内边距以优化视觉效果
+            }}>
+                <span style={copyrightTextStyle}>
+                    Copyright&copy; Quant Trading Society（HKUST- MAFM）
+                </span>
+
+                <div style={friendLinksTextStyle}>
+                    {t('friendLinks')}<br />
+                    <a href="https://mafm.hkust.edu.hk/" style={{ color: 'white' }}>
+                        <span style={cryptoStyle}>Crypto-Fintech Lab</span>
+                        {isMobile ? '' : <br />}
+                        HKUST MAFM
+                    </a>
+                </div>
+            </div>
+        )}
+
                     <div style={outerDivStyle}>
                         <div style={{
                             display: 'flex',
@@ -162,7 +197,7 @@ function Footer() {
                             justifyContent: 'flex-start',
                             height: '80%',
                             width: 'calc(100% - 50px)',
-                            marginLeft: '170px',
+                            marginLeft: isTablet ? '50px' : '170px',
                             boxSizing: 'border-box'
                         }}>
 
@@ -179,7 +214,7 @@ function Footer() {
                             justifyContent: 'flex-start',
                             height: '80%',
                             width: 'calc(100% - 50px)',
-                            marginLeft: '170px',
+                            marginLeft: isTablet ? '50px' : '170px',
                             boxSizing: 'border-box'
                         }}>
                             <Linkedin style={{ marginRight: '15px', position: 'relative', top: '8px' }}></Linkedin>

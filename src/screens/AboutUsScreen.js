@@ -15,6 +15,13 @@ import avatar8 from '../img/avatar/yuruoyan.png';
 import avatar9 from '../img/avatar/likachun.png';
 import avatar10 from '../img/avatar/gongyanbin.png';
 
+import avatar11 from '../img/avatar/daiaijing.jpg';
+import avatar12 from '../img/avatar/yangzhankai.jpg';
+import avatar13 from '../img/avatar/huanghailan.jpg';
+import avatar14 from '../img/avatar/guanjirui.jpg';
+import avatar15 from '../img/avatar/jinzexu.png';
+import avatar16 from '../img/avatar/hongzizhao.jpg';
+
 const associationMemberData = [
   { 
     id: 1, 
@@ -83,7 +90,55 @@ const associationMemberData = [
     en: 'Yu Ruoyan',
     tc: '虞若妍'
   },   
-  job: 'General Secretary', introduce1: 'Bachelor of Accounting and Finance,', introduce2: 'Hong Kong Polytechnic University ', avatarSrc: avatar8 },
+  job: 'General Secretary', introduce1: 'Bachelor of Accounting and Finance,', introduce2: 'Hong Kong Polytechnic University', avatarSrc: avatar8 },
+  { 
+    id: 11,     
+    name: {
+      zh: '戴爱静',
+      en: 'Dai Aijing',
+      tc: '戴愛靜'
+    },   
+    job: 'General Secretary', introduce1: 'Bachelor in Electronic Engineering,', introduce2: 'Hong Kong University of Science and Technology', avatarSrc: avatar11 },
+  { 
+    id: 12,     
+    name: {
+      zh: '杨战铠',
+      en: 'Yang Zhankai',
+      tc: '楊戰鎧'
+    },   
+    job: 'General Secretary', introduce1: 'Bachelor of Mathematics and Economics,', introduce2: 'Hong Kong University of Science and Technology', avatarSrc: avatar12 },
+  { 
+    id: 13,     
+    name: {
+      zh: '黄海岚',
+      en: 'Huang Hailan',
+      tc: '黃海嵐'
+    },   
+    job: 'General Secretary', introduce1: 'BSc in Mathematics with Extended Major in Artificial Intelligence,', introduce2: 'Hong Kong University of Science and Technology', avatarSrc: avatar13 },
+  { 
+    id: 14,     
+    name: {
+      zh: '关吉睿',
+      en: 'Guan Jirui',
+      tc: '關吉睿'
+    },   
+    job: 'General Secretary', introduce1: 'Bachelor of Operations Management and Professional Accounting,', introduce2: 'Hong Kong University of Science and Technology', avatarSrc: avatar14 },
+  { 
+    id: 15,     
+    name: {
+      zh: '金泽旭',
+      en: 'Jin Zexu',
+      tc: '金澤旭'
+    },   
+    job: 'General Secretary', introduce1: 'BSc in Mathematics,', introduce2: 'Hong Kong University of Science and Technology', avatarSrc: avatar15 },
+  { 
+    id: 16,     
+    name: {
+      zh: '洪子钊',
+      en: 'Hong Zizhao',
+      tc: '洪子鑷'
+    },   
+    job: 'General Secretary', introduce1: 'BSc in Mathematics with Extended Major in AI,', introduce2: 'Hong Kong University of Science and Technology', avatarSrc: avatar16 },
   { 
     id: 9,   
     name: {
