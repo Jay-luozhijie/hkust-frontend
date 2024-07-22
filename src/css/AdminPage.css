@@ -1,5 +1,6 @@
 .adminPage{
     margin-left:40px;
+    margin-top:40px;
 }
 
 .btn-group {
@@ -46,4 +47,21 @@
     padding: 5px; /* Optional: to add some padding inside the input */
     font-size: 16px; /* Optional: adjust font size */
     border-radius: 4px; /* Optio*/
+}
+
+
+.custom-dropdown-menu {
+    max-height: 200px; /* Adjust the height as needed */
+    overflow-y: auto;
+    width: 800px;
+  }
+
+.dropdownDeleteBtn{
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+.deleteBtn{
+    margin-left: 30px;
+    margin-top: 30px;
 }
