@@ -209,10 +209,6 @@ function AboutUsScreen() {
     whiteSpace: i18n.language === 'en' ? 'nowrap' : undefined
   };
 
-  const associationMemberListStyle = {
-    marginLeft: isMobile ? '50px' : '0'
-  };
-
   const avatarOuterStyle = {
     width: isMobile ? '139px' : '193px',
     height: isMobile ? '164px' : '263px'
@@ -250,7 +246,7 @@ function AboutUsScreen() {
         <div className="title" style={titleStyle}>
           {getTranslatedText(i18n, '协会成员', 'Association Members', '協會成員')}
         </div>
-        <div className="association-member-list" style={associationMemberListStyle}>
+        <div className="association-member-list">
           {associationMemberData.map((item) => (
             <div key={item.id} className="member-item">
               <div className="avatar-outer" style={avatarOuterStyle}>

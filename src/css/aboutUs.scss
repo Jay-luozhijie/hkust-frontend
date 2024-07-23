@@ -93,7 +93,12 @@
     .association-member-list {
       display: flex;
       flex-wrap: wrap;
-
+      @media only screen and (min-width: 411px) and (max-width: 768px) {
+          margin-left: 50px;
+      }      
+      @media only screen and (max-width: 410px) {
+        margin-left: 10px;
+      }
       .member-item {
         width: 260px;
         margin-bottom: 45px;
