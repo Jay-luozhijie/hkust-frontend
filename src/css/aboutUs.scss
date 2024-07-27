@@ -93,7 +93,19 @@
     .association-member-list {
       display: flex;
       flex-wrap: wrap;
-
+      margin-left: -100px;
+      left: 100px;
+      position: relative;
+      @media only screen and (min-width: 411px) and (max-width: 768px) {
+          margin-left: 50px;
+          left: 0px;
+          position: relative;
+      }      
+      @media only screen and (max-width: 410px) {
+        margin-left: -50px;
+        left: 100px;
+        position: relative;
+      }
       .member-item {
         width: 260px;
         margin-bottom: 45px;
@@ -176,7 +188,7 @@
     }
 
     .previous-member-list {
-      margin-left: 20px;
+      margin-left: 30px;
       @media only screen and (max-width: 768px) {
         margin-left: 50px;
       }
