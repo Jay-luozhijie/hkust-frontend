@@ -6,6 +6,8 @@ import axios from 'axios';
 import { useState } from 'react';
 import 'react-markdown-editor-lite/lib/index.css';
 import '../css/AdminPage.css'
+// import {imgbox} from 'imgbox-js'
+import ImgboxUploader from '../components/ImgBoxUploader';
 
 const COMMUNITY_NEWS = 1
 const ALUMNI_ACTIVITIES = 0
@@ -176,6 +178,9 @@ const AdminPage = () => {
 
       {editMode === NEW && (
         <div>
+          <div class="imgboxContainer">
+            <ImgboxUploader />
+          </div>
           <div class="content">
             <input class="inputNewsTitle"
               type="text"
