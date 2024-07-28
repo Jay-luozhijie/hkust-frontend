@@ -22,14 +22,11 @@ const ImgBoxUploader = () => {
     if (!selectedFile) return;
 
     const formData = new FormData();
-    formData.append('image', selectedFile);
+    formData.append('file', selectedFile);
 
     try {
-      const response = await axios.post('https://api.imgbb.com/1/upload', formData, {
-      params: {
-        key:'bd267989c2b04ad915a732e8f60ae47e'
-      }});
-      setImageURL(response.data.data.url);
+      const response = await axios.post('/api/users/generateImageUrl', formData);
+      setImageURL(response.data.secure_url);
     } catch (error) {
       console.error('Error uploading the image', error);
     }
@@ -41,7 +38,7 @@ const ImgBoxUploader = () => {
       <button onClick={handleUpload}>generate image url</button>
       {imageURL && (
         <div>
-          <p>Image URL, double click to copy:</p>
+          <p>double click to copy:</p>
           <a
             href={imageURL}
             target="_blank"

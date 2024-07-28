@@ -58,19 +58,6 @@ const AdminPage = () => {
     }
   };
 
-  // useEffect(() => {
-  //   fetchActData();
-  // }, [aluAct]);
-  
-  // const fetchActData = async () => {
-  //   try {
-  //     const response = await axios.get(`/api/users/AlumniAct?isAll=1`);
-  //     setNewsData(response.data);
-  //   } catch (error) {
-  //     console.error('Error fetching act data', error);
-  //   }
-  // };
-
 
   const handleEditorChange = ({ text }) => {
     setContent(text);
