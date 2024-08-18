@@ -1,0 +1,325 @@
+.sign-up-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'customOPPOSans';
+    @media only screen and (max-width: 768px) {
+        padding-left: 30px;
+        width: 93%;
+      }
+
+    .heading{
+        margin-top: 80px;
+        color: #9A1E23;
+        font-size: 66px;
+        font-weight: bold;
+        margin-bottom: 50px;
+        @media only screen and (max-width: 768px) {
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-align: center;
+          }
+    }
+    
+    .team-information {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 80%;
+        @media only screen and (max-width: 768px) {
+            font-size: 26px;
+            align-items: center;
+          }
+
+        .sub-heading{
+            margin-bottom: 30px;
+            color: #9A1E23;
+            font-weight: bold;
+            font-size: 34px;
+            @media only screen and (max-width: 768px) {
+                font-size: 26px;
+                text-align: center;
+              }
+        }
+
+        .team-members-information-heading3{
+            margin-bottom: 30px;
+            color: #9A1E23;
+            font-size: 32px;
+            @media only screen and (max-width: 768px) {
+                font-size: 24px;
+                text-align: left;
+                width: 100%;
+              }
+        }
+
+        .member-separator {
+            border: none;
+            border-top: 2px solid #6F6E6F;
+            margin: 50px 0;
+            width: 100%;
+            @media only screen and (max-width: 768px) {
+                margin-top: 26px;
+              }
+          }
+          
+          .middle-button-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            flex-direction: column;
+            align-items: center;
+
+            .add-member-button {
+                margin-top: 10px;
+                background-color: #9A1E23;
+                color: #fff;
+                border: none;
+                padding: 10px 100px;
+                cursor: pointer;
+                border-radius: 8px;
+                font-size: 22px;
+                @media only screen and (max-width: 768px) {
+                    width: 100%;
+                    padding: 10px 5px;
+                    margin-top: 0px;
+                    margin-bottom: 50px;
+                  }
+              }
+          }
+  
+          .remove-member-button {
+            margin-top: 10px;
+            background-color: #9A1E23;
+            color: #fff;
+            border: none;
+            padding: 8px 30px;
+            cursor: pointer;
+            border-radius: 8px;
+            font-size: 20px;
+          }
+          
+          .team-information-heading {
+            margin-bottom: 30px;
+            color: #9A1E23;
+            font-weight: bold;
+            font-size: 34px;
+            @media only screen and (max-width: 768px) {
+                font-size: 26px;
+                text-align: center;
+              }
+        }
+
+        .first{
+            margin-bottom: 80px;
+        }
+        
+        .team-information-details {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+
+            .input-row {
+                display: flex;
+                margin-bottom: 15px;
+                width: 100%;
+                gap: 80px;
+            @media only screen and (max-width: 768px) {
+                flex-direction: column;
+                gap: 20px;
+              }
+                .empty-space {
+                    flex: 1;
+                  }
+            }
+
+            .details {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                  
+                .rounded-input {
+                    width: 100%;
+                    padding: 10px;
+                    border: 2px solid #9A1E23;
+                    border-radius: 6px;
+                    box-sizing: border-box;
+                    font-size: 16px;
+                    outline: none;
+                  
+                    &::placeholder {
+                        font-size: 18px;
+                        color: #aaa;
+                      }
+
+                    &:focus {
+                      border-color: #9A1E23;
+                      box-shadow: 0 0 5px rgba(154, 30, 35, 0.5);
+                    }
+                  }
+                  
+                  .option-bar {
+                    padding: 10px;
+                    border: 2px solid #9A1E23;
+                    border-radius: 6px;
+                    font-size: 18px;
+                    outline: none;
+                    color: #aaa;
+
+                    .option{
+                        background-color: #C95C5C;
+                        color: white;
+                    }
+
+
+                }
+
+                .has-value {
+                    color: #333; /* 修改选项的字体颜色 */
+                }
+
+                .input-heading {
+                    font-size: 24px;
+                    margin-bottom: 5px;
+                    @media only screen and (max-width: 768px) {
+                        font-size: 20px;
+                      }
+                    }
+                    
+
+
+                .file-upload {
+                    width: 100%;
+                }
+
+                .file-upload-container {
+                    position: relative;
+
+                    .upload-button {
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        bottom: 0;
+                        margin: auto;
+                        padding: 10px 15px;
+                        background-color: #9A1E23;
+                        color: #fff;
+                        border: none;
+                        border-radius: 0 10px 10px 0;
+                        cursor: pointer;
+                        height: 100%;
+                        width: 20%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        @media only screen and (max-width: 768px) {
+                            border-radius: 10px;
+                            width: 100%;
+                            font-size: 20px;
+                          }
+                        .file-input {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            opacity: 0;
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                .upload-progress {
+                    top: 70%;
+                    position: relative;
+                    margin-left: 10px;
+                    background-color: #f3f3f3;
+                    border-radius: 5px;
+                    overflow: hidden;
+                    height: 5px;
+                    @media only screen and (max-width: 768px) {
+                        display: none;
+                      }
+
+                    .upload-progress-bar {
+                        height: 100%;
+                        background-color: #9A1E23;
+                        transition: width 0.3s;
+                    }
+                }
+            }
+        }
+    }
+
+    .attention {
+        font-size: 24px;
+        color: #858585;
+        margin-bottom: 80px;
+        @media only screen and (max-width: 768px) {
+            font-size: 20px;
+          }
+
+          .attention-content{
+            @media only screen and (max-width: 768px) {
+                margin-bottom: 20px;
+              }
+          }
+    }
+
+    .other-information{
+        width: 100%;
+        @media only screen and (max-width: 768px) {
+            margin-bottom: 30px;
+          }
+
+        .heading-3{
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .other-information-input{
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #9A1E23;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 16px;
+            outline: none;
+            height: 150px;
+            margin-bottom: 50px;
+
+            @media only screen and (max-width: 768px) {
+                margin-bottom: 10px;
+              }
+
+            &::placeholder {
+                font-size: 18px;
+                color: #aaa;
+              }
+
+            &:focus {
+              border-color: #9A1E23;
+              box-shadow: 0 0 5px rgba(154, 30, 35, 0.5);
+            }
+        }
+    }
+
+    .submit-button{
+        margin-top: 10px;
+        background-color: #9A1E23;
+        color: #fff;
+        border: none;
+        padding: 8px 66px;
+        cursor: pointer;
+        border-radius: 40px;
+        font-size: 38px;
+        margin-bottom: 20px;
+
+        @media only screen and (max-width: 768px) {
+            padding: 8px 40px;
+            font-size: 24px;
+          }
+    }
+}

@@ -29,9 +29,10 @@ import AboutUsScreen from './screens/AboutUsScreen'
 import IntroduceScreen from './screens/IntroduceScreen'
 import CommunityNewsDetailScreen from './screens/CommunityNewsDetailScreen.js';
 import TradingCompetition from './screens/TradingCompetitionScreen.js';
+import SignUp from './screens/SignUp/SignUp.js';
+
 import './css/App.scss';
 import './css/PartnerScreen.scss';
-import './css/TradingCompetitionScreen.scss'
 import './css/Alumni/HongKong.scss';
 import './css/Alumni/Guangzhou.scss';
 import './css/Alumni/Beijing.scss'; 
@@ -70,6 +71,7 @@ function App() {
                       <Route path = "/SocialAdvisor" element={<SocialAdvisorScreen/>}></Route>
                       <Route path = "/AboutUs" element={<AboutUsScreen/>}></Route>
                       <Route path = "/TradingCompetition" element={<TradingCompetition/>}></Route> 
+                      <Route path="/TradingCompetition/sign-up" element={<SignUp />} />
                       <Route path = "/Introduce" element={<IntroduceScreen/>}></Route>
                       <Route path="/Alumni" element={<Alumni />}>
                         <Route path = "/Alumni/Beijing" element={<Beijing></Beijing>}></Route>

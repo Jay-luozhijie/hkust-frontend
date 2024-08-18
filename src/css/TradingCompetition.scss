@@ -1,0 +1,233 @@
+.background-container{
+  width: 100%;
+  background-image: url(../img/TradingCompetitionBG.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 55% auto;
+  background-position: 100% top;
+  @media only screen and (max-width: 768px) {
+    background-size: 95% auto;
+    background-position: 100% top;
+  }
+.trading-competition-page{
+    margin-left: 120px;
+    width: 90%;
+    font-family: "customOPPOSans";
+
+    @media only screen and (max-width: 768px) {
+        margin-left: 0px;
+        width: 100%;
+        padding-left: 50px;
+      }
+    
+.competition-content-wrapper{
+  width: 55%;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.title{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    @media only screen and (max-width: 768px) {
+        margin-bottom: 30px;
+      }
+}
+
+.heading {
+    font-size: 52px;
+    font-weight: 500;
+    line-height: 84.42px;
+    text-align: left;
+    width: 512px;
+    height: 84px;
+    position: relative;
+    color: #9A1E23;
+    @media only screen and (max-width: 768px) {
+        font-size: 36px;
+        width: 80%;
+      }
+  }
+  
+  .competition-content {
+    position: relative;
+    text-align: left;
+    text-indent: 46px;
+    display: block;
+    width: 100%;
+    font-size: 24px;
+    @media only screen and (max-width: 768px) {
+        width: 90%;
+        font-size: 18px;
+        text-indent: 30px;
+      }
+}
+
+.button {
+    margin-top: 70px;
+    position: relative;
+    width: 270px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 10px;
+    border: 2px solid #9A1E23;
+    background-color: white;
+    color: #9A1E23;
+     
+    font-size: 34px;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 55px;
+    @media only screen and (max-width: 768px) {
+        margin-top: 20px;
+        width: 150px;
+        padding: 6px 10px;
+        font-size: 22px;
+      }
+}
+  
+.button .triangle {
+    margin-left: 10px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid #9A1E23;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+}
+
+.timeline-heading{
+    margin-bottom: 30px;
+    width: 80%;
+}
+
+.timeline-section {
+    display: block;
+    margin-top: 120px;
+    @media only screen and (max-width: 768px) {
+        margin-top: 60px;
+        width: 85%;
+      }
+  }
+  
+  .timeline-item {
+    display: flex;
+    margin-left: 65px;
+    width: 80%;
+    @media only screen and (max-width: 768px) {
+        margin-left: 0px;
+        width: 100%;
+      }
+}
+
+  .timeline-line-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 40px;
+  }
+  
+  .timeline-circle {
+    min-width: 14px;
+    min-height: 14px;
+    background-color: #C95C5D;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+  
+  .timeline-line {
+    width: 2px;
+    background-color: #C95C5D;
+    height: 100%; /* 让竖线占据父容器的全部高度 */
+    flex-grow: 1; /* 确保竖线适应内容区域的高度 */
+  }
+  
+  .timeline-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-top: 15px;
+}
+  
+  .timeline-label {
+    position: relative;
+    color: #9A1E23;
+     
+    font-size: 26px;
+  }
+  
+  .timeline-content {
+    margin-top: 50px;
+     
+  }
+  
+  .date{
+    width: 80%;
+  }
+
+  .content-flex {
+    display: flex;
+     
+  }
+  
+.sub-content-timeline{
+    display: flex;
+    flex-direction: column;
+}
+
+.first{
+    margin-top: 13px;
+}
+
+  .content-circle {
+    width: 6px;
+    height: 6px;
+    background-color: #C95C5D;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .content-title {
+    font-size: 20px;
+  }
+  
+  .content-dashed-line {
+    border-left: 1px dashed #ccc;
+    margin-left: 3px;
+    flex-grow: 1;
+    height: auto;
+  }
+  
+  .content-description {
+    color: #858585;
+    margin-bottom: 60px;
+    font-size: 20px;
+  }
+
+  .sub-content{
+    margin-left: 20px;
+  }
+
+  .contact-information {
+    margin-left: 70px;
+    margin-bottom: 120px;
+    @media only screen and (max-width: 768px) {
+      margin-left: 0px;
+    }
+}
+
+  .contact-email{
+    color: #9A1E23;
+    font-size: 26px;
+  }
+
+  .email-address{
+    color: #000000;
+    font-size: 22px;
+  }
+}
+}

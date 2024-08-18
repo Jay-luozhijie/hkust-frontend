@@ -19,8 +19,8 @@ a.nav-link {
     padding: 0px;
     color: #9A1E23; /* 字体颜色 */
     font-size: 20px; /* 字号大小 */
-    font-family: "customOPPOSans", sans-serif; /* 字体 */
-    font-weight: 400; /* 字体粗细 */
+    font-family: "customOPPOSans"; /* 字体 */
+    font-weight: 400;
     word-wrap: break-word; /* 文字自动换行 */
     text-decoration: none; /* 去掉下划线 */
 	overflow: hidden;
@@ -238,8 +238,8 @@ a.nav-link {
     display: flex;
     align-items: center;
     color: #9A1E23;
-    font-family: "customOPPOSans", sans-serif;
-    font-weight: 500;
+    font-family: "customOPPOSans";
+    font-weight: bold;
     text-decoration: none;
     padding: 10px 20px;
 }
@@ -263,8 +263,8 @@ a.nav-link {
     padding: 8px 20px;
     color: #9A1E23;
     text-decoration: none;
-    font-family: "customOPPOSans", sans-serif;
-    font-weight: 500;
+    font-family: "customOPPOSans";
+    font-weight: bold;
 }
 
 .about-dropdown-icon {
