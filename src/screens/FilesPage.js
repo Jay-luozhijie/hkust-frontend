@@ -36,14 +36,15 @@ const FileList = () => {
   };
 
   return (
-    <div>
-      <h1>Uploaded Files</h1>
+    <div style={{ marginTop: '50px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <h1>已上传表格</h1>
+      <h5>(附件与表格同名)</h5>
       <ul>
         {files.map((file, index) => (
           <li key={index}>{file}</li>
         ))}
       </ul>
-      <button onClick={handleDownloadAll}>Download All as ZIP</button>
+      <button onClick={handleDownloadAll}>下载ZIP文件</button>
     </div>
   );
 };

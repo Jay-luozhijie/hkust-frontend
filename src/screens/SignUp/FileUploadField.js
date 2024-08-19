@@ -40,6 +40,8 @@ function FileUploadField({ label, placeholder }) {
               type="file" 
               className="file-input" 
               onChange={handleFileChange} 
+              accept=".pdf,.doc,.docx"
+              aria-label="上传文件"
             />
           </button>
         </div>

@@ -35,6 +35,12 @@ function SignUp() {
     { label: "学号", placeholder: "请填写" },
   ];
 
+  const [selectedFile, setSelectedFile] = useState(null);
+
+  const handleFileSelect = (file) => {
+    setSelectedFile(file);
+  };
+
   const [otherInformation, setOtherInformation] = useState({
     motivation: "",
     expectation: ""
@@ -123,68 +129,78 @@ key={fieldIndex}
     // 获取团队名称和队长姓名
     const teamName = teamMembers[0][0].value;
     const leaderName = teamMembers[0][1].value;
-
+  
     teamMembers.forEach((member, memberIndex) => {
       const headerLabel = memberIndex === 0 ? "队长信息" : `团队成员 ${memberIndex}`;
       excelData.push({ "信息名称": headerLabel, "信息内容": "" });
-
+  
       member.forEach((field) => {
         excelData.push({
           "信息名称": field.label,
           "信息内容": field.value
         });
       });
-
+  
       excelData.push({ "信息名称": "", "信息内容": "" });
       excelData.push({ "信息名称": "", "信息内容": "" });
     });
-
+  
     excelData.push({ "信息名称": "", "信息内容": "" });
     excelData.push({ "信息名称": "参赛动机", "信息内容": otherInformation.motivation });
     excelData.push({ "信息名称": "期望从大赛中学到的内容", "信息内容": otherInformation.expectation });
-
+  
     const worksheet = XLSX.utils.json_to_sheet(excelData);
     const wscols = [{ wch: 20 }, { wch: 30 }];
     worksheet['!cols'] = wscols;
-
-    const fillColors = { leader: { bgColor: { rgb: "FFFF00" } }, member: { bgColor: { rgb: "ADD8E6" } } };
-
+  
+    // 定义样式填充颜色
+    const fillColors = { 
+      leader: { bgColor: { rgb: "FFFF00" } }, 
+      member: { bgColor: { rgb: "ADD8E6" } } 
+    };
+  
+    // 应用样式填充颜色
     excelData.forEach((row, index) => {
       const cellAddressName = `A${index + 1}`;
       const cellAddressContent = `B${index + 1}`;
       const isLeader = row["信息名称"] === "队长信息";
       const fill = isLeader ? fillColors.leader : fillColors.member;
-
+  
       worksheet[cellAddressName].s = { fill };
       worksheet[cellAddressContent].s = { fill };
     });
-
+  
     const workbook = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(workbook, worksheet, "报名信息");
-
-    const fileName = `${teamName}_${leaderName}.xlsx`;
+  
+    const fileName = encodeURIComponent(`${teamName}_${leaderName}.xlsx`);
     
     // 将工作簿转换为二进制文件
     const wbout = XLSX.write(workbook, { bookType: "xlsx", type: "array" });
-    const blob = new Blob([wbout], { type: "application/octet-stream" });
-
+    const excelBlob = new Blob([wbout], { type: "application/octet-stream" });
+  
     // 创建FormData并添加文件
     const formData = new FormData();
-    formData.append("file", blob, fileName);
-
+    formData.append("file", excelBlob, fileName);
+  
+    if (selectedFile) {
+      const resumeFileName = `${fileName}_${selectedFile.name}`;
+      formData.append("resume", selectedFile, resumeFileName);
+    }
+  
     try {
       // 发送POST请求将文件上传到服务器
       const response = await axios.post("https://hkustquant.hk/api/upload", formData, {
         headers: {
-            "Content-Type": "multipart/form-data"
+          "Content-Type": "multipart/form-data"
         }
-    });    
+      });    
       console.log("File uploaded successfully:", response.data);
     } catch (error) {
       console.error("File upload failed:", error);
     }
   };
-
+  
   return (
     <div className="sign-up-page">
       <div className="heading">
