@@ -44,40 +44,40 @@ function TradingCompetition() {
       开始报名
       <div className="triangle"></div>
     </button>
-      <div class="timeline-section">
-  <div class="heading timeline-heading">时间线</div>
-  <div class="timeline-item">
-    <div class="timeline-line-wrapper">
-      <div class="timeline-circle"></div>
-      <div class="timeline-line"></div>
+      <div className="timeline-section">
+  <div className="heading timeline-heading">时间线</div>
+  <div className="timeline-item">
+    <div className="timeline-line-wrapper">
+      <div className="timeline-circle"></div>
+      <div className="timeline-line"></div>
     </div>
-    <div class="timeline-content-wrapper">
-      <div class="timeline-label">报名阶段</div>
-      <div class="timeline-label date">2024年8月19日 -2024年9月15日</div>
-      <div class="timeline-content">
-        <div class="content-flex">
+    <div className="timeline-content-wrapper">
+      <div className="timeline-label">报名阶段</div>
+      <div className="timeline-label date">2024年8月19日 -2024年9月15日</div>
+      <div className="timeline-content">
+        <div className="content-flex">
           <div className='sub-content-timeline first'>
-            <div class="content-circle"></div>
-            <div class="content-dashed-line"></div>
+            <div className="content-circle"></div>
+            <div className="content-dashed-line"></div>
           </div>
           <div className='sub-content'>
-            <div class="content-title">
+            <div className="content-title">
               参赛资格
             </div>
-            <div class="content-description">
+            <div className="content-description">
             比赛面向香港科技大学的在校生和毕业生，也欢迎其他港校、其他地区高校的学生和校友报名参赛
             </div>
         </div>
         </div>
-        <div class="content-flex">
+        <div className="content-flex">
           <div className='content-timeline'>
-            <div class="content-circle"></div>
+            <div className="content-circle"></div>
           </div>
           <div className='sub-content' style={{ position: 'relative', top: '-10px' }}>
-            <div class="content-title">
+            <div className="content-title">
             报名方式
             </div>
-            <div class="content-description">
+            <div className="content-description">
             在官网提交团队信息
             </div>
         </div>
@@ -85,24 +85,24 @@ function TradingCompetition() {
       </div>
     </div>
   </div>
-  <div class="timeline-item">
-    <div class="timeline-line-wrapper">
-      <div class="timeline-circle"></div>
-      <div class="timeline-line"></div>
+  <div className="timeline-item">
+    <div className="timeline-line-wrapper">
+      <div className="timeline-circle"></div>
+      <div className="timeline-line"></div>
     </div>
-    <div class="timeline-content-wrapper">
-      <div class="timeline-label">资格审查阶段</div>
-      <div class="timeline-label date">开始报名：2024年9月20日</div>
-      <div class="timeline-content">
-        <div class="content-flex">
+    <div className="timeline-content-wrapper">
+      <div className="timeline-label">资格审查阶段</div>
+      <div className="timeline-label date">开始报名：2024年9月20日</div>
+      <div className="timeline-content">
+        <div className="content-flex">
           <div className='sub-content-timeline first'>
-            <div class="content-circle"></div>
+            <div className="content-circle"></div>
           </div>
           <div className='sub-content'>
-            <div class="content-title">
+            <div className="content-title">
             团队、策略审核
             </div>
-            <div class="content-description">
+            <div className="content-description">
             根据一定的规则审核团队成员情况，可能有邮件联络
             </div>
         </div>
@@ -110,24 +110,24 @@ function TradingCompetition() {
       </div>
     </div>
   </div>
-  <div class="timeline-item">
-    <div class="timeline-line-wrapper">
-      <div class="timeline-circle"></div>
-      <div class="timeline-line"></div>
+  <div className="timeline-item">
+    <div className="timeline-line-wrapper">
+      <div className="timeline-circle"></div>
+      <div className="timeline-line"></div>
     </div>
-    <div class="timeline-content-wrapper">
-      <div class="timeline-label">赛前准备阶段</div>
-      <div class="timeline-label date">2024年9月20日 - 2024年9月30日</div>
-      <div class="timeline-content">
-        <div class="content-flex">
+    <div className="timeline-content-wrapper">
+      <div className="timeline-label">赛前准备阶段</div>
+      <div className="timeline-label date">2024年9月20日 - 2024年9月30日</div>
+      <div className="timeline-content">
+        <div className="content-flex">
           <div className='sub-content-timeline first'>
-            <div class="content-circle"></div>
+            <div className="content-circle"></div>
           </div>
           <div className='sub-content'>
-            <div class="content-title">
+            <div className="content-title">
             内容
             </div>
-            <div class="content-description">
+            <div className="content-description">
             分配模拟交易账户；选择团队的顾问；举办交易沙龙
             </div>
         </div>
@@ -135,24 +135,24 @@ function TradingCompetition() {
       </div>
     </div>
   </div>
-  <div class="timeline-item">
-    <div class="timeline-line-wrapper">
-      <div class="timeline-circle"></div>
-      <div class="timeline-line"></div>
+  <div className="timeline-item">
+    <div className="timeline-line-wrapper">
+      <div className="timeline-circle"></div>
+      <div className="timeline-line"></div>
     </div>
-    <div class="timeline-content-wrapper">
-      <div class="timeline-label">初赛阶段</div>
-      <div class="timeline-label date">2024年10月1日 - 2024年10月13日</div>
-      <div class="timeline-content">
-        <div class="content-flex">
+    <div className="timeline-content-wrapper">
+      <div className="timeline-label">初赛阶段</div>
+      <div className="timeline-label date">2024年10月1日 - 2024年10月13日</div>
+      <div className="timeline-content">
+        <div className="content-flex">
           <div className='sub-content-timeline first'>
-            <div class="content-circle"></div>
+            <div className="content-circle"></div>
           </div>
           <div className='sub-content'>
-            <div class="content-title">
+            <div className="content-title">
             内容
             </div>
-            <div class="content-description">
+            <div className="content-description">
             学习使用提供的模拟交易账户进行交易，账户净值有变化即可进入复赛
             </div>
         </div>
@@ -160,24 +160,24 @@ function TradingCompetition() {
       </div>
     </div>
   </div>
-  <div class="timeline-item">
-    <div class="timeline-line-wrapper">
-      <div class="timeline-circle"></div>
-      <div class="timeline-line"></div>
+  <div className="timeline-item">
+    <div className="timeline-line-wrapper">
+      <div className="timeline-circle"></div>
+      <div className="timeline-line"></div>
     </div>
-    <div class="timeline-content-wrapper">
-      <div class="timeline-label">复赛阶段</div>
-      <div class="timeline-label date">2024年10月13日 - 2024年12月31日</div>
-      <div class="timeline-content">
-        <div class="content-flex">
+    <div className="timeline-content-wrapper">
+      <div className="timeline-label">复赛阶段</div>
+      <div className="timeline-label date">2024年10月13日 - 2024年12月31日</div>
+      <div className="timeline-content">
+        <div className="content-flex">
           <div className='sub-content-timeline first'>
-            <div class="content-circle"></div>
+            <div className="content-circle"></div>
           </div>
           <div className='sub-content'>
-            <div class="content-title">
+            <div className="content-title">
             内容
             </div>
-            <div class="content-description">
+            <div className="content-description">
             最终比赛成绩参考的只有复赛成绩
             </div>
         </div>
@@ -185,24 +185,24 @@ function TradingCompetition() {
       </div>
     </div>
   </div>
-  <div class="timeline-item">
-    <div class="timeline-line-wrapper">
-      <div class="timeline-circle"></div>
-      <div class="timeline-line"></div>
+  <div className="timeline-item">
+    <div className="timeline-line-wrapper">
+      <div className="timeline-circle"></div>
+      <div className="timeline-line"></div>
     </div>
-    <div class="timeline-content-wrapper">
-      <div class="timeline-label">评审与答辩阶段</div>
-      <div class="timeline-label date">2025年1月1日 - 2025年1月14日</div>
-      <div class="timeline-content">
-        <div class="content-flex">
+    <div className="timeline-content-wrapper">
+      <div className="timeline-label">评审与答辩阶段</div>
+      <div className="timeline-label date">2025年1月1日 - 2025年1月14日</div>
+      <div className="timeline-content">
+        <div className="content-flex">
           <div className='sub-content-timeline first'>
-            <div class="content-circle"></div>
+            <div className="content-circle"></div>
           </div>
           <div className='sub-content'>
-            <div class="content-title">
+            <div className="content-title">
             内容
             </div>
-            <div class="content-description">
+            <div className="content-description">
             成果总结、策略答辩会议、评审与颁奖
             </div>
         </div>
@@ -210,17 +210,17 @@ function TradingCompetition() {
       </div>
     </div>
   </div>
-  <div class="timeline-item">
-    <div class="timeline-line-wrapper">
-      <div class="timeline-circle"></div>
+  <div className="timeline-item">
+    <div className="timeline-line-wrapper">
+      <div className="timeline-circle"></div>
     </div>
-    <div class="timeline-content-wrapper">
-      <div class="timeline-content">
-        <div class="content-flex">
+    <div className="timeline-content-wrapper">
+      <div className="timeline-content">
+        <div className="content-flex">
           <div className='sub-content'>
-            <div class="content-title">
+            <div className="content-title">
             </div>
-            <div class="content-description">
+            <div className="content-description">
             </div>
         </div>
         </div>
@@ -230,10 +230,10 @@ function TradingCompetition() {
 
 </div>
 <div className='contact-information'>
-  <div class="contact-email">
+  <div className="contact-email">
     咨询邮箱
   </div>
-  <div class="email-address">
+  <div className="email-address">
   lisiyuansven@foxmail.com
   </div>
 </div>

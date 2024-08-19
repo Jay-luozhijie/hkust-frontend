@@ -214,6 +214,7 @@
                         display: flex;
                         align-items: center;
                         justify-content: center;
+                        text-wrap: nowrap;
                         @media only screen and (max-width: 768px) {
                             border-radius: 10px;
                             width: 100%;

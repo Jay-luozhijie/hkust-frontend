@@ -153,23 +153,23 @@ const AdminPage = () => {
 
   return (
     <div>
-      <h2 class="adminPage">Admin Page</h2>
-      <div class="btn-group">
-        <a href="#" onClick={() => handlePurposeChange(NEW)} class={`btn  ${purpose===NEW? 'active':''}`}>NEW</a>
-        <a href="#" onClick={() => handlePurposeChange(DELETE)} class={`btn  ${purpose===DELETE? 'active':''}`}>DELETE</a>
+      <h2 className="adminPage">Admin Page</h2>
+      <div className="btn-group">
+        <a href="#" onClick={() => handlePurposeChange(NEW)} className={`btn  ${purpose===NEW? 'active':''}`}>NEW</a>
+        <a href="#" onClick={() => handlePurposeChange(DELETE)} className={`btn  ${purpose===DELETE? 'active':''}`}>DELETE</a>
       </div>
-      <div class="btn-group">
-        <a href="#" onClick={() => handleComNewsChange()} class={`btn  ${comNews? 'active':''}`}>社团新闻</a>
-        <a href="#" onClick={() => handleAluActChange()} class={`btn  ${aluAct? 'active':''}`}>校友活动</a>
+      <div className="btn-group">
+        <a href="#" onClick={() => handleComNewsChange()} className={`btn  ${comNews? 'active':''}`}>社团新闻</a>
+        <a href="#" onClick={() => handleAluActChange()} className={`btn  ${aluAct? 'active':''}`}>校友活动</a>
       </div>
 
       {editMode === NEW && (
         <div>
-          <div class="imgboxContainer">
+          <div className="imgboxContainer">
             <ImgboxUploader />
           </div>
-          <div class="content">
-            <input class="inputNewsTitle"
+          <div className="content">
+            <input className="inputNewsTitle"
               type="text"
               value={title || ''}
               onChange={handleTitleChange}
@@ -177,7 +177,7 @@ const AdminPage = () => {
             />
 
             {aluAct === 1 && (
-            <input class="imageUrl"
+            <input className="imageUrl"
               type="text"
               value={img_url || ''}
               onChange={handleImgUrlChange}
@@ -195,12 +195,12 @@ const AdminPage = () => {
       )}
       {editMode === DELETE && (
         <div>
-          <div class="dropdown dropdownDeleteBtn">
-            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <div className="dropdown dropdownDeleteBtn">
+            <a className="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               {selectedTitle}
             </a>
 
-            <ul class="dropdown-menu custom-dropdown-menu">
+            <ul className="dropdown-menu custom-dropdown-menu">
               {newsData.map((item) => (
                 <li id={item._id}>
                   <a
@@ -218,7 +218,7 @@ const AdminPage = () => {
               ))}
             </ul>
           </div>
-          <button class="deleteBtn" onClick={handleDelete}>Delete</button>
+          <button className="deleteBtn" onClick={handleDelete}>Delete</button>
         </div>
       )}
       

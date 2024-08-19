@@ -30,9 +30,9 @@ function SignUp() {
   ];
   
   const initialMemberFields = [
-    { label: "成员姓名", placeholder: "请填写成员的全名" },
-    { label: "成员电子邮件地址", placeholder: "请提供成员的电子邮件地址" },
-    { label: "成员手机号（选填）", placeholder: "请填写成员的手机号" },
+    { label: "姓名", placeholder: "请填写" },
+    { label: "电子邮件", placeholder: "请填写" },
+    { label: "团队角色", placeholder: "请描述其在团队中的角色" },
     { label: "学校/单位", type: "dropdown", options: schoolOptions, placeholder: "请选择", value: memberSchool, onChange: e => setMemberSchool(e.target.value) },
     { label: "学院", placeholder: "请填写" },
     { label: "年级", placeholder: "请填写" },

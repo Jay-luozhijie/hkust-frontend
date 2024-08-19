@@ -38,14 +38,14 @@ export default function ActivitiesDetailScreen(){
     
     
     return (
-        <div class="newsContainer">
+        <div className="newsContainer">
             {news ? (
                 <div>
-                    <div class="newsTitleContainer">
-                        <h2 class="newsTitle">{news.title}</h2>
-                        <div class="newsDate">{date}</div>
+                    <div className="newsTitleContainer">
+                        <h2 className="newsTitle">{news.title}</h2>
+                        <div className="newsDate">{date}</div>
                     </div>
-                    <div class="newsContent">
+                    <div className="newsContent">
                         <ReactMarkdown remarkPlugins={[remarkGfm]}  rehypePlugins={[rehypeRaw]}>{news.content}</ReactMarkdown>
                     </div>
                    
