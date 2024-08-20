@@ -9,16 +9,6 @@ const FileList = () => {
   useEffect(() => {
     const source = axios.CancelToken.source();
 
-    useEffect(() => {
-      axios.get('/api/registration/status')
-        .then(response => {
-          setIsRegistrationOpen(response.data.isOpen);
-        })
-        .catch(error => {
-          console.error('Error fetching registration status:', error);
-        });
-    }, []);
-    
     const fetchFiles = async () => {
       try {
         const response = await axios.get('/api/files', { cancelToken: source.token });
@@ -39,6 +29,16 @@ const FileList = () => {
     };
   }, []);
 
+  useEffect(() => {
+    axios.get('/api/registration/status')
+      .then(response => {
+        setIsRegistrationOpen(response.data.isOpen);
+      })
+      .catch(error => {
+        console.error('Error fetching registration status:', error);
+      });
+  }, []);
+  
   const handleDownloadAll = async () => {
     try {
       const response = await axios.get('/api/files/download-all', {
