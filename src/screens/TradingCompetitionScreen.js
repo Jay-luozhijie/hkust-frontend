@@ -52,7 +52,6 @@ function TradingCompetition() {
         参赛团队可以自由选择不同的量化交易技术和量化策略，展现自己独特的投资理念。
       </span>
       </div>
-        <button className="button" onClick={handleButtonClick}>
         <button
   className="button"
   onClick={handleButtonClick}
@@ -61,9 +60,6 @@ function TradingCompetition() {
   {isRegistrationOpen ? '开始报名' : '暂未开放'}
   <div className="triangle"></div>
 </button>
-
-          <div className="triangle"></div>
-        </button>
       <div className="timeline-section">
   <div className="heading timeline-heading">时间线</div>
   <div className="timeline-item">
