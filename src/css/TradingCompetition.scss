@@ -89,7 +89,11 @@
         font-size: 22px;
       }
 }
-  
+
+.button:disabled {
+  cursor: not-allowed;
+}
+
 .button .triangle {
     margin-left: 10px;
     width: 0;

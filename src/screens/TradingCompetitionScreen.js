@@ -53,7 +53,15 @@ function TradingCompetition() {
       </span>
       </div>
         <button className="button" onClick={handleButtonClick}>
-          {isRegistrationOpen ? '开始报名' : '暂未开放'}
+        <button
+  className="button"
+  onClick={handleButtonClick}
+  disabled={!isRegistrationOpen}
+>
+  {isRegistrationOpen ? '开始报名' : '暂未开放'}
+  <div className="triangle"></div>
+</button>
+
           <div className="triangle"></div>
         </button>
       <div className="timeline-section">
