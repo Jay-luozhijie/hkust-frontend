@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import InputField from './InputField';
 import DropdownField from './DropdownField';
 import '../../css/SignUp.scss';
@@ -7,40 +8,76 @@ import * as XLSX from "xlsx";
 import axios from "axios";
 
 function SignUp() {
+  const navigate = useNavigate();
+
   const schoolOptions = [
     "科大学生", 
     "科大校友", 
     "其他"
   ];
 
-  const createInitialMemberFields = () => [
-    { label: "姓名", placeholder: "请填写", value: "" },
-    { label: "电子邮件", placeholder: "请填写", value: "" },
-    { label: "团队角色", placeholder: "请描述其在团队中的角色", value: "" },
-    { label: "学校/单位", type: "dropdown", options: schoolOptions, placeholder: "请选择", value: "" },
-    { label: "学院", placeholder: "请填写", value: "" },
-    { label: "年级", placeholder: "请填写", value: "" },
-    { label: "学号", placeholder: "请填写", value: "" },
-  ];  
+  function createInitialMemberFields(schoolType = "") {
+    const commonFields = [
+      { label: "姓名", placeholder: "请填写", value: "" },
+      { label: "电子邮件", placeholder: "请填写", value: "" },
+      { label: "团队角色", placeholder: "请描述其在团队中的角色", value: "" },
+      { label: "学校/单位", type: "dropdown", options: schoolOptions, placeholder: "请选择", value: schoolType }
+    ];
+  
+    if (schoolType === "科大学生" || schoolType === "科大校友") {
+      return commonFields.concat([
+        { label: "学院", placeholder: "请填写", value: "" },
+        { label: "年级", placeholder: "请填写", value: "" },
+        { label: "学号", placeholder: "请填写", value: "" }
+      ]);
+    } else if (schoolType === "其他") {
+      return commonFields.concat([
+        { label: "单位信息", placeholder: "大学名称-院系名称 / 工作单位名称", value: "" }
+      ]);
+    }
+  
+    return commonFields;
+  }
 
-  const createInitialLeaderFields = () => [
-    { label: "团队名称", placeholder: "请填写您的团队名称" },
-    { label: "队长姓名", placeholder: "请填写队长的全名" },
-    { label: "队长电子邮件地址", placeholder: "请提供队长常用的电子邮件地址" },
-    { label: "队长微信号（选填）", placeholder: "请提供队长的微信号" },
-    { label: "队长手机号（选填）", placeholder: "请填写队长的手机号" },
-    { label: "学校/单位", type: "dropdown", options: schoolOptions, placeholder: "请选择", value: "" },
-    { label: "学院", placeholder: "请填写" },
-    { label: "年级", placeholder: "请填写" },
-    { label: "学号", placeholder: "请填写" },
-  ];
+  function createInitialLeaderFields(schoolType = "") {
+    const commonFields = [
+      { label: "团队名称", placeholder: "请填写您的团队名称", value: "" },
+      { label: "队长姓名", placeholder: "请填写队长的全名", value: "" },
+      { label: "队长电子邮件地址", placeholder: "请提供队长常用的电子邮件地址", value: "" },
+      { label: "队长微信号（选填）", placeholder: "请提供队长的微信号", value: "" },
+      { label: "队长手机号（选填）", placeholder: "请填写队长的手机号", value: "" },
+      { label: "学校/单位", type: "dropdown", options: schoolOptions, placeholder: "请选择", value: schoolType }
+    ];
+  
+    if (schoolType === "科大学生" || schoolType === "科大校友") {
+      return commonFields.concat([
+        { label: "学院", placeholder: "请填写", value: "" },
+        { label: "年级", placeholder: "请填写", value: "" },
+        { label: "学号", placeholder: "请填写", value: "" }
+      ]);
+    } else if (schoolType === "其他") {
+      return commonFields.concat([
+        { label: "单位信息", placeholder: "大学名称-院系名称 / 工作单位名称", value: "" }
+      ]);
+    }
+  
+    return commonFields;
+  }  
 
   const [selectedFile, setSelectedFile] = useState(null);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [countdown, setCountdown] = useState(5);
+  // 添加一个状态来显示是否超出成员限制的警告
+  const [showMemberLimitWarning, setShowMemberLimitWarning] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
-  const handleFileSelect = (file) => {
+  const handleFileChange = (file) => {
     setSelectedFile(file);
   };
 
+  useEffect(() => {
+    console.log('selectedFile:', selectedFile);
+  }, [selectedFile]);
   const [otherInformation, setOtherInformation] = useState({
     motivation: "",
     expectation: ""
@@ -55,18 +92,26 @@ function SignUp() {
 
   const [teamMembers, setTeamMembers] = useState([
     createInitialLeaderFields(), // 队长始终是第一个成员
-    ...Array(5).fill(createInitialMemberFields()) // 初始设置为其他4个成员
+    ...Array(2).fill(createInitialMemberFields()) // 初始设置为其他2个成员
   ]);
 
   const addMember = () => {
-    setTeamMembers([...teamMembers, createInitialMemberFields()]);
+    if (teamMembers.length >= 6) {
+      setShowModal(true);
+    } else {
+      setTeamMembers([...teamMembers, createInitialMemberFields()]);
+    }
   };
 
   const removeMember = (index) => {
-    if (teamMembers.length > 6) { // 保证至少有一个队长和5个成员
+    if (teamMembers.length > 3) { // 保证至少有一个队长和2个成员
       setTeamMembers(teamMembers.slice(0, index).concat(teamMembers.slice(index + 1)));
     }
   };  
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
 
   const groupFields = (fields) => {
     const grouped = [];
@@ -79,17 +124,28 @@ function SignUp() {
   const handleFieldChange = (newValue, memberIndex, fieldIndex) => {
     setTeamMembers(teamMembers.map((member, idx) => {
       if (idx === memberIndex) {
-        return member.map((field, fIdx) => {
+        const updatedMember = member.map((field, fIdx) => {
           if (fIdx === fieldIndex) {
+            // 当“学校/单位”字段改变时，重新构建成员字段
+            if (field.label === "学校/单位") {
+              // 根据是否是队长来调用不同的创建字段函数
+              return idx === 0 ? createInitialLeaderFields(newValue) : createInitialMemberFields(newValue);
+            }
             return {...field, value: newValue};
           }
           return field;
         });
+  
+        // 如果改变的是学校/单位字段，重新构建整个成员的字段数组
+        if (member[fieldIndex].label === "学校/单位") {
+          return idx === 0 ? createInitialLeaderFields(newValue) : createInitialMemberFields(newValue);
+        }
+        return updatedMember;
       }
       return member;
     }));
-  };   
-
+  };  
+  
   const renderFields = (fields, memberIndex) => {
     return groupFields(fields).map((group, groupIndex) => (
       <div className="input-row" key={groupIndex}>
@@ -129,6 +185,12 @@ key={fieldIndex}
     // 获取团队名称和队长姓名
     const teamName = teamMembers[0][0].value;
     const leaderName = teamMembers[0][1].value;
+  
+      // 检查团队名称和队长姓名是否为空
+  if (!teamName.trim() || !leaderName.trim()) {
+    alert("团队名称和队长姓名不能为空！");
+    return; // 停止执行后续代码
+  }
   
     teamMembers.forEach((member, memberIndex) => {
       const headerLabel = memberIndex === 0 ? "队长信息" : `团队成员 ${memberIndex}`;
@@ -173,43 +235,99 @@ key={fieldIndex}
     const workbook = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(workbook, worksheet, "报名信息");
   
-    const fileName = encodeURIComponent(`${teamName}_${leaderName}.xlsx`);
+    const fileName = `${teamName}_${leaderName}.xlsx`;
+    const encodedFileName = encodeURIComponent(`${teamName}_${leaderName}`); // 正确地编码文件名以确保URL兼容性
     
     // 将工作簿转换为二进制文件
     const wbout = XLSX.write(workbook, { bookType: "xlsx", type: "array" });
     const excelBlob = new Blob([wbout], { type: "application/octet-stream" });
   
-    // 创建FormData并添加文件
+    // 创建可下载的链接并触发下载
+    const downloadUrl = window.URL.createObjectURL(excelBlob);
+    const downloadLink = document.createElement('a');
+    downloadLink.href = downloadUrl;
+    downloadLink.download = fileName; // No encoding for local file name
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+  
+    // 创建 FormData 并添加文件
     const formData = new FormData();
-    formData.append("file", excelBlob, fileName);
+    formData.append("file", excelBlob, encodedFileName);
   
     if (selectedFile) {
-      const resumeFileName = `${fileName}_${selectedFile.name}`;
+      // 对 selectedFile.name 进行单独的编码处理
+      const encodedSelectedFileName = encodeURIComponent(selectedFile.name);
+      // 创建最终的简历文件名
+      const resumeFileName = `${encodedFileName}_${encodedSelectedFileName}`;
+      // 然后将文件添加到 FormData 中
       formData.append("resume", selectedFile, resumeFileName);
     }
   
+    // 发送POST请求将文件上传到服务器
     try {
-      // 发送POST请求将文件上传到服务器
       const response = await axios.post("https://hkustquant.hk/api/upload", formData, {
         headers: {
           "Content-Type": "multipart/form-data"
         }
-      });    
+      });
       console.log("File uploaded successfully:", response.data);
+  
+      // 上传成功后显示倒计时页面
+      setIsSubmitted(true);
+  
+      // 开始倒计时
+      const countdownInterval = setInterval(() => {
+        setCountdown((prev) => {
+          if (prev === 1) {
+            clearInterval(countdownInterval);
+            navigate("/"); // 倒计时结束后跳转到主页
+          }
+          return prev - 1;
+        });
+      }, 1000);
     } catch (error) {
       console.error("File upload failed:", error);
     }
   };
-  
+        
+  if (isSubmitted) {
+    return (
+      <div className="countdown-page">
+        <div className="message">
+          报名提交成功！
+          <div>
+            {countdown} 秒后将返回
+            <span
+            className="home-link"
+            onClick={() => navigate("/")}
+          >
+            主页
+          </span>...
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+
   return (
     <div className="sign-up-page">
+      {showModal && (
+        <div className="modal-overlay">
+          <div className="modal-content">
+            <p>成员数量不能超过5人</p>
+            <button className="close-button" onClick={closeModal}>&times;</button>
+          </div>
+        </div>
+      )}
       <div className="heading">
         港科宽图量化交易大赛报名表
       </div>
       <div className="attention">
         <div className="attention-content">注意事项</div>
         <div className="attention-content">1. 香港科技大学各专业本硕博学生，香港科技大学校友以及香港地区其他高校学生均可报名，欢迎跨专业组队</div>
-        <div className="attention-content">2.每支参赛队伍人数不少于5人，其中香港科技大学学生的占比不低于50%</div>
+        <div className="attention-content">2.每支参赛队伍人数不多于5人</div>
         <div className="attention-content">3.您的个人信息仅会在港科宽图交易大赛中使用，港科宽图承诺保护您的隐私信息</div>
       </div>
       <div className="team-information">
@@ -220,20 +338,22 @@ key={fieldIndex}
             <FileUploadField 
               label="队长简历" 
               placeholder="请上传附件提交队长简历" 
+              selectedFile={selectedFile}
+              onFileChange={handleFileChange} 
             />
           </div>
         </div>
         <div className="team-members-information-heading sub-heading">
-          团队成员信息（请确保团队中至少有50%以上的香港科技大学成员）
+          团队成员信息
         </div>
-        {teamMembers.slice(1).map((fields, memberIndex) => (
+{teamMembers.slice(1).map((fields, memberIndex) => (
   <React.Fragment key={memberIndex + 1}>
     <div className="team-members-information-heading3">
       团队成员{memberIndex + 1}: 
     </div>
     <div className="team-information-details">
       {renderFields(fields, memberIndex + 1)} 
-      {memberIndex + 1 > 5 && (  // 保持原有逻辑，确保只有第六个及之后的成员才显示删除按钮
+      {memberIndex + 1 > 2 && (
         <button className="remove-member-button" onClick={() => removeMember(memberIndex + 1)}>
           删除成员
         </button>
@@ -241,7 +361,7 @@ key={fieldIndex}
       <hr className="member-separator" />
       {memberIndex + 1 === teamMembers.length - 1 && (
         <div className="middle-button-container">
-          <button className="add-member-button" onClick={addMember}>
+          <button className="add-member-button" onClick={() => addMember()}>
             添加团队成员
           </button>
         </div>

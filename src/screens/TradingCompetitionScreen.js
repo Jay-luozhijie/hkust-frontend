@@ -6,6 +6,17 @@ import '../css/TradingCompetition.scss';
 function TradingCompetition() {
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
+  const [isRegistrationOpen, setIsRegistrationOpen] = useState(false);
+
+  useEffect(() => {
+    axios.get('/api/registration/status')
+      .then(response => {
+        setIsRegistrationOpen(response.data.isOpen);
+      })
+      .catch(error => {
+        console.error('Error fetching registration status:', error);
+      });
+  }, []);
 
   const getTranslatedText = (zhText, enText, tcText) => {
     if (i18n.language === 'zh') {
@@ -40,10 +51,10 @@ function TradingCompetition() {
         参赛团队可以自由选择不同的量化交易技术和量化策略，展现自己独特的投资理念。
       </span>
       </div>
-      <button className="button" onClick={handleButtonClick}>
-      开始报名
-      <div className="triangle"></div>
-    </button>
+        <button className="button" onClick={handleButtonClick}>
+          {isRegistrationOpen ? '开始报名' : '暂未开放'}
+          <div className="triangle"></div>
+        </button>
       <div className="timeline-section">
   <div className="heading timeline-heading">时间线</div>
   <div className="timeline-item">

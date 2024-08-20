@@ -323,4 +323,93 @@
             font-size: 24px;
           }
     }
+
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    
+    .modal-content {
+      background-color: #fff;
+      color: #9A1E23;
+      font-weight: bold;
+      font-size: 30px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 1001;
+      width: 90%;
+      max-width: 600px;
+      height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .close-button {
+      float: right;
+      background: #fff;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      line-height: 20px;
+      padding: 5px 10px;
+      margin: -10px -10px 10px 0; /* 确保按钮在框的右上角 */
+    }    
+}
+
+.countdown-page{
+      display: flex;
+      font-family: 'customOPPOSans';
+      align-items: center;
+      justify-content: center;
+      height: 580px;
+      background-image: url('../img/comingsoonbg.png');
+      background-position: right;
+      background-size: 60% auto;
+      background-repeat: no-repeat;
+      @media only screen and (max-width: 768px) {
+        background-size: 130% auto;
+        background-position: -60%;
+      }
+      .message{
+        font-weight: bold;
+        font-size: 46px;
+        color: #9A1E23;
+        text-align: center;
+        @media only screen and (max-width: 768px) {
+          font-size: 22px;
+        }
+
+        .home-link {
+          color: #9A1E23; /* 根据需求调整颜色 */
+          cursor: pointer;
+          position: relative;
+          text-decoration: none; /* 移除默认下划线 */
+        }
+        
+        .home-link::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: -2px; /* 控制下划线的垂直位置，可以根据需要调整 */
+          height: 3px; /* 下划线的粗细 */
+          background-color: #9A1E23; /* 下划线颜色，与文字颜色保持一致 */
+          transform: scaleX(0);
+          transition: transform 0.3s ease;
+        }
+        
+        .home-link:hover::after {
+          transform: scaleX(1);
+        }
+      }
 }

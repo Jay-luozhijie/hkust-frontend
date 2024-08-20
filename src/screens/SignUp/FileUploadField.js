@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 
-function FileUploadField({ label, placeholder }) {
+function FileUploadField({ label, placeholder, selectedFile, onFileChange }) {
   const [fileName, setFileName] = useState('');
   const [uploadProgress, setUploadProgress] = useState(0);
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
+    if (file) {
+      onFileChange(file);
+    }
     if (file) {
       setFileName(file.name);
       // 模拟上传过程
@@ -35,7 +38,7 @@ function FileUploadField({ label, placeholder }) {
             readOnly
           />
           <button className="upload-button">
-            选择文件
+          {uploadProgress === 100 ? '上传成功' : '选择文件'}
             <input 
               type="file" 
               className="file-input" 
