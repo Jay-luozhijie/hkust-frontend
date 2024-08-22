@@ -220,7 +220,8 @@ key={fieldIndex}
   
     // 为文件名添加时间戳
     const timestamp = new Date().toISOString().replace(/[-:.]/g, "");
-    const fileName = `${teamName}_${leaderName}_${timestamp}.xlsx`;
+    const rawFileName = `${teamName}_${leaderName}_${timestamp}.xlsx`;
+    const encodedFileName = encodeURIComponent(rawFileName); // 对文件名进行URL编码
   
     // 将工作簿转换为二进制文件
     const wbout = XLSX.write(workbook, { bookType: "xlsx", type: "array" });
@@ -228,11 +229,12 @@ key={fieldIndex}
   
     // 创建 FormData 并添加文件
     const formData = new FormData();
-    formData.append("file", excelBlob, fileName);
+    formData.append("file", excelBlob, encodedFileName); // 使用编码后的文件名
   
     if (selectedFile) {
-      // 不再改变resume文件名，服务器会处理
-      formData.append("resume", selectedFile);
+      const resumeFileName = `${timestamp}_${selectedFile.name}`;
+      const encodedResumeFileName = encodeURIComponent(resumeFileName);
+      formData.append("resume", selectedFile, encodedResumeFileName); // 使用编码后的简历文件名
     }
   
     // 将文件上传到服务器
@@ -262,7 +264,7 @@ key={fieldIndex}
     } catch (error) {
       console.error("File upload failed:", error);
     }
-  };
+  };  
           
   if (isSubmitted) {
     return (
