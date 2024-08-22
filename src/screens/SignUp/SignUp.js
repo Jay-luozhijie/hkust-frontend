@@ -186,11 +186,11 @@ key={fieldIndex}
     const teamName = teamMembers[0][0].value;
     const leaderName = teamMembers[0][1].value;
   
-      // 检查团队名称和队长姓名是否为空
-  if (!teamName.trim() || !leaderName.trim()) {
-    alert("团队名称和队长姓名不能为空！");
-    return; // 停止执行后续代码
-  }
+    // 检查团队名称和队长姓名是否为空
+    if (!teamName.trim() || !leaderName.trim()) {
+      alert("团队名称和队长姓名不能为空！");
+      return; // 停止执行后续代码
+    }
   
     teamMembers.forEach((member, memberIndex) => {
       const headerLabel = memberIndex === 0 ? "队长信息" : `团队成员 ${memberIndex}`;
@@ -215,62 +215,34 @@ key={fieldIndex}
     const wscols = [{ wch: 20 }, { wch: 30 }];
     worksheet['!cols'] = wscols;
   
-    // 定义样式填充颜色
-    const fillColors = { 
-      leader: { bgColor: { rgb: "FFFF00" } }, 
-      member: { bgColor: { rgb: "ADD8E6" } } 
-    };
-  
-    // 应用样式填充颜色
-    excelData.forEach((row, index) => {
-      const cellAddressName = `A${index + 1}`;
-      const cellAddressContent = `B${index + 1}`;
-      const isLeader = row["信息名称"] === "队长信息";
-      const fill = isLeader ? fillColors.leader : fillColors.member;
-  
-      worksheet[cellAddressName].s = { fill };
-      worksheet[cellAddressContent].s = { fill };
-    });
-  
     const workbook = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(workbook, worksheet, "报名信息");
   
-    const fileName = `${teamName}_${leaderName}.xlsx`;
-    const encodedFileName = encodeURIComponent(`${teamName}_${leaderName}`); // 正确地编码文件名以确保URL兼容性
-    
+    // 为文件名添加时间戳
+    const timestamp = new Date().toISOString().replace(/[-:.]/g, "");
+    const fileName = `${teamName}_${leaderName}_${timestamp}.xlsx`;
+  
     // 将工作簿转换为二进制文件
     const wbout = XLSX.write(workbook, { bookType: "xlsx", type: "array" });
     const excelBlob = new Blob([wbout], { type: "application/octet-stream" });
   
-    // 创建可下载的链接并触发下载
-    const downloadUrl = window.URL.createObjectURL(excelBlob);
-    const downloadLink = document.createElement('a');
-    downloadLink.href = downloadUrl;
-    downloadLink.download = fileName; // No encoding for local file name
-    document.body.appendChild(downloadLink);
-    downloadLink.click();
-    document.body.removeChild(downloadLink);
-  
     // 创建 FormData 并添加文件
     const formData = new FormData();
-    formData.append("file", excelBlob, encodedFileName);
+    formData.append("file", excelBlob, fileName);
   
     if (selectedFile) {
-      // 对 selectedFile.name 进行单独的编码处理
-      const encodedSelectedFileName = encodeURIComponent(selectedFile.name);
-      // 创建最终的简历文件名
-      const resumeFileName = `${encodedFileName}_${encodedSelectedFileName}`;
-      // 然后将文件添加到 FormData 中
-      formData.append("resume", selectedFile, resumeFileName);
+      // 不再改变resume文件名，服务器会处理
+      formData.append("resume", selectedFile);
     }
   
-    // 发送POST请求将文件上传到服务器
+    // 将文件上传到服务器
     try {
       const response = await axios.post("https://hkustquant.hk/api/upload", formData, {
         headers: {
           "Content-Type": "multipart/form-data"
         }
       });
+  
       console.log("File uploaded successfully:", response.data);
   
       // 上传成功后显示倒计时页面
@@ -286,11 +258,12 @@ key={fieldIndex}
           return prev - 1;
         });
       }, 1000);
+  
     } catch (error) {
       console.error("File upload failed:", error);
     }
   };
-        
+          
   if (isSubmitted) {
     return (
       <div className="countdown-page">
