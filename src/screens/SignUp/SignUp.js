@@ -221,6 +221,7 @@ key={fieldIndex}
     // 为文件名添加时间戳并确保包含 .xlsx 后缀
     const timestamp = new Date().toISOString().replace(/[-:.]/g, "");
     const rawFileName = `${teamName}_${leaderName}_${timestamp}.xlsx`; // 确保文件名包含后缀
+    console.log('rawFileName', rawFileName)
     const encodedFileName = encodeURIComponent(rawFileName); // 对文件名进行URL编码
   console.log('encodedFileName', encodedFileName)
     // 将工作簿转换为二进制文件
