@@ -218,9 +218,9 @@ key={fieldIndex}
     const workbook = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(workbook, worksheet, "报名信息");
   
-    // 为文件名添加时间戳
+    // 为文件名添加时间戳并确保包含后缀
     const timestamp = new Date().toISOString().replace(/[-:.]/g, "");
-    const rawFileName = `${teamName}_${leaderName}_${timestamp}.xlsx`;
+    const rawFileName = `${teamName}_${leaderName}_${timestamp}.xlsx`; // 确保文件名包含后缀
     const encodedFileName = encodeURIComponent(rawFileName); // 对文件名进行URL编码
   
     // 将工作簿转换为二进制文件
@@ -229,12 +229,11 @@ key={fieldIndex}
   
     // 创建 FormData 并添加文件
     const formData = new FormData();
-    formData.append("file", excelBlob, encodedFileName); // 使用编码后的文件名
+    formData.append("file", excelBlob, rawFileName); // 使用原始文件名（包含后缀）
   
     if (selectedFile) {
       const resumeFileName = `${timestamp}_${selectedFile.name}`;
-      const encodedResumeFileName = encodeURIComponent(resumeFileName);
-      formData.append("resume", selectedFile, encodedResumeFileName); // 使用编码后的简历文件名
+      formData.append("resume", selectedFile, resumeFileName); // 使用原始简历文件名
     }
   
     // 将文件上传到服务器
@@ -265,7 +264,7 @@ key={fieldIndex}
       console.error("File upload failed:", error);
     }
   };  
-          
+            
   if (isSubmitted) {
     return (
       <div className="countdown-page">
