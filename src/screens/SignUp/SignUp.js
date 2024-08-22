@@ -221,27 +221,26 @@ key={fieldIndex}
     // 为文件名添加时间戳并确保包含 .xlsx 后缀
     const timestamp = new Date().toISOString().replace(/[-:.]/g, "");
     const rawFileName = `${teamName}_${leaderName}_${timestamp}.xlsx`; // 确保文件名包含后缀
-    console.log('rawFileName', rawFileName);
+    console.log('Original rawFileName:', rawFileName);
     
     // 将工作簿转换为二进制文件
     const wbout = XLSX.write(workbook, { bookType: "xlsx", type: "array" });
     const excelBlob = new Blob([wbout], { type: "application/octet-stream" });
   
-    // 使用UTF-8编码文件名
-    const encodedFileName = new TextEncoder().encode(rawFileName).reduce((acc, char) => acc + String.fromCharCode(char), '');
-  
     // 创建 FormData 并添加文件
     const formData = new FormData();
-    formData.append("file", excelBlob, encodedFileName); // 使用编码的文件名
+    formData.append("file", excelBlob, rawFileName); // 使用未编码的文件名
   
     if (selectedFile) {
       const resumeFileName = `${timestamp}_${selectedFile.name}`;
-      const encodedResumeFileName = new TextEncoder().encode(resumeFileName).reduce((acc, char) => acc + String.fromCharCode(char), '');
-      formData.append("resume", selectedFile, encodedResumeFileName); // 使用编码的简历文件名
+      console.log('Original resumeFileName:', resumeFileName);
+      formData.append("resume", selectedFile, resumeFileName); // 使用未编码的简历文件名
     }
   
     // 将文件上传到服务器
     try {
+      console.log('FormData file names before upload:', formData.get('file'), formData.get('resume'));
+  
       const response = await axios.post("https://hkustquant.hk/api/upload", formData, {
         headers: {
           "Content-Type": "multipart/form-data"
@@ -267,7 +266,7 @@ key={fieldIndex}
     } catch (error) {
       console.error("File upload failed:", error);
     }
-  };
+  };  
      
   if (isSubmitted) {
     return (
