@@ -323,7 +323,7 @@ function SignUp() {
         const baseName = nameParts.join('.');  // 如果文件名中有多个点，保持结构不变
 
         // 组合新的文件名，将文件后缀放到最后
-        let resumeFileName = `${baseName}_队员简历_${index + 1}_${timestamp}.${extension}`;
+        let resumeFileName = `${baseName}_简历_${index + 1}_${timestamp}.${extension}`;
 
         resumeFileName = encodeURIComponent(resumeFileName); // 对简历文件名进行编码
         console.log(`Encoded resumeFileName for member ${index + 1}:`, resumeFileName);
