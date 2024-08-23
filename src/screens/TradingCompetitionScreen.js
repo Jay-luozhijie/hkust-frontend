@@ -11,15 +11,17 @@ function TradingCompetition() {
   const [isLoading, setIsLoading] = useState(true); // 用于跟踪加载状态
 
   useEffect(() => {
-    axios.get('/api/registration/status')
-      .then(response => {
-        setIsRegistrationOpen(response.data.isOpen);
-        setIsLoading(false); // 数据加载完成后，设置为 false
-      })
-      .catch(error => {
-        console.error('Error fetching registration status:', error);
-        setIsLoading(false); // 即使发生错误，也停止加载状态
-      });
+    // axios.get('/api/registration/status')
+    //   .then(response => {
+    //     setIsRegistrationOpen(response.data.isOpen);
+    //     setIsLoading(false); // 数据加载完成后，设置为 false
+    //   })
+    //   .catch(error => {
+    //     console.error('Error fetching registration status:', error);
+    //     setIsLoading(false); // 即使发生错误，也停止加载状态
+    //   });
+    setIsRegistrationOpen(true);
+    setIsLoading(false); // 数据加载完成后，设置为 false
   }, []);
 
   const getTranslatedText = (zhText, enText, tcText) => {
