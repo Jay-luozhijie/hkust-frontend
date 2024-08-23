@@ -21,7 +21,7 @@ function SignUp() {
       { label: "姓名", placeholder: "请填写", value: "" },
       { label: "电子邮件", placeholder: "请填写", value: "" },
       { label: "团队角色", placeholder: "请描述其在团队中的角色", value: "" },
-      { label: "学校/单位", type: "dropdown", options: schoolOptions, placeholder: "请选择", value: schoolType }
+      { label: "学校/单位", type: "dropdown", options: schoolOptions, placeholder: "请选择", value: schoolType },
     ];
   
     if (schoolType === "科大学生" || schoolType === "科大校友") {
@@ -70,11 +70,15 @@ function SignUp() {
   // 添加一个状态来显示是否超出成员限制的警告
   const [showMemberLimitWarning, setShowMemberLimitWarning] = useState(false);
   const [showModal, setShowModal] = useState(false);
-
-  const handleFileChange = (file) => {
-    setSelectedFile(file);
+  
+  const handleFileChange = (file, memberIndex) => {
+    setTeamMembers((prevMembers) => 
+      prevMembers.map((member, index) => 
+        index === memberIndex ? { ...member, resume: file } : member
+      )
+    );
   };
-
+  
   useEffect(() => {
     console.log('selectedFile:', selectedFile);
   }, [selectedFile]);
@@ -91,17 +95,33 @@ function SignUp() {
   };
 
   const [teamMembers, setTeamMembers] = useState([
-    createInitialLeaderFields(), // 队长始终是第一个成员
-    ...Array(2).fill(createInitialMemberFields()) // 初始设置为其他2个成员
-  ]);
+    {
+      fields: createInitialLeaderFields(),
+      resume: null
+    }, 
+    ...Array(2).fill({ fields: createInitialMemberFields(), resume: null })
+  ]);  
 
+  const [fieldErrors, setFieldErrors] = useState(
+    teamMembers.map(member => 
+      member.fields.map(() => "") // 仅为 fields 初始化错误状态
+    )
+  );  
+
+  const [otherInformationErrors, setOtherInformationErrors] = useState({
+    motivation: "",
+    expectation: ""
+  });
+  
   const addMember = () => {
     if (teamMembers.length >= 6) {
       setShowModal(true);
     } else {
-      setTeamMembers([...teamMembers, createInitialMemberFields()]);
+      const newMember = createInitialMemberFields();
+      setTeamMembers([...teamMembers, newMember]);
+      setFieldErrors([...fieldErrors, newMember.map(() => "")]); // 同步更新 fieldErrors
     }
-  };
+  };  
 
   const removeMember = (index) => {
     if (teamMembers.length > 3) { // 保证至少有一个队长和2个成员
@@ -124,23 +144,53 @@ function SignUp() {
   const handleFieldChange = (newValue, memberIndex, fieldIndex) => {
     setTeamMembers(teamMembers.map((member, idx) => {
       if (idx === memberIndex) {
-        const updatedMember = member.map((field, fIdx) => {
+        const updatedFields = member.fields.map((field, fIdx) => {
           if (fIdx === fieldIndex) {
             // 当“学校/单位”字段改变时，重新构建成员字段
             if (field.label === "学校/单位") {
               // 根据是否是队长来调用不同的创建字段函数
-              return idx === 0 ? createInitialLeaderFields(newValue) : createInitialMemberFields(newValue);
+              const newFields = idx === 0 ? createInitialLeaderFields(newValue) : createInitialMemberFields(newValue);
+  
+              // 确保新的下拉菜单字段保留了用户选择的值
+              return newFields.map(newField => {
+                if (newField.label === "学校/单位") {
+                  return { ...newField, value: newValue };
+                }
+                const existingField = member.fields.find(f => f.label === newField.label);
+                return existingField ? { ...newField, value: existingField.value } : newField;
+              });
             }
-            return {...field, value: newValue};
+            return { ...field, value: newValue };
           }
           return field;
         });
   
-        // 如果改变的是学校/单位字段，重新构建整个成员的字段数组
-        if (member[fieldIndex].label === "学校/单位") {
-          return idx === 0 ? createInitialLeaderFields(newValue) : createInitialMemberFields(newValue);
+        // 清除错误提示
+        setFieldErrors(prevErrors => {
+          const newErrors = [...prevErrors];
+          if (newValue.trim()) {
+            newErrors[memberIndex][fieldIndex] = ""; // 清除该字段的错误提示
+          }
+          return newErrors;
+        });
+  
+        // 如果改变的是“学校/单位”字段，重新构建整个成员的字段数组
+        if (member.fields[fieldIndex].label === "学校/单位") {
+          const newFields = idx === 0 ? createInitialLeaderFields(newValue) : createInitialMemberFields(newValue);
+  
+          // 确保新的下拉菜单字段保留了用户选择的值
+          const updatedFieldsWithNewSelection = newFields.map(newField => {
+            if (newField.label === "学校/单位") {
+              return { ...newField, value: newValue };
+            }
+            const existingField = member.fields.find(f => f.label === newField.label);
+            return existingField ? { ...newField, value: existingField.value } : newField;
+          });
+  
+          return { ...member, fields: updatedFieldsWithNewSelection };
         }
-        return updatedMember;
+  
+        return { ...member, fields: updatedFields };
       }
       return member;
     }));
@@ -149,42 +199,60 @@ function SignUp() {
   const renderFields = (fields, memberIndex) => {
     return groupFields(fields).map((group, groupIndex) => (
       <div className="input-row" key={groupIndex}>
-{group.map((field, fieldIndex) => (
-  field.type === "dropdown" ? (
-    <DropdownField
-      key={`${memberIndex}-${fieldIndex}`}
-      label={field.label}
-      options={field.options}
-      placeholder={field.placeholder}
-      value={field.value}
-      onChange={(newValue) => {
-        console.log(`Dropdown changed - Member: ${memberIndex}, Field: ${groupIndex * 2 + fieldIndex}, New Value: ${newValue}`);
-        handleFieldChange(newValue, memberIndex, groupIndex * 2 + fieldIndex);
-      }} // 添加调试输出
-    />
-  ) : (
-<InputField
-key={fieldIndex}
-  label={field.label}
-  placeholder={field.placeholder}
-  value={field.value}
-  onChange={(e) => handleFieldChange(e.target.value, memberIndex, groupIndex * 2 + fieldIndex)}
-/>
-
-  )
-))}
-
+        {group.map((field, fieldIndex) => (
+          <div key={`${memberIndex}-${fieldIndex}`} className="field-container">
+            {field.type === "dropdown" ? (
+              <DropdownField
+                label={field.label}
+                options={field.options}
+                placeholder={field.placeholder}
+                value={field.value}
+                onChange={(newValue) => {
+                  handleFieldChange(
+                    newValue,
+                    memberIndex,
+                    groupIndex * 2 + fieldIndex
+                  );
+                }}
+              />
+            ) : (
+              <InputField
+                label={field.label}
+                placeholder={field.placeholder}
+                value={field.value}
+                onChange={(e) =>
+                  handleFieldChange(
+                    e.target.value,
+                    memberIndex,
+                    groupIndex * 2 + fieldIndex
+                  )
+                }
+              />
+            )}
+            {/* 显示错误提示 */}
+            {fieldErrors[memberIndex][groupIndex * 2 + fieldIndex] && (
+              <div className="error-message">
+                {fieldErrors[memberIndex][groupIndex * 2 + fieldIndex]}
+              </div>
+            )}
+          </div>
+        ))}
         {group.length === 1 && <div className="empty-space"></div>}
       </div>
     ));
   };
   
   const handleSubmit = async () => {
+    if (!validateForm()) {
+      setShowModal(true); // 显示提示框
+      return; // 停止表单提交
+    }
+  
     const excelData = [];
     
     // 获取团队名称和队长姓名
-    const teamName = teamMembers[0][0].value;
-    const leaderName = teamMembers[0][1].value;
+    const teamName = teamMembers[0].fields[0].value;
+    const leaderName = teamMembers[0].fields[1].value;
   
     // 检查团队名称和队长姓名是否为空
     if (!teamName.trim() || !leaderName.trim()) {
@@ -196,7 +264,7 @@ key={fieldIndex}
       const headerLabel = memberIndex === 0 ? "队长信息" : `团队成员 ${memberIndex}`;
       excelData.push({ "信息名称": headerLabel, "信息内容": "" });
   
-      member.forEach((field) => {
+      member.fields.forEach((field) => {
         excelData.push({
           "信息名称": field.label,
           "信息内容": field.value
@@ -234,16 +302,19 @@ key={fieldIndex}
     const formData = new FormData();
     formData.append("file", excelBlob, rawFileName);
   
-    if (selectedFile) {
-      let resumeFileName = `${timestamp}_${selectedFile.name}`;
-      resumeFileName = encodeURIComponent(resumeFileName); // 对简历文件名进行编码
-      console.log('Encoded resumeFileName:', resumeFileName);
-      formData.append("resume", selectedFile, resumeFileName);
-    }
+    // 添加每个成员的简历文件到 FormData
+    teamMembers.forEach((member, index) => {
+      if (member.resume) {
+        let resumeFileName = `${timestamp}_member_${index + 1}_${member.resume.name}`;
+        resumeFileName = encodeURIComponent(resumeFileName); // 对简历文件名进行编码
+        console.log(`Encoded resumeFileName for member ${index + 1}:`, resumeFileName);
+        formData.append(`resume_${index + 1}`, member.resume, resumeFileName);
+      }
+    });
   
     // 将文件上传到服务器
     try {
-      console.log('FormData file names before upload:', formData.get('file'), formData.get('resume'));
+      console.log('FormData file names before upload:', formData.get('file'), ...teamMembers.map((_, i) => formData.get(`resume_${i + 1}`)));
   
       const response = await axios.post("https://hkustquant.hk/api/upload", formData, {
         headers: {
@@ -270,8 +341,54 @@ key={fieldIndex}
     } catch (error) {
       console.error("File upload failed:", error);
     }
-  };  
+  };
      
+  const optionalFields = [
+    "队长微信号（选填）",
+    "队长手机号（选填）",
+    "简历（选填）"
+  ];
+  
+  const validateForm = () => {
+    let isValid = true;
+    const newFieldErrors = teamMembers.map((member, i) => {
+      // 检查该成员是否所有字段都是空的
+      const allFieldsEmpty = member.every(field => !field.value.trim());
+  
+    // 如果是队长，即使所有字段为空，也要进行验证
+    if (allFieldsEmpty && i !== 0) {
+      return member.map(() => ""); // 对于非队长，若全部为空，返回空的错误信息
+    }
+  
+      return member.map((field, j) => {
+        if (!field.value.trim() && !optionalFields.includes(field.label)) {
+          isValid = false;
+          return "*此字段是必填项";
+        }
+        return "";
+      });
+    });
+  
+    setFieldErrors(newFieldErrors);
+  
+    // 继续检查其他信息的错误
+    let newOtherInformationErrors = { motivation: "", expectation: "" };
+    
+    if (!otherInformation.motivation.trim()) {
+      newOtherInformationErrors.motivation = "*参赛动机是必填项";
+      isValid = false;
+    }
+  
+    if (!otherInformation.expectation.trim()) {
+      newOtherInformationErrors.expectation = "*期望从大赛中学到的内容是必填项";
+      isValid = false;
+    }
+  
+    setOtherInformationErrors(newOtherInformationErrors);
+  
+    return isValid;
+  };  
+
   if (isSubmitted) {
     return (
       <div className="countdown-page">
@@ -290,8 +407,7 @@ key={fieldIndex}
       </div>
     );
   }
-
-
+  
   return (
     <div className="sign-up-page">
       {showModal && (
@@ -314,26 +430,34 @@ key={fieldIndex}
       <div className="team-information">
         <div className="team-information-heading sub-heading">团队基本信息</div>
         <div className="team-information-details first">
-        {renderFields(teamMembers[0], 0)}
-          <div className="input-row">
-            <FileUploadField 
-              label="队长简历" 
-              placeholder="请上传附件提交队长简历" 
-              selectedFile={selectedFile}
-              onFileChange={handleFileChange} 
-            />
-          </div>
+        {renderFields(teamMembers[0].fields, 0)}
+        <div className="input-row">
+  <FileUploadField 
+    label="队长简历" 
+    placeholder="请上传附件提交队长简历" 
+    selectedFile={teamMembers[0].resume}  // 使用队长的 resume 状态
+    onFileChange={(file) => handleFileChange(file, 0)}  // 队长的索引为 0
+  />
+</div>
         </div>
         <div className="team-members-information-heading sub-heading">
           团队成员信息
         </div>
-{teamMembers.slice(1).map((fields, memberIndex) => (
+        {teamMembers.slice(1).map((member, memberIndex) => (
   <React.Fragment key={memberIndex + 1}>
     <div className="team-members-information-heading3">
       团队成员{memberIndex + 1}: 
     </div>
     <div className="team-information-details">
-      {renderFields(fields, memberIndex + 1)} 
+      {renderFields(member.fields, memberIndex + 1)} 
+      <div className="input-row">
+        <FileUploadField 
+          label="简历（选填）" 
+          placeholder="请上传" 
+          selectedFile={member.resume}
+          onFileChange={(file) => handleFileChange(file, memberIndex + 1)} 
+        />
+      </div>
       {memberIndex + 1 > 2 && (
         <button className="remove-member-button" onClick={() => removeMember(memberIndex + 1)}>
           删除成员
@@ -354,23 +478,46 @@ key={fieldIndex}
         <div className="other-information">
           <div className="sub-heading">其他信息</div>
           <div className="other-information-block">
-            <div className="motivation heading-3">参赛动机</div>
-            <textarea
-              className="other-information-input"
-              placeholder="请简述您参加这次大赛的原因和期望获得的经验"
-              value={otherInformation.motivation}
-              onChange={(e) => handleOtherInfoChange("motivation", e.target.value)}
-            />
-          </div>
-          <div className="other-information-block">
-            <div className="motivation heading-3">期望从大赛中学到的内容</div>
-            <textarea
-              className="other-information-input"
-              placeholder="请描述您希望通过此次大赛学习或提高的具体技能"
-              value={otherInformation.expectation}
-              onChange={(e) => handleOtherInfoChange("expectation", e.target.value)}
-            />
-          </div>
+  <div className="motivation heading-3">参赛动机</div>
+  <textarea
+    className="other-information-input"
+    placeholder="请简述您参加这次大赛的原因和期望获得的经验"
+    value={otherInformation.motivation}
+    onChange={(e) => {
+      handleOtherInfoChange("motivation", e.target.value);
+      setOtherInformationErrors((prev) => ({
+        ...prev,
+        motivation: "",
+      }));
+    }}
+  />
+  {otherInformationErrors.motivation && (
+    <div className="error-message">
+      {otherInformationErrors.motivation}
+    </div>
+  )}
+</div>
+<div className="other-information-block">
+  <div className="motivation heading-3">期望从大赛中学到的内容</div>
+  <textarea
+    className="other-information-input"
+    placeholder="请描述您希望通过此次大赛学习或提高的具体技能"
+    value={otherInformation.expectation}
+    onChange={(e) => {
+      handleOtherInfoChange("expectation", e.target.value);
+      setOtherInformationErrors((prev) => ({
+        ...prev,
+        expectation: "",
+      }));
+    }}
+  />
+  {otherInformationErrors.expectation && (
+    <div className="error-message">
+      {otherInformationErrors.expectation}
+    </div>
+  )}
+</div>
+
         </div>
         <div className="middle-button-container">
         <button className="submit-button" onClick={handleSubmit}>

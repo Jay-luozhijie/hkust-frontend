@@ -114,6 +114,12 @@
         .first{
             margin-bottom: 80px;
         }
+
+        .error-message {
+          color: #9A1E23;
+          font-size: 12px;
+          margin-top: 5px;
+        }
         
         .team-information-details {
             display: flex;
@@ -135,10 +141,19 @@
                   }
             }
 
+            .field-container{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                width: 100%;
+                flex: 1;
+            }
+
             .details {
                 flex: 1;
                 display: flex;
                 flex-direction: column;
+                width: 100%;
                   
                 .rounded-input {
                     width: 100%;
@@ -279,7 +294,8 @@
             font-size: 22px;
             margin-bottom: 10px;
         }
-
+        .other-information-block{
+          margin-bottom: 50px;
         .other-information-input{
             width: 100%;
             padding: 10px;
@@ -289,7 +305,7 @@
             font-size: 16px;
             outline: none;
             height: 150px;
-            margin-bottom: 50px;
+
 
             @media only screen and (max-width: 768px) {
                 margin-bottom: 10px;
@@ -305,6 +321,7 @@
               box-shadow: 0 0 5px rgba(154, 30, 35, 0.5);
             }
         }
+      }
     }
 
     .submit-button{

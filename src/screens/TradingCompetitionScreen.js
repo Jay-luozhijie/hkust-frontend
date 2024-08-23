@@ -10,13 +10,7 @@ function TradingCompetition() {
   const [isRegistrationOpen, setIsRegistrationOpen] = useState(false);
 
   useEffect(() => {
-    axios.get('/api/registration/status')
-      .then(response => {
-        setIsRegistrationOpen(response.data.isOpen);
-      })
-      .catch(error => {
-        console.error('Error fetching registration status:', error);
-      });
+setIsRegistrationOpen(true);
   }, []);
 
   const getTranslatedText = (zhText, enText, tcText) => {
