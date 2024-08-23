@@ -250,13 +250,15 @@ function SignUp() {
     ));
   };
   
+  const [isUploading, setIsUploading] = useState(false);
+
   const handleSubmit = async () => {
     if (!validateForm()) {
       setModalMessage("请完成所有必填字段后再提交。");  // 设置自定义提示信息
       setShowModal(true); // 显示提示框
       return; // 停止表单提交
     }
-
+    setIsUploading(true); 
     const excelData = [];
     
     // 获取团队名称和队长姓名
@@ -297,7 +299,7 @@ function SignUp() {
   
     // 为文件名添加时间戳并确保包含 .xlsx 后缀
     const timestamp = new Date().toISOString().replace(/[-:.]/g, "");
-    let rawFileName = `${teamName}_${leaderName}_${timestamp}.xlsx`;
+    let rawFileName = `${teamName}_${leaderName}_队长简历_${timestamp}.xlsx`;
     
     // 在前端对文件名进行 encodeURIComponent 编码
     rawFileName = encodeURIComponent(rawFileName);
@@ -314,7 +316,7 @@ function SignUp() {
     // 添加每个成员的简历文件到 FormData
     teamMembers.forEach((member, index) => {
       if (member.resume) {
-        let resumeFileName = `${timestamp}_member_${index + 1}_${member.resume.name}`;
+        let resumeFileName = `${member.resume.name}_队员简历_${index + 1}_${timestamp}`;
         resumeFileName = encodeURIComponent(resumeFileName); // 对简历文件名进行编码
         console.log(`Encoded resumeFileName for member ${index + 1}:`, resumeFileName);
         formData.append(`resume_${index + 1}`, member.resume, resumeFileName);
@@ -349,6 +351,8 @@ function SignUp() {
   
     } catch (error) {
       console.error("File upload failed:", error);
+    } finally {
+      setIsUploading(false); // 无论成功还是失败，上传结束后都设置上传状态为false
     }
   };
      
@@ -535,8 +539,8 @@ function SignUp() {
 
         </div>
         <div className="middle-button-container">
-        <button className="submit-button" onClick={handleSubmit}>
-          提交报名
+        <button className="submit-button" onClick={handleSubmit} disabled={isUploading}>
+            {isUploading ? '上传中...' : '提交报名'}
         </button>
           <div className="attention">注意：提交报名后信息不可更改</div>
         </div>
