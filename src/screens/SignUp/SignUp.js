@@ -317,7 +317,14 @@ function SignUp() {
     // 添加每个成员的简历文件到 FormData
     teamMembers.forEach((member, index) => {
       if (member.resume) {
-        let resumeFileName = `${member.resume.name}_队员简历_${index + 1}_${timestamp}`;
+        // 提取文件名和后缀
+        const nameParts = member.resume.name.split('.');
+        const extension = nameParts.pop();  // 移除并获取数组的最后一个元素（文件扩展名）
+        const baseName = nameParts.join('.');  // 如果文件名中有多个点，保持结构不变
+
+        // 组合新的文件名，将文件后缀放到最后
+        let resumeFileName = `${baseName}_队员简历_${index + 1}_${timestamp}.${extension}`;
+
         resumeFileName = encodeURIComponent(resumeFileName); // 对简历文件名进行编码
         console.log(`Encoded resumeFileName for member ${index + 1}:`, resumeFileName);
         formData.append(`resume_${index + 1}`, member.resume, resumeFileName);
