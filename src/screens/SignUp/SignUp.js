@@ -82,8 +82,9 @@ function SignUp() {
   };
   
   useEffect(() => {
-    console.log('selectedFile:', selectedFile);
-  }, [selectedFile]);
+    setIsUploading(false);
+  }, []);
+
   const [otherInformation, setOtherInformation] = useState({
     motivation: "",
     expectation: ""
@@ -351,8 +352,6 @@ function SignUp() {
   
     } catch (error) {
       console.error("File upload failed:", error);
-    } finally {
-      setIsUploading(false); // 无论成功还是失败，上传结束后都设置上传状态为false
     }
   };
      
