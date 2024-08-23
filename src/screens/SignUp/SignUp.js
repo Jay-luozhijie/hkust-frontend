@@ -51,9 +51,10 @@ function SignUp() {
     ];
   
     if (schoolType === "科大学生" || schoolType === "科大校友") {
+      const gradeLabel = schoolType === "科大校友" ? "学届" : "年级";
       return commonFields.concat([
         { label: "学院", placeholder: "请填写", value: "" },
-        { label: "年级", placeholder: "请填写", value: "" },
+        { label: gradeLabel, placeholder: "请填写", value: "" },
         { label: "学号", placeholder: "请填写", value: "" }
       ]);
     } else if (schoolType === "其他") {
