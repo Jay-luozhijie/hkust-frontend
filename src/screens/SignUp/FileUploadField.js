@@ -1,16 +1,22 @@
 import React, { useState } from "react";
 
-function FileUploadField({ label, placeholder, selectedFile, onFileChange }) {
+function FileUploadField({ label, placeholder, selectedFile, onFileChange, maxSize, setShowModal, setModalMessage }) {
   const [fileName, setFileName] = useState('');
   const [uploadProgress, setUploadProgress] = useState(0);
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     if (file) {
+      // 检查文件大小是否超过限制
+      if (file.size > maxSize) {
+        setShowModal(true);
+        setModalMessage(`文件过大，请选择小于 ${(maxSize / (1024 * 1024)).toFixed(2)}MB 的文件。`);
+        return;
+      }
+      
       onFileChange(file);
-    }
-    if (file) {
       setFileName(file.name);
+
       // 模拟上传过程
       const simulateUpload = setInterval(() => {
         setUploadProgress((prevProgress) => {

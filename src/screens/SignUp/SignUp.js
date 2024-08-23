@@ -69,7 +69,8 @@ function SignUp() {
   const [countdown, setCountdown] = useState(5);
   const [modalMessage, setModalMessage] = useState(""); 
   const [showModal, setShowModal] = useState(false);
-  
+  const MAXSIZE = 10 * 1024 * 1024;
+
   const handleFileChange = (file, memberIndex) => {
     setTeamMembers((prevMembers) => 
       prevMembers.map((member, index) => 
@@ -443,6 +444,9 @@ function SignUp() {
     placeholder="请上传附件提交队长简历" 
     selectedFile={teamMembers[0].resume}  // 使用队长的 resume 状态
     onFileChange={(file) => handleFileChange(file, 0)}  // 队长的索引为 0
+    setModalMessage={setModalMessage}
+    setShowModal={setShowModal}
+    maxSize={MAXSIZE}
   />
 </div>
         </div>
@@ -461,7 +465,10 @@ function SignUp() {
           label="简历（选填）" 
           placeholder="请上传" 
           selectedFile={member.resume}
-          onFileChange={(file) => handleFileChange(file, memberIndex + 1)} 
+          onFileChange={(file) => handleFileChange(file, memberIndex + 1)}
+          setModalMessage={setModalMessage}
+          setShowModal={setShowModal}
+          maxSize={MAXSIZE}
         />
       </div>
       {memberIndex + 1 > 2 && (
