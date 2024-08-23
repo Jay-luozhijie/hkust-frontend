@@ -67,8 +67,7 @@ function SignUp() {
   const [selectedFile, setSelectedFile] = useState(null);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [countdown, setCountdown] = useState(5);
-  // 添加一个状态来显示是否超出成员限制的警告
-  const [showMemberLimitWarning, setShowMemberLimitWarning] = useState(false);
+  const [modalMessage, setModalMessage] = useState(""); 
   const [showModal, setShowModal] = useState(false);
   
   const handleFileChange = (file, memberIndex) => {
@@ -116,10 +115,16 @@ function SignUp() {
   const addMember = () => {
     if (teamMembers.length >= 6) {
       setShowModal(true);
+      setModalMessage("成员数量不能超过五人");
     } else {
-      const newMember = createInitialMemberFields();
+      const newMember = {
+        fields: createInitialMemberFields(),
+        resume: null // 初始化新成员的 resume 为 null
+      };
       setTeamMembers([...teamMembers, newMember]);
-      setFieldErrors([...fieldErrors, newMember.map(() => "")]); // 同步更新 fieldErrors
+  
+      // 同步更新 fieldErrors，仅针对新成员的 fields 初始化错误状态
+      setFieldErrors([...fieldErrors, newMember.fields.map(() => "")]);
     }
   };  
 
@@ -244,10 +249,11 @@ function SignUp() {
   
   const handleSubmit = async () => {
     if (!validateForm()) {
+      setModalMessage("请完成所有必填字段后再提交。");  // 设置自定义提示信息
       setShowModal(true); // 显示提示框
       return; // 停止表单提交
     }
-  
+
     const excelData = [];
     
     // 获取团队名称和队长姓名
@@ -352,15 +358,15 @@ function SignUp() {
   const validateForm = () => {
     let isValid = true;
     const newFieldErrors = teamMembers.map((member, i) => {
-      // 检查该成员是否所有字段都是空的
-      const allFieldsEmpty = member.every(field => !field.value.trim());
+      // 检查该成员的所有字段是否都是空的
+      const allFieldsEmpty = member.fields.every(field => !field.value.trim());
   
-    // 如果是队长，即使所有字段为空，也要进行验证
-    if (allFieldsEmpty && i !== 0) {
-      return member.map(() => ""); // 对于非队长，若全部为空，返回空的错误信息
-    }
+      // 如果是队长，即使所有字段为空，也要进行验证
+      if (allFieldsEmpty && i !== 0) {
+        return member.fields.map(() => ""); // 对于非队长，若全部为空，返回空的错误信息
+      }
   
-      return member.map((field, j) => {
+      return member.fields.map((field, j) => {
         if (!field.value.trim() && !optionalFields.includes(field.label)) {
           isValid = false;
           return "*此字段是必填项";
@@ -413,7 +419,7 @@ function SignUp() {
       {showModal && (
         <div className="modal-overlay">
           <div className="modal-content">
-            <p>成员数量不能超过5人</p>
+            <p>{modalMessage}</p>  {/* 显示 modalMessage */}
             <button className="close-button" onClick={closeModal}>&times;</button>
           </div>
         </div>
