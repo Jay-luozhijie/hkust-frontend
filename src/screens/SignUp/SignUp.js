@@ -300,7 +300,7 @@ function SignUp() {
   
     // 为文件名添加时间戳并确保包含 .xlsx 后缀
     const timestamp = new Date().toISOString().replace(/[-:.]/g, "");
-    let rawFileName = `${teamName}_${leaderName}_队长简历_${timestamp}.xlsx`;
+    let rawFileName = `${teamName}_${leaderName}_报名表单_${timestamp}.xlsx`;
     
     // 在前端对文件名进行 encodeURIComponent 编码
     rawFileName = encodeURIComponent(rawFileName);
