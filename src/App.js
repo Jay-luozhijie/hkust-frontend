@@ -30,7 +30,6 @@ import IntroduceScreen from './screens/IntroduceScreen'
 import CommunityNewsDetailScreen from './screens/CommunityNewsDetailScreen.js';
 import TradingCompetition from './screens/TradingCompetitionScreen.js';
 import SignUp from './screens/SignUp/SignUp.js';
-import FilesPage from './screens/FilesPage.js';
 
 import './css/App.scss';
 import './css/PartnerScreen.scss';
@@ -74,7 +73,6 @@ function App() {
                       <Route path = "/TradingCompetition" element={<TradingCompetition/>}></Route> 
                       <Route path="/TradingCompetition/sign-up" element={<SignUp />} />
                       <Route path = "/Introduce" element={<IntroduceScreen/>}></Route>
-                      <Route path = "/files" element={<FilesPage/>}></Route>
                       <Route path="/Alumni" element={<Alumni />}>
                         <Route path = "/Alumni/Beijing" element={<Beijing></Beijing>}></Route>
                         <Route path = "/Alumni/Hongkong" element={<Hongkong></Hongkong>}></Route>

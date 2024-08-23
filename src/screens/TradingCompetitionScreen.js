@@ -7,10 +7,19 @@ import '../css/TradingCompetition.scss';
 function TradingCompetition() {
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
-  const [isRegistrationOpen, setIsRegistrationOpen] = useState(false);
+  const [isRegistrationOpen, setIsRegistrationOpen] = useState(null); // 初始值设置为 null 表示尚未加载
+  const [isLoading, setIsLoading] = useState(true); // 用于跟踪加载状态
 
   useEffect(() => {
-setIsRegistrationOpen(true);
+    axios.get('/api/registration/status')
+      .then(response => {
+        setIsRegistrationOpen(response.data.isOpen);
+        setIsLoading(false); // 数据加载完成后，设置为 false
+      })
+      .catch(error => {
+        console.error('Error fetching registration status:', error);
+        setIsLoading(false); // 即使发生错误，也停止加载状态
+      });
   }, []);
 
   const getTranslatedText = (zhText, enText, tcText) => {
@@ -24,7 +33,9 @@ setIsRegistrationOpen(true);
   };
 
   const handleButtonClick = () => {
+    if (isRegistrationOpen !== null) {
     navigate('sign-up'); 
+    }
   };
 
   return (
@@ -46,14 +57,14 @@ setIsRegistrationOpen(true);
         参赛团队可以自由选择不同的量化交易技术和量化策略，展现自己独特的投资理念。
       </span>
       </div>
-        <button
-  className="button"
-  onClick={handleButtonClick}
-  disabled={!isRegistrationOpen}
->
-  {isRegistrationOpen ? '开始报名' : '暂未开放'}
-  <div className="triangle"></div>
-</button>
+      <button
+      className="button"
+      onClick={handleButtonClick}
+      disabled={isLoading} // 在加载中时禁用按钮
+    >
+      {isLoading ? '加载中……' : (isRegistrationOpen ? '开始报名' : '暂未开放')}
+      <div className="triangle"></div>
+    </button>
       <div className="timeline-section">
   <div className="heading timeline-heading">时间线</div>
   <div className="timeline-item">
