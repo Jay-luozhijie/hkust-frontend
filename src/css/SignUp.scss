@@ -4,8 +4,8 @@
     align-items: center;
     font-family: 'customOPPOSans';
     @media only screen and (max-width: 768px) {
-        padding-left: 30px;
-        width: 93%;
+        padding-left: 45px;
+        width: 90%;
       }
 
     .heading{
@@ -98,6 +98,9 @@
             cursor: pointer;
             border-radius: 8px;
             font-size: 20px;
+            @media only screen and (max-width: 768px) {
+              margin-left: auto;
+            }
           }
           
           .team-information-heading {
@@ -199,7 +202,7 @@
                     font-size: 24px;
                     margin-bottom: 5px;
                     @media only screen and (max-width: 768px) {
-                        font-size: 20px;
+                        font-size: 16px;
                       }
                     }
                     
@@ -273,8 +276,10 @@
         font-size: 24px;
         color: #858585;
         margin-bottom: 80px;
+        width: 80%;
         @media only screen and (max-width: 768px) {
             font-size: 20px;
+            width: 95%;
           }
 
           .attention-content{

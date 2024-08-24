@@ -40,6 +40,79 @@ function TradingCompetition() {
     }
   };
 
+  const timelineData = [
+    {
+      label: "报名阶段",
+      date: "2024年8月27日 - 2024年9月22日",
+      contents: [
+        {
+          title: "参赛资格",
+          description: "比赛面向香港科技大学的在校生和毕业生，也欢迎其他港校、其他地区高校的学生和校友报名参赛"
+        },
+        {
+          title: "报名方式",
+          description: "在港科宽图官网提交团队信息"
+        }
+      ]
+    },
+    {
+      label: "资格审核与比赛注册阶段",
+      date: "团队报名时刻 - 2024年9月22日",
+      contents: [
+        {
+          title: "模拟账户注册",
+          description: "填写报名问卷链接，获得正式比赛的模拟账户"
+        },
+        {
+          title: "团队、策略审核",
+          description: "根据一定的规则审核团队成员情况，可能有邮件联络"
+        }
+      ]
+    },
+    {
+      label: "赛前准备阶段",
+      date: "2024年9月22日 - 2024年9月30日",
+      contents: [
+        {
+          title: "事项",
+          description: "分配模拟交易账户；选择团队的顾问；举办交易沙龙"
+        }
+      ]
+    },
+    {
+      label: "正式比赛阶段",
+      date: "2024年10月1日 - 2024年12月31日",
+      contents: [
+        {
+          title: "事项",
+          description: "选手采用正式比赛的模拟交易账户进行交易"
+        }
+      ]
+    },
+    {
+      label: "评审与答辩阶段",
+      date: "2025年1月1日 - 2025年1月14日",
+      contents: [
+        {
+          title: "成果总结",
+          description: "宽图将整理和校对所有团队的数据，形成最终结果"
+        },
+        {
+          title: "策略答辩会议",
+          description: "由宽图的荣誉技术顾问出面担任评委，表现较好的参赛团队选出代表进行答辩活动"
+        },
+        {
+          title: "评审",
+          description: "评委依据交易策略的稳定性、收益率、风险控制和未来表现预期等指标进行评审，决定最终排名"
+        },
+        {
+          title: "颁奖典礼",
+          description: "公布比赛结果，颁发奖项"
+        },
+      ]
+    }
+  ];
+  
   return (
     <div className='background-container'>
     <div className='trading-competition-page'>
@@ -69,170 +142,34 @@ function TradingCompetition() {
     </button>
       <div className="timeline-section">
   <div className="heading timeline-heading">时间线</div>
-  <div className="timeline-item">
+  {timelineData.map((item, index) => (
+  <div className="timeline-item" key={index}>
     <div className="timeline-line-wrapper">
       <div className="timeline-circle"></div>
       <div className="timeline-line"></div>
     </div>
     <div className="timeline-content-wrapper">
-      <div className="timeline-label">报名阶段</div>
-      <div className="timeline-label date">2024年8月19日 -2024年9月15日</div>
+      <div className="timeline-label">{item.label}</div>
+      <div className="timeline-label date">{item.date}</div>
       <div className="timeline-content">
-        <div className="content-flex">
-          <div className='sub-content-timeline first'>
-            <div className="content-circle"></div>
-            <div className="content-dashed-line"></div>
+        {item.contents.map((content, idx) => (
+          <div className="content-flex" key={idx}>
+            <div className={`sub-content-timeline ${idx === 0 ? 'first' : ''}`}>
+            {idx !== 0 && <div className={`content-dashed-line ${idx === 0 ? '' : 'continuation-line-space'}`}></div>}
+              <div className="content-circle"></div>
+              {idx !== item.contents.length - 1 && <div className="content-dashed-line"></div>}
+            </div>
+            <div className='sub-content'>
+              {idx !== 0 && <div className="continuation-content-space"></div>}
+              <div className="content-title">{content.title}</div>
+              <div className="content-description">{content.description}</div>
+            </div>
           </div>
-          <div className='sub-content'>
-            <div className="content-title">
-              参赛资格
-            </div>
-            <div className="content-description">
-            比赛面向香港科技大学的在校生和毕业生，也欢迎其他港校、其他地区高校的学生和校友报名参赛
-            </div>
-        </div>
-        </div>
-        <div className="content-flex">
-          <div className='content-timeline'>
-            <div className="content-circle"></div>
-          </div>
-          <div className='sub-content' style={{ position: 'relative', top: '-10px' }}>
-            <div className="content-title">
-            报名方式
-            </div>
-            <div className="content-description">
-            在官网提交团队信息
-            </div>
-        </div>
-        </div>
+        ))}
       </div>
     </div>
   </div>
-  <div className="timeline-item">
-    <div className="timeline-line-wrapper">
-      <div className="timeline-circle"></div>
-      <div className="timeline-line"></div>
-    </div>
-    <div className="timeline-content-wrapper">
-      <div className="timeline-label">资格审查阶段</div>
-      <div className="timeline-label date">开始报名：2024年9月20日</div>
-      <div className="timeline-content">
-        <div className="content-flex">
-          <div className='sub-content-timeline first'>
-            <div className="content-circle"></div>
-          </div>
-          <div className='sub-content'>
-            <div className="content-title">
-            团队、策略审核
-            </div>
-            <div className="content-description">
-            根据一定的规则审核团队成员情况，可能有邮件联络
-            </div>
-        </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div className="timeline-item">
-    <div className="timeline-line-wrapper">
-      <div className="timeline-circle"></div>
-      <div className="timeline-line"></div>
-    </div>
-    <div className="timeline-content-wrapper">
-      <div className="timeline-label">赛前准备阶段</div>
-      <div className="timeline-label date">2024年9月20日 - 2024年9月30日</div>
-      <div className="timeline-content">
-        <div className="content-flex">
-          <div className='sub-content-timeline first'>
-            <div className="content-circle"></div>
-          </div>
-          <div className='sub-content'>
-            <div className="content-title">
-            内容
-            </div>
-            <div className="content-description">
-            分配模拟交易账户；选择团队的顾问；举办交易沙龙
-            </div>
-        </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div className="timeline-item">
-    <div className="timeline-line-wrapper">
-      <div className="timeline-circle"></div>
-      <div className="timeline-line"></div>
-    </div>
-    <div className="timeline-content-wrapper">
-      <div className="timeline-label">初赛阶段</div>
-      <div className="timeline-label date">2024年10月1日 - 2024年10月13日</div>
-      <div className="timeline-content">
-        <div className="content-flex">
-          <div className='sub-content-timeline first'>
-            <div className="content-circle"></div>
-          </div>
-          <div className='sub-content'>
-            <div className="content-title">
-            内容
-            </div>
-            <div className="content-description">
-            学习使用提供的模拟交易账户进行交易，账户净值有变化即可进入复赛
-            </div>
-        </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div className="timeline-item">
-    <div className="timeline-line-wrapper">
-      <div className="timeline-circle"></div>
-      <div className="timeline-line"></div>
-    </div>
-    <div className="timeline-content-wrapper">
-      <div className="timeline-label">复赛阶段</div>
-      <div className="timeline-label date">2024年10月13日 - 2024年12月31日</div>
-      <div className="timeline-content">
-        <div className="content-flex">
-          <div className='sub-content-timeline first'>
-            <div className="content-circle"></div>
-          </div>
-          <div className='sub-content'>
-            <div className="content-title">
-            内容
-            </div>
-            <div className="content-description">
-            最终比赛成绩参考的只有复赛成绩
-            </div>
-        </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div className="timeline-item">
-    <div className="timeline-line-wrapper">
-      <div className="timeline-circle"></div>
-      <div className="timeline-line"></div>
-    </div>
-    <div className="timeline-content-wrapper">
-      <div className="timeline-label">评审与答辩阶段</div>
-      <div className="timeline-label date">2025年1月1日 - 2025年1月14日</div>
-      <div className="timeline-content">
-        <div className="content-flex">
-          <div className='sub-content-timeline first'>
-            <div className="content-circle"></div>
-          </div>
-          <div className='sub-content'>
-            <div className="content-title">
-            内容
-            </div>
-            <div className="content-description">
-            成果总结、策略答辩会议、评审与颁奖
-            </div>
-        </div>
-        </div>
-      </div>
-    </div>
-  </div>
+))}
   <div className="timeline-item">
     <div className="timeline-line-wrapper">
       <div className="timeline-circle"></div>

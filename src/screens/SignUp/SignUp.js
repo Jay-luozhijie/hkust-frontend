@@ -117,9 +117,9 @@ function SignUp() {
   });
   
   const addMember = () => {
-    if (teamMembers.length >= 6) {
+    if (teamMembers.length >= 11) {
       setShowModal(true);
-      setModalMessage("成员数量不能超过五人");
+      setModalMessage("成员数量不能超过十人");
     } else {
       const newMember = {
         fields: createInitialMemberFields(),
@@ -322,8 +322,11 @@ function SignUp() {
         const extension = nameParts.pop();  // 移除并获取数组的最后一个元素（文件扩展名）
         const baseName = nameParts.join('.');  // 如果文件名中有多个点，保持结构不变
 
+        // 判断是队长还是队员，并据此修改文件名
+        let role = index === 0 ? "队长" : `队员${index}`;
+
         // 组合新的文件名，将文件后缀放到最后
-        let resumeFileName = `${baseName}_简历_${index + 1}_${timestamp}.${extension}`;
+        let resumeFileName = `${teamName}_${role}简历_${timestamp}.${extension}`;
 
         resumeFileName = encodeURIComponent(resumeFileName); // 对简历文件名进行编码
         console.log(`Encoded resumeFileName for member ${index + 1}:`, resumeFileName);
@@ -442,9 +445,9 @@ function SignUp() {
       </div>
       <div className="attention">
         <div className="attention-content">注意事项</div>
-        <div className="attention-content">1. 香港科技大学各专业本硕博学生，香港科技大学校友以及香港地区其他高校学生均可报名，欢迎跨专业组队</div>
-        <div className="attention-content">2.每支参赛队伍人数不多于5人</div>
-        <div className="attention-content">3.您的个人信息仅会在港科宽图交易大赛中使用，港科宽图承诺保护您的隐私信息</div>
+        <div className="attention-content">1. 比赛面向香港科技大学的在校生和毕业生，也欢迎其他港校、其他地区高校的学生和校友报名参赛比赛面向香港科技大学的在校生和毕业生，也欢迎其他港校、其他地区高校的学生和校友报名参赛</div>
+        <div className="attention-content">2. 推荐每支队伍由3-5人构成；队伍人数上限为10人</div>
+        <div className="attention-content">3. 您的个人信息仅会在港科宽图交易大赛中使用，港科宽图承诺保护您的隐私信息</div>
       </div>
       <div className="team-information">
         <div className="team-information-heading sub-heading">团队基本信息</div>
