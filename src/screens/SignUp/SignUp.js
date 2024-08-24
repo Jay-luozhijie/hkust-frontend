@@ -324,9 +324,12 @@ function SignUp() {
 
         // 判断是队长还是队员，并据此修改文件名
         let role = index === 0 ? "队长" : `队员${index}`;
+        // 根据角色选择名字字段的位置
+        let nameIndex = index === 0 ? 1 : 0; // 如果是队长，姓名在第二个位置；如果是队员，姓名在第一个位置
+        let memberName = member.fields[nameIndex].value; // 根据索引获取姓名
 
         // 组合新的文件名，将文件后缀放到最后
-        let resumeFileName = `${teamName}_${role}简历_${timestamp}.${extension}`;
+        let resumeFileName = `${teamName}_${role}_${memberName}_简历_${timestamp}.${extension}`;
 
         resumeFileName = encodeURIComponent(resumeFileName); // 对简历文件名进行编码
         console.log(`Encoded resumeFileName for member ${index + 1}:`, resumeFileName);
