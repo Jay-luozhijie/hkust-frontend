@@ -278,8 +278,7 @@
         margin-bottom: 80px;
         width: 80%;
         @media only screen and (max-width: 768px) {
-            font-size: 20px;
-            width: 95%;
+            font-size: 16px;
           }
 
           .attention-content{
@@ -287,6 +286,16 @@
                 margin-bottom: 20px;
               }
           }
+    }
+
+    .last-attention{
+      font-size: 24px;
+      color: #858585;
+      margin-bottom: 80px;
+        @media only screen and (max-width: 768px) {
+          font-size: 20px;
+          width: 95%;
+        }
     }
 
     .other-information{

@@ -554,7 +554,7 @@ function SignUp() {
         <button className="submit-button" onClick={handleSubmit} disabled={isUploading}>
             {isUploading ? '上传中...' : '提交报名'}
         </button>
-          <div className="attention">注意：提交报名后信息不可更改</div>
+          <div className="last-attention">注意：提交报名后信息不可更改</div>
         </div>
       </div>
     </div>
