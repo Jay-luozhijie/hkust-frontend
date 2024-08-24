@@ -329,7 +329,7 @@ function SignUp() {
         let memberName = member.fields[nameIndex].value; // 根据索引获取姓名
 
         // 组合新的文件名，将文件后缀放到最后
-        let resumeFileName = `${teamName}_${role}_${memberName}_简历_${timestamp}.${extension}`;
+        let resumeFileName = `${teamName}_${role}${memberName}简历_${timestamp}.${extension}`;
 
         resumeFileName = encodeURIComponent(resumeFileName); // 对简历文件名进行编码
         console.log(`Encoded resumeFileName for member ${index + 1}:`, resumeFileName);
