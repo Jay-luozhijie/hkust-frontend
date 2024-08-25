@@ -173,7 +173,7 @@
           "signup_stage": "Signup Stage",
           "signup_date": "August 27, 2024 - September 22, 2024",
           "eligibility_title": "Eligibility",
-          "eligibility_description": "The competition is open to current students and alumni of the Hong Kong University of Science and Technology, as well as students and alumni from other universities in Hong Kong and abroad.",
+          "eligibility_description": "The competition is designed for current students and alumni of the Hong Kong University of Science and Technology, and it also welcomes entries from students and alumni of other universities in Hong Kong and beyond.",
           "registration_method_title": "Registration Method",
           "registration_method_description": "Submit team information on the official Quant Trading Society website.",
           "qualification_review_stage": "Qualification Review and Competition Registration Stage",
@@ -202,14 +202,14 @@
         },
         "competition": {
           "title": "Quant Trading Society Competition",
-          "intro_part1": "The Quant Trading Societyitative Trading Society will officially host the first ",
-          "intro_date": "October 1 ",
-          "intro_part2": " annual ",
-          "intro_event": "Simulated Quantitative Trading Competition",
-          "intro_part3": " this year. The competition is open to current students and alumni of HKUST, as well as students and alumni from other Hong Kong universities and institutions abroad.",
+          "intro_part1": "The Quant Trading Society will officially launch its first ",
+          "intro_date": "simulated quantitative trading competition ",
+          "intro_part2": "on ",
+          "intro_event": "October 1st ",
+          "intro_part3": " this year. The competition is designed for current students and alumni of the Hong Kong University of Science and Technology, and it also welcomes entries from students and alumni of other universities in Hong Kong and beyond.",
           "competition_details_part1": "The simulation trading competition consists of a two-week preliminary round and a two-and-a-half-month final round, with only the results of the final round being considered for the final scores.",
-          "competition_details_part2": "With the strong support of Tiger Securities, competing teams will have the opportunity to freely configure assets within a specified range, including but not limited to stocks, commodities, ETFs, and derivatives.",
-          "competition_details_part3": "Teams are free to choose different quantitative trading techniques and strategies to showcase their unique investment philosophies."
+          "competition_details_part2": "Supported by Tiger Brokers, teams will have the flexibility to manage portfolios that may include stocks, commodities, ETFs, and derivatives, using various quantitative trading techniques to showcase their unique investment strategies.",
+          "competition_details_part3": ""
         },
         "ui": {
           "loading": "Loading...",

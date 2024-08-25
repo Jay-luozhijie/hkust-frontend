@@ -119,7 +119,6 @@ function TradingCompetition() {
             {t('competition.intro_part3')}<br />
           </span>
           <span className="competition-content">
-            {t('competition.competition_details_part1')}
             {t('competition.competition_details_part2')}
             {t('competition.competition_details_part3')}
           </span>
