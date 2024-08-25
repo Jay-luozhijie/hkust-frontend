@@ -168,6 +168,54 @@
         "hkust_quant_trading_association2": " Quant Trading Society(HKUST- MAFM)",
         "we_are": "We are",
         "association_description_1": ". As a student society of the HKUST Master of Science in Financial Mathematics (MAFM), we are committed to helping students enter the quantitative industry and build effective networks. Our alumni network covers over 10,000 HKUST graduates. Additionally, we plan to hold trading competitions for all students to discover talent and incubate future quant funds.",
-        "association_description_2": "Since its establishment in 2006, the Department of Mathematics at HKUST enrolls about 800 undergraduate, master's, and doctoral students each year. As a student leadership platform supported by the department, our alumni network covers over 10,000 students and alumni."
-      
+        "association_description_2": "Since its establishment in 2006, the Department of Mathematics at HKUST enrolls about 800 undergraduate, master's, and doctoral students each year. As a student leadership platform supported by the department, our alumni network covers over 10,000 students and alumni.",
+        "timeline": {
+          "signup_stage": "Signup Stage",
+          "signup_date": "August 27, 2024 - September 22, 2024",
+          "eligibility_title": "Eligibility",
+          "eligibility_description": "The competition is open to current students and alumni of the Hong Kong University of Science and Technology, as well as students and alumni from other universities in Hong Kong and abroad.",
+          "registration_method_title": "Registration Method",
+          "registration_method_description": "Submit team information on the official Quant Trading Society website.",
+          "qualification_review_stage": "Qualification Review and Competition Registration Stage",
+          "review_date": "Team Registration Time - September 22, 2024",
+          "sim_account_title": "Simulation Account Registration",
+          "sim_account_description": "Fill out the registration form link to obtain an official competition simulation account.",
+          "team_strategy_review_title": "Team and Strategy Review",
+          "team_strategy_review_description": "Team members are reviewed based on certain rules; email contact may be required.",
+          "pre_competition_stage": "Pre-Competition Preparation Stage",
+          "pre_competition_date": "September 22, 2024 - September 30, 2024",
+          "pre_competition_item_title": "Tasks",
+          "pre_competition_item_description": "Assign simulation trading accounts; select team advisors; organize trading salons.",
+          "main_competition_stage": "Main Competition Stage",
+          "main_competition_date": "October 1, 2024 - December 31, 2024",
+          "main_competition_item_description": "Participants will trade using their official competition simulation accounts.",
+          "judging_defense_stage": "Judging and Defense Stage",
+          "judging_defense_date": "January 1, 2025 - January 14, 2025",
+          "results_summary_title": "Results Summary",
+          "results_summary_description": "Quant Trading Society will compile and verify all team data to form the final results.",
+          "strategy_defense_meeting_title": "Strategy Defense Meeting",
+          "strategy_defense_meeting_description": "Representatives from the best performing teams will present at a defense meeting chaired by Quant Trading Society's honorary technical advisors.",
+          "judging_title": "Judging",
+          "judging_description": "Judges will evaluate the trading strategies based on stability, profitability, risk management, and future performance expectations to determine the final rankings.",
+          "awards_ceremony_title": "Awards Ceremony",
+          "awards_ceremony_description": "The competition results will be announced, and awards will be presented."
+        },
+        "competition": {
+          "title": "Quant Trading Society Competition",
+          "intro_part1": "The Quant Trading Societyitative Trading Society will officially host the first ",
+          "intro_date": "October 1 ",
+          "intro_part2": " annual ",
+          "intro_event": "Simulated Quantitative Trading Competition",
+          "intro_part3": " this year. The competition is open to current students and alumni of HKUST, as well as students and alumni from other Hong Kong universities and institutions abroad.",
+          "competition_details_part1": "The simulation trading competition consists of a two-week preliminary round and a two-and-a-half-month final round, with only the results of the final round being considered for the final scores.",
+          "competition_details_part2": "With the strong support of Tiger Securities, competing teams will have the opportunity to freely configure assets within a specified range, including but not limited to stocks, commodities, ETFs, and derivatives.",
+          "competition_details_part3": "Teams are free to choose different quantitative trading techniques and strategies to showcase their unique investment philosophies."
+        },
+        "ui": {
+          "loading": "Loading...",
+          "signup_open": "Start",
+          "signup_closed": "Not Yet Open",
+          "timeline_heading": "Timeline",
+          "contact_email": "Contact Email"
+        }
 }

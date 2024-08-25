@@ -37,6 +37,25 @@
       }
 }
 
+/* 英语模式下的手机视图 */
+@media (max-width: 768px) {
+  .heading.title.title-en {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 600px) {
+  .timeline-label.label-en {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .timeline-label.date.date-en {
+    font-size: 18px;
+  }
+}
+
 .heading {
     font-size: 52px;
     font-weight: 500;
@@ -46,10 +65,10 @@
     height: 84px;
     position: relative;
     color: #9A1E23;
+    text-wrap: nowrap;
     @media only screen and (max-width: 768px) {
         font-size: 30px;
         width: 80%;
-        text-wrap: nowrap;
       }
   }
   
