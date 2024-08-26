@@ -448,7 +448,7 @@ function SignUp() {
       </div>
       <div className="attention">
         <div className="attention-content">注意事项</div>
-        <div className="attention-content">1. 比赛面向香港科技大学的在校生和毕业生，也欢迎其他港校、其他地区高校的学生和校友报名参赛比赛面向香港科技大学的在校生和毕业生，也欢迎其他港校、其他地区高校的学生和校友报名参赛</div>
+        <div className="attention-content">1. 比赛面向香港科技大学的在校生和毕业生，也欢迎其他港校、其他地区高校的学生和校友报名参赛</div>
         <div className="attention-content">2. 推荐每支队伍由3-5人构成；队伍人数上限为10人</div>
         <div className="attention-content">3. 您的个人信息仅会在港科宽图交易大赛中使用，港科宽图承诺保护您的隐私信息</div>
       </div>
