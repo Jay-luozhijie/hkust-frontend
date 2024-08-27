@@ -259,6 +259,14 @@ function SignUp() {
       setShowModal(true); // 显示提示框
       return; // 停止表单提交
     }
+
+
+  if (!teamMembers[0].resume) {
+    setModalMessage("队长简历是必填项，请上传文件。");
+    setShowModal(true);
+    return; // 停止表单提交
+  }
+  
     setIsUploading(true); 
     const excelData = [];
     
@@ -457,15 +465,16 @@ function SignUp() {
         <div className="team-information-details first">
         {renderFields(teamMembers[0].fields, 0)}
         <div className="input-row">
-  <FileUploadField 
-    label="队长简历" 
-    placeholder="请上传附件提交队长简历" 
-    selectedFile={teamMembers[0].resume}  // 使用队长的 resume 状态
-    onFileChange={(file) => handleFileChange(file, 0)}  // 队长的索引为 0
-    setModalMessage={setModalMessage}
-    setShowModal={setShowModal}
-    maxSize={MAXSIZE}
-  />
+        <FileUploadField 
+          label="队长简历" 
+          placeholder="请上传附件提交队长简历" 
+          selectedFile={teamMembers[0].resume}  // 使用队长的 resume 状态
+          onFileChange={(file) => handleFileChange(file, 0)}  // 队长的索引为 0
+          setModalMessage={setModalMessage}
+          setShowModal={setShowModal}
+          maxSize={MAXSIZE}
+          showError={true}  // 传递 showError 属性
+        />
 </div>
         </div>
         <div className="team-members-information-heading sub-heading">
