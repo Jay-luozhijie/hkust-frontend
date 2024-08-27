@@ -9,6 +9,7 @@ import axios from "axios";
 
 function SignUp() {
   const navigate = useNavigate();
+  const [showFileError, setShowFileError] = useState(false);
 
   const schoolOptions = [
     "科大学生", 
@@ -260,13 +261,6 @@ function SignUp() {
       return; // 停止表单提交
     }
 
-
-  if (!teamMembers[0].resume) {
-    setModalMessage("队长简历是必填项，请上传文件。");
-    setShowModal(true);
-    return; // 停止表单提交
-  }
-  
     setIsUploading(true); 
     const excelData = [];
     
@@ -418,7 +412,14 @@ function SignUp() {
     }
   
     setOtherInformationErrors(newOtherInformationErrors);
-  
+    
+    // 验证队长简历文件上传
+    if (!teamMembers[0].resume) {
+      setShowFileError(true);  // 设置文件上传错误提示
+      isValid = false;
+    } else {
+      setShowFileError(false); // 清除文件上传错误提示
+    }
     return isValid;
   };  
 
@@ -466,15 +467,15 @@ function SignUp() {
         {renderFields(teamMembers[0].fields, 0)}
         <div className="input-row">
         <FileUploadField 
-          label="队长简历" 
-          placeholder="请上传附件提交队长简历" 
-          selectedFile={teamMembers[0].resume}  // 使用队长的 resume 状态
-          onFileChange={(file) => handleFileChange(file, 0)}  // 队长的索引为 0
-          setModalMessage={setModalMessage}
-          setShowModal={setShowModal}
-          maxSize={MAXSIZE}
-          showError={true}  // 传递 showError 属性
-        />
+  label="队长简历" 
+  placeholder="请上传附件提交队长简历" 
+  selectedFile={teamMembers[0].resume}  
+  onFileChange={(file) => handleFileChange(file, 0)}  
+  setModalMessage={setModalMessage}
+  setShowModal={setShowModal}
+  maxSize={MAXSIZE}
+  showError={showFileError}  // 根据validateForm的结果传递 showError 属性
+/>
 </div>
         </div>
         <div className="team-members-information-heading sub-heading">
