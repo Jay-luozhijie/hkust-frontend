@@ -1,221 +1,251 @@
 {
-    "socialAdvisorTitle": "Advisors",
-    "members": [
-      {
-        "name_mobile": "Prof. Yang Wang",
-        "name_desktop": "Prof. Yang Wang",
-        "job": "Honorary chairman",
-        "introduce": "Prof. Yang Wang took office as Vice-President for Institutional Advancement of HKUST on October 1, 2020. He is also a Chair Professor of Department of Industrial Engineering and Decision Analytics and Department of Mathematics. He joined the HKUST as the Head of the Department of Mathematics in 2014 and he became the Dean of School of Science in 2016. Prof. Wang received his Bachelor's degree in Mathematics from the University of Science and Technology of China in 1983 and obtained his PhD degree in Mathematics from Harvard University in 1990. He started his academic career with the Georgia Institute of Technology in 1989 and then moved on to be the Department Chair and Professor of Mathematics at Michigan State University in 2007."
-      },
-      {
-        "name_mobile": "Mr. Samuel Yung Wing Ki, SBS, MH, JP",
-        "name_desktop": "Mr. Samuel Yung Wing Ki, SBS, MH, JP",
-        "job": "Honorary consultant",
-        "introduce": "Mr. Samuel Yung is an Executive District Director & Honorable Advisor of AIA International Limited. He is Vice Chairman of the Committee for Economic Affairs, Chinese People’s Political Consultative Conference (CPPCC) National Committee and Founding President of Hong Kong Professionals and Senior Executives Association. Mr. Yung has strong ties with the tertiary education sector. He is a Council Member of the Hong Kong University of Science and Technology (HKUST) and a Court Member of the Hong Kong Metropolitan University (HKMU)."
-      },
-      {
-        "name_mobile": "Prof. Kani Chen",
-        "name_desktop": "Prof. Kani Chen",
-        "job": "Chief supervisor",
-        "introduce": "Prof. Kani Chen acts as program director of MSc in Financial Mathematics and CoDirector of Risk Management and Business Intelligence Program in HKUST. He received a PhD in Statistics (1994) from Columbia University in the City of New York, an MSc (1990) and a BSc (1987) from Peking University. He has over decades of research and teaching experience in financial mathematics."
-      },
-      {
-        "name_mobile": "Mr. Hyde Li CFA",
-        "name_desktop": "Mr. Hyde Li CFA",
-        "job": "Chief advisor",
-        "introduce": "Mr. Hyde Li, CFA, serves as the Executive Director of Tianlong Securities Co., Ltd. and the Chairman of Fund Connect HK Limited. He is also the President of the Hong Kong MBA Institute. Mr. Li has many years of experience in the traditional and digital asset investment industries. He has managed various prestigious projects, including the \"Top 100 Listed Companies in Hong Kong\" for Finet Group Limited, collaborated with Huobi Group on digital asset quantitative trading management, and handled asset management for family offices. He has built extensive professional networks and maintained strong connections with the Hong Kong University of Science and Technology, providing a vast platform for student entrepreneurship and career development."
-      }
-    ],
-    "partnerTitle": "Partners",
-    "partners": [
-      {
-        "name": "Tianlong Securities",
-        "description": "Incorporated in Hong Kong in August 2020, Tianlong Securities Co., Ltd (“TLS”) is a member of Tianlong Financial Group. It holds Type 4 (Advising on securities), and Type 9 (Asset management) professional licenses. TLS committed to improving its product portfolio and services, and its investment covers the Greater China areas, providing comprehensive investment management services to high net-worth clients, family offices and institutional clients. We customize programs for them and helps them accurately grasp the pulse of the information-intensive market and seize investment opportunities to increase wealth.",
-        "link": "https://www.tianlongsecurities.com/zh"
-      },
-      {
-        "name": "Tiger Brokers",
-        "description": "Tiger Brokers (NASDAQ: TIGR) was established in 2014 and is a leading technology-driven brokerage group. Its subsidiary, Tiger Brokers (HK) Global Limited (Central number: BMU940), holds Hong Kong Securities and Futures Commission licenses for categories 1, 2, 4, 5, and 9. Hong Kong residents can trade Hong Kong stocks, warrants, CBBCs, U.S. stocks, fractional shares, ETFs, and other major global financial products through one account on Tiger Trade, offering a one-stop solution for investment needs.",
-        "link": "https://www.itiger.com"
-      },
-      {
-        "name": "Hong Kong MBA Institute",
-        "description": "Hong Kong MBA Institute was founded in 2014 by the outstanding MBA students and alumni of eight universities in Hong Kong, as well as many senior professors and business celebrities as guidance counselors. As a non-profit organization, Hong Kong MBA Institute will create a broad development space and provide a resource sharing platform to the MBA students, alumni and business people.",
-        "link": "http://www.hk-mba.org/"
-      },
-      {
-        "name": "Fund Connect HK",
-        "description": "Fund Connect HK provides project consultation for investment managers, striving to serve as an effective communication platform between capital and projects. The \"HKUST-Fund Connect HK Leading Fund\" was established in Hong Kong on the 28th and is committed to promoting the transformation of university scientific research achievements and supporting the construction of Hong Kong as an international innovation and technology hub. The core investment research team of the HKUST-Fund Connect HK Leading Fund comprises members from top-tier domestic schools and Ivy League universities abroad, all of whom possess extensive experience in quantitative fund investment and management and a profound understanding of the financial markets. They are dedicated to delivering long-term, stable, and satisfactory investment returns to their clients.",
-        "link": "https://mp.weixin.qq.com/s/SanNilboYaAZuS6F11ih2Q"
-      },
-      {
-        "name": "Tianlong Securities",
-        "description": "Incorporated in Hong Kong in August 2020, Tianlong Securities Co., Ltd (“TLS”) is a member of Tianlong Financial Group. It holds Type 4 (Advising on securities), and Type 9 (Asset management) professional licenses. TLS committed to improving its product portfolio and services, and its investment covers the Greater China areas, providing comprehensive investment management services to high net-worth clients, family offices and institutional clients. We customize programs for them and helps them accurately grasp the pulse of the information-intensive market and seize investment opportunities to increase wealth.",
-        "link": "https://www.tianlongsecurities.com/zh"
-      },
-      {
-        "name": "Tiger Brokers",
-        "description": "Tiger Brokers (NASDAQ: TIGR) was established in 2014 and is a leading technology-driven brokerage group. Its subsidiary, Tiger Brokers (HK) Global Limited (Central number: BMU940), holds Hong Kong Securities and Futures Commission licenses for categories 1, 2, 4, 5, and 9. Hong Kong residents can trade Hong Kong stocks, warrants, CBBCs, U.S. stocks, fractional shares, ETFs, and other major global financial products through one account on Tiger Trade, offering a one-stop solution for investment needs.",
-        "link": "https://www.itiger.com"
-      },
-      {
-        "name": "Hong Kong MBA Institute",
-        "description": "Hong Kong MBA Institute was founded in 2014 by the outstanding MBA students and alumni of eight universities in Hong Kong, as well as many senior professors and business celebrities as guidance counselors. As a non-profit organization, Hong Kong MBA Institute will create a broad development space and provide a resource sharing platform to the MBA students, alumni and business people.",
-        "link": "https://mba.org.hk/"
-      },
-      {
-        "name": "Fund Connect HK",
-        "description": "Fund Connect HK provides project consultation for investment managers, striving to serve as an effective communication platform between capital and projects. The \"HKUST-Fund Connect HK Leading Fund\" was established in Hong Kong on the 28th and is committed to promoting the transformation of university scientific research achievements and supporting the construction of Hong Kong as an international innovation and technology hub. The core investment research team of the HKUST-Fund Connect HK Leading Fund comprises members from top-tier domestic schools and Ivy League universities abroad, all of whom possess extensive experience in quantitative fund investment and management and a profound understanding of the financial markets. They are dedicated to delivering long-term, stable, and satisfactory investment returns to their clients.",
-        "link": "https://mp.weixin.qq.com/s/SanNilboYaAZuS6F11ih2Q"
-      }
-    ],
-        "introduceTitle": "Quant Trading Society",
-        "hkustQuantTradingSociety": "(HKUST- MAFM)",
-        "empowerFutureQuantLeaders": "Empowering future quantitative finance leaders through knowledge transfer, networking, and competition practice",
-        "missionTitle": "Mission",
-        "missionText": "Bridging academia and industry, promoting practical applications in the field of quantitative finance through academic innovation, building a platform for international cooperation and exchange, and nurturing forward-looking and innovative quantitative professionals.",
-        "visionTitle": "Vision",
-        "visionText": "To become the engine shaping the future leaders of global quantitative trading, driving industry innovation and progress by establishing an open global knowledge-sharing network.",
-        "cultureTitle": "Society Culture",
-        "cultureText": "Innovation-driven, resource-sharing, technology forefront – exploring future possibilities together.",
-        "activityTimelineTitle": "Activity Timeline",
-        "mainServicesTitle": "Main Services",
-        "industryConnectionTitle": "Industry Connection",
-        "industryConnectionLabel": "Industry Connection",
-        "industryConnectionDetails": [
-          "Establishing effective connections",
-          "through career fairs and alumni",
-          "network events",
-          "Hosting quantitative-themed",
-          "sharing sessions",
-          "Goal: Establishing effective",
-          "industry connections"
-        ],
-        "tradingCompetitionTitle": "Trading Competition",
-        "tradingCompetitionLabel": "Trading Competition",
-        "tradingStrategies": [
-          "Student engagement",
-          "Mentor-guided projects",
-          "Providing quantitative ",
-          "strategy support"
-        ],
-        "tradingSelection": [
-          "Testing high-return strategies",
-          "through backtesting and",
-          " simulated trading",
-          "Selecting excellent strategies"
-        ],
-        "tradingCompetition": [
-          "Hosting trading competitions",
-          "Conducting three-month",
-          "trading sessions each season",
-          "Goal: Enriching quantitative",
-          "fund management experience"
-        ],
-        "quantFundIncubationTitle": "Quant Fund Incubation",
-        "quantFundIncubationLabel": "Quant Fund Incubation",
-        "quantFundIncubationDetails": [
-          "Raising and initiating funds",
-          "for excellent strategies"
-        ],
-        "newsData_2024": [
-          {"id": 1, "time": "January", "title": "Second Strategic Competition", "small": "Expected to be held in January"},
-          {"id": 2, "time": "February", "title": "", "small": ""},
-          {"id": 3, "time": "March", "title": "", "small": ""},
-          {"id": 4, "time": "April", "title": "", "small": ""},
-          {"id": 5, "time": "May", "title": "Third Strategic Competition", "small": "Expected to be held in May"},
-          {"id": 6, "time": "June", "title": "", "small": ""},
-          {"id": 7, "time": "July", "title": "", "small": ""},
-          {"id": 8, "time": "August", "title": "", "small": ""},
-          {"id": 9, "time": "September", "title": "", "small": ""},
-          {"id": 10, "time": "October", "title": "Quantitative Analysis Talent Fair", "small": "Targeting 0fin&Mafm programs"},
-          {"id": 11, "time": "November", "title": "", "small": ""},
-          {"id": 12, "time": "December", "title": "", "small": ""}
-        ],
-        "newsData_2025": [
-          {"id": 1, "time": "January", "title": "", "small": ""},
-          {"id": 2, "time": "February", "title": "", "small": ""},
-          {"id": 3, "time": "March", "title": "", "small": ""},
-          {"id": 4, "time": "April", "title": "Management Team Meeting", "small": "Formulating development plans"},
-          {"id": 5, "time": "May", "title": "", "small": ""},
-          {"id": 6, "time": "June", "title": "", "small": ""},
-          {"id": 7, "time": "July", "title": "Opening Ceremony", "small": "Expected to be held in mid-July"},
-          {"id": 8, "time": "August", "title": "", "small": ""},
-          {"id": 9, "time": "September", "title": "First Strategic Competition", "small": "Expected to be held in September"},
-          {"id": 10, "time": "October", "title": "", "small": ""},
-          {"id": 11, "time": "November", "title": "", "small": ""},
-          {"id": 12, "time": "December", "title": "", "small": ""}
-        ],
-        "aboutUs": "About Us",
-        "introduction": "Introduction",
-        "team": "Team",
-        "tradingCompetitionNav": "Trading Competition",
-        "socialAdvisor": "Advisor",
-        "partnersNav": "Partners",
-        "alumni": "Alumni",
-        "alumniHongKong": "Hong Kong",
-        "alumniBeijing": "Beijing",
-        "alumniShanghai": "Shanghai",
-        "alumniGuangzhou": "Guangzhou",
-        "alumniShenzhen": "Shenzhen",
-        "communityNews": "News",
-        "friendLinks": "Links",
-        "hkust_background": "HKUST Background",
-        "slide_text_line1": "Empowering Future \nQuantitative Finance Leaders",
-        "slide_text_line2": "Through Knowledge Transfer, \nNetworking, and Competitions",
-        "hkust_quant_trading_society": "Quant Trading Society (HKUST- MAFM)",
-        "hkust_quant_trading_association": "Quant Trading Society",
-        "hkust_quant_trading_association2": " Quant Trading Society(HKUST- MAFM)",
-        "we_are": "We are",
-        "association_description_1": ". As a student society of the HKUST Master of Science in Financial Mathematics (MAFM), we are committed to helping students enter the quantitative industry and build effective networks. Our alumni network covers over 10,000 HKUST graduates. Additionally, we plan to hold trading competitions for all students to discover talent and incubate future quant funds.",
-        "association_description_2": "Since its establishment in 2006, the Department of Mathematics at HKUST enrolls about 800 undergraduate, master's, and doctoral students each year. As a student leadership platform supported by the department, our alumni network covers over 10,000 students and alumni.",
-        "timeline": {
-          "signup_stage": "Signup Stage",
-          "signup_date": "August 27, 2024 - September 22, 2024",
-          "eligibility_title": "Eligibility",
-          "eligibility_description": "The competition is designed for current students and alumni of the Hong Kong University of Science and Technology, and it also welcomes entries from students and alumni of other universities in Hong Kong and beyond.",
-          "registration_method_title": "Registration Method",
-          "registration_method_description": "Submit team information on the official Quant Trading Society website.",
-          "qualification_review_stage": "Qualification Review and Competition Registration Stage",
-          "review_date": "Team Registration Time - September 22, 2024",
-          "sim_account_title": "Simulation Account Registration",
-          "sim_account_description": "Fill out the registration form link to obtain an official competition simulation account.",
-          "team_strategy_review_title": "Team and Strategy Review",
-          "team_strategy_review_description": "Team members are reviewed based on certain rules; email contact may be required.",
-          "pre_competition_stage": "Pre-Competition Preparation Stage",
-          "pre_competition_date": "September 22, 2024 - September 30, 2024",
-          "pre_competition_item_title": "Tasks",
-          "pre_competition_item_description": "Assign simulation trading accounts; select team advisors; organize trading salons.",
-          "main_competition_stage": "Main Competition Stage",
-          "main_competition_date": "October 1, 2024 - December 31, 2024",
-          "main_competition_item_description": "Participants will trade using their official competition simulation accounts.",
-          "judging_defense_stage": "Judging and Defense Stage",
-          "judging_defense_date": "January 1, 2025 - January 14, 2025",
-          "results_summary_title": "Results Summary",
-          "results_summary_description": "Quant Trading Society will compile and verify all team data to form the final results.",
-          "strategy_defense_meeting_title": "Strategy Defense Meeting",
-          "strategy_defense_meeting_description": "Representatives from the best performing teams will present at a defense meeting chaired by Quant Trading Society's honorary technical advisors.",
-          "judging_title": "Judging",
-          "judging_description": "Judges will evaluate the trading strategies based on stability, profitability, risk management, and future performance expectations to determine the final rankings.",
-          "awards_ceremony_title": "Awards Ceremony",
-          "awards_ceremony_description": "The competition results will be announced, and awards will be presented."
-        },
-        "competition": {
-          "title": "Quant Trading Society Competition",
-          "intro_part1": "The Quant Trading Society will officially launch its first ",
-          "intro_date": "simulated quantitative trading competition ",
-          "intro_part2": "on ",
-          "intro_event": "October 1st ",
-          "intro_part3": " this year. The competition is designed for current students and alumni of the Hong Kong University of Science and Technology, and it also welcomes entries from students and alumni of other universities in Hong Kong and beyond.",
-          "competition_details_part1": "The simulation trading competition consists of a two-week preliminary round and a two-and-a-half-month final round, with only the results of the final round being considered for the final scores.",
-          "competition_details_part2": "Supported by Tiger Brokers, teams will have the flexibility to manage portfolios that may include stocks, commodities, ETFs, and derivatives, using various quantitative trading techniques to showcase their unique investment strategies.",
-          "competition_details_part3": ""
-        },
-        "ui": {
-          "loading": "Loading...",
-          "signup_open": "Start",
-          "signup_closed": "Not Yet Open",
-          "timeline_heading": "Timeline",
-          "contact_email": "Contact Email"
-        }
+  "socialAdvisorTitle": "Advisors",
+  "members": [
+    {
+      "name_mobile": "Prof. Yang Wang",
+      "name_desktop": "Prof. Yang Wang",
+      "job": "Honorary chairman",
+      "introduce": "Prof. Yang Wang took office as Vice-President for Institutional Advancement of HKUST on October 1, 2020. He is also a Chair Professor of Department of Industrial Engineering and Decision Analytics and Department of Mathematics. He joined the HKUST as the Head of the Department of Mathematics in 2014 and he became the Dean of School of Science in 2016. Prof. Wang received his Bachelor's degree in Mathematics from the University of Science and Technology of China in 1983 and obtained his PhD degree in Mathematics from Harvard University in 1990. He started his academic career with the Georgia Institute of Technology in 1989 and then moved on to be the Department Chair and Professor of Mathematics at Michigan State University in 2007."
+    },
+    {
+      "name_mobile": "Mr. Samuel Yung Wing Ki, SBS, MH, JP",
+      "name_desktop": "Mr. Samuel Yung Wing Ki, SBS, MH, JP",
+      "job": "Honorary consultant",
+      "introduce": "Mr. Samuel Yung is an Executive District Director & Honorable Advisor of AIA International Limited. He is Vice Chairman of the Committee for Economic Affairs, Chinese People’s Political Consultative Conference (CPPCC) National Committee and Founding President of Hong Kong Professionals and Senior Executives Association. Mr. Yung has strong ties with the tertiary education sector. He is a Council Member of the Hong Kong University of Science and Technology (HKUST) and a Court Member of the Hong Kong Metropolitan University (HKMU)."
+    },
+    {
+      "name_mobile": "Prof. Kani Chen",
+      "name_desktop": "Prof. Kani Chen",
+      "job": "Chief supervisor",
+      "introduce": "Prof. Kani Chen acts as program director of MSc in Financial Mathematics and CoDirector of Risk Management and Business Intelligence Program in HKUST. He received a PhD in Statistics (1994) from Columbia University in the City of New York, an MSc (1990) and a BSc (1987) from Peking University. He has over decades of research and teaching experience in financial mathematics."
+    },
+    {
+      "name_mobile": "Mr. Hyde Li CFA",
+      "name_desktop": "Mr. Hyde Li CFA",
+      "job": "Chief advisor",
+      "introduce": "Mr. Hyde Li, CFA, serves as the Executive Director of Tianlong Securities Co., Ltd. and the Chairman of Fund Connect HK Limited. He is also the President of the Hong Kong MBA Institute. Mr. Li has many years of experience in the traditional and digital asset investment industries. He has managed various prestigious projects, including the \"Top 100 Listed Companies in Hong Kong\" for Finet Group Limited, collaborated with Huobi Group on digital asset quantitative trading management, and handled asset management for family offices. He has built extensive professional networks and maintained strong connections with the Hong Kong University of Science and Technology, providing a vast platform for student entrepreneurship and career development."
+    }
+  ],
+  "partnerTitle": "Partners",
+  "partners": [
+    {
+      "name": "Tianlong Securities",
+      "description": "Incorporated in Hong Kong in August 2020, Tianlong Securities Co., Ltd (“TLS”) is a member of Tianlong Financial Group. It holds Type 4 (Advising on securities), and Type 9 (Asset management) professional licenses. TLS committed to improving its product portfolio and services, and its investment covers the Greater China areas, providing comprehensive investment management services to high net-worth clients, family offices and institutional clients. We customize programs for them and helps them accurately grasp the pulse of the information-intensive market and seize investment opportunities to increase wealth.",
+      "link": "https://www.tianlongsecurities.com/zh"
+    },
+    {
+      "name": "Tiger Brokers",
+      "description": "Tiger Brokers (NASDAQ: TIGR) was established in 2014 and is a leading technology-driven brokerage group. Its subsidiary, Tiger Brokers (HK) Global Limited (Central number: BMU940), holds Hong Kong Securities and Futures Commission licenses for categories 1, 2, 4, 5, and 9. Hong Kong residents can trade Hong Kong stocks, warrants, CBBCs, U.S. stocks, fractional shares, ETFs, and other major global financial products through one account on Tiger Trade, offering a one-stop solution for investment needs.",
+      "link": "https://www.itiger.com"
+    },
+    {
+      "name": "Hong Kong MBA Institute",
+      "description": "Hong Kong MBA Institute was founded in 2014 by the outstanding MBA students and alumni of eight universities in Hong Kong, as well as many senior professors and business celebrities as guidance counselors. As a non-profit organization, Hong Kong MBA Institute will create a broad development space and provide a resource sharing platform to the MBA students, alumni and business people.",
+      "link": "http://www.hk-mba.org/"
+    },
+    {
+      "name": "Fund Connect HK",
+      "description": "Fund Connect HK provides project consultation for investment managers, striving to serve as an effective communication platform between capital and projects. The \"HKUST-Fund Connect HK Leading Fund\" was established in Hong Kong on the 28th and is committed to promoting the transformation of university scientific research achievements and supporting the construction of Hong Kong as an international innovation and technology hub. The core investment research team of the HKUST-Fund Connect HK Leading Fund comprises members from top-tier domestic schools and Ivy League universities abroad, all of whom possess extensive experience in quantitative fund investment and management and a profound understanding of the financial markets. They are dedicated to delivering long-term, stable, and satisfactory investment returns to their clients.",
+      "link": "https://mp.weixin.qq.com/s/SanNilboYaAZuS6F11ih2Q"
+    },
+    {
+      "name": "Tianlong Securities",
+      "description": "Incorporated in Hong Kong in August 2020, Tianlong Securities Co., Ltd (“TLS”) is a member of Tianlong Financial Group. It holds Type 4 (Advising on securities), and Type 9 (Asset management) professional licenses. TLS committed to improving its product portfolio and services, and its investment covers the Greater China areas, providing comprehensive investment management services to high net-worth clients, family offices and institutional clients. We customize programs for them and helps them accurately grasp the pulse of the information-intensive market and seize investment opportunities to increase wealth.",
+      "link": "https://www.tianlongsecurities.com/zh"
+    },
+    {
+      "name": "Tiger Brokers",
+      "description": "Tiger Brokers (NASDAQ: TIGR) was established in 2014 and is a leading technology-driven brokerage group. Its subsidiary, Tiger Brokers (HK) Global Limited (Central number: BMU940), holds Hong Kong Securities and Futures Commission licenses for categories 1, 2, 4, 5, and 9. Hong Kong residents can trade Hong Kong stocks, warrants, CBBCs, U.S. stocks, fractional shares, ETFs, and other major global financial products through one account on Tiger Trade, offering a one-stop solution for investment needs.",
+      "link": "https://www.itiger.com"
+    },
+    {
+      "name": "Hong Kong MBA Institute",
+      "description": "Hong Kong MBA Institute was founded in 2014 by the outstanding MBA students and alumni of eight universities in Hong Kong, as well as many senior professors and business celebrities as guidance counselors. As a non-profit organization, Hong Kong MBA Institute will create a broad development space and provide a resource sharing platform to the MBA students, alumni and business people.",
+      "link": "https://mba.org.hk/"
+    },
+    {
+      "name": "Fund Connect HK",
+      "description": "Fund Connect HK provides project consultation for investment managers, striving to serve as an effective communication platform between capital and projects. The \"HKUST-Fund Connect HK Leading Fund\" was established in Hong Kong on the 28th and is committed to promoting the transformation of university scientific research achievements and supporting the construction of Hong Kong as an international innovation and technology hub. The core investment research team of the HKUST-Fund Connect HK Leading Fund comprises members from top-tier domestic schools and Ivy League universities abroad, all of whom possess extensive experience in quantitative fund investment and management and a profound understanding of the financial markets. They are dedicated to delivering long-term, stable, and satisfactory investment returns to their clients.",
+      "link": "https://mp.weixin.qq.com/s/SanNilboYaAZuS6F11ih2Q"
+    }
+  ],
+  "introduceTitle": "Quant Trading Society",
+  "hkustQuantTradingSociety": "(HKUST- MAFM)",
+  "empowerFutureQuantLeaders": "Empowering future quantitative finance leaders through knowledge transfer, networking, and competition practice",
+  "missionTitle": "Mission",
+  "missionText": "Bridging academia and industry, promoting practical applications in the field of quantitative finance through academic innovation, building a platform for international cooperation and exchange, and nurturing forward-looking and innovative quantitative professionals.",
+  "visionTitle": "Vision",
+  "visionText": "To become the engine shaping the future leaders of global quantitative trading, driving industry innovation and progress by establishing an open global knowledge-sharing network.",
+  "cultureTitle": "Society Culture",
+  "cultureText": "Innovation-driven, resource-sharing, technology forefront – exploring future possibilities together.",
+  "activityTimelineTitle": "Activity Timeline",
+  "mainServicesTitle": "Main Services",
+  "industryConnectionTitle": "Industry Connection",
+  "industryConnectionLabel": "Industry Connection",
+  "industryConnectionDetails": [
+    "Establishing effective connections",
+    "through career fairs and alumni",
+    "network events",
+    "Hosting quantitative-themed",
+    "sharing sessions",
+    "Goal: Establishing effective",
+    "industry connections"
+  ],
+  "tradingCompetitionTitle": "Trading Competition",
+  "tradingCompetitionLabel": "Trading Competition",
+  "tradingStrategies": [
+    "Student engagement",
+    "Mentor-guided projects",
+    "Providing quantitative ",
+    "strategy support"
+  ],
+  "tradingSelection": [
+    "Testing high-return strategies",
+    "through backtesting and",
+    " simulated trading",
+    "Selecting excellent strategies"
+  ],
+  "tradingCompetition": [
+    "Hosting trading competitions",
+    "Conducting three-month",
+    "trading sessions each season",
+    "Goal: Enriching quantitative",
+    "fund management experience"
+  ],
+  "quantFundIncubationTitle": "Quant Fund Incubation",
+  "quantFundIncubationLabel": "Quant Fund Incubation",
+  "quantFundIncubationDetails": [
+    "Raising and initiating funds",
+    "for excellent strategies"
+  ],
+  "newsData_2024": [
+    {
+      "id": 1,
+      "time": "January",
+      "title": "Second Strategic Competition",
+      "small": "Expected to be held in January"
+    },
+    { "id": 2, "time": "February", "title": "", "small": "" },
+    { "id": 3, "time": "March", "title": "", "small": "" },
+    { "id": 4, "time": "April", "title": "", "small": "" },
+    {
+      "id": 5,
+      "time": "May",
+      "title": "Third Strategic Competition",
+      "small": "Expected to be held in May"
+    },
+    { "id": 6, "time": "June", "title": "", "small": "" },
+    { "id": 7, "time": "July", "title": "", "small": "" },
+    { "id": 8, "time": "August", "title": "", "small": "" },
+    { "id": 9, "time": "September", "title": "", "small": "" },
+    {
+      "id": 10,
+      "time": "October",
+      "title": "Quantitative Analysis Talent Fair",
+      "small": "Targeting 0fin&Mafm programs"
+    },
+    { "id": 11, "time": "November", "title": "", "small": "" },
+    { "id": 12, "time": "December", "title": "", "small": "" }
+  ],
+  "newsData_2025": [
+    { "id": 1, "time": "January", "title": "", "small": "" },
+    { "id": 2, "time": "February", "title": "", "small": "" },
+    { "id": 3, "time": "March", "title": "", "small": "" },
+    {
+      "id": 4,
+      "time": "April",
+      "title": "Management Team Meeting",
+      "small": "Formulating development plans"
+    },
+    { "id": 5, "time": "May", "title": "", "small": "" },
+    { "id": 6, "time": "June", "title": "", "small": "" },
+    {
+      "id": 7,
+      "time": "July",
+      "title": "Opening Ceremony",
+      "small": "Expected to be held in mid-July"
+    },
+    { "id": 8, "time": "August", "title": "", "small": "" },
+    {
+      "id": 9,
+      "time": "September",
+      "title": "First Strategic Competition",
+      "small": "Expected to be held in September"
+    },
+    { "id": 10, "time": "October", "title": "", "small": "" },
+    { "id": 11, "time": "November", "title": "", "small": "" },
+    { "id": 12, "time": "December", "title": "", "small": "" }
+  ],
+  "aboutUs": "About Us",
+  "introduction": "Introduction",
+  "team": "Team",
+  "tradingCompetitionNav": "Trading Competition",
+  "socialAdvisor": "Advisor",
+  "partnersNav": "Partners",
+  "alumni": "Alumni",
+  "alumniHongKong": "Hong Kong",
+  "alumniBeijing": "Beijing",
+  "alumniShanghai": "Shanghai",
+  "alumniGuangzhou": "Guangzhou",
+  "alumniShenzhen": "Shenzhen",
+  "communityNews": "News",
+  "friendLinks": "Links",
+  "hkust_background": "HKUST Background",
+  "slide_text_line1": "Empowering Future \nQuantitative Finance Leaders",
+  "slide_text_line2": "Through Knowledge Transfer, \nNetworking, and Competitions",
+  "hkust_quant_trading_society": "Quant Trading Society (HKUST- MAFM)",
+  "hkust_quant_trading_association": "Quant Trading Society",
+  "hkust_quant_trading_association2": " Quant Trading Society(HKUST- MAFM)",
+  "we_are": "We are",
+  "association_description_1": ". As a student society of the HKUST Master of Science in Financial Mathematics (MAFM), we are committed to helping students enter the quantitative industry and build effective networks. Our alumni network covers over 10,000 HKUST graduates. Additionally, we plan to hold trading competitions for all students to discover talent and incubate future quant funds.",
+  "association_description_2": "Since its establishment in 2006, the Department of Mathematics at HKUST enrolls about 800 undergraduate, master's, and doctoral students each year. As a student leadership platform supported by the department, our alumni network covers over 10,000 students and alumni.",
+  "timeline": {
+    "signup_stage": "Signup Stage",
+    "signup_date": "August 27, 2024 - September 22, 2024",
+    "eligibility_title": "Eligibility",
+    "eligibility_description": "The competition is designed for current students and alumni of the Hong Kong University of Science and Technology, and it also welcomes entries from students and alumni of other universities in Hong Kong and beyond.",
+    "registration_method_title": "Registration Method",
+    "registration_method_description": "Submit team information on the official Quant Trading Society website.",
+    "qualification_review_stage": "Qualification Review and Competition Registration Stage",
+    "review_date": "Team Registration Time - September 22, 2024",
+    "sim_account_title": "Simulation Account Registration",
+    "sim_account_description": "Fill out the registration form link to obtain an official competition simulation account.",
+    "team_strategy_review_title": "Team and Strategy Review",
+    "team_strategy_review_description": "Team members are reviewed based on certain rules; email contact may be required.",
+    "pre_competition_stage": "Pre-Competition Preparation Stage",
+    "pre_competition_date": "September 22, 2024 - September 30, 2024",
+    "pre_competition_item_title": "Tasks",
+    "pre_competition_item_description": "Assign simulation trading accounts; select team advisors; organize trading salons.",
+    "main_competition_stage": "Main Competition Stage",
+    "main_competition_date": "October 1, 2024 - December 31, 2024",
+    "main_competition_item_description": "Participants will trade using their official competition simulation accounts.",
+    "judging_defense_stage": "Judging and Defense Stage",
+    "judging_defense_date": "January 1, 2025 - January 14, 2025",
+    "results_summary_title": "Results Summary",
+    "results_summary_description": "Quant Trading Society will compile and verify all team data to form the final results.",
+    "strategy_defense_meeting_title": "Strategy Defense Meeting",
+    "strategy_defense_meeting_description": "Representatives from the best performing teams will present at a defense meeting chaired by Quant Trading Society's honorary technical advisors.",
+    "judging_title": "Judging",
+    "judging_description": "Judges will evaluate the trading strategies based on stability, profitability, risk management, and future performance expectations to determine the final rankings.",
+    "awards_ceremony_title": "Awards Ceremony",
+    "awards_ceremony_description": "The competition results will be announced, and awards will be presented."
+  },
+  "competition": {
+    "title": "Quant Trading Society Competition",
+    "intro_part1": "The Quant Trading Society will officially launch its first ",
+    "intro_date": "simulated quantitative trading competition ",
+    "intro_part2": "on ",
+    "intro_event": "October 1st ",
+    "intro_part3": " this year. The competition is designed for current students and alumni of the Hong Kong University of Science and Technology. It also welcomes entries from students and alumni of other universities in Hong Kong and beyond. Each team must be captained by a current student from a Hong Kong institution or an alum with Hong Kong residency.",
+    "competition_details_part1": "The simulation trading competition consists of a two-week preliminary round and a two-and-a-half-month final round, with only the results of the final round being considered for the final scores.",
+    "competition_details_part2": "Supported by Tiger Brokers, teams will have the flexibility to manage portfolios that may include stocks, commodities, ETFs, and derivatives, using various quantitative trading techniques to showcase their unique investment strategies.",
+    "competition_details_part3": ""
+  },
+  "ui": {
+    "loading": "Loading...",
+    "signup_open": "Start",
+    "signup_closed": "Not Yet Open",
+    "timeline_heading": "Timeline",
+    "contact_email": "Contact Email"
+  }
 }
